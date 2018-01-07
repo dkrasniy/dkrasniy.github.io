@@ -1,0 +1,23 @@
+Colors:
+Investments Leadership Measures App 
+---------------------------------------
+
+Text: #333;
+Light text or bold: #afb8bb
+Background blue tint: #f2f7fb
+
+Blue:#188af6
+BG Blue:#e7f3ff
+
+Green:#37ca37
+BG Green: #c4ecd6
+Dark Green: #278c27
+
+Yellow:#febe00
+BG Yellow:#fff8e6
+
+Red: #fc2400
+BG Red: #febebf
+
+Purple:#886cff
+
