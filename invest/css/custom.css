@@ -596,7 +596,9 @@ li.nav-item.disabled a {
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
-    content: '';
+    content: attr(data-rating);
+    color: #ddd;
+    line-height: 32px;
     position: absolute;
     left: 0;
     top: 25px;
@@ -610,7 +612,9 @@ li.nav-item.disabled a {
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
-    content: '';
+    content: attr(data-rating);
+    color: #fff;
+    line-height: 32px;
     width: 34px;
     height: 34px;
     background: #188af6;
@@ -677,7 +681,19 @@ span.score-num {
         transform: scale(1.2);
     }
 }
-
+input ~ .rating-label {
+  top: 31px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+}
+input:checked ~ .rating-label {
+  top: 31px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  color: #fff;
+}
 
 .nav-tabs .nav-link.active {
     border-color: transparent;
