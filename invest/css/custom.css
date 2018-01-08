@@ -39,7 +39,7 @@ Header area
   border-radius: .25em;
 }
 .main-content .container-body .row {
-  padding: 12px;
+  padding: 0 12px;
 }
 
 .main-content {
@@ -61,7 +61,8 @@ Header area
 .col-md-3.review-steps {
   background: #fff;
   padding-right: 0;
-      border-right: 1px solid #efeff2;
+  padding-left: 0;
+  border-right: 1px solid #efeff2;
 }
 .nav-tabs .nav-link {
   border: 1px solid transparent;
@@ -100,6 +101,7 @@ ul.nav.nav-tabs.flex-column li:last-child {
   background: transparent;
   color: #188af6;
   border: 1px solid #188af6;
+  line-height: 1.4;
 }
 .employee-details-area h2 {
   font-size: 2em;
@@ -137,11 +139,21 @@ span.question-number {
 .question h4 {
   color: #333;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 
 /*** Steps >>>> */
+.cd-breadcrumb.triangle a {
+    text-decoration: none;
+    cursor: default;
+}
+.cd-breadcrumb.triangle .completed a{
+  color: #ffffff;
+  background-color: #37ca37;
+  border-color: #37ca37;
 
+}
 .cd-breadcrumb, .cd-multi-steps {
   padding: 0.5em 1em;
   margin: 1em auto;
@@ -272,9 +284,10 @@ Triangle breadcrumb
   }
   .cd-breadcrumb.triangle li.current > * {
     /* selected step */
-    color: #ffffff;
-    background-color: #febe00;
-    border-color: #febe00;
+    color: #393a3a;
+    background-color: #eff7ff;
+    border-color: #eff7ff;
+    font-weight: 600;
   }
   .cd-breadcrumb.triangle li:first-of-type > * {
     padding-left: 1.6em;
@@ -699,8 +712,8 @@ input:checked ~ .rating-label {
 
 .nav-tabs .nav-link.active {
     border-color: transparent;
-    background: #f1f1f1;
-    color: #febe00!important;
+    background: #1889f612;
+    color: #333!important;
 }
 
 
@@ -733,7 +746,7 @@ a.nav-link.active:before{
     content: "";
     height: 11px;
     width: 11px;
-    border: solid #febe00;
+    border: solid #333;
     border-width: 0 3px 3px 0;
     transform: rotate(-40deg);
     transition: ease .15s all;
@@ -746,6 +759,7 @@ Form area
 -------------------------------- */
 .form-content {
     padding-left: 0;
+    padding-right:0;
 }
 .section-title {
     font-weight: bold;
@@ -785,12 +799,118 @@ Editor
     border: none!important;
 }
 .comments-area {
-    padding: 20px;
+    padding: 20px 45px;
     border-top: 1px solid #efeff2;
     overflow: hidden;
-    background: #f6f6f6;
+
 }
 .note-editor.note-frame.card {
     border: 1px solid #f1f1f1!important;
     box-shadow: none!important;
+}
+.comments-area.card-header {
+    background: #f2f7fb!important;
+  }
+
+
+/* --------------------------------
+Submit review page
+-------------------------------- */
+.review .question {
+    border: 1px solid #e7e7ed;
+    margin-bottom: 1em;
+    border-radius: 0.35em;
+    padding:0;
+}
+.review .question h4 {
+    margin-bottom: 0;
+    padding: 15px;
+    background: #f6f6f6;
+    border-radius: .25em .25em 0 0;
+    font-size: 1.05em;
+
+}
+.review .question span.question-number {
+    font-weight: 600;
+    color: #afb8bb;
+    display: block;
+    font-size: 0.8em;
+}
+.review .question table.table{
+  margin-bottom: 0;
+    border-radius: .35em;
+    color: #555;
+    font-weight: 700;
+}
+.review .question .table td.scoree {
+    padding-left: 12px;
+    width: 55%;
+    color:#188af6;
+    border-right: 1px solid #e7e7ed;
+}
+.review .question .table td.score {
+    color:#188af6;
+    padding-left: 25px;
+}
+.review .question .table th.score-compare {
+  width: 5%;
+  background: white;
+  border-radius: .35em;
+  vertical-align: middle;
+  padding-right: 5px;
+    color: #febe03;
+}
+.review h2.section-title {
+  text-align: center;
+  color: #37ca37;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 40px;
+}
+.tab-review {
+  border-bottom: 2px solid #f6f6f6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.sticky-tab-section {
+  position: sticky;
+    top: -1px;
+    z-index: 1;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding: 20px 45px 20px 45px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e7e7ed;
+    background: white;
+}
+.sticky-tab-section p, .sticky-tab-section h2 {
+    margin-bottom: 0;
+}
+
+.row.missed-question {
+    margin: 20px 10px;
+}
+button.btn.btn-secondary.float-right {
+    font-size: .85rem;
+    margin-top: -6px;
+}
+.question.comments-review table.table {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: .9em;
+}
+.question.comments-review p {
+    margin-bottom: .5em;
+    font-weight: bold;
+    color: #545454;
+    font-size: 1.1em;
+}
+span.comment-date {
+    font-size: .8em;
+    float: right;
+    padding-top: 2px;
+    color: grey;
+}
+.question .row {
+    padding: 0!important;
 }
