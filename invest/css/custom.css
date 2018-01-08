@@ -37,7 +37,9 @@ Header area
   background: white;
   border: 1px solid #afb8bb59;
   border-radius: .25em;
-  overflow: hidden;
+}
+.main-content .container-body .row {
+  padding: 12px;
 }
 
 .main-content {
