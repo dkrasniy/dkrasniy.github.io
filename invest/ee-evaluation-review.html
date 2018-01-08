@@ -14,7 +14,23 @@
     <title>Hello, world!</title>
 
 
-
+<style>
+.review h2.section-title {
+  text-align: center;
+  color: #37ca37;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 40px;
+}
+.tab-review {
+    border-bottom: 3px solid #F44336;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.sticky-tab-section {
+    background: #f6f6f6;
+}
+</style>
 </head>
 <body>
 <div class="container-fluid edge-width">
@@ -142,95 +158,267 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="collaboration" role="tabpanel">
                             <div class="container review">
-                              <h2 class="section-title">Review & Submit</h2>
 
-                            <div class="question">
-                                <span class="question-number">Question 1</span>
-                                <h4>Reaches out to other teams to develop and execute ideas</h4>
-                                <table class="table table-bordered">
+                              <h2 class="section-title">
+                                <i data-feather="user-check" width="40" height="40" class="header-item-icons"></i>
+                                <br>Review & Submit
+                              </h2>
 
-                                  <tbody>
-                                    <tr>
-                                      <td>Employee Evaluation Rating</td>
-                                      <td>2</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
+                            <div class="tab-review">
+                              <div class="sticky-tab-section">
+                                <p class="float-right">Edit collaboration scores</p>
+                                <h2 class="tab-title">Collaboration</h2>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 1</span>
+                                  <h4>Reaches out to other teams to develop and execute ideas</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 2</span>
+                                  <h4>Asks questions to identify shared interests, experiences, or other common ground</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 3</span>
+                                  <h4>Builds a friendly and professional rapport with colleagues</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 4</span>
+                                  <h4>Seeks out, respects, and values others' perspectives</h4>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test16" name="radio-group3">
+                                        <label for="test16">Outstanding</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test27" name="radio-group3">
+                                        <label for="test27">Consistently meets standard</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test38" name="radio-group3">
+                                        <label for="test38">Exceeds standard</label>
+
+                                      </input>
+                                    </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test49" name="radio-group3">
+                                        <label for="test49">Does not meet standard</label>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+
+                            </div>
+                            <div class="tab-review">
+                              <div class="sticky-tab-section">
+                                <p class="float-right">Edit leading people scores</p>
+                                <h2 class="tab-title">Leading People</h2>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 1</span>
+                                  <h4>Reaches out to other teams to develop and execute ideas</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 2</span>
+                                  <h4>Asks questions to identify shared interests, experiences, or other common ground</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 3</span>
+                                  <h4>Builds a friendly and professional rapport with colleagues</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 4</span>
+                                  <h4>Seeks out, respects, and values others' perspectives</h4>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test16" name="radio-group3">
+                                        <label for="test16">Outstanding</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test27" name="radio-group3">
+                                        <label for="test27">Consistently meets standard</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test38" name="radio-group3">
+                                        <label for="test38">Exceeds standard</label>
+
+                                      </input>
+                                    </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test49" name="radio-group3">
+                                        <label for="test49">Does not meet standard</label>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+
+                            </div>
+                            <div class="tab-review">
+                              <div class="sticky-tab-section">
+                                <p class="float-right">Edit leading change scores</p>
+                                <h2 class="tab-title">Leading Change</h2>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 1</span>
+                                  <h4>Reaches out to other teams to develop and execute ideas</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 2</span>
+                                  <h4>Asks questions to identify shared interests, experiences, or other common ground</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+
+                              <div class="question">
+                                  <span class="question-number">Question 3</span>
+                                  <h4>Builds a friendly and professional rapport with colleagues</h4>
+                                  <table class="table table-bordered">
+
+                                    <tbody>
+                                      <tr>
+                                        <td>Employee Evaluation Rating</td>
+                                        <td>2</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                              <div class="question">
+                                  <span class="question-number">Question 4</span>
+                                  <h4>Seeks out, respects, and values others' perspectives</h4>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test16" name="radio-group3">
+                                        <label for="test16">Outstanding</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test27" name="radio-group3">
+                                        <label for="test27">Consistently meets standard</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test38" name="radio-group3">
+                                        <label for="test38">Exceeds standard</label>
+
+                                      </input>
+                                    </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="rating">
+                                        <input type="radio" id="test49" name="radio-group3">
+                                        <label for="test49">Does not meet standard</label>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+
                             </div>
 
-                            <div class="question">
-                                <span class="question-number">Question 1</span>
-                                <h4>Reaches out to other teams to develop and execute ideas</h4>
-                                <table class="table table-bordered">
 
-                                  <tbody>
-                                    <tr>
-                                      <td>Employee Evaluation Rating</td>
-                                      <td>2</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                            </div>
 
-                            <div class="question">
-                                <span class="question-number">Question 1</span>
-                                <h4>Reaches out to other teams to develop and execute ideas</h4>
-                                <table class="table table-bordered">
 
-                                  <tbody>
-                                    <tr>
-                                      <td>Employee Evaluation Rating</td>
-                                      <td>2</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                            </div>
 
-                            <div class="question">
-                                <span class="question-number">Question 4</span>
-                                <h4>Seeks out, respects, and values others' perspectives</h4>
-                                <div class="row">
-                                  <div class="col">
-                                    <div class="rating">
-                                      <input type="radio" id="test16" name="radio-group3">
-                                      <label for="test16">Outstanding</label>
-                                      </div>
 
-                                  </div>
-                                  <div class="col">
-                                    <div class="rating">
-                                      <input type="radio" id="test27" name="radio-group3">
-                                      <label for="test27">Consistently meets standard</label>
-                                      </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="rating">
-                                      <input type="radio" id="test38" name="radio-group3">
-                                      <label for="test38">Exceeds standard</label>
 
-                                    </input>
-                                  </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="rating">
-                                      <input type="radio" id="test49" name="radio-group3">
-                                      <label for="test49">Does not meet standard</label>
-                                      </div>
-                                  </div>
-                                </div>
-                            </div>
 
                           </div>
-                          <div class="comments-area">
-                            <h4>Comments</h4>
-                            <p>Additional comments added here</p>
-                              <div id="comments"></div>
-                          </div>
-
-                        <div class="action-buttons">
-                          <!-- <button type="button" class="btn btn-default next-step">Save and continue</button> -->
-                            <button type="button" class="btn btn-primary next-step float-right">Save and continue</button>
-                        </div>
 
                         </div>
                         <div class="tab-pane" id="leading-people" role="tabpanel">
