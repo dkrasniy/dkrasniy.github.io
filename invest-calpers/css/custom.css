@@ -1,0 +1,1044 @@
+/* --------------------------------
+
+David Krasniy
+CalPERS
+Investments Leadership Measures App
+
+Global Styles
+
+-------------------------------- */
+
+.edge-width {
+  padding: 0;
+}
+body {
+  background: #f6f6f6;
+}
+
+/* --------------------------------
+Header area
+-------------------------------- */
+.application-bar.navbar-expand-md .nav-link-monospaced {
+  padding: 0px 10px;
+}
+.employee-details-area {
+  background: #f6f6f6;
+  padding: 20px;
+  border-bottom: 1px solid #afb8bb59;
+  border-radius: 0.35em 0.35em 0 0;
+}
+
+.steps {
+  padding: 0 15px;
+  border-bottom: 1px solid #afb8bb59;
+}
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 0 solid rgba(0, 0, 0, 0.125);
+  font-weight: 600;
+  border-bottom: 1px solid #e4e7e8;
+}
+.container-fluid.edge-width.employee-details-area {
+  background: white;
+  padding: 20px 0;
+  /*box-shadow: 2px 3px 12px 0 #e7e7ed;*/
+  border-bottom: 1px solid #afb8bb59;
+}
+.container-fluid.steps {
+  background: white;
+  padding: 1px 0;
+  border-bottom: 1px solid #afb8bb59;
+}
+.main-content .container-body {
+  background: white;
+  border: 1px solid #afb8bb59;
+  border-radius: .25em;
+}
+.main-content .container-body .row {
+  padding: 0 12px;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.card-header:first-child {
+  border-radius: 0.25rem 0.25rem 0 0;
+  background: white;
+  border-bottom: 1px solid #f1f2f5;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding:20px;
+}
+
+.employee-details-area .row {
+  padding: 0!important;
+}
+.employee-details-area .row {
+  align-items: center;
+}
+.col-md-3.review-steps {
+  background: #fff;
+  padding-right: 0;
+  padding-left: 0;
+  border-right: 1px solid #efeff2;
+}
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+ul.nav.nav-tabs.flex-column li a {
+  font-size: 1.1em;
+  padding:0.85rem 0.85rem;
+  font-weight: 600;
+  color: #677179;
+  padding-left: 3em;
+}
+
+.review-steps a.nav-link {
+    border-bottom: 1px solid #efeff2!important;
+}
+ul.nav.nav-tabs.flex-column li:last-child {
+  border-bottom:0px;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+  background: #f1f1f1;
+}
+
+
+.badge-default {
+  padding: 0.25rem 0.5rem;
+  border-radius: .25em;
+  background: transparent;
+  color: #188af6;
+  border: 1px solid #188af6;
+  line-height: 1.4;
+}
+
+
+
+.employee-details-area h2 {
+  font-size: 2em;
+  padding: 0;
+  margin: 2px 0;
+  margin-bottom:0;
+}
+
+
+
+.main-content a.nav-link:before {
+  background-color: #fff0;
+  border: 2px solid #677179;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: 15px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+  content: "";
+}
+
+
+
+/**** Inner step content ****/
+
+.question {
+  padding: 10px 0;
+}
+span.question-number {
+  font-weight: 600;
+  color: #afb8bb;
+}
+.question h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+/*** Steps >>>> */
+.cd-breadcrumb.triangle a {
+    text-decoration: none;
+    cursor: default;
+}
+.cd-breadcrumb.triangle .completed a{
+  color: #ffffff;
+  background-color: #37ca37;
+  border-color: #37ca37;
+
+}
+.cd-breadcrumb, .cd-multi-steps {
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  background-color: #edeff0;
+  border-radius: .25em;
+}
+.cd-breadcrumb:after, .cd-multi-steps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-breadcrumb li, .cd-multi-steps li {
+  display: inline-block;
+  float: left;
+  margin: 0.5em 0;
+}
+.cd-breadcrumb li::after, .cd-multi-steps li::after {
+  /* this is the separator between items */
+  display: inline-block;
+  content: '\00bb';
+  margin: 0 .6em;
+  color: #959fa5;
+}
+.cd-breadcrumb li:last-of-type::after, .cd-multi-steps li:last-of-type::after {
+  /* hide separator after the last item */
+  display: none;
+}
+.cd-breadcrumb li > *, .cd-multi-steps li > * {
+  /* single step */
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #2c3f4c;
+}
+.cd-breadcrumb li.current > *, .cd-multi-steps li.current > * {
+  /* selected step */
+  color: #37ca37;
+}
+.no-touch .cd-breadcrumb a:hover, .no-touch .cd-multi-steps a:hover {
+  /* steps already visited */
+  color: #37ca37;
+}
+.cd-breadcrumb.custom-separator li::after, .cd-multi-steps.custom-separator li::after {
+  /* replace the default arrow separator with a custom icon */
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: url(../img/cd-custom-separator.svg) no-repeat center center;
+  vertical-align: middle;
+}
+.cd-breadcrumb.custom-icons li > *::before, .cd-multi-steps.custom-icons li > *::before {
+  /* add a custom icon before each item */
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: .4em;
+  margin-top: -2px;
+  background: url(../img/cd-custom-icons-01.svg) no-repeat 0 0;
+  vertical-align: middle;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(2) > *::before {
+  /* change custom icon using image sprites */
+  background-position: -20px 0;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(3) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(3) > *::before {
+  background-position: -40px 0;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(4) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(4) > *::before {
+  background-position: -60px 0;
+}
+.cd-breadcrumb.custom-icons li.current:first-of-type > *::before, .cd-multi-steps.custom-icons li.current:first-of-type > *::before {
+  /* change custom icon for the current item */
+  background-position: 0 -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(2) > *::before {
+  background-position: -20px -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(3) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(3) > *::before {
+  background-position: -40px -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(4) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(4) > *::before {
+  background-position: -60px -20px;
+}
+@media only screen and (min-width: 768px) {
+  .cd-breadcrumb, .cd-multi-steps {
+    padding: 0 1.2em;
+  }
+  .cd-breadcrumb li, .cd-multi-steps li {
+    margin: 1.2em 0;
+  }
+  .cd-breadcrumb li::after, .cd-multi-steps li::after {
+    margin: 0 1em;
+  }
+  .cd-breadcrumb li > *, .cd-multi-steps li > * {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------
+
+Triangle breadcrumb
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  .cd-breadcrumb.triangle {
+    /* reset basic style */
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+  }
+  .cd-breadcrumb.triangle li {
+    position: relative;
+    padding: 0;
+    margin: 4px 4px 4px 0;
+    flex: 1;
+    display: flex;
+  }
+  .cd-breadcrumb.triangle li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-breadcrumb.triangle li > * {
+    position: relative;
+    padding: 1em .8em 1em 2.5em;
+    color: #afb8bb;
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    flex: 1;
+  }
+  .cd-breadcrumb.triangle li.current > * {
+    /* selected step */
+    color: #393a3a;
+    background-color: #eff7ff;
+    border-color: #eff7ff;
+    font-weight: 600;
+  }
+  .cd-breadcrumb.triangle li:first-of-type > * {
+    padding-left: 1.6em;
+    border-radius: .25em 0 0 .25em;
+  }
+  .cd-breadcrumb.triangle li:last-of-type > * {
+    padding-right: 1.6em;
+    border-radius: 0 .25em .25em 0;
+  }
+  .no-touch .cd-breadcrumb.triangle a:hover {
+    /* steps already visited */
+    color: #ffffff;
+    background-color: #2c3f4c;
+    border-color: #2c3f4c;
+  }
+  .cd-breadcrumb.triangle li::after, .cd-breadcrumb.triangle li > *::after {
+    /*
+    	li > *::after is the colored triangle after each item
+    	li::after is the white separator between two items
+    */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    content: '';
+    height: 0;
+    width: 0;
+    /* 48px is the height of the <a> element */
+    border: 28px solid transparent;
+    border-right-width: 0;
+    border-left-width: 20px;
+  }
+  .cd-breadcrumb.triangle li::after {
+    /* this is the white separator between two items */
+    z-index: 1;
+    -webkit-transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    -o-transform: translateX(4px);
+    transform: translateX(4px);
+    border-left-color: #ffffff;
+    /* reset style */
+    margin: 0;
+  }
+  .cd-breadcrumb.triangle li > *::after {
+    /* this is the colored triangle after each element */
+    z-index: 2;
+    border-left-color: inherit;
+  }
+  .cd-breadcrumb.triangle li:last-of-type::after, .cd-breadcrumb.triangle li:last-of-type > *::after {
+    /* hide the triangle after the last step */
+    display: none;
+  }
+  .cd-breadcrumb.triangle.custom-separator li::after {
+    /* reset style */
+    background-image: none;
+  }
+  .cd-breadcrumb.triangle.custom-icons li::after, .cd-breadcrumb.triangle.custom-icons li > *::after {
+    /* 50px is the height of the <a> element */
+    border-top-width: 25px;
+    border-bottom-width: 25px;
+  }
+
+  @-moz-document url-prefix() {
+    .cd-breadcrumb.triangle li::after,
+    .cd-breadcrumb.triangle li > *::after {
+      /* fix a bug on Firefix - tooth edge on css triangle */
+      border-left-style: dashed;
+    }
+  }
+}
+/* --------------------------------
+
+Multi steps indicator
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  .cd-multi-steps {
+    /* reset style */
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    display: flex;
+  }
+
+  .cd-multi-steps li {
+    position: relative;
+    float: none;
+    margin: 0.4em 40px 0.4em 0;
+  }
+  .cd-multi-steps li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-multi-steps li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    content: '';
+    height: 4px;
+    background: #edeff0;
+    /* reset style */
+    margin: 0;
+  }
+  .cd-multi-steps li.visited::after {
+    background-color: #37ca37;
+  }
+  .cd-multi-steps li > *, .cd-multi-steps li.current > * {
+    position: relative;
+    color: #2c3f4c;
+  }
+
+  .cd-multi-steps.custom-separator li::after {
+    /* reset style */
+    height: 4px;
+    background: #edeff0;
+  }
+
+  .cd-multi-steps.text-center li::after {
+    width: 100%;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%) translateX(-1px);
+    -moz-transform: translateY(-50%) translateX(-1px);
+    -ms-transform: translateY(-50%) translateX(-1px);
+    -o-transform: translateY(-50%) translateX(-1px);
+    transform: translateY(-50%) translateX(-1px);
+  }
+  .cd-multi-steps.text-center li > * {
+    z-index: 1;
+    padding: .6em 1em;
+    border-radius: .25em;
+    background-color: #edeff0;
+  }
+  .no-touch .cd-multi-steps.text-center a:hover {
+    background-color: #2c3f4c;
+  }
+  .cd-multi-steps.text-center li.current > *, .cd-multi-steps.text-center li.visited > * {
+    color: #ffffff;
+    background-color: #37ca37;
+  }
+  .cd-multi-steps.text-center.custom-icons li.visited a::before {
+    /* change the custom icon for the visited item - check icon */
+    background-position: 0 -60px;
+  }
+
+  .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
+    width: 80px;
+    text-align: center;
+  }
+  .cd-multi-steps.text-top li::after, .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    left: 50%;
+    /* 40px is the <li> right margin value */
+    width: calc(100% + 40px);
+  }
+  .cd-multi-steps.text-top li > *::before, .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+  }
+  .cd-multi-steps.text-top li.visited > *::before,
+  .cd-multi-steps.text-top li.current > *::before, .cd-multi-steps.text-bottom li.visited > *::before,
+  .cd-multi-steps.text-bottom li.current > *::before {
+    background-color: #37ca37;
+  }
+  .no-touch .cd-multi-steps.text-top a:hover, .no-touch .cd-multi-steps.text-bottom a:hover {
+    color: #37ca37;
+  }
+  .no-touch .cd-multi-steps.text-top a:hover::before, .no-touch .cd-multi-steps.text-bottom a:hover::before {
+    box-shadow: 0 0 0 3px rgba(150, 192, 61, 0.3);
+  }
+
+  .cd-multi-steps.text-top li::after {
+    /* this is the line connecting 2 adjacent items */
+    bottom: 4px;
+  }
+  .cd-multi-steps.text-top li > * {
+    padding-bottom: 20px;
+  }
+  .cd-multi-steps.text-top li > *::before {
+    /* this is the spot indicator */
+    bottom: 0;
+  }
+
+  .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    top: 3px;
+  }
+  .cd-multi-steps.text-bottom li > * {
+    padding-top: 20px;
+  }
+  .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    top: 0;
+  }
+}
+/* --------------------------------
+
+Add a counter to the multi-steps indicator
+
+-------------------------------- */
+.cd-multi-steps.count li {
+  counter-increment: steps;
+}
+
+.cd-multi-steps.count li > *::before {
+  content: counter(steps) " - ";
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-multi-steps.text-top.count li > *::before,
+  .cd-multi-steps.text-bottom.count li > *::before {
+    /* this is the spot indicator */
+    content: counter(steps);
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .cd-multi-steps.text-top.count li:not(.current) em::before,
+  .cd-multi-steps.text-bottom.count li:not(.current) em::before {
+    /* steps not visited yet - counter color */
+    color: #2c3f4c;
+  }
+
+  .cd-multi-steps.text-top.count li::after {
+    bottom: 11px;
+  }
+
+  .cd-multi-steps.text-top.count li > * {
+    padding-bottom: 34px;
+  }
+
+  .cd-multi-steps.text-bottom.count li::after {
+    top: 11px;
+  }
+
+  .cd-multi-steps.text-bottom.count li > * {
+    padding-top: 34px;
+  }
+}
+
+li.nav-item.disabled {
+  /* background: grey; */
+}
+
+.btn-primary {
+  color: #FFF;
+  background-color: #188af6;
+  border-color: #188af6;
+  box-shadow: none;
+}
+.btn-primary:hover {
+    background-color: #066fd2;
+    border-color: #066fd2;
+}
+.btn.btn-default {
+    background: #f6f6f6;
+}
+.btn.btn-default :hover {
+    background-color: #f9f9f9;
+    border-color: #f9f9f9;
+}
+
+
+li.nav-item.disabled a {
+  cursor: default;
+}
+
+.rating label {
+  background: transparent;
+  padding: 70px 25px 20px 25px;
+  border-radius: .25em;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+}
+.rating {
+    display: flex;
+    width: 100%;
+}
+.question .col {
+    display: flex;
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+
+}
+
+[type="radio"]:checked + label {
+  background: #f2f7fb;
+  color: #333;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: attr(data-rating);
+    color: #ddd;
+    line-height: 32px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+    left: 50%;
+    margin-left: -14px;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: attr(data-rating);
+    color: #fff;
+    line-height: 32px;
+    width: 34px;
+    height: 34px;
+    background: #188af6;
+    position: absolute;
+    top: 25px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 50%;
+    margin-left: -14px;
+}
+
+
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-animation: check-bounce .5s;
+    animation: check-bounce .5s;
+}
+
+
+span.score-num {
+    position: absolute;
+    top: 26px;
+    left: 48%;
+    z-index: 2000;
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+/*-----------------------
+Radio button animation
+------------------------*/
+@keyframes check-bounce {
+    0% {
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+    }
+    30% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    60% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+input ~ .rating-label {
+  top: 31px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+}
+input:checked ~ .rating-label {
+  top: 31px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  color: #fff;
+}
+
+.nav-tabs .nav-link.active {
+    border-color: transparent;
+    background: #1889f612;
+    color: #333!important;
+}
+
+span.blue-color {
+  color: #188af6;
+}
+a.nav-link.completed:before {
+    background-color: #fff0;
+    border-radius: 0px!important;
+    cursor: pointer;
+    height: 20px;
+    left: 24px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    content: "";
+    height: 15px;
+    width: 8px;
+    border: solid #29bd29;
+    border-width: 0 3px 3px 0;
+    transform: rotate(30deg);
+}
+
+a.nav-link.active:before{
+  background-color: #fff0;
+    border-radius: 0px!important;
+    cursor: pointer;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    content: "";
+    height: 11px;
+    width: 11px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-40deg);
+    transition: ease .15s all;
+}
+
+
+
+/* --------------------------------
+Form area
+-------------------------------- */
+.form-content {
+    padding-left: 0;
+    padding-right:0;
+}
+.section-title {
+    font-weight: bold;
+}
+
+.form-content .tab-content .container {
+    padding: 20px 45px;
+}
+a.nav-link.completed {
+  background: #ffffff;
+color: #29bd29!important;
+}
+/* Buttons Area */
+.action-buttons {
+    padding: 20px;
+    border-top: 1px solid #efeff2;
+    overflow: hidden;
+}
+.action-buttons ul {
+    margin-bottom: 0;
+    display: inline-flex;
+  }
+  .action-buttons li {
+    margin-left: 1em;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+
+/* --------------------------------
+Editor
+-------------------------------- */
+.note-editor.note-frame {
+    border: none!important;
+}
+.comments-area {
+    padding: 20px 45px;
+    border-top: 1px solid #efeff2;
+    overflow: hidden;
+
+}
+.note-editor.note-frame.card {
+    border: 1px solid #f1f1f1!important;
+    box-shadow: none!important;
+}
+.comments-area.card-header {
+    background: #f2f7fb!important;
+  }
+.note-toolbar.card-header {
+  z-index: 1!important;
+}
+
+/* --------------------------------
+Submit review page
+-------------------------------- */
+.review .question {
+    border: 1px solid #e7e7ed;
+    margin-bottom: 1em;
+    border-radius: 0.35em;
+    padding:0;
+}
+.review .question h4 {
+    margin-bottom: 0;
+    padding: 15px;
+    background: #f6f6f6;
+    border-radius: .25em .25em 0 0;
+    font-size: 1.05em;
+
+}
+.review .question span.question-number {
+    font-weight: 600;
+    color: #afb8bb;
+    display: block;
+    font-size: 0.8em;
+}
+.review .question table.table{
+  margin-bottom: 0;
+    border-radius: .35em;
+    color: #555;
+    font-weight: 700;
+}
+.review .question .table td.scoree {
+    padding-left: 12px;
+    width: 55%;
+    color:#188af6;
+    border-right: 1px solid #e7e7ed;
+}
+.review .question .table td.score {
+    color:#188af6;
+    padding-left: 25px;
+}
+.review .question .table th.score-compare {
+  width: 5%;
+  background: white;
+  border-radius: .35em;
+  vertical-align: middle;
+  padding-right: 5px;
+    color: #febe03;
+}
+
+.tab-review {
+  border-bottom: 2px solid #f6f6f6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.sticky-tab-section {
+  position: sticky;
+    top: -1px;
+    z-index: 501;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding: 20px 45px 20px 45px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e7e7ed;
+    background: white;
+}
+.sticky-tab-section p, .sticky-tab-section h2 {
+    margin-bottom: 0;
+}
+
+.row.missed-question {
+    margin: 20px 10px;
+}
+button.btn.btn-secondary.float-right {
+    font-size: .85rem;
+    margin-top: -6px;
+}
+.question.comments-review table.table {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: .9em;
+}
+.question.comments-review p {
+    margin-bottom: .5em;
+    font-weight: bold;
+    color: #545454;
+    font-size: 1.1em;
+}
+span.comment-date {
+    font-size: .8em;
+    float: right;
+    padding-top: 2px;
+    color: grey;
+}
+.question .row {
+    padding: 0!important;
+}
+
+
+
+/******Manager Scoring page ****/
+.manager-scoring {
+  background: #fff8e6;
+  padding: 15px;
+  border-top: 1px solid #f7edd4;
+}
+.manager-scoring p {
+  color: #4e4e4e;
+  font-weight: bold;
+}
+
+.badge-scoring-unlocked {
+  color: #febe00!important;
+  line-height: 1.4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25em;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #febe00!important;;
+  border-image: initial;
+  float: right;
+}
+
+.manager-scoring .rating label {
+  padding: 70px 25px 20px 25px;
+  border-radius: .25em;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #1889f638;
+}
+
+.manager-scoring [type="radio"]:not(:checked) + label {
+  background: white;
+  padding: 70px 25px 20px 25px;
+  border-radius: .25em;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #1889f638;
+}
+
+th.score-compare.mismatch {
+  color: #febe03!important;
+}
+th.score-compare.match {
+  color: #37ca37!important;
+}
+
+
+
+
+/*************Review page***************/
+.review-status-header {
+  text-align: center;
+}
+
+
+
+/*************Dashboard view***************/
+a {
+  color:#188af6;
+}
+.manager-team-status .row {
+  padding: 10px 0!important;
+}
+.employee-details-area.manager-team-status {
+  background: #37cb3712;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+span.green-color {
+  color: #37cb37;
+}
+
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.input-group-addon:not([size]):not([multiple]), .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
+  height: 100%;
+}
+div#example_wrapper {
+  padding: 20px 10px;
+}
+
+.employee-details-area.not-started {
+  background: #e7f3ffd1;
+  margin-bottom: -1px;
+}
+
+.employee-details-area.submitted {
+  background: #c4ecd66b;
+  margin-bottom: -1px;
+}
+
+.tab-pane .review-submit h2.section-title {
+  text-align: center;
+  color: #37ca37;
+  padding: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 0px;
+  background: #37cb3714;
+}

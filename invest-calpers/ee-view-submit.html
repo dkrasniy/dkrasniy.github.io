@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+      <link rel="stylesheet" href="css/pearl.css">
+      <link rel="stylesheet" href="css/custom.css">
+      <title>Hello, world!</title>
+   </head>
+   <body>
+      <div class="container-fluid edge-width">
+         <nav class="application-bar application-bar-dark navbar navbar-expand-md">
+            <div class="container">
+               <div class="navbar-title navbar-text-truncate">Investments Leadership Measures</div>
+               <ul class="navbar-nav">
+                  <li class="dropdown nav-item">
+                     <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced"
+                        data-toggle="dropdown" href="#1" role="button">
+                     Timothy Taylor
+                     </a>
+                     <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#1">Action</a>
+                        <a class="dropdown-item" href="#1">Another action</a>
+                        <a class="dropdown-item" href="#1">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#1">Sign out</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+
+      <div class="container-fluid main-content">
+
+
+         <div class="container">
+            <div class="container-body">
+               <div class="employee-details-area submitted">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col review-status-header">
+                           <div class="row">
+                              <div class="col">
+                                <span class="green-color"> <i data-feather="check" width="40" height="40" class="header-item-icons"></i><br>
+                                 <h2> 2018 Year-end evaluation</h2></span>
+                                 <p>Your evaluation has been submitted. You can review it below.</p>
+                                 <a href="#" class="btn btn-secondary" role="button">Review</a>
+                              </div>
+
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+
+               <div class="current-progress">
+                  <div class="card-header">My 2018 Year-end evaluation</div>
+                  <div class="steps">
+                     <div class="container">
+                        <nav>
+                           <ol class="cd-breadcrumb triangle">
+                              <li class="completed"><a href="#0">Draft</a></li>
+                              <li class="completed"><a href="#0">Submitted</a></li>
+                              <li><a href="#0">Manager Scored</a></li>
+                              <li><a href="#0">Calibration Score</a></li>
+                              <li><a href="#0">Manager Review</a></li>
+                              <li><a href="#0">Published</a></li>
+                           </ol>
+                        </nav>
+                     </div>
+                  </div>
+
+               </div>
+
+
+
+
+               <div class="card-header">Previous evaluations</div>
+
+               <div class="row">
+
+                  <table id="example" class="table no-padding" cellspacing="0" width="100%">
+                     <thead>
+                     <tr>
+                        <th>#</th>
+                        <th>Executive</th>
+                        <th>Classification</th>
+                        <th>Unit</th>
+                        <th>Manager</th>
+                        <th>Period</th>
+                        <th>Status</th>
+                     </tr>
+                     </thead>
+
+                     <tbody>
+
+                     <tr>
+                        <td>1</td>
+                        <td><a href="#">Daniel Davis</a></td>
+                        <td>Associate Investment Manager</td>
+                        <td>INVO - PE AIM</td>
+                        <td>Andrew Studer</td>
+                        <td>2017 Year-end</td>
+                        <td>Published</td>
+
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td><a href="#">Daniel Davis</a></td>
+                        <td>Associate Investment Manager</td>
+                        <td>INVO - PE AIM</td>
+                        <td>Andrew Studer</td>
+                        <td>2017 Mid-year</td>
+                        <td>Published</td>
+
+                     </tr><tr>
+                        <td>1</td>
+                        <td><a href="#">Daniel Davis</a></td>
+                        <td>Associate Investment Manager</td>
+                        <td>INVO - PE AIM</td>
+                        <td>Andrew Studer</td>
+                        <td>2016 Year-end</td>
+                        <td>Published</td>
+
+
+                     </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <script src="js/feather.min.js"></script>
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/tether.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/datatables.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+             //Wizard
+             $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+                 var $target = $(e.target);
+                 if ($target.hasClass('disabled')) {
+                     return false;
+                 }
+             });
+
+             $(".next-step").click(function (e) {
+
+                 var $active = $('.nav-tabs li a.active');
+                 $active.addClass("completed");
+                 $active.parent().next().children().removeClass('disabled');
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 nextTab($active);
+
+             });
+             $(".prev-step").click(function (e) {
+
+                 var $active = $('.nav-tabs li a.active');
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 prevTab($active);
+
+             });
+             $(".btn.btn-secondary.float-right").on("click", function () {
+                 var reviewSectionIndex = $(this).parent().parent().index() - 1;
+                 $(".nav.nav-tabs.flex-column li:eq(" +  reviewSectionIndex +")").find('a[data-toggle="tab"]').click();
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+             });
+         });
+
+         function nextTab(elem) {
+             $(elem).parent().next().find('a[data-toggle="tab"]').click();
+         }
+
+         function prevTab(elem) {
+             $(elem).parent().prev().find('a[data-toggle="tab"]').click();
+         }
+
+         feather.replace();
+
+         $(document).ready(function () {
+             oTable = $('#example').DataTable({
+                 responsive: true,
+                 language: {
+                     searchPlaceholder: "Search",
+                     search: "" }
+             });
+         });
+
+      </script>
+
+   </body>
+</html>
