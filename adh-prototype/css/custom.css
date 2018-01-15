@@ -734,21 +734,6 @@ th.score-compare.match {
 
 
 /*************Dashboard view***************/
-a {
-  color:#188af6;
-}
-.manager-team-status .row {
-  padding: 10px 0!important;
-}
-.quick-stats-dash.manager-team-status {
-  background: #37cb3712;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-span.green-color {
-  color: #37cb37;
-}
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.input-group-addon:not([size]):not([multiple]), .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: 100%;
@@ -758,17 +743,11 @@ div#example_wrapper {
 }
 
 
-
-.tab-pane .review-submit h2.section-title {
-  text-align: center;
-  color: #37ca37;
-  padding: 15px;
-  border-bottom: 1px solid #f1f1f1;
-  margin-bottom: 0px;
-  background: #37cb3714;
+.quantity-stats {
+    font-size: 3em;
+    margin-top: -1rem;
+    font-weight: 600;
 }
-
-
 
 
 /*-----------------
@@ -777,10 +756,10 @@ DataTable styling
 .img-row {
     width: 150px;
 }
-td.available {
+.available {
     color: #2ecd70;
 }
 
-td.reserved {
+.reserved {
     color: #ffba00;
 }
