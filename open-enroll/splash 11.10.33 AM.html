@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>Open Enrollment</title>
+</head>
+<body class="splash">
+    <div class="begin-cta d-md-none">
+        <button class="btn btn-success btn-lg start-oe-button btn-block">Continue to my|CalPERS</button>
+    </div>
+<div class="container main-container splash-screen">
+    <div class="row">
+        <div class="col-12 col-lg-6 willRemovePadding will-change">
+            <h1 class="myCalPERS-logo animateTextIn"><strong>my</strong>|CalPERS</h1>
+            <div class="willSlideOut will-change">
+                <div class="h2-cover"><h2 class="animateTextIn">Open Enrollment </h2></div>
+                <img class="selection-svg d-md-none" src="assets/open-enroll.svg"/>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tortor felis, tincidunt vitae
+                    massa vitae,
+                    consequat accumsan est. Quisque accumsan lorem vel convallis fermentum. Nam bibendum congue dui, sed aliquam
+                    lorem consectetur eu. Vivamus consectetur malesuada ipsum nec molestie. Cras pretium quam at neque tempus
+                    tempus. <br><br>Aliquam erat volutpat. Mauris auctor est eu dolor blandit porta. Morbi vitae elit dictum,
+                    sollicitudin elit nec, suscipit est. Vivamus sed felis magna. Mauris a egestas metus. Nullam in pharetra est, sed tempus
+                    nisl. Suspendisse feugiat iaculis sapien, eu volutpat tellus ultricies ac.</p>
+                    <button class="btn btn-success btn-lg continue-btn btn-block d-none d-md-block">Continue to my|CalPERS</button>
+                </div>
+                <div class="willSlideIn d-none will-change prelogin">
+                    <h2>Pre-Log In</h2>
+                    <hr>
+                    <h3>Select the appropriate type below: (required)</h3>
+                    <div class="prelogin-select">
+                    <input type="radio" id="preLogin1"
+     name="prelogin" value="1" class="radio">
+    <label for="preLogin1"><b>Participant</b><br>You can log in or register as a participant if you are a member, non-member, retiree, community property payee, beneficiary, survivor, or subscriber.
+    </label>
+</div>
+<div class="prelogin-select">
+    <input type="radio" id="preLogin2"
+name="prelogin" value="2" class="radio">
+<label for="preLogin2"><b>Business Partner</b><br>You can log in as a business partner if you are a representative of the State of California, a public agency, school, reciprocal or non-reciprocal retirement system, health carrier, medical vendor group, independent medical examiner, job assessor, direct authorization organization or service provider.
+</label>
+</div>
+<button class="btn btn-success btn-lg continue-oe-button btn-block d-none d-md-block" disabled>Continue</button>
+</div>
+        </div>
+        
+        <div class="col-12 col-lg-6">
+            <img class="selection-svg d-none d-md-block" src="assets/open-enroll.svg"/>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; Copyright 2018 CalPERS | <a href="#">Privacy Policy</a> | <a href="#">Conditions of Use</a> | <a href="#">Accessibility</a> | <a href="#">Contact Us</a> </p>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--Feather icons-->
+<script src="js/feather.min.js"></script>
+
+<script type="text/javascript">
+    feather.replace();
+
+    $('.continue-btn').on('click', function(){
+        $('.willSlideOut').addClass('slideUpOut');
+        $('.willSlideIn').removeClass('d-none');
+        $('.willRemovePadding').addClass('no-padding-top');
+    })
+    $('.begin-cta').on('click', function(){
+        $('.willSlideOut').addClass('slideUpOut');
+        $('.willSlideIn').removeClass('d-none');
+        $('.willRemovePadding').addClass('no-padding-top');
+
+       $('.begin-cta').html(" <button class=\"btn btn-success btn-lg continue-oe-button btn-block\" disabled>Continue</button>");
+    })
+
+    $('.radio').on('click', function() {
+        $('.continue-oe-button').prop("disabled", false); 
+    })
+
+    
+
+
+
+    
+
+</script>
+</body>
+</html>
