@@ -13,6 +13,12 @@
 
 
     <title>Open Enrollment</title>
+
+    <style>
+        .container-fluid.header {
+            padding: 2em 0 0em 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,14 +54,14 @@
 
 <div class="container-fluid">
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div role="table" aria-label="Compare Plans Table" aria-describedby="plans_table_desc">
             <div id="plans_table_desc" class="sr-only">Table Desc</div>
 
             <div class="row compare-container table-header" role="rowgroup">
                 <div class="col-2 single-row-label"></div>
-                <div role="columnheader" data-planID="1" class="col plan-name plan-col _1 data-point">
+                <div role="columnheader" data-planID="1" class="col plan-name plan-col _1 data-point hidden">
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <img class="plan-logo" src="assets/kaiser.png"/>
@@ -69,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div role="columnheader" data-planID="2" class="col plan-name plan-col _2 data-point">
+                <div role="columnheader" data-planID="2" class="col plan-name plan-col _2 data-point hidden">
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <img class="plan-logo" src="assets/blue.png"/>
@@ -83,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div role="columnheader" data-planID="3" class="col plan-name plan-col _3 data-point">
+                <div role="columnheader" data-planID="3" class="col plan-name plan-col _3 data-point hidden">
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <img class="plan-logo" src="assets/healthnet.png"/>
@@ -97,13 +103,27 @@
                         </div>
                     </div>
                 </div>
-                <div role="columnheader" data-planID="4" class="col plan-name plan-col _4 data-point">
+                <div role="columnheader" data-planID="4" class="col plan-name plan-col _4 data-point hidden">
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <img class="plan-logo" src="assets/kaiser.png"/>
+                            <img class="plan-logo" src="assets/united.png"/>
                         </div>
                         <div class="col-12 col-md-6">
-                            <h4>Kaiser Permanente</h4>
+                            <h4>UnitedHealthcare</h4>
+                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="5" class="col plan-name plan-col _5 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/pers.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>PERSChoice</h4>
                             <p>$781/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
                                                                                                 href="#"><i
                                     data-feather="help-circle" width="16" height="16"
@@ -112,7 +132,12 @@
                     </div>
                 </div>
                 <div class="plans-navigation col-12">
-                    <p id="previous">B_AS09MU</p> Showing 1-3 of 10<p id="next">N_A9SYD</p>
+                    <a href="#/" id="previous" class="paginate-plans"><span><i data-feather="chevron-left" width="16" height="16"></i></span></a>
+
+                   <span class="visiblePlansCount"></span>
+                    <a href="#/" id="next" class="paginate-plans"><span><i data-feather="chevron-right" width="16" height="16"></i></span></a>
+
+
                 </div>
 
             </div>
@@ -126,17 +151,19 @@
             <div role="row" class="row compare-container">
 
                 <div role="rowheader" class="col-2 single-row-label">Individual</div>
-                <div role="cell" class="col plan-col _1 data-point">$0</div>
-                <div role="cell" class="col plan-col _2 data-point">$0</div>
-                <div role="cell" class="col plan-col _3 data-point">$10</div>
-                <div role="cell" class="col plan-col _4 data-point">$25</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$10</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$25</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$25</div>
             </div>
             <div role="row" class="row compare-container">
                 <div role="rowheader" class="col-2 single-row-label">Family</div>
-                <div role="cell" class="col plan-col _1 data-point">$0</div>
-                <div role="cell" class="col plan-col _2 data-point">$0</div>
-                <div role="cell" class="col plan-col _3 data-point">$10</div>
-                <div role="cell" class="col plan-col _4 data-point">$25</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$10</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$25</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$25</div>
             </div>
         </span>
                 <span class="section">
@@ -146,17 +173,19 @@
             <div role="row" class="row compare-container">
 
                 <div role="rowheader" class="col-2 single-row-label">Individual</div>
-                <div role="cell" class="col plan-col _1 data-point">$1,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _2 data-point">$1,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _3 data-point">$1,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _4 data-point">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$1,500<br>(co-pay)</div>
             </div>
             <div role="row" class="row compare-container">
                 <div role="rowheader" class="col-2 single-row-label">Family</div>
-                <div role="cell" class="col plan-col _1 data-point">$3,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _2 data-point">$3,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _3 data-point">$3,500<br>(co-pay)</div>
-                <div role="cell" class="col plan-col _4 data-point">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$3,500<br>(co-pay)</div>
+                 <div role="cell" class="col plan-col _5 data-point hidden">$3,500<br>(co-pay)</div>
             </div>
         </span>
                 <span class="section">
@@ -166,24 +195,27 @@
             <div role="row" class="row compare-container">
 
                 <div role="rowheader" class="col-2 single-row-label">Deductible (per admission)</div>
-                <div role="cell" class="col plan-col _1 data-point">$0</div>
-                <div role="cell" class="col plan-col _2 data-point">$0</div>
-                <div role="cell" class="col plan-col _3 data-point">$0</div>
-                <div role="cell" class="col plan-col _4 data-point">$0</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
             </div>
             <div role="row" class="row compare-container">
                 <div role="rowheader" class="col-2 single-row-label">Inpatient</div>
-                <div role="cell" class="col plan-col _1 data-point">$0</div>
-                <div role="cell" class="col plan-col _2 data-point">$0</div>
-                <div role="cell" class="col plan-col _3 data-point">$0</div>
-                <div role="cell" class="col plan-col _4 data-point">$0</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
             </div>
             <div role="row" class="row compare-container">
                     <div role="rowheader" class="col-2 single-row-label">Outpatient Facility/ Surgery Services</div>
-                    <div role="cell" class="col plan-col _1 data-point">$0</div>
-                    <div role="cell" class="col plan-col _2 data-point">$0</div>
-                    <div role="cell" class="col plan-col _3 data-point">$0</div>
-                    <div role="cell" class="col plan-col _4 data-point">$0</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                 <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
                 </div>
         </span>
 
@@ -194,24 +226,27 @@
                 <div role="row" class="row compare-container">
     
                     <div role="rowheader" class="col-2 single-row-label">Emergency Room Deductible</div>
-                    <div role="cell" class="col plan-col _1 data-point">$0</div>
-                    <div role="cell" class="col plan-col _2 data-point">$0</div>
-                    <div role="cell" class="col plan-col _3 data-point">$0</div>
-                    <div role="cell" class="col plan-col _4 data-point">$0</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                     <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
                 </div>
                 <div role="row" class="row compare-container">
                     <div role="rowheader" class="col-2 single-row-label">Emergency (co-pay waived if admitted as an inpatient or for observation as an outpatient)</div>
-                    <div role="cell" class="col plan-col _1 data-point">$50</div>
-                    <div role="cell" class="col plan-col _2 data-point">$50</div>
-                    <div role="cell" class="col plan-col _3 data-point">$50</div>
-                    <div role="cell" class="col plan-col _4 data-point">$50</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _5 data-point hidden">$50</div>
                 </div>
                 <div role="row" class="row compare-container">
                         <div role="rowheader" class="col-2 single-row-label">Non-Emergency (co-pay waived if admitted as an inpatient or for observation as an outpatient)</div>
-                        <div role="cell" class="col plan-col _1 data-point">$0</div>
-                        <div role="cell" class="col plan-col _2 data-point">$0</div>
-                        <div role="cell" class="col plan-col _3 data-point">$0</div>
-                        <div role="cell" class="col plan-col _4 data-point">$0</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                     <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
                     </div>
             </span>
 
@@ -222,78 +257,96 @@
                     <div role="row" class="row compare-container">
         
                         <div role="rowheader" class="col-2 single-row-label">Office Visits (co-pay for each service provided)</div>
-                        <div role="cell" class="col plan-col _1 data-point">$10</div>
-                        <div role="cell" class="col plan-col _2 data-point">$15</div>
-                        <div role="cell" class="col plan-col _3 data-point">$15</div>
-                        <div role="cell" class="col plan-col _4 data-point">$15</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                         <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
                     </div>
                     <div role="row" class="row compare-container">
                         <div role="rowheader" class="col-2 single-row-label">Inpatient Visits</div>
-                        <div role="cell" class="col plan-col _1 data-point">$50</div>
-                        <div role="cell" class="col plan-col _2 data-point">$50</div>
-                        <div role="cell" class="col plan-col _3 data-point">$50</div>
-                        <div role="cell" class="col plan-col _4 data-point">$50</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$50</div>
+                         <div role="cell" class="col plan-col _5 data-point hidden">$50</div>
                     </div>
 
                 </span>
 
 
-                <span style="display: none;" class="section">
+                <span class="section">
                         <div class="row">
                             <div class="section-title">Diagnostic X-Ray/Lab</div>
                         </div>
                         <div role="row" class="row compare-container">
             
                             <div role="rowheader" class="col-2 single-row-label">Diagnostic X-Ray/Lab</div>
-                            <div role="cell" class="col data-point">$10</div>
-                            <div role="cell" class="col data-point">$15</div>
-                            <div role="cell" class="col data-point">$15</div>
+                            <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                            <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                            <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                             <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                             <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
                         </div>
                         
                     </span>
 
 
-                <span style="display: none;" class="section">
+                <span class="section">
                             <div class="row">
                                 <div class="section-title">Prescription Drugs</div>
                             </div>
                             <div role="row" class="row compare-container">
                 
                                 <div role="rowheader" class="col-2 single-row-label">Deductible</div>
-                                <div role="cell" class="col data-point">$10</div>
-                                <div role="cell" class="col data-point">$15</div>
-                                <div role="cell" class="col data-point">$15</div>
+                                <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                                <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
                             </div>
                             <div role="row" class="row compare-container">
                                 <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy (not to exceed 30 day supply)</div>
-                                <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                              
+                                <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                               <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
                             </div>
                             <div role="row" class="row compare-container">
                                     <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Long-Term Prescription Medications filled after 2nd fill (i.e. 90 day supply)</div>
-                                    <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                    <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                    <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                 <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                 <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                 </div>
                             <div role="row" class="row compare-container">
                                     <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Maintenance Medications filled after 2nd fill (i.e. a medication taken longer than 60 days) (not to exceed 30 day supply)</div>
-                                    <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                 </div>
                                 <div role="row" class="row compare-container">
                                         <div role="rowheader" class="col-2 single-row-label">Mail Order Pharmacy Program (not to exceed 90 day supply for maintenance drugs)</div>
-                                        <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                        <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
-                                        <div role="cell" class="col data-point"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                        <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                        <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                        <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                      <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
+                                       <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
                                     </div>
                                     <div role="row" class="row compare-container">
                                             <div role="rowheader" class="col-2 single-row-label">Mail order maximum co-payment per person per calendar year</div>
-                                            <div role="cell" class="col data-point">$1,000</div>
-                                            <div role="cell" class="col data-point">$1,000</div>
-                                            <div role="cell" class="col data-point">$1,000</div>
+                                            <div role="cell" class="col plan-col _1 data-point hidden">$1,000</div>
+                                            <div role="cell" class="col plan-col _2 data-point hidden">$1,000</div>
+                                            <div role="cell" class="col plan-col _3 data-point hidden">$1,000</div>
+                                        <div role="cell" class="col plan-col _4 data-point hidden">$1,000</div>
+                                        <div role="cell" class="col plan-col _5 data-point hidden">$1,000</div>
                                         </div>
                         </span>
 
@@ -313,20 +366,24 @@
 <script src="js/feather.min.js"></script>
 
 <script type="text/javascript">
+
+
     feather.replace();
 
-    var distance = $('.table-header').offset().top,
-            $window = $(window);
 
-    $window.scroll(function () {
-        if ($window.scrollTop() >= distance) {
-            $('.table-header').addClass('fixed');
+    var header = $(".table-header");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        console.log(scroll);
+        if (scroll >= 205) {
+            header.addClass("fixed");
         }
-        if ($window.scrollTop() < distance) {
-            $('.table-header').removeClass('fixed');
+        if (scroll <= 200) {
+            header.removeClass("fixed");
         }
+
     });
-
     var totalNumberOfPlans = $('.plan-name').filter(".plan-name").length;
 
     console.log("Total Plans: " + totalNumberOfPlans);
@@ -365,11 +422,7 @@
     });
 
 
-    function updatePlans() {
-
-    }
-
-
+    updateCount();
     function movePlans(direction) {
         var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");
         var currentLastActive = $('.plan-name').filter(".current:last").attr("data-planID");
@@ -405,6 +458,14 @@
             $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').removeClass('hidden');
             $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').addClass('current');
         }
+        updateCount();
+    }
+
+
+    function updateCount() {
+        var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");
+        var indexOfFirstActive = plans.allPlanID.indexOf(currentFirstActive);
+        $('.visiblePlansCount').html("<p>Showing " + (indexOfFirstActive + 1) + "-" + (indexOfFirstActive + 3) + " of " + totalNumberOfPlans + "</p>");
     }
 
 
@@ -420,15 +481,9 @@
     });
 
 
-    document.addEventListener('swiped-left', function(e) {
-        movePlans("next");
-    });
-    document.addEventListener('swiped-right', function(e) {
-        movePlans("previous");
-    });
-    document.addEventListener('swiped-up', function(e) {
-       alert("You swiped up!!!");
-    });
+
+
+
 </script>
 </body>
 </html>
