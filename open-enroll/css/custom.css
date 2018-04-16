@@ -10,7 +10,7 @@ Global Styles
 /*PRIMARY COLOR USED EVERYWHERE::: #43467F */
 body {
     background: #f9f9f9;
-    font-family: Proxima Nova, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 p {
@@ -335,8 +335,52 @@ a {
         padding: 1em;
     }
 }
+@media (min-width: 767px) {
+    .login .myCalPERS-logo {
+        font-size: 1.5em;
+        padding: 0 1.25em;
+        margin-bottom: -1em;
+        padding-top: 1em;
+    }
+}
 
 @media (max-width: 767px) {
+    body.login {
+        background: #fff;
+    }
+    .login-area .card {
+        box-shadow: none;
+    }
+
+    ._logo-area {
+        background: #335d87;
+        text-align: center;
+        padding: 2em 1em;
+        color: white;
+    }
+    .login-area .card-header {
+        text-align: center;
+    }
+    .login-title {
+        font-weight: 700;
+        margin-bottom: 0;
+        font-size: 1.8em;
+    }
+    .login .footer {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        background: #f9f9f9;
+        width: 100%;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    ._logo-area h1 {
+        color: white;
+        font-size: 2em!important;
+        font-weight:500;
+    }
+
     body.splash {
         padding-bottom: 80px;
     }
@@ -890,6 +934,7 @@ span.visiblePlansCount {
 /* --------------------------------
 Login Page
 -------------------------------- */
+
 .login .top-area {
     background: #fff;
     padding: 1.5em 0em 3em 0em;
@@ -1445,3 +1490,26 @@ a.btn.btn-primary.btn-lg.btn-block.compare-button {
     padding-top: 2em;
     padding-bottom:1em;
 }
+
+.slidein-notify {
+    position: absolute;
+    left:50%;
+
+}
+.slidein-notify .quick-notify-alert {
+    margin: 0;
+    position: relative;
+    left:-50%;
+    background: #4CAF50;
+    z-index: 1;
+    border: 2px solid #4CAF50;
+    color: #ffffff;
+    padding: .15em .75em;
+    text-align: center;
+    display: inline-block;
+    animation: slideInNotify 2s ease-in-out 0s 1;
+    animation-fill-mode: both;
+    box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
+}
+
+
