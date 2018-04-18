@@ -8,6 +8,12 @@ Global Styles
 -------------------------------- */
 
 /*PRIMARY COLOR USED EVERYWHERE::: #43467F */
+
+html {
+    overflow-y: scroll;
+}
+
+
 body {
     background: #f9f9f9;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -342,6 +348,7 @@ a {
         margin-bottom: -1em;
         padding-top: 1em;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -1093,7 +1100,7 @@ img {
 .security-check .heading {
     display: flex;
     align-items: center;
-    padding-bottom: .25em;
+    padding-bottom: 1em;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 1.25em;
 }
@@ -1106,7 +1113,6 @@ img {
 }
 .security-check h3 {
     font-size: 1em;
-    display: flex;
 
 }
 .security-message {
@@ -1116,6 +1122,7 @@ img {
 }
 .row.security-img-message a {
     font-size: .8em;
+    display: block;
 }
 .security-img-message {
     display: flex;
@@ -1128,6 +1135,12 @@ img {
     }
     .login-area .card {
         margin-top: 0;
+    }
+    body {
+        font-size:.9em;
+    }
+    label.float-label {
+        line-height: 3.76em;
     }
 }
 
@@ -1513,3 +1526,116 @@ a.btn.btn-primary.btn-lg.btn-block.compare-button {
 }
 
 
+
+
+.contact-us-section {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background: #fbfbfb;
+    height: 100%;
+    width: 100%;
+    display: none;
+    animation: slideOverlayDown .4s cubic-bezier(0.79, 0.01, 0.31, 0.99);
+    animation-fill-mode: forwards;
+
+}
+
+.contact-us-section.open {
+    display: block;
+    animation: slideOverlayUp .4s cubic-bezier(0.79, 0.01, 0.31, 0.99);
+    animation-fill-mode: both;
+
+}
+
+.contact-us-section .header {
+    background: #fff;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
+}
+
+.contact-us-section .header .btn {
+    position: absolute;
+    right: 20px;
+}
+
+.contact-us-section .header .title {
+    font-size: 1.35em;
+    font-weight: 600;
+    text-align: center;
+}
+p.privacy-acknowledgement {
+    max-width: 100%;
+    text-align: center;
+    padding: 1em 2em;
+    font-size: .8em;
+    color: #585858;
+}
+
+@keyframes slideOverlayUp {
+    0% {
+        transform: translate(0, 100vh);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes slideOverlayDown {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(0, 100vh);
+
+    }
+}
+
+.bottom-nav {
+    background-color: #fff;
+    border: 0;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 10;
+    border-top: 1px solid #e6e6e6;
+}
+
+
+.bottom-nav .nav-container {
+    height: 100%;
+}
+.bottom-nav .nav-container .items-row {
+    height: 100%;
+}
+.bottom-nav  .col.nav-item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+nav.bottom-nav .icon {
+    font-size: 20px;
+    text-align: center;
+    height:26px;
+}
+.bottom-nav a {
+    text-align: center;
+    color: #717171;
+    font-size: 10px;
+    text-decoration: none;
+
+}
+.bottom-nav  .nav-item.active a {
+    color: #335d87;
+    font-weight: 600;
+}

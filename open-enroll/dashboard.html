@@ -8,10 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
-
+<style>
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        background-color: #ffffff !important;
+        box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
+        position: relative;
+        z-index:1;
+    }
+    .secondary-nav {
+        display: none;
+    }
+</style>
     <title>Open Enrollment Login</title>
 </head>
 <body class="dashboard D_9ISds_xa">
@@ -62,6 +73,12 @@
 <div class="container main-page-container">
     <div class="row justify-content-center">
         <div class="col-12 padding-0">
+
+            <div class="page-main-head">
+            <h1>Welcome back, David</h1>
+            </div>
+
+
             <div class="card">
                 <!--<div class="card-header">-->
                     <!--<img class="dash-compare-plans-svg" src="assets/open-enroll.svg">-->
@@ -73,9 +90,7 @@
                 <div class="card-header">
                     <div class="row align-items-center text-align-left">
                         <div class="col-12 col-md-6">
-                            <h1 class="title">Open Enrollment Plan & Compare</h1>
-                            <p class="header-p-padding">Open Enrollment begins September 15, 2018 and ends October 15, 2018</p>
-                            <a class="btn btn-primary" href="confirm-info.html" role="button">Explore 2019 Plan Options</a>
+
 
                         </div>
                         <div class="col-12 col-md-6">
@@ -86,7 +101,41 @@
 
                 </div>
 
+                <div class="card">
+                    <div class="card-header">
+                        Open Enrollment Plan & Compare
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <h3>Medical Plan</h3>
+                                <p>Kaiser Permanente</p>
+                                <a href="#/">View Details</a>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <h3>Coverage Type</h3>
+                                <p>You only (Basic)</p>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <h3>Enrolled Since</h3>
+                                <p>11/01/2017</p>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <h3>Premium</h3>
+                                <p>$717.38</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="card-body C_M1Sdh98 health-summary">
+
+                    <h1 class="title">Open Enrollment Plan & Compare</h1>
+                    <p class="header-p-padding">Open Enrollment begins September 15, 2018 and ends October 15, 2018</p>
+                    <a class="btn btn-primary" href="confirm-info.html" role="button">Explore 2019 Plan Options</a>
+
+
+
                     <h2>Health Plan Summary</h2>
                     <div class="row">
                         <div class="col-12 col-md-3">
@@ -163,12 +212,51 @@
 
 </div>
 
-
+<nav role="navigation" class="bottom-nav">
+    <div class="nav-container">
+<div class="row items-row">
+    <div class="col nav-item active">
+        <a href="#">
+            <div class="icon">
+                <i class="fas fa-home"></i>
+            </div>
+            Home
+        </a>
+    </div>
+    <div class="col nav-item">
+        <a href="#">
+            <div class="icon">
+                <i class="fas fa-th-large"></i>
+            </div>
+            Compare Plans
+        </a>
+    </div>
+    <div class="col nav-item">
+        <a href="#">
+            <div class="icon">
+                <i class="fas fa-bookmark"></i>
+            </div>
+            Saved
+        </a>
+    </div>
+    <div class="col nav-item">
+        <a href="#">
+            <div class="icon">
+                <i class="fas fa-user"></i>
+            </div>
+            Account
+        </a>
+    </div>
+</div>
+    </div>
+</nav>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+
 
 <!--Feather icons-->
 <script src="js/feather.min.js"></script>
