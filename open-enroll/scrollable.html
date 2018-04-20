@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>Open Enrollment</title>
+
+
+    <style>
+        .content {
+            flex: 1;
+            display: flex;
+            overflow: auto;
+        }
+
+        .box {
+            min-height: min-content; /* needs vendor prefixes */
+            display: flex;
+        }
+
+        .single-row-label {
+            position: sticky;
+            z-index: 1;
+            padding: 1em;
+            left: 0;
+            background: #f9f9f9;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container-fluid" style="padding:0;">
+
+    <div class="container-fluid"  style="padding:0;">
+
+        <div role="table" aria-label="Compare Plans Table" aria-describedby="plans_table_desc">
+            <div id="plans_table_desc" class="sr-only">Table Desc</div>
+<div class="over-wrapper">
+            <div class="d-flex flex-row compare-container table-header" role="rowgroup">
+                <div class="col-3 single-row-label"></div>
+                <div role="columnheader" data-planID="1" class="col-3 plan-name plan-col _1 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/kaiser.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Kaiser Permanente</h4>
+                            <p>$524/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="2" class="col-3 plan-name plan-col _2 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/blue.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Blue Shield Access+</h4>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                           <div class="row">
+                               <div class="col-6">
+                                   <i class="fas fa-thumbtack"></i>
+                               </div>
+                               <div class="col-6">
+                                   <i class="fas fa-times"></i>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="3" class="col-3 plan-name plan-col _3 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/healthnet.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Health Net SmartCare</h4>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="4" class="col-3 plan-name plan-col _4 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/united.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>UnitedHealthcare</h4>
+                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="2" class="col-3 plan-name plan-col _2 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/blue.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Blue Shield Access+</h4>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="2" class="col-3 plan-name plan-col _2 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/blue.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Blue Shield Access+</h4>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="2" class="col-3 plan-name plan-col _2 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/blue.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Blue Shield Access+</h4>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="5" class="col-3 plan-name plan-col _5 data-point">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/pers.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>PERSChoice</h4>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div> <div class="options col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <i class="fas fa-thumbtack"></i>
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div>
+</div>
+            <div class="plans-navigation col-12">
+                <a href="#/" id="previous" class="paginate-plans"><span><i data-feather="chevron-left" width="16" height="16"></i></span></a>
+
+                <span class="visiblePlansCount"></span>
+                <a href="#/" id="next" class="paginate-plans"><span><i data-feather="chevron-right" width="16" height="16"></i></span></a>
+
+
+            </div>
+
+            <div role="rowgroup">
+            <span class="section">
+            <div class="row">
+            <div class="section-title">Calendar Year Deductible</div>
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+
+                <div role="rowheader" class="col-3 single-row-label">Individual</div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$10</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$25</div>
+                <div role="cell" class="col-3 plan-col _5 data-point">$25</div>
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+                <div role="rowheader" class="col-3 single-row-label">Family</div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$10</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$25</div>
+                <div role="cell" class="col-3 plan-col _5 data-point">$25</div>
+            </div>
+        </span>
+                <span class="section">
+            <div class="row">
+                <div class="section-title">Maximum Calendar Year Co-pay or Co-insurance<span class="section-desc">(excluding Pharmacy)</span></div>
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+
+                <div role="rowheader" class="col-3 single-row-label">Individual</div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _5 data-point">$1,500<br>(co-pay)</div>
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+                <div role="rowheader" class="col-3 single-row-label">Family</div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$3,500<br>(co-pay)</div>
+                 <div role="cell" class="col-3 plan-col _5 data-point">$3,500<br>(co-pay)</div>
+            </div>
+        </span>
+                <span class="section">
+            <div class="row">
+                <div class="section-title">Hospital<span class="section-desc">(including Mental Health and Substance Abuse)</span></div>
+
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+
+                <div role="rowheader" class="col-3 single-row-label">Deductible<span class="section-desc">(per admission)</span></div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _5 data-point">$0</div>
+            </div>
+            <div role="row" class="d-flex flex-row compare-container">
+                <div role="rowheader" class="col-3 single-row-label">Inpatient</div>
+                <div role="cell" class="col-3 plan-col _1 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _2 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _3 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _4 data-point">$0</div>
+                <div role="cell" class="col-3 plan-col _5 data-point">$0</div>
+            </div>
+
+        </span>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="box">
+        <div class="column">Column 1</div>
+        <div class="column">Column 1</div>
+        <div class="column">Column 1</div>
+    </div>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--Feather icons-->
+<script src="js/feather.min.js"></script>
+
+<!--<script type="text/javascript">-->
+
+
+    <!--feather.replace();-->
+
+
+    <!--var header = $(".table-header");-->
+    <!--$(window).scroll(function() {-->
+        <!--var scroll = $(window).scrollTop();-->
+
+        <!--console.log(scroll);-->
+        <!--if (scroll >= 220) {-->
+            <!--header.addClass("fixed");-->
+        <!--}-->
+<!--//        if (scroll <= 250) {-->
+<!--//            header.removeClass("fixed");-->
+<!--//        }-->
+
+    <!--});-->
+    <!--var totalNumberOfPlans = $('.plan-name').filter(".plan-name").length;-->
+
+    <!--console.log("Total Plans: " + totalNumberOfPlans);-->
+
+
+    <!--var plans = {-->
+        <!--allPlanID: []-->
+        <!--, activePlans: []-->
+    <!--}-->
+
+    <!--$('.plan-name').each(function () {-->
+        <!--plans.allPlanID.push($(this).attr("data-planid"));-->
+        <!--plans.activePlans = plans.allPlanID.slice(0, 3);-->
+    <!--});-->
+
+    <!--plans.activePlans.map(function (val) {-->
+        <!--$('*[data-planid=' + val + ']').addClass('current');-->
+        <!--$('*[data-planid=' + val + ']').removeClass('hidden');-->
+        <!--$('._' + val).addClass('current');-->
+        <!--$('._' + val).removeClass('hidden');-->
+    <!--});-->
+
+    <!--// get total count of plans-->
+    <!--$('.totalPlansCount').text(totalNumberOfPlans);-->
+
+    <!--//add class current to first 3 plans-->
+    <!--$('.plan-name').slice(0, 3).addClass('current');-->
+    <!--$('.plan-name').slice(0, 3).removeClass('hidden');-->
+
+    <!--$('#next').on('click', function () {-->
+        <!--movePlans("next");-->
+    <!--});-->
+
+    <!--$('#previous').on('click', function () {-->
+        <!--movePlans("previous");-->
+    <!--});-->
+
+
+    <!--updateCount();-->
+    <!--function movePlans(direction) {-->
+        <!--var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");-->
+        <!--var currentLastActive = $('.plan-name').filter(".current:last").attr("data-planID");-->
+
+        <!--//to be allowed to DOM-->
+        <!--var indexOfLastActive = plans.allPlanID.indexOf(currentLastActive);-->
+        <!--if (direction == "next") {-->
+            <!--indexOfLastActive++;-->
+        <!--}-->
+        <!--var nextDataID = plans.allPlanID[indexOfLastActive];-->
+
+        <!--//to be from DOM-->
+        <!--var indexOfFirstActive = plans.allPlanID.indexOf(currentFirstActive);-->
+        <!--if (direction == "previous") {-->
+            <!--indexOfFirstActive&#45;&#45;;-->
+        <!--}-->
+        <!--var firstDataID = plans.allPlanID[indexOfFirstActive];-->
+
+        <!--if (direction == "next") {-->
+            <!--//add class current to next available item-->
+            <!--$('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').addClass('current');-->
+            <!--$('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').removeClass('hidden');-->
+
+            <!--//remove first item-->
+            <!--$('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').addClass('hidden');-->
+            <!--$('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').removeClass('current');-->
+
+        <!--}-->
+        <!--if (direction == "previous") {-->
+            <!--$('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').removeClass('current');-->
+            <!--$('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').addClass('hidden');-->
+
+            <!--$('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').removeClass('hidden');-->
+            <!--$('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').addClass('current');-->
+        <!--}-->
+        <!--updateCount();-->
+    <!--}-->
+
+
+    <!--function updateCount() {-->
+        <!--var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");-->
+        <!--var indexOfFirstActive = plans.allPlanID.indexOf(currentFirstActive);-->
+        <!--$('.visiblePlansCount').html("<p>Showing " + (indexOfFirstActive + 1) + "-" + (indexOfFirstActive + 3) + " of " + totalNumberOfPlans + "</p>");-->
+    <!--}-->
+
+
+    <!--window.addEventListener('keydown', function (e) {-->
+        <!--// go to the right-->
+        <!--if (e.keyCode == 39) {-->
+            <!--movePlans("next");-->
+        <!--}-->
+        <!--// go to the left-->
+        <!--if (e.keyCode == 37) {-->
+            <!--movePlans("previous");-->
+        <!--}-->
+    <!--});-->
+
+
+
+
+
+<!--</script>-->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+</body>
+</html>
