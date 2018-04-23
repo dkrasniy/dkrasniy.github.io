@@ -14,47 +14,98 @@
 
     <title>Open Enrollment</title>
 
-    <style>
-        .container-fluid.header {
-            padding: 2em 0 0em 0;
-        }
-    </style>
+
 </head>
 <body>
 
-<div class="container-fluid header">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
+        <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ml-auto justify-content-end">
 
-        <h1 class="myCalPERS-logo"><strong>my</strong>|CalPERS</h1>
-        <h2>Compare Medical Plan Options</h2>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CalPERS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        David Krasniy
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
     </div>
 
+</nav>
+<div class="secondary-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link active" href="dashboard.html"><span class="tab-item">Health Plan Summary</span></a>
+            <a class="nav-link" href="confirm-info.html"><span class="tab-item">Find a Medical Plan</span></a>
+
+        </nav>
+    </div>
+</div>
+<div class="save-compare">
+    <div class="col-12 col-md-5 back-save-compare">
+                <span>
+                    <button type="button" class="btn btn-dark">Back to Search Results</button>
+                    <button type="button" class="btn btn-success">Save Comparison</button>
+
+
+                </span>
+    </div>
+</div>
+<div class="container-fluid header">
     <div class="critea-filter-options-details">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-7"><p class="search-criteria-text"><span class="totalPlansCount"></span> Plans
-                    Found - Results Based On:</p>
-                    <b>ZIP Code:</b> 95843
-                    <b>Plan Year:</b> 2018
-                    <b>Member Type:</b> State or CSU
-                    <b>Coverage Type:</b> You only (Basic)
-                </div>
-                <div class="col-12 col-md-5 back-save-compare">
-                <span>
-                    <button type="button" class="btn btn-link">Back to Search Results</button>
-                <button type="button" class="btn btn-success">Save Comparison</button>
+                <div class="col-12 col-md-7"><p class="search-criteria-text">Compare Plans</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>95843<span class="search-label">ZIP Code</span></p>
+                        </div>
+                        <div class="col-6">
+                            <p>2018<span class="search-label">Plan Year</span></p>
+                        </div>
+                        <div class="col-6">
+                            <p>State or CSU<span class="search-label">Member Type</span></p>
+                        </div>
+                        <div class="col-6">
+                            <p>You only (Basic)<span class="search-label">Coverage Type</span></p>
+                        </div>
+                    </div>
 
-                </span>
+
+
+
+
                 </div>
+
             </div>
         </div>
     </div>
 
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding:0;">
 
-    <div class="container-fluid">
+    <div class="container-fluid"  style="padding:0;">
 
         <div role="table" aria-label="Compare Plans Table" aria-describedby="plans_table_desc">
             <div id="plans_table_desc" class="sr-only">Table Desc</div>
@@ -68,10 +119,17 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4>Kaiser Permanente</h4>
-                            <p>$524/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
-                                                                                                href="#"><i
-                                    data-feather="help-circle" width="16" height="16"
-                                    class="menu-dropdown-icons"></i></a></span></p>
+                            <p>$524/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,10 +140,17 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4>Blue Shield Access+</h4>
-                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
-                                                                                                href="#"><i
-                                    data-feather="help-circle" width="16" height="16"
-                                    class="menu-dropdown-icons"></i></a></span></p>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                           <div class="row">
+                               <div class="col-6">
+                                   <i class="fas fa-thumbtack"></i>
+                               </div>
+                               <div class="col-6">
+                                   <i class="fas fa-times"></i>
+                               </div>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -96,10 +161,17 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4>Health Net SmartCare</h4>
-                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
-                                                                                                href="#"><i
-                                    data-feather="help-circle" width="16" height="16"
-                                    class="menu-dropdown-icons"></i></a></span></p>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,10 +182,17 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4>UnitedHealthcare</h4>
-                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
-                                                                                                href="#"><i
-                                    data-feather="help-circle" width="16" height="16"
-                                    class="menu-dropdown-icons"></i></a></span></p>
+                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div>
+                        <div class="options col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <i class="fas fa-thumbtack"></i>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,11 +203,17 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <h4>PERSChoice</h4>
-                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
-                                                                                                href="#"><i
-                                    data-feather="help-circle" width="16" height="16"
-                                    class="menu-dropdown-icons"></i></a></span></p>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                        </div> <div class="options col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <i class="fas fa-thumbtack"></i>
+                            </div>
+                            <div class="col-6">
+                                <i class="fas fa-times"></i>
+                            </div>
                         </div>
+                    </div>
                     </div>
                 </div>
                 <div class="plans-navigation col-12">
@@ -168,7 +253,7 @@
         </span>
                 <span class="section">
             <div class="row">
-                <div class="section-title">Maximum Calendar Year Co-pay or Co-insurance (excluding Pharmacy)</div>
+                <div class="section-title">Maximum Calendar Year Co-pay or Co-insurance<span class="section-desc">(excluding Pharmacy)</span></div>
             </div>
             <div role="row" class="row compare-container">
 
@@ -190,11 +275,12 @@
         </span>
                 <span class="section">
             <div class="row">
-                <div class="section-title">Hospital (including Mental Health and Substance Abuse)</div>
+                <div class="section-title">Hospital<span class="section-desc">(including Mental Health and Substance Abuse)</span></div>
+
             </div>
             <div role="row" class="row compare-container">
 
-                <div role="rowheader" class="col-2 single-row-label">Deductible (per admission)</div>
+                <div role="rowheader" class="col-2 single-row-label">Deductible<span class="section-desc">(per admission)</span></div>
                 <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
                 <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
                 <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
@@ -252,7 +338,7 @@
 
                 <span class="section">
                     <div class="row">
-                        <div class="section-title"> Physician Services (including Mental Health and Substance Abuse)                            </div>
+                        <div class="section-title"> Physician Services<span class="section-desc">(including Mental Health and Substance Abuse)</span>                         </div>
                     </div>
                     <div role="row" class="row compare-container">
         
@@ -315,7 +401,7 @@
 
                             </div>
                             <div role="row" class="row compare-container">
-                                    <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Long-Term Prescription Medications filled after 2nd fill (i.e. 90 day supply)</div>
+                                <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Long-Term Prescription Medications filled after 2nd fill<span class="section-desc">(i.e. 90 day supply)</span></div>
                                     <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                     <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                     <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
@@ -323,7 +409,7 @@
                                  <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                 </div>
                             <div role="row" class="row compare-container">
-                                    <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Maintenance Medications filled after 2nd fill (i.e. a medication taken longer than 60 days) (not to exceed 30 day supply)</div>
+                                <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Maintenance Medications filled after 2nd fill<span class="section-desc">(i.e. a medication taken longer than 60 days) (not to exceed 30 day supply)</span></div>
                                     <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                 <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
                                 <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
@@ -376,12 +462,12 @@
         var scroll = $(window).scrollTop();
 
         console.log(scroll);
-        if (scroll >= 205) {
+        if (scroll >= 220) {
             header.addClass("fixed");
         }
-        if (scroll <= 200) {
-            header.removeClass("fixed");
-        }
+//        if (scroll <= 250) {
+//            header.removeClass("fixed");
+//        }
 
     });
     var totalNumberOfPlans = $('.plan-name').filter(".plan-name").length;
@@ -485,5 +571,6 @@
 
 
 </script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </body>
 </html>

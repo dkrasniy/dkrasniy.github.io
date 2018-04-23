@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>Open Enrollment Login</title>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+    </style>
+</head>
+<body class="login">
+
+<div class="container form-container">
+    <div class="row">
+        <div class="col-xl-6 col-lg-8 col-md-9 col-12 login-area">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="myCalPERS-logo"><strong>my</strong>|CalPERS</h1>
+                    <h2 class="login-title">Open Enrollment</h2>
+                    <p>Please sign in to continue</p>
+                </div>
+                <div class="card-body">
+                    <form class="form-signin float-labels">
+                        <label for="loginUsername" class="float-label">Username</label>
+                        <input type="text" class="form-control" id="loginUsername">
+                        <a class="btn btn-lg btn-primary btn-block" href="password.html" role="button">Continue</a>
+
+                    </form>
+
+
+                </div>
+                <div class="card-more-info"><h4>New to my|CalPERS? Register now.</h4>
+                    <p>For your security, we recommend that you log out when you're done, and close all of your browser
+                        windows.</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p></b><a href="#">Privacy Policy</a> | <a href="#">Conditions of Use</a> | <a href="#">Accessibility</a>
+                    | <a href="#">Contact Us</a></p>&copy; Copyright 2018 CalPERS
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--Feather icons-->
+<script src="js/feather.min.js"></script>
+
+<script type="text/javascript">
+    feather.replace();
+    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
+        if (!this.value) {
+            $(this).removeClass('float-true');
+            $(this).prev().removeClass('float-true');
+        }
+        if (this.value) {
+            $(this).addClass('float-true');
+            $(this).prev().addClass('float-true');
+        }
+    });
+</script>
+</body>
+</html>

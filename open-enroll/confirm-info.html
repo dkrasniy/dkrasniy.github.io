@@ -14,7 +14,11 @@
 
     <title>Open Enrollment Login</title>
 </head>
+
 <body class="dashboard compare-proccess">
+
+
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -83,6 +87,7 @@
                 </div>
 
                 <div class="card-body C_M1Sdh98 confirm-your-info">
+
                     <h2>Confirm Your Information</h2>
                     <img class="user d-none d-md-block" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZGlzYWJsZWQtLWludmVydGVkPC90aXRsZT48ZyBmaWxsPSIjQUFCN0M0IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbC1vcGFjaXR5PSIuMiIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIi8+PHBhdGggZD0iTTEwIDIwYTkuOTY0IDkuOTY0IDAgMCAxLTcuMjUtMy4xMjVjMS4wNjMtMS45NSAzLjMwNi0zLjI2MiA3LjI1LTMuMjYyczYuMTg4IDEuMzEyIDcuMjUgMy4yNjJBOS45NjUgOS45NjUgMCAwIDEgMTAgMjB6bS4wMDQtMTYuMjMxbC4wMDEtLjAwMmMyLjA3NyAwIDMuNzU5IDEuNTA3IDMuNzU5IDMuOTU3cy0xLjY4MyAzLjk2Mi0zLjc2IDMuOTYyYy0yLjA3NiAwLTMuNzYtMS41MDgtMy43Ni0zLjk1OHMxLjY4NS0zLjk2IDMuNzYtMy45NnoiLz48L2c+PC9zdmc+">
                     <div class="row">
@@ -113,11 +118,6 @@
                     <a class="btn btn-primary btn-block" href="plan-types.html" role="button">Next <i data-feather="arrow-right" width="16" height="16"></i></a>
                 </div>
 
-            </div>
-            <div class="footer">
-                <p></b><a href="#">Privacy Policy</a> | <a href="#">Conditions of Use</a> | <a
-                        href="#">Accessibility</a>
-                    | <a href="#">Contact Us</a></p>&copy; Copyright 2018 CalPERS
             </div>
 
         </div>
@@ -169,18 +169,7 @@
 <!--Feather icons-->
 <script src="js/feather.min.js"></script>
 
-<script type="text/javascript">
-    feather.replace();
-    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
-        if (!this.value) {
-            $(this).removeClass('float-true');
-            $(this).prev().removeClass('float-true');
-        }
-        if (this.value) {
-            $(this).addClass('float-true');
-            $(this).prev().addClass('float-true');
-        }
-    });
-</script>
+<script src="js/custom.js"></script>
+
 </body>
 </html>

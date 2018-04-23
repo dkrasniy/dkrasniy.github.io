@@ -1590,6 +1590,16 @@
 
     });
 
+    window.addEventListener('keydown', function (e) {
+        // go to the right
+        if (e.keyCode == 39) {
+            swipeLeft();
+        }
+        // go to the left
+        if (e.keyCode == 37) {
+            swipeRight();
+        }
+    });
 
 
 

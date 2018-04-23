@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+            background-color: #ffffff !important;
+            box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .secondary-nav {
+            display: none;
+        }
+    </style>
+    <title>Open Enrollment Login</title>
+</head>
+<body class="dashboard D_9ISds_xa">
+
+<div class="scrolling-plans">
+    <div class="d-flex flex-row scroll-this">
+        <div class="col-3">
+           <img src="assets/kaiser.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/blue.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/healthnet.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/pers.png">
+        </div>
+        <div class="col-3">
+           <img src="assets/kaiser.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/blue.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/healthnet.png">
+        </div>
+        <div class="col-3">
+            <img src="assets/pers.png">
+        </div>
+
+    </div>
+
+    <div class="d-flex flex-row scroll-this">
+
+    <div class="col-3">
+        <img src="assets/pers.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/kaiser.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/united.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/healthnet.png">
+    </div>
+
+    <div class="col-3">
+        <img src="assets/blue.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/pers.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/kaiser.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/united.png">
+    </div>
+    <div class="col-3">
+        <img src="assets/healthnet.png">
+    </div>
+
+    <div class="col-3">
+        <img src="assets/blue.png">
+    </div>
+
+</div>
+
+</div>
+
+
+<nav role="navigation" class="bottom-nav">
+    <div class="nav-container">
+        <div class="row items-row">
+            <div class="col nav-item active">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="menu-item-name">Home</span>
+                </a>
+            </div>
+
+            <div class="col nav-item">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <span class="menu-item-name">Saved</span>
+                </a>
+            </div>
+            <div class="col nav-item">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="menu-item-name">Account</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+
+
+<!--Feather icons-->
+<script src="js/feather.min.js"></script>
+
+<script type="text/javascript">
+    feather.replace();
+    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
+        if (!this.value) {
+            $(this).removeClass('float-true');
+            $(this).prev().removeClass('float-true');
+        }
+        if (this.value) {
+            $(this).addClass('float-true');
+            $(this).prev().addClass('float-true');
+        }
+    });
+</script>
+</body>
+</html>

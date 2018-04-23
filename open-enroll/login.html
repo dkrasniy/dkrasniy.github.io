@@ -13,12 +13,7 @@
 
 
     <title>Open Enrollment Login</title>
-    <style>
-        html {
-            overflow-y: scroll;
-        }
 
-    </style>
 </head>
 <body class="login">
 
@@ -40,6 +35,7 @@
                         <a class="btn btn-lg btn-primary btn-block" href="password.html" role="button">Continue</a>
 
                     </form>
+                    <p class="privacy-acknowledgement">By signing in, you agree to our <a href="">Terms & Conditions</a> and <a href="#">Privacy Statement</a>.</p>
                 </div>
 
             </div>
@@ -52,7 +48,30 @@
 
 
 </div>
-<div class="footer">Contact Us</div>
+<div class="footer"><a href="#contactInfo">Contact Us</a></div>
+
+<div class="contact-us-section">
+   <div class="header">
+       <div class="title">
+           Contact Us
+       </div>
+       <button type="button" id="closeModal" class="btn btn-link">Done</button>
+   </div>
+    <div class="content">
+        <div class="container">
+
+
+            <p><strong>Hours:</strong> Monday - Friday, 8:00 a.m. to <span class="text-nowrap">5:00 p.m.</span><br>
+                We're closed on state holidays.</p>
+
+            <p><strong>Phone: 888 CalPERS</strong> (or <strong>888</strong>-225-7377)<br>
+                <strong>TTY:</strong> (877) 249-7442<br>
+                <strong>Fax:</strong> (800) 959-6545<br>
+                <strong>International Calls:</strong> +1 916-795-3000</p>
+        </div>
+
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -62,19 +81,6 @@
 
 <!--Feather icons-->
 <script src="js/feather.min.js"></script>
-
-<script type="text/javascript">
-    feather.replace();
-    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
-        if (!this.value) {
-            $(this).removeClass('float-true');
-            $(this).prev().removeClass('float-true');
-        }
-        if (this.value) {
-            $(this).addClass('float-true');
-            $(this).prev().addClass('float-true');
-        }
-    });
-</script>
+<script src="js/custom.js"></script>
 </body>
 </html>

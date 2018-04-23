@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>Open Enrollment</title>
+
+    <style>
+        .container-fluid.header {
+            padding: 2em 0 0em 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ml-auto justify-content-end">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CalPERS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        David Krasniy
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<div class="secondary-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link active" href="dashboard.html"><span class="tab-item">Health Plan Summary</span></a>
+            <a class="nav-link" href="confirm-info.html"><span class="tab-item">Find a Medical Plan</span></a>
+
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid header">
+    <h2>Compare Medical Plan Options</h2>
+    <div class="critea-filter-options-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7"><p class="search-criteria-text"><span class="totalPlansCount"></span> Plans
+                    Found - Results Based On:</p>
+                    <b>ZIP Code:</b> 95843
+                    <b>Plan Year:</b> 2018
+                    <b>Member Type:</b> State or CSU
+                    <b>Coverage Type:</b> You only (Basic)
+                </div>
+                <div class="col-12 col-md-5 back-save-compare">
+                <span>
+                    <button type="button" class="btn btn-link">Back to Search Results</button>
+                <button type="button" class="btn btn-success">Save Comparison</button>
+
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="container-fluid">
+
+        <div role="table" aria-label="Compare Plans Table" aria-describedby="plans_table_desc">
+            <div id="plans_table_desc" class="sr-only">Table Desc</div>
+
+            <div class="row compare-container table-header" role="rowgroup">
+                <div class="col-2 single-row-label"></div>
+                <div role="columnheader" data-planID="1" class="col plan-name plan-col _1 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/kaiser.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Kaiser Permanente</h4>
+                            <p>$524/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="2" class="col plan-name plan-col _2 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/blue.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Blue Shield Access+</h4>
+                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="3" class="col plan-name plan-col _3 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/healthnet.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>Health Net SmartCare</h4>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="4" class="col plan-name plan-col _4 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/united.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>UnitedHealthcare</h4>
+                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="columnheader" data-planID="5" class="col plan-name plan-col _5 data-point hidden">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <img class="plan-logo" src="assets/pers.png"/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4>PERSChoice</h4>
+                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium <a class="help-circle"
+                                                                                                href="#"><i
+                                    data-feather="help-circle" width="16" height="16"
+                                    class="menu-dropdown-icons"></i></a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plans-navigation col-12">
+                    <a href="#/" id="previous" class="paginate-plans"><span><i data-feather="chevron-left" width="16" height="16"></i></span></a>
+
+                   <span class="visiblePlansCount"></span>
+                    <a href="#/" id="next" class="paginate-plans"><span><i data-feather="chevron-right" width="16" height="16"></i></span></a>
+
+
+                </div>
+
+            </div>
+
+
+            <div role="rowgroup">
+            <span class="section">
+            <div class="row">
+            <div class="section-title">Calendar Year Deductible</div>
+            </div>
+            <div role="row" class="row compare-container">
+
+                <div role="rowheader" class="col-2 single-row-label">Individual</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$10</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$25</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$25</div>
+            </div>
+            <div role="row" class="row compare-container">
+                <div role="rowheader" class="col-2 single-row-label">Family</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$10</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$25</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$25</div>
+            </div>
+        </span>
+                <span class="section">
+            <div class="row">
+                <div class="section-title">Maximum Calendar Year Co-pay or Co-insurance (excluding Pharmacy)</div>
+            </div>
+            <div role="row" class="row compare-container">
+
+                <div role="rowheader" class="col-2 single-row-label">Individual</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$1,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$1,500<br>(co-pay)</div>
+            </div>
+            <div role="row" class="row compare-container">
+                <div role="rowheader" class="col-2 single-row-label">Family</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$3,500<br>(co-pay)</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$3,500<br>(co-pay)</div>
+                 <div role="cell" class="col plan-col _5 data-point hidden">$3,500<br>(co-pay)</div>
+            </div>
+        </span>
+                <span class="section">
+            <div class="row">
+                <div class="section-title">Hospital (including Mental Health and Substance Abuse)</div>
+            </div>
+            <div role="row" class="row compare-container">
+
+                <div role="rowheader" class="col-2 single-row-label">Deductible (per admission)</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
+            </div>
+            <div role="row" class="row compare-container">
+                <div role="rowheader" class="col-2 single-row-label">Inpatient</div>
+                <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
+            </div>
+            <div role="row" class="row compare-container">
+                    <div role="rowheader" class="col-2 single-row-label">Outpatient Facility/ Surgery Services</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                 <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
+                </div>
+        </span>
+
+                <span class="section">
+                <div class="row">
+                    <div class="section-title">Emergency Services</div>
+                </div>
+                <div role="row" class="row compare-container">
+    
+                    <div role="rowheader" class="col-2 single-row-label">Emergency Room Deductible</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                     <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
+                </div>
+                <div role="row" class="row compare-container">
+                    <div role="rowheader" class="col-2 single-row-label">Emergency (co-pay waived if admitted as an inpatient or for observation as an outpatient)</div>
+                    <div role="cell" class="col plan-col _1 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _2 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _3 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _4 data-point hidden">$50</div>
+                    <div role="cell" class="col plan-col _5 data-point hidden">$50</div>
+                </div>
+                <div role="row" class="row compare-container">
+                        <div role="rowheader" class="col-2 single-row-label">Non-Emergency (co-pay waived if admitted as an inpatient or for observation as an outpatient)</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$0</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$0</div>
+                     <div role="cell" class="col plan-col _5 data-point hidden">$0</div>
+                    </div>
+            </span>
+
+                <span class="section">
+                    <div class="row">
+                        <div class="section-title"> Physician Services (including Mental Health and Substance Abuse)                            </div>
+                    </div>
+                    <div role="row" class="row compare-container">
+        
+                        <div role="rowheader" class="col-2 single-row-label">Office Visits (co-pay for each service provided)</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                         <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
+                    </div>
+                    <div role="row" class="row compare-container">
+                        <div role="rowheader" class="col-2 single-row-label">Inpatient Visits</div>
+                        <div role="cell" class="col plan-col _1 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _2 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _3 data-point hidden">$50</div>
+                        <div role="cell" class="col plan-col _4 data-point hidden">$50</div>
+                         <div role="cell" class="col plan-col _5 data-point hidden">$50</div>
+                    </div>
+
+                </span>
+
+
+                <span class="section">
+                        <div class="row">
+                            <div class="section-title">Diagnostic X-Ray/Lab</div>
+                        </div>
+                        <div role="row" class="row compare-container">
+            
+                            <div role="rowheader" class="col-2 single-row-label">Diagnostic X-Ray/Lab</div>
+                            <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                            <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                            <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                             <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                             <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
+                        </div>
+                        
+                    </span>
+
+
+                <span class="section">
+                            <div class="row">
+                                <div class="section-title">Prescription Drugs</div>
+                            </div>
+                            <div role="row" class="row compare-container">
+                
+                                <div role="rowheader" class="col-2 single-row-label">Deductible</div>
+                                <div role="cell" class="col plan-col _1 data-point hidden">$10</div>
+                                <div role="cell" class="col plan-col _2 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _3 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _4 data-point hidden">$15</div>
+                                <div role="cell" class="col plan-col _5 data-point hidden">$15</div>
+                            </div>
+                            <div role="row" class="row compare-container">
+                                <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy (not to exceed 30 day supply)</div>
+                                <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                               <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
+                            </div>
+                            <div role="row" class="row compare-container">
+                                    <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Long-Term Prescription Medications filled after 2nd fill (i.e. 90 day supply)</div>
+                                    <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                    <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                 <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                 <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                </div>
+                            <div role="row" class="row compare-container">
+                                    <div role="rowheader" class="col-2 single-row-label">Retail Pharmacy Maintenance Medications filled after 2nd fill (i.e. a medication taken longer than 60 days) (not to exceed 30 day supply)</div>
+                                    <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                </div>
+                                <div role="row" class="row compare-container">
+                                        <div role="rowheader" class="col-2 single-row-label">Mail Order Pharmacy Program (not to exceed 90 day supply for maintenance drugs)</div>
+                                        <div role="cell" class="col plan-col _1 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                        <div role="cell" class="col plan-col _2 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                        <div role="cell" class="col plan-col _3 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+                                      <div role="cell" class="col plan-col _4 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
+                                       <div role="cell" class="col plan-col _5 data-point hidden"><ul><li>Generic: $5</li><li>Brand Formulary:: $25</li><li>Non-Formulary:: $50</li></ul></div>
+
+                                    </div>
+                                    <div role="row" class="row compare-container">
+                                            <div role="rowheader" class="col-2 single-row-label">Mail order maximum co-payment per person per calendar year</div>
+                                            <div role="cell" class="col plan-col _1 data-point hidden">$1,000</div>
+                                            <div role="cell" class="col plan-col _2 data-point hidden">$1,000</div>
+                                            <div role="cell" class="col plan-col _3 data-point hidden">$1,000</div>
+                                        <div role="cell" class="col plan-col _4 data-point hidden">$1,000</div>
+                                        <div role="cell" class="col plan-col _5 data-point hidden">$1,000</div>
+                                        </div>
+                        </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!--Feather icons-->
+<script src="js/feather.min.js"></script>
+
+<script type="text/javascript">
+
+
+    feather.replace();
+
+
+    var header = $(".table-header");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        console.log(scroll);
+        if (scroll >= 205) {
+            header.addClass("fixed");
+        }
+        if (scroll <= 200) {
+            header.removeClass("fixed");
+        }
+
+    });
+    var totalNumberOfPlans = $('.plan-name').filter(".plan-name").length;
+
+    console.log("Total Plans: " + totalNumberOfPlans);
+
+
+    var plans = {
+        allPlanID: []
+        , activePlans: []
+    }
+
+    $('.plan-name').each(function () {
+        plans.allPlanID.push($(this).attr("data-planid"));
+        plans.activePlans = plans.allPlanID.slice(0, 3);
+    });
+
+    plans.activePlans.map(function (val) {
+        $('*[data-planid=' + val + ']').addClass('current');
+        $('*[data-planid=' + val + ']').removeClass('hidden');
+        $('._' + val).addClass('current');
+        $('._' + val).removeClass('hidden');
+    });
+
+    // get total count of plans
+    $('.totalPlansCount').text(totalNumberOfPlans);
+
+    //add class current to first 3 plans
+    $('.plan-name').slice(0, 3).addClass('current');
+    $('.plan-name').slice(0, 3).removeClass('hidden');
+
+    $('#next').on('click', function () {
+        movePlans("next");
+    });
+
+    $('#previous').on('click', function () {
+        movePlans("previous");
+    });
+
+
+    updateCount();
+    function movePlans(direction) {
+        var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");
+        var currentLastActive = $('.plan-name').filter(".current:last").attr("data-planID");
+
+        //to be allowed to DOM
+        var indexOfLastActive = plans.allPlanID.indexOf(currentLastActive);
+        if (direction == "next") {
+            indexOfLastActive++;
+        }
+        var nextDataID = plans.allPlanID[indexOfLastActive];
+
+        //to be hidden from DOM
+        var indexOfFirstActive = plans.allPlanID.indexOf(currentFirstActive);
+        if (direction == "previous") {
+            indexOfFirstActive--;
+        }
+        var firstDataID = plans.allPlanID[indexOfFirstActive];
+
+        if (direction == "next") {
+            //add class current to next available item
+            $('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').addClass('current');
+            $('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').removeClass('hidden');
+
+            //remove first item
+            $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').addClass('hidden');
+            $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').removeClass('current');
+
+        }
+        if (direction == "previous") {
+            $('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').removeClass('current');
+            $('._' + nextDataID + ',*[data-planid=' + nextDataID + ']').addClass('hidden');
+
+            $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').removeClass('hidden');
+            $('._' + firstDataID + ',*[data-planid=' + firstDataID + ']').addClass('current');
+        }
+        updateCount();
+    }
+
+
+    function updateCount() {
+        var currentFirstActive = $('.plan-name').filter(".current:first").attr("data-planID");
+        var indexOfFirstActive = plans.allPlanID.indexOf(currentFirstActive);
+        $('.visiblePlansCount').html("<p>Showing " + (indexOfFirstActive + 1) + "-" + (indexOfFirstActive + 3) + " of " + totalNumberOfPlans + "</p>");
+    }
+
+
+    window.addEventListener('keydown', function (e) {
+        // go to the right
+        if (e.keyCode == 39) {
+            movePlans("next");
+        }
+        // go to the left
+        if (e.keyCode == 37) {
+            movePlans("previous");
+        }
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
