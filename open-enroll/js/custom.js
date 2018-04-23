@@ -1,7 +1,9 @@
 (function($) {
 
-    // Inject feather icon SVG's into paeg
-    feather.replace();
+   var stickyBottomNavHeight = $('.bottom-nav').height();
+    $('body').css('padding-bottom', (stickyBottomNavHeight+20)+'px');
+
+    console.log(stickyBottomNavHeight);
 
     // FLoating labels
     $("#loginUsername, #inputPassword").bind('input propertychange', function () {
@@ -24,6 +26,7 @@
         event.preventDefault();
         $('.contact-us-section').removeClass('open');
     });
+
 
 
 })(jQuery);
