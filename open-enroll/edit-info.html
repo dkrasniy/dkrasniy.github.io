@@ -19,10 +19,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="gUD9C0--Jf navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="_1wvd45e0_t">Open menu</span>
         </button>
+
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="nav navbar-nav ml-auto justify-content-end">
 
@@ -33,7 +35,8 @@
                     <a class="nav-link" href="#">CalPERS</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         David Krasniy
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,104 +53,101 @@
     </div>
 
 </nav>
-<div class="secondary-nav">
-    <div class="container">
-        <nav class="nav">
-            <a class="nav-link" href="dashboard.html"><span class="tab-item">Health Plan Summary</span></a>
-            <a class="nav-link active" href="find-medical-plan.html"><span class="tab-item">Find a Medical Plan</span></a>
 
-        </nav>
+<nav role="navigation" class="bottom-nav">
+    <div class="nav-container">
+        <div class="row items-row">
+            <div class="col nav-item">
+                <a href="bottom-nav.html">
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="menu-item-name">Home</span>
+                </a>
+            </div>
+
+            <div class="col nav-item active">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <span class="menu-item-name">Search</span>
+                </a>
+            </div>
+            <div class="col nav-item">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <span class="menu-item-name">Saved</span>
+                </a>
+            </div>
+            <div class="col nav-item">
+                <a href="#account" class="account">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="menu-item-name">David</span>
+                </a>
+            </div>
+        </div>
     </div>
+</nav>
+<div class="page-title-area">
+    <h1>Search For Medical Plans</h1>
+    <p>Discover the best medical plan for you.</p>
 </div>
+
 <div class="container main-page-container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-12 col-xl-9 padding-0">
-            <div class="card">
-                <!--<div class="card-header">-->
-                    <!--<img class="dash-compare-plans-svg" src="assets/open-enroll.svg">-->
-                    <!--<h1 class="title">Open Enrollment Plan & Compare</h1>-->
-                    <!--<p>Open Enrollment begins September 15, 2018 and ends October 15, 2018</p>-->
-                    <!--<button class="btn btn-primary">Explore 2019 Plan Options</button>-->
-                <!--</div>-->
+    <h1 class="page-header">Edit Your Information</h1>
+    <div class="confirm-your-info">
 
-                <div class="card-header">
-                    <div class="row align-items-center text-align-left">
-                        <div class="col-12">
-                            <h1 class="title">Explore 2019 Plans</h1>
-                            <p>Find the best medical plan for you.</p>
-                        </div>
+        <div class="row">
+            <div class="col-12">
+                <label for="ZIP">Your current health eligibility ZIP Code is:</label>
+                <input type="text" class="form-control col-3" id="ZIP" value="95843">
+            </div>
+            <div class="col-12">
+                <h3>Plan Year</h3>
+                <p>2018</p>
+            </div>
+            <div class="col-12">
+                <h3>Your member type is:</h3>
+                <p>State or CSU</p>
+            </div>
+            <div class="col-12">
 
-                    </div>
+                <div class="form-group">
+                    <label for="coverageType">Your coverage type is:</label>
+                    <select id="coverageType" name="healthPlanSearchRequestDto.partyRate">
 
-
+                        <option style="font-weight:bold;" value="-2">Select a CalPERS Basic Health Plan Type:</option>
+                        <option value="EB" selected="true">You only (Basic)</option><option value="DB1">You plus one dependent (Basic)</option><option value="DB2">You plus family (Basic)</option>
+                        <option value="-3">&nbsp;</option>
+                        <option value="-4">---</option>
+                        <option style="font-weight:bold;" value="-5">Select a CalPERS Medicare Health Plan Type:</option>
+                        <option value="SM">You only (Medicare)</option><option value="SM1">You plus one dependent (Medicare)</option><option value="SM2">You plus family (Medicare)</option>
+                        <option value="-6">&nbsp;</option>
+                        <option value="-7">---</option>
+                        <option style="font-weight:bold;" value="-8">Select a CalPERS Combination (Basic &amp; Medicare) Health Plan Type:</option>
+                        <option value="SD1">You in Medicare plus one dependent in Basic</option><option value="TSD">You in Medicare plus family in Basic</option><option value="DD1">You and one dependent in Medicare plus one or more dependents in Basic</option><option value="DM1">You in Basic plus one dependent in Medicare</option><option value="DM2">You in Basic plus family in Medicare</option><option value="DM3">You and one dependent in Basic plus one or more dependents in Medicare</option>
+                    </select>
                 </div>
 
-                <div class="card-body C_M1Sdh98 confirm-your-info">
-                    <h2>Edit Your Information</h2>
-                    <img class="user d-none d-md-block" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZGlzYWJsZWQtLWludmVydGVkPC90aXRsZT48ZyBmaWxsPSIjQUFCN0M0IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbC1vcGFjaXR5PSIuMiIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIi8+PHBhdGggZD0iTTEwIDIwYTkuOTY0IDkuOTY0IDAgMCAxLTcuMjUtMy4xMjVjMS4wNjMtMS45NSAzLjMwNi0zLjI2MiA3LjI1LTMuMjYyczYuMTg4IDEuMzEyIDcuMjUgMy4yNjJBOS45NjUgOS45NjUgMCAwIDEgMTAgMjB6bS4wMDQtMTYuMjMxbC4wMDEtLjAwMmMyLjA3NyAwIDMuNzU5IDEuNTA3IDMuNzU5IDMuOTU3cy0xLjY4MyAzLjk2Mi0zLjc2IDMuOTYyYy0yLjA3NiAwLTMuNzYtMS41MDgtMy43Ni0zLjk1OHMxLjY4NS0zLjk2IDMuNzYtMy45NnoiLz48L2c+PC9zdmc+">
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="ZIP">Your current health eligibility ZIP Code is:</label>
-                            <input type="text" class="form-control col-3" id="ZIP" value="95843">
-                        </div>
-                        <div class="col-12">
-                            <h3>Plan Year</h3>
-                            <p>2018</p>
-                        </div>
-                        <div class="col-12">
-                            <h3>Your member type is:</h3>
-                            <p>State or CSU</p>
-                        </div>
-                        <div class="col-12">
-
-                            <div class="form-group">
-                                <label for="coverageType">Your coverage type is:</label>
-                                <select id="coverageType" name="healthPlanSearchRequestDto.partyRate">
-
-                                    <option style="font-weight:bold;" value="-2">Select a CalPERS Basic Health Plan Type:</option>
-                                    <option value="EB" selected="true">You only (Basic)</option><option value="DB1">You plus one dependent (Basic)</option><option value="DB2">You plus family (Basic)</option>
-                                    <option value="-3">&nbsp;</option>
-                                    <option value="-4">---</option>
-                                    <option style="font-weight:bold;" value="-5">Select a CalPERS Medicare Health Plan Type:</option>
-                                    <option value="SM">You only (Medicare)</option><option value="SM1">You plus one dependent (Medicare)</option><option value="SM2">You plus family (Medicare)</option>
-                                    <option value="-6">&nbsp;</option>
-                                    <option value="-7">---</option>
-                                    <option style="font-weight:bold;" value="-8">Select a CalPERS Combination (Basic &amp; Medicare) Health Plan Type:</option>
-                                    <option value="SD1">You in Medicare plus one dependent in Basic</option><option value="TSD">You in Medicare plus family in Basic</option><option value="DD1">You and one dependent in Medicare plus one or more dependents in Basic</option><option value="DM1">You in Basic plus one dependent in Medicare</option><option value="DM2">You in Basic plus family in Medicare</option><option value="DM3">You and one dependent in Basic plus one or more dependents in Medicare</option>
-                                </select>
-                            </div>
-
-
-                        </div>
-
-                        <!--<div class="col-12">-->
-                            <!--<label>If you are a dues-paying member, select the association. </label>-->
-                            <!--<div class="form-check">-->
-                                <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
-                                <!--<label class="form-check-label" for="exampleRadios1">California Associations of Highway Patrol</label>-->
-                            <!--</div>-->
-                            <!--<div class="form-check">-->
-                                <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
-                                <!--<label class="form-check-label" for="exampleRadios2">California Correctional Peace Officers Association</label>-->
-                            <!--</div>-->
-                            <!--<div class="form-check">-->
-                                <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">-->
-                                <!--<label class="form-check-label" for="exampleRadios3">Peace Officers Research Association of California</label>-->
-                            <!--</div>-->
-
-
-                        <!--</div>-->
-                    </div>
-
-                </div>
-                <div class="card-action">
-                    <a class="btn btn-primary btn-block" href="confirm-info.html" role="button">Save & Next <i data-feather="arrow-right" width="16" height="16"></i></a>
-                 </div>
 
             </div>
 
-
         </div>
+        <div class="card-action">
+            <a class="btn btn-primary btn-block" href="plan-types.html" role="button">Save Changes</a>
+        </div>
+
+    </div>
+
+
+    <div class="row justify-content-center">
+
+
         <div class="col-3 d-none d-lg-block">
             <div class="process-steps">
                 <div class="step active">
@@ -187,27 +187,15 @@
 </div>
 
 
+
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 
-<!--Feather icons-->
-<script src="js/feather.min.js"></script>
-
-<script type="text/javascript">
-    feather.replace();
-    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
-        if (!this.value) {
-            $(this).removeClass('float-true');
-            $(this).prev().removeClass('float-true');
-        }
-        if (this.value) {
-            $(this).addClass('float-true');
-            $(this).prev().addClass('float-true');
-        }
-    });
-</script>
 </body>
 </html>
