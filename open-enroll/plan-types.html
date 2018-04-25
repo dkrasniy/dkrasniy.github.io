@@ -19,10 +19,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="gUD9C0--Jf navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="_1wvd45e0_t">Open menu</span>
         </button>
+
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="nav navbar-nav ml-auto justify-content-end">
 
@@ -33,7 +35,8 @@
                     <a class="nav-link" href="#">CalPERS</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         David Krasniy
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,95 +53,109 @@
     </div>
 
 </nav>
-<div class="secondary-nav">
-    <div class="container">
-        <nav class="nav">
-            <a class="nav-link" href="dashboard.html"><span class="tab-item">Health Plan Summary</span></a>
-            <a class="nav-link active" href="find-medical-plan.html"><span class="tab-item">Find a Medical Plan</span></a>
 
-        </nav>
+<nav role="navigation" class="bottom-nav">
+    <div class="nav-container">
+        <div class="row items-row">
+            <div class="col nav-item">
+                <a href="dashboard.html">
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="menu-item-name">Home</span>
+                </a>
+            </div>
+
+            <div class="col nav-item active">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <span class="menu-item-name">Search</span>
+                </a>
+            </div>
+            <div class="col nav-item">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <span class="menu-item-name">Saved</span>
+                </a>
+            </div>
+            <div class="col nav-item">
+                <a href="#account" class="account">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="menu-item-name">David</span>
+                </a>
+            </div>
+        </div>
     </div>
+</nav>
+<div class="page-title-area">
+    <h1>Search For Medical Plans</h1>
+    <p>Discover the best medical plan for you.</p>
 </div>
-<div class="container main-page-container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-12 col-xl-9 padding-0">
-            <div class="card">
-                <!--<div class="card-header">-->
-                    <!--<img class="dash-compare-plans-svg" src="assets/open-enroll.svg">-->
-                    <!--<h1 class="title">Open Enrollment Plan & Compare</h1>-->
-                    <!--<p>Open Enrollment begins September 15, 2018 and ends October 15, 2018</p>-->
-                    <!--<button class="btn btn-primary">Explore 2019 Plan Options</button>-->
-                <!--</div>-->
+<div class="container main-page-container plan-types">
+    <h1 class="page-header">Filter Plan Types</h1>
+    <div>
 
-                <div class="card-header">
-                    <div class="row align-items-center text-align-left">
-                        <div class="col-12">
-                            <h1 class="title">Explore 2019 Plans</h1>
-                            <p>Find the best medical plan for you.</p>
+        <div class="row">
+            <div class="col-12 simple-radios">
+
+
+                <label>What kind of plans would you like to see?</label>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Show all plans
+                            </label>
                         </div>
-
                     </div>
-
-
+                    <div class="col-12"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Show only PPO plans
+                        </label>
+                    </div></div>
+                    <div class="col-12"><div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+                        <label class="form-check-label" for="exampleRadios3">
+                            Show only HMO plans
+                        </label>
+                    </div></div>
                 </div>
 
-                <div class="card-body C_M1Sdh98 confirm-your-info">
-                    <h2>Filter Plan Types</h2>
-                    <div class="row">
-                        <div class="col-12 simple-radios">
 
 
-<label>What kind of plans would you like to see?</label>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios1">
-                                           Show all plans
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-4"><div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                       Show only PPO plans
-                                    </label>
-                                </div></div>
-                                <div class="col-4"><div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
-                                    <label class="form-check-label" for="exampleRadios3">
-                                        Show only HMO plans
-                                    </label>
-                                </div></div>
-                            </div>
-
-
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-                <div class="card-action">
-                    <a class="btn btn-primary btn-block" href="search-results.html" role="button">Next <i data-feather="arrow-right" width="16" height="16"></i></a>
-                </div>
 
             </div>
 
 
         </div>
+        <div class="card-action">
+            <a class="btn btn-primary btn-block" href="search-results.html" role="button">Next</a>
+        </div>
+
+    </div>
+
+
+    <div class="row justify-content-center">
+
+
         <div class="col-3 d-none d-lg-block">
             <div class="process-steps">
-                <div class="step completed">
+                <div class="step active">
                     <div class="circle-step">
                         <div class="line"></div>
                         <div class="circle"></div>
                     </div>
                     <div class="step-title">Confirm Your Information</div>
                 </div>
-                <div class="step active">
+                <div class="step">
                     <div class="circle-step">
                         <div class="line"></div>
                         <div class="circle"></div>
@@ -168,27 +185,15 @@
 </div>
 
 
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-<!--Feather icons-->
-<script src="js/feather.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 
-<script type="text/javascript">
-    feather.replace();
-    $("#loginUsername, #inputPassword").bind('input propertychange', function () {
-        if (!this.value) {
-            $(this).removeClass('float-true');
-            $(this).prev().removeClass('float-true');
-        }
-        if (this.value) {
-            $(this).addClass('float-true');
-            $(this).prev().addClass('float-true');
-        }
-    });
-</script>
+
 </body>
 </html>

@@ -1,6 +1,8 @@
 (function($) {
 
    var stickyBottomNavHeight = $('.bottom-nav').height();
+
+
     $('body').css('padding-bottom', (stickyBottomNavHeight+20)+'px');
 
     console.log(stickyBottomNavHeight);
