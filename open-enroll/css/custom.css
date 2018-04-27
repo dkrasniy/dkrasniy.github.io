@@ -465,6 +465,10 @@ a {
     .row.compare-container.table-header.fixed .plan-name .plan-logo {
         display: none;
     }
+
+    .row.compare-container.table-header.fixed .table-navigation a {
+        top: -30px;
+    }
 }
 
 .row.compare-container.table-header.fixed .plan-name .plan-logo {
@@ -851,6 +855,8 @@ body {
     margin: .5em 0;
     font-size: 100%;
     padding: 0;
+    background: #e4e4e4;
+    padding: .5em;
 }
 
 .d-flex.flex-row._2translate {
@@ -943,7 +949,7 @@ span.section .col {
     background: #f9f9f9;
 }
 
-.row.compare-container.table-header .plan-name:nth-child(odd) {
+.row.compare-container.table-header  {
     background: #f9f9f9;
 }
 
@@ -1007,10 +1013,9 @@ span.monthly-desc {
 .row.compare-container.table-header.fixed {
     -webkit-box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
     box-shadow: 0 5px 20px 2px rgba(125, 125, 125, 0.05), 0 3px 7px rgba(197, 197, 197, 0.08);
-}
-
-.row.compare-container.table-header.fixed .plan-name {
-    padding: 0.75em 0 0.25em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .row.compare-container.table-header.fixed .plan-name h4 {
@@ -1427,7 +1432,6 @@ thead tr {
     padding: 1em;
     border-radius: .35em;
     text-align: center;
-    margin: 0 -15px;
     box-shadow: 0 8px 20px 3px rgba(125, 125, 125, 0.05), 0 5px 9px 0px rgba(197, 197, 197, 0.08);
 }
 
@@ -2154,9 +2158,10 @@ body.dashboard.D_9ISds_xa .main-page-container .row .col-12 .card:nth-child(2) {
         display: block;
         padding: .25em .75em;
         display: block;
-        border: 1px solid #d8d8d8;
         border-radius: .35em;
         margin-bottom: .5em;
+        -webkit-box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
     }
 
     table td {
@@ -2394,6 +2399,9 @@ h3.title {
 .modalCompareTips .modal-content {
     background: #2b2b2b;
     min-height: 200px;
+    text-align: center;
+    color: white;
+    padding: 2em 1em;
 }
 .modalCompareTips .close {
     color: #fff;
@@ -2405,3 +2413,50 @@ h3.title {
 
 }
 
+
+.swipe-icon svg {
+    width: 70px;
+    height: 130px;
+}
+.modal-body h2 {
+    font-weight: 700;
+    font-size: 1.75em;
+}
+.modal-body p {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+.comparison-options {
+    margin-top: .5em;
+    text-align: center;
+    border-top: 1px solid #e4e4e4;
+    padding-top: .5em;
+}
+.over-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+ul.plan-details li b:after {
+    content: ":";
+}
+ul.plan-details li b {
+    font-weight: normal;
+}
+[role="table"] [role="cell"] ul li {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+[role="table"] [role="cell"] ul li:last-child {
+border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+[role="table"] [role="cell"] ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    font-size: 0.85em;
+}

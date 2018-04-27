@@ -11,10 +11,28 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
+    <style>
+        .scrolling-numbers {
+            overflow: hidden;
+            height: 21px;
+        }
 
+        .scrolling-numbers p span {
+            display: block;
+            font-size:14px;
+        }
+
+        .scrolling-numbers p {
+            transition: .3s ease all;
+            transform: translateY(0);
+        }
+
+
+    </style>
     <title>Open Enrollment Login</title>
 </head>
 <body class="dashboard compare-proccess">
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -106,242 +124,259 @@
 
         <div class="row search-results">
 
-                    <div class="col-12">
-                        <h3 class="title">If you keep your current plan</h3>
-                        <hr>
-                        <ul class="plans-list">
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck1">
-                                        <label class="plan-label" for="defaultCheck1">
+            <div class="col-12">
+                <h3 class="title">If you keep your current plan</h3>
+                <hr>
+                <ul class="plans-list">
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck1">
+                                <label class="plan-label" for="defaultCheck1">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/kaiser.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">Kaiser Permanente</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> HMO</li>
-                                                        <li><b>Full Monthly Premium</b> $717.38</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
-                                                    </ul>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/kaiser.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">Kaiser Permanente</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> HMO</li>
+                                                <li><b>Full Monthly Premium</b> $717.38</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
 
-                        </ul>
-                        <h3 class="title">All available plans (7)</h3>
-                        <hr>
-                        <ul class="plans-list">
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck2">
-                                        <label class="plan-label" for="defaultCheck2">
+                </ul>
+                <h3 class="title">All available plans (7)</h3>
+                <hr>
+                <ul class="plans-list">
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck2">
+                                <label class="plan-label" for="defaultCheck2">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/blue.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">Blue Shield Access+</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> HMO</li>
-                                                        <li><b>Full Monthly Premium</b> $752.32</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
-                                                        <li><b>Retail Pharmacy</b> $5 Generic</li>
-                                                        <li><a href="#/">View Details</a></li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/blue.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">Blue Shield Access+</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> HMO</li>
+                                                <li><b>Full Monthly Premium</b> $752.32</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
+                                                <li><b>Retail Pharmacy</b> $5 Generic</li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck3">
-                                        <label class="plan-label" for="defaultCheck3">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck3">
+                                <label class="plan-label" for="defaultCheck3">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/healthnet.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">Health Net SmartCare</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> HMO</li>
-                                                        <li><b>Full Monthly Premium</b> $412.32</li>
-                                                        <li><b>Calendar Year Deductible</b> $25</li>
-                                                        <li><b>Office Visit Co-Pay</b> $0</li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/healthnet.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">Health Net SmartCare</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> HMO</li>
+                                                <li><b>Full Monthly Premium</b> $412.32</li>
+                                                <li><b>Calendar Year Deductible</b> $25</li>
+                                                <li><b>Office Visit Co-Pay</b> $0</li>
 
-                                                        <li><a href="#/">View Details</a></li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck4">
-                                        <label class="plan-label" for="defaultCheck4">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck4">
+                                <label class="plan-label" for="defaultCheck4">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/united.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">UnitedHealthcare</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> HMO</li>
-                                                        <li><b>Full Monthly Premium</b> $692.84</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/united.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">UnitedHealthcare</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> HMO</li>
+                                                <li><b>Full Monthly Premium</b> $692.84</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
 
-                                                        <li><a href="#/">View Details</a></li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck5">
-                                        <label class="plan-label" for="defaultCheck5">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck5">
+                                <label class="plan-label" for="defaultCheck5">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/pers.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">PERS Choice</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> PPO</li>
-                                                        <li><b>Full Monthly Premium</b> $724.16</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/pers.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">PERS Choice</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> PPO</li>
+                                                <li><b>Full Monthly Premium</b> $724.16</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
 
-                                                        <li><a href="#/">View Details</a></li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck6">
-                                        <label class="plan-label" for="defaultCheck6">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck6">
+                                <label class="plan-label" for="defaultCheck6">
 
-                                            <div class="row">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/pers.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">PERSCare</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> PPO</li>
-                                                        <li><b>Full Monthly Premium</b> $776.19</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/pers.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">PERSCare</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> PPO</li>
+                                                <li><b>Full Monthly Premium</b> $776.19</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
 
-                                                        <li><a href="#/">View Details</a></li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="plan">
-                                    <div class="form-check">
-                                        <input class="form-check-input checkbox" type="checkbox" value=""
-                                               id="defaultCheck7">
-                                        <label class="plan-label" for="defaultCheck7">
-                                            <div class="row">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plan">
+                            <div class="form-check">
+                                <input class="form-check-input checkbox" type="checkbox" value=""
+                                       id="defaultCheck7">
+                                <label class="plan-label" for="defaultCheck7">
+                                    <div class="row">
 
-                                                <div class="col-3 plan-logo">
-                                                    <img class="plan-logo" src="assets/pers.png">
-                                                </div>
-                                                <div class="col-9 plan-details">
-                                                    <h4 class="plan-name">PERS Select</h4>
-                                                    <ul class="plan-details">
-                                                        <li><b>Plan Type</b> PPO</li>
-                                                        <li><b>Full Monthly Premium</b> $661.29</li>
-                                                        <li><b>Calendar Year Deductible</b> $0</li>
-                                                        <li><b>Office Visit Co-Pay</b> $15</li>
+                                        <div class="col-3 plan-logo">
+                                            <img class="plan-logo" src="assets/pers.png">
+                                        </div>
+                                        <div class="col-9 plan-details">
+                                            <h4 class="plan-name">PERS Select</h4>
+                                            <ul class="plan-details">
+                                                <li><b>Plan Type</b> PPO</li>
+                                                <li><b>Full Monthly Premium</b> $661.29</li>
+                                                <li><b>Calendar Year Deductible</b> $0</li>
+                                                <li><b>Office Visit Co-Pay</b> $15</li>
 
-                                                        <li><a href="#/">View Details</a></li>
+                                                <li><a href="#/">View Details</a></li>
 
 
-                                                    </ul>
+                                            </ul>
 
-                                                </div>
-                                            </div>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
 
-                        </ul>
-                    </div>
-
-
-
-
-
+                </ul>
+            </div>
 
 
         </div>
 
         <div class="compare-ready-button compare-plans-actions">
-            <span class="plansSelectedCount"></span> <a href="comparison.html" class="btn-light btn btn-sm">Compare</a>
+            <div class="compare-plans-desc">
+                <div class="_2plus">
+                    <div class="scrolling-numbers">
+                        <p>
+                            <span>0</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                        </p>
+                    </div><span class="plansSelectedCount"></span>
+                </div>
+                <div class="_2less">
+                    <a href="comparison.html" class="btn-light btn btn-sm">Compare</a>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
@@ -398,24 +433,33 @@
 <script type="text/javascript">
 
 
+
+    var numberToScroll = $('.scrolling-numbers p');
+
+    //height of
+    var numberSpanContainerHeight = $('.scrolling-numbers p');
+
+
     $('.plansSelectedCount').html("Compare Plans");
     $('.checkbox').on('click', function () {
+
+
         var selectedOptionsCount = $("[type='checkbox']:checked").length;
+        numberToScroll.css("transform", "translateY(" + -21 * selectedOptionsCount + "px)");
 
         if (selectedOptionsCount <= 1) {
-            $('.plansSelectedCount').html("Select 2 or more plans to compare");
+//            $('.plansSelectedCount').html("Select 2 or more plans to compare");
             $('.compare-button').addClass('disabled');
             $('.compare-ready-button .btn').addClass('sr-only');
 
         }
 
         if (selectedOptionsCount > 1) {
-            $('.plansSelectedCount').html(selectedOptionsCount + " plans selected");
+            $('.plansSelectedCount').html(" plans selected");
             $('.compare-button').removeClass('disabled');
             $('.compare-ready-button').addClass('visible');
             $('.compare-ready-button .btn').removeClass('sr-only');
         }
-
 
 
     });
