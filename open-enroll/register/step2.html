@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../css/custom.css">
 
     <title>Open Enrollment Register</title>
+    <style>
+        .form-control {
+            min-height: 100%;
+        }
+    </style>
 </head>
 <body class="dashboard register">
 
@@ -61,14 +66,14 @@
         <div class="form-group">
             <label for="DOBInput">Date of Birth</label>
             <input id="DOBInput" aria-describedby="DOBInputHelp" type="date" name="bday" min="1000-01-01"
-                   max="3000-12-31" class="form-control">
+                   max="3000-12-31" class="form-control" placeholder="Password">
             <small id="DOBInputHelp" class="form-text text-muted">mm/dd/yyyy</small>
 
         </div>
 
         <div class="form-group">
             <label for="SSNInput">Social Security Number</label>
-            <input type="password" class="form-control" id="SSNInput" aria-describedby="SSNInputHelp" placeholder="Password">
+            <input type="password" pattern="[0-9]*" class="form-control" id="SSNInput" aria-describedby="SSNInputHelp" placeholder="SSN">
             <small id="SSNInputHelp" class="form-text text-muted">Enter 9 digits</small>
 
         </div>

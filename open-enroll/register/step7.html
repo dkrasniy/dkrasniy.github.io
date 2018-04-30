@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <title>Open Enrollment Register</title>
+
+    <style>
+        svg {
+            width: 100px;
+            display: block;
+            margin: 40px auto 0;
+        }
+        .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+        }
+        .path.circle {
+            -webkit-animation:dash 1.5s cubic-bezier(0.59, 0.01, 0.14, 1.01);
+            animation: dash 1.5s cubic-bezier(0.59, 0.01, 0.14, 1.01);
+        }
+        .path.check {
+            stroke-dashoffset: -100;
+            -webkit-animation: dash-check .8s .5s cubic-bezier(0.63, 0.02, 0.14, 0.94) forwards;
+            animation: dash-check .8s .5s cubic-bezier(0.63, 0.02, 0.14, 0.94) forwards;
+        }
+        @-webkit-keyframes dash {
+            0% {
+                stroke-dashoffset: 1000;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 1000;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @-webkit-keyframes dash-check {
+            0% {
+                stroke-dashoffset: -100;
+            }
+            100% {
+                stroke-dashoffset: 900;
+            }
+        }
+        @keyframes dash-check {
+            0% {
+                stroke-dashoffset: -100;
+            }
+            100% {
+                stroke-dashoffset: 900;
+            }
+        }
+
+    </style>
+</head>
+<body class="dashboard register">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
+
+
+        <h1>Account Registration</h1>
+    </div>
+
+</nav>
+
+
+<div class="page-title-area">
+    <h1 class="page-header">Registration Complete!</h1>
+    <ol class="steps">
+        <li class="completed"><a href="#">Security Agreement</a></li>
+        <li class="completed"><a href="#">Identify Yourself</a></li>
+        <li class="completed"><a href="#">Verify Your Identity</a></li>
+        <li class="completed"><a href="#">Username and Password</a></li>
+        <li class="completed"><a href="#">Personal Security</a></li>
+        <li class="completed"><a href="#">Security Questions</a></li>
+        <li class="active"><a href="#">Registration Complete</a></li>
+
+
+    </ol>
+</div>
+
+
+<div class="container main-page-container registration">
+
+
+
+
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#4a7c10" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <polyline class="path check" fill="none" stroke="#4a7c10" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+    </svg>
+
+    <div class="registration-success">
+        <h4>You've successfully registered for your my|CalPERS account!</h4>
+            <p>
+            We've sent a confirmation to your email address.<br>
+            If you don't receive the email, contact us at <strong>888 CalPERS</strong> (or <strong>888</strong>-225-7377) for assistance.</p>
+
+    </div>
+
+
+
+
+    <div class="card-action">
+        <a class="btn btn-primary btn-block" href="../login.html" role="button">Login to my|CalPERS</a>
+    </div>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../js/jquery-3.2.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/custom.js"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+</body>
+</html>

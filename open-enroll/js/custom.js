@@ -30,7 +30,7 @@
 
     //if null set to 0
     if (!bottomFixedNavHeight) {
-        bottomFixedNavHeight = 0;
+        bottomFixedNavHeight = 20;
     }
     if (!cardActionHeight) {
         cardActionHeight = 0;
@@ -55,7 +55,7 @@
 
     // iPhone X Detection
     if (iOS && screen.width == 1125 && screen.height === 2436) {
-        alert('iPhoneX Detected!');
+        $('body').addClass('iPhoneX');
     }
 
 
