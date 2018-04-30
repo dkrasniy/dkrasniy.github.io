@@ -1578,18 +1578,19 @@ ul.plan-details .label {
 
 .card-action {
     border-radius: 0 0 .25em .25em;
-    padding: 15px 15px 75px 15px;
+    padding: 15px;
     position: fixed;
     left: 0;
     bottom: 0;
     background: #ffffff;
     width: 100%;
+    text-align: center;;
 }
 
 
 
 
-.card-action .btn {
+.card-action .btn-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2459,4 +2460,104 @@ border-bottom: 0;
     list-style-type: none;
     text-align: left;
     font-size: 0.85em;
+}
+
+ol.steps {
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+}
+ol.steps li {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: .4em 40px .4em 0;
+}
+ol.steps li  a{
+    display: none;
+
+}
+
+ol.steps li:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+}
+ol.steps li.completed:before {
+    background: #4a7c10;
+}
+ol.steps li.active:before {
+    background: #4a7c10;
+}
+
+ol.steps li:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    background: #edeff0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    width: calc(100% + 40px);
+    bottom: -9px;
+}
+ol.steps li.completed:after {
+    background: #4a7c10;
+}.steps-count {
+     font-weight: bold;
+     color: grey;
+     text-transform: uppercase;
+     letter-spacing: .25px;
+ }
+.current-step-title {
+    font-size: 15px;
+    text-align: center;
+}
+
+h1.multi-step-title {
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navbar h1 {
+    font-size: 15px;
+    letter-spacing: -.15px;
+}
+
+.registration h2 {
+    padding-top: .35em;
+    margin-top: .35em;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.registration h3 {
+    font-size: 1.25em;
+    margin-top: .35em;
+    color: #335e88;
+}
+.pageActions {
+    text-align: center;
+}
+p.intro-copy {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    font-size: .8em;
+}
+label {
+    font-weight: 600;
 }
