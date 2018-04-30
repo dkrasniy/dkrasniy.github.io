@@ -2561,3 +2561,8 @@ p.intro-copy {
 label {
     font-weight: 600;
 }
+
+.bottom-nav {
+    height: 70px;
+    padding-bottom:10px;
+}
