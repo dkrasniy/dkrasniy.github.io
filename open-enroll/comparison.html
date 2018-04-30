@@ -258,7 +258,7 @@
                     <div class="col-lg-2 single-row-label"></div>
                     <div class="col-lg-10 _n0_sP2">
                         <ul class="table-navigation">
-                            <li><a href="#0" class="prev" style="">Prev</a></li>
+                            <li><a href="#0" class="prev inactive" style="">Prev</a></li>
                             <li><a href="#0" class="next" style="">Next</a></li>
                         </ul>
                         <div class="d-flex flex-row _2translate">
@@ -1713,10 +1713,12 @@
     function swipeLeft() {
         swipePos -= 1;
         translateX();
+        $('.prev').removeClass('inactive');
     }
     function swipeRight() {
         swipePos += 1;
         translateX();
+
     }
 
     $('.prev').on('click', function() {
