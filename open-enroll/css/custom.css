@@ -410,23 +410,6 @@ a {
         box-shadow: none;
     }
 
-    ._logo-area {
-        background: #335d87;
-        text-align: center;
-        padding: 2em 1em;
-        color: white;
-    }
-
-    .login-area .card-header {
-        text-align: center;
-    }
-
-    .login-title {
-        font-weight: 700;
-        margin-bottom: 0;
-        font-size: 1.8em;
-    }
-
     .login .footer {
         position: absolute;
         bottom: 0;
@@ -436,11 +419,6 @@ a {
         border-top: 1px solid #e6e6e6;
     }
 
-    ._logo-area h1 {
-        color: white;
-        font-size: 2em !important;
-        font-weight: 500;
-    }
 
     body.splash {
         padding-bottom: 80px;
@@ -1137,6 +1115,7 @@ Login Page
 
 .login .myCalPERS-logo {
     font-size: 1.5em;
+    font-weight: 500;
 }
 
 .login .card {
@@ -1207,7 +1186,7 @@ Login Page
 
 label.float-label {
     height: 3.25em;
-    left: 44px;
+    left: 29px;
     line-height: 3.25em;
     overflow: hidden;
     pointer-events: none;
@@ -1253,9 +1232,11 @@ input.form-control.float-true {
 }
 
 .security-check {
-    padding: 1em 2em;
-    background: #fff;
+    padding: 1em;
+    margin: 15px -15px;
+    background: #d2d2d23d;
     border-bottom: 1px solid #e6e6e6;
+    padding: 2em 1.25em;
 }
 
 img {
@@ -2348,7 +2329,7 @@ h3.title {
 
 .compare-ready-button {
     position: fixed;
-    bottom: 65px;
+    bottom: 80px;
     background: #335d87;
     border-radius: .5em;
     -webkit-box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
@@ -2521,7 +2502,7 @@ ol.steps li:last-child:after{
 
 ol.steps li:last-child {
     margin:.4em 0;
-    
+
 }
 .steps-count {
      font-weight: bold;
@@ -2708,4 +2689,70 @@ div#select_label {
     font-size: 1.25em;
     font-weight: 700;
 
+}
+
+.login h1.page-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.5em;
+}
+form.form-signin.float-labels {
+    padding: 1em 0;
+}
+.comparison-options .card {
+    text-align: left;
+}
+.saved-searchli {
+    padding: 1em;
+    border-radius: .35em;
+    -webkit-box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+.saved-searchli h6 {
+    font-size: 1em;
+    margin-bottom: 0.15em;
+}
+.saved-searchli p {
+    font-size: .9em;
+    color: grey;
+}
+
+
+@keyframes notificationDown {
+    0% {
+        -webkit-transform: translateY(-70px);
+        transform: translateY(-70px);
+    }
+    30% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    60% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+
+    }
+    100% {
+        -webkit-transform: translateY(-70px);
+        transform: translateY(-70px);
+
+    }
+}
+
+.saved-alert {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -63px;
+    z-index: 100;
+    animation:notificationDown 2s ease;
+    animation-fill-mode: both;
+}
+
+.saved-alert .alert-success {
+    color: #ffffff;
+    background-color: #4a7c10;
+    border-color: #4a7c10;
 }

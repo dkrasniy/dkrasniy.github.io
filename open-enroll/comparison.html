@@ -137,6 +137,11 @@
     </style>
 </head>
 <body>
+<div class="saved-alert" style="display: none;">
+    <div class="alert alert-success quick-notify-alert" role="alert">
+        Comparison saved!
+    </div>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
@@ -179,7 +184,7 @@
     <div class="nav-container">
         <div class="row items-row">
             <div class="col nav-item">
-                <a href="dashboard.html">
+                <a href="dashboard-saved.html">
                     <div class="icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -220,7 +225,27 @@
     <p>95843, 2018, State or CSU, You only (Basic)</p>
     <div class="comparison-options">
        <a href="#" class="btn btn-link btn-sm">Edit my search</a>
-        <a href="#" class="btn btn-success btn-sm">Save search</a>
+
+        <button class="btn btn-success btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Save search
+        </button>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Save as </label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E.g. Good plans for me">
+                        <small id="emailHelp" class="form-text text-muted">Enter a name for this comparison.</small>
+                    </div>
+
+                    <a href="#" class="btn btn-success btn-sm float-right saveSubmit">Save</a>
+                </form>
+
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 
@@ -1643,7 +1668,6 @@
     </div>
 </div>
 
-
 <!-- JavaScript -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -1744,6 +1768,11 @@
     $(window).on('load',function(){
         $('#modalCompareTips').modal('show');
     });
+
+    $('.saveSubmit').on('click', function() {
+        $('.collapse.show').css('display', 'none');
+        $('.saved-alert').css('display', 'block');
+    })
 </script>
 
 </body>
