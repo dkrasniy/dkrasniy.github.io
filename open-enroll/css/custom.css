@@ -347,6 +347,8 @@ a {
 
 .navbar-brand {
     font-size: 1.75rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar-light .navbar-brand {
@@ -2251,8 +2253,6 @@ span.search-label {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin-left: auto;
-    margin-right: -9px;
     width: 40px;
     height: 40px;
     cursor: pointer;
