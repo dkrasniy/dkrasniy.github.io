@@ -133,10 +133,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <button class="gUD9C0--Jf navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="_1wvd45e0_t">Open menu</span>
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="icon">
+                <i class="fas fa-bars"></i>
+            </div>
         </button>
-        <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
+        <a class="navbar-brand" href="#">my|<strong>CalPERS</strong></a>
 
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -182,7 +184,7 @@
             <div class="col nav-item active">
                 <a href="#">
                     <div class="icon">
-                        <i class="fas fa-exchange-alt"></i>
+                        <i class="fas fa-search"></i>
                     </div>
                     <span class="menu-item-name">Compare</span>
                 </a>
@@ -190,7 +192,7 @@
             <div class="col nav-item">
                 <a href="#">
                     <div class="icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-bookmark"></i>
                     </div>
                     <span class="menu-item-name">Saved</span>
                 </a>
@@ -198,7 +200,7 @@
             <div class="col nav-item">
                 <a href="#">
                     <div class="icon">
-                        <i class="fas fa-file-alt"></i>
+                        <i class="fas fa-fa-exchange-alt"></i>
                     </div>
                     <span class="menu-item-name">Change</span>
                 </a>
@@ -206,7 +208,7 @@
             <div class="col nav-item">
                 <a href="#account" class="account">
                     <div class="icon">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
                     <span class="menu-item-name">Statements</span>
                 </a>
@@ -215,15 +217,16 @@
     </div>
 </nav>
 
-<div class="page-title-area">
-    <h1>Results based on</h1>
-    <p>95843, 2018, State or CSU, You only (Basic)</p>
-    <div class="comparison-options">
-        <a href="#" class="btn btn-link btn-sm">Edit my search</a>
+<div class="page-title-area c">
 
-        <button class="btn btn-success btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Save search
-        </button>
+    <div class="float-left icon">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <h1>Showing 3 of 6</h1>
+    <div class="float-right icon filter" id="toggleFitlerPane">
+        <i class="fas fa-sliders-h"></i>
+    </div>
+    <div class="comparison-options hidden" id="filterPane">
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
                 <form>
@@ -1644,12 +1647,12 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
 
-                <div class="swipe-icon">
-                    <i class="far mobile"></i>
+                <div class="icon swipe-icon">
+                    <i class="fas fa-mobile"></i>
                 </div>
                 <h2>Swipe Gestures</h2>
                 <p>Swipe left or right with your finger to quickly move between plans.</p>
-                <a href="#" class="btn btn-primary">Ok, great!</a>
+                <a href="#" class="btn btn-primary" data-dismiss="modal">Ok, great!</a>
             </div>
         </div>
     </div>
@@ -1734,6 +1737,9 @@
         if (e.keyCode == 37) {
             swipeRight();
         }
+    });
+    $("#toggleFitlerPane").onclick(function() {
+        $("#filterPane").slideDown();
     });
     $(window).on('load',function(){
         $('#modalCompareTips').modal('show');

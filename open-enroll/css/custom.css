@@ -2242,7 +2242,7 @@ span.search-label {
 .gUD9C0--Jf {
     padding: 0;
     margin: 0;
-    font-family: inherit;
+    font-family: 1.25em;
     font-style: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -2259,25 +2259,6 @@ span.search-label {
     pointer-events: all;
     background: 0 0;
     outline: none;
-}
-
-.gUD9C0--Jf:after, .gUD9C0--Jf:before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 10px;
-    width: 20px;
-    height: 2px;
-    background: #000;
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-}
-
-.gUD9C0--Jf:after {
-    top: auto;
-    bottom: 16px;
 }
 
 ._1wvd45e0_t {
@@ -2304,6 +2285,13 @@ span.search-label {
     z-index: 2;
     border-top: 1px solid #ececec;
     box-shadow: 0 8px 20px 3px rgba(125, 125, 125, 0.05), 0 5px 9px 0px rgba(197, 197, 197, 0.08);
+}
+.page-title-area.c {
+    display: flex;
+    justify-content: space-between;
+}
+.page-title-area.c .icon{
+    cursor: pointer;
 }
 .page-title-area h1 {
     color: #333;
@@ -2406,9 +2394,9 @@ h3.title {
 }
 
 
-.swipe-icon svg {
-    width: 70px;
-    height: 130px;
+.swipe-icon svg.svg-inline--fa.fa-w-10 {
+    width: 40px;
+    height: 90px;
 }
 .modal-body h2 {
     font-weight: 700;
