@@ -134,18 +134,9 @@
             }
         }
 
-        .table-navigation a {
-    display: none;
-}
-
     </style>
 </head>
 <body>
-<div class="saved-alert" style="display: none;">
-    <div class="alert alert-success quick-notify-alert" role="alert">
-        Comparison saved!
-    </div>
-</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><strong>my</strong>|CalPERS</a>
@@ -188,7 +179,7 @@
     <div class="nav-container">
         <div class="row items-row">
             <div class="col nav-item">
-                <a href="dashboard-saved.html">
+                <a href="dashboard.html">
                     <div class="icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -199,19 +190,27 @@
             <div class="col nav-item active">
                 <a href="#">
                     <div class="icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-exchange"></i>
                     </div>
-                    <span class="menu-item-name">Search</span>
+                    <span class="menu-item-name">Change Plans</span>
                 </a>
             </div>
             <div class="col nav-item">
                 <a href="#">
                     <div class="icon">
-                        <i class="fas fa-bookmark"></i>
+                        <i class="fas fa-search"></i>
                     </div>
-                    <span class="menu-item-name">Saved</span>
+                    <span class="menu-item-name">Compare Plans</span>
                 </a>
             </div>
+            <div class="col nav-item">
+            <a href="#">
+                <div class="icon">
+                    <i class="fas fa-alt"></i>
+                </div>
+                <span class="menu-item-name">Statements</span>
+            </a>
+        </div>
             <div class="col nav-item">
                 <a href="#account" class="account">
                     <div class="icon">
@@ -229,27 +228,7 @@
     <p>95843, 2018, State or CSU, You only (Basic)</p>
     <div class="comparison-options">
        <a href="#" class="btn btn-link btn-sm">Edit my search</a>
-
-        <button class="btn btn-success btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Save search
-        </button>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Save as </label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E.g. Good plans for me">
-                        <small id="emailHelp" class="form-text text-muted">Enter a name for this comparison.</small>
-                    </div>
-
-                    <a href="#" class="btn btn-success btn-sm float-right saveSubmit">Save</a>
-                </form>
-
-            </div>
-        </div>
-
-
-
+        <a href="#" class="btn btn-success btn-sm">Save search</a>
     </div>
 </div>
 
@@ -262,7 +241,7 @@
                     <div class="col-lg-2 single-row-label"></div>
                     <div class="col-lg-10 _n0_sP2">
                         <ul class="table-navigation">
-                            <li><a href="#0" class="prev inactive" style="">Prev</a></li>
+                            <li><a href="#0" class="prev" style="">Prev</a></li>
                             <li><a href="#0" class="next" style="">Next</a></li>
                         </ul>
                         <div class="d-flex flex-row _2translate">
@@ -1672,6 +1651,7 @@
     </div>
 </div>
 
+
 <!-- JavaScript -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -1717,12 +1697,10 @@
     function swipeLeft() {
         swipePos -= 1;
         translateX();
-        $('.prev').removeClass('inactive');
     }
     function swipeRight() {
         swipePos += 1;
         translateX();
-
     }
 
     $('.prev').on('click', function() {
@@ -1774,11 +1752,6 @@
     $(window).on('load',function(){
         $('#modalCompareTips').modal('show');
     });
-
-    $('.saveSubmit').on('click', function() {
-        $('.collapse.show').css('display', 'none');
-        $('.saved-alert').css('display', 'block');
-    })
 </script>
 
 </body>
