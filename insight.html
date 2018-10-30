@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Insight Range Slider</title>
+      <style>
+         body {
+			font-family: sans-serif;
+		}
+
+		.container {
+			margin: 0 auto;
+			margin-top: 3em;
+			width: 90%;
+		}
+
+		@media(min-width: 767px) {
+			.container {
+				width: 65%;
+			}
+		}
+
+		.ui-widget.ui-widget-content {
+			border: 1px solid #c5c5c5;
+			background: #d6d6d6;
+			border: none;
+		}
+
+		.ui-slider {
+			position: relative;
+			text-align: left;
+		}
+
+		.ui-slider .ui-slider-handle {
+			position: absolute;
+			z-index: 2;
+			width: 1.2em;
+			height: 1.2em;
+			cursor: pointer;
+			-ms-touch-action: none;
+			touch-action: none;
+		}
+
+		.ui-slider .ui-slider-range {
+			position: absolute;
+			z-index: 1;
+			font-size: .7em;
+			display: block;
+			border: 0;
+			background-position: 0 0;
+		}
+
+
+		/* support: IE8 */
+
+		.ui-slider.ui-state-disabled .ui-slider-handle,
+		.ui-slider.ui-state-disabled .ui-slider-range {
+			-webkit-filter: inherit;
+			filter: inherit;
+		}
+
+		.ui-slider-horizontal {
+			height: .3em;
+		}
+
+		.ui-slider-horizontal .ui-slider-handle {
+			top: -.3em;
+			margin-left: -.6em;
+		}
+
+		.ui-slider-horizontal .ui-slider-range {
+			top: 0;
+			height: 100%;
+		}
+
+		.ui-slider-horizontal .ui-slider-range-min {
+			left: 0;
+		}
+
+		.ui-slider-horizontal .ui-slider-range-max {
+			right: 0;
+		}
+
+		.ui-slider-vertical {
+			width: .8em;
+			height: 100px;
+		}
+
+		.ui-slider-vertical .ui-slider-handle {
+			left: -.3em;
+			margin-left: 0;
+			margin-bottom: -.6em;
+		}
+
+		.ui-slider-vertical .ui-slider-range {
+			left: 0;
+			width: 100%;
+		}
+
+		.ui-slider-vertical .ui-slider-range-min {
+			bottom: 0;
+		}
+
+		.ui-slider-vertical .ui-slider-range-max {
+			top: 0;
+		}
+
+		#insight-handle {
+			width: 1.25em;
+			height: 1.75em;
+			top: 50%;
+			margin-top: -1em;
+			border-radius: 3px 3px 0 0;
+			text-align: center;
+			line-height: 1.6em;
+		}
+
+		#insight-handle::after {
+			content: '';
+			position: absolute;
+			top: 99.45%;
+			left: 0;
+			border-width: 0.625em;
+			border-style: solid;
+			border-top-color: #0874D9;
+			border-left-color: transparent;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+
+		#insight-handle:focus {
+			outline-width: 0;
+		}
+
+		.ui-state-default,
+		.ui-widget-content .ui-state-default,
+		.ui-widget-header .ui-state-default,
+		.ui-button,
+		html .ui-button.ui-state-disabled:hover,
+		html .ui-button.ui-state-disabled:active {
+			color: #454545;
+			background: #0874D9;
+			border: none;
+		}
+
+		.ui-corner-all,
+		.ui-corner-bottom,
+		.ui-corner-right,
+		.ui-corner-br {
+			border-bottom-right-radius: 0;
+		}
+
+		.ui-corner-all,
+		.ui-corner-bottom,
+		.ui-corner-left,
+		.ui-corner-bl {
+			border-bottom-left-radius: 0;
+		}
+
+		.ticks {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+		}
+
+		.tick {
+			background: #d6d6d6;
+			height: 2em;
+			width: .3em;
+			margin-top: -.75em;
+		}
+
+		.tick-desc {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin-right: -.15em;
+		}
+
+		.tick-desc p {
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+
+		.tick-desc p:first-child {
+			-webkit-box-pack: start;
+			-ms-flex-pack: start;
+			justify-content: flex-start;
+		}
+
+		.tick-desc p:last-child {
+			-webkit-box-pack: end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+		}
+
+		.tick:last-child {
+			margin-right: -.15em;
+		}
+
+		.slider-value {
+			margin: 0 auto;
+			margin-top: 10em;
+			max-width: 150px;
+			text-align:center;
+			background:#eee;
+			padding:1em;
+			border-radius: 5px;
+		}
+		.value-text,.slider-value h3 {
+			margin:0;
+			padding:0;
+			padding-bottom:.25em;
+		}
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1 style="padding-bottom:1em;text-align: center;">Insight Range Slider</h1>
+         <div class="slider-container">
+            <div id="slider">
+               <div class="ticks">
+                  <div class="tick"></div>
+                  <div class="tick"></div>
+                  <div class="tick"></div>
+               </div>
+               <div class="tick-desc">
+                  <p>Needs Development</p>
+                  <p>Proficient</p>
+                  <p>Exceptional</p>
+               </div>
+               <div id="insight-handle" class="ui-slider-handle"></div>
+            </div>
+		 </div>
+		 
+		 <div class="slider-value">
+			 <h3>Current Value</h3>
+			 <p class="value-text">0</p>
+		 </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+         $( function() {
+           $( "#slider" ).slider({
+			slide: function( event, ui ) {
+				// value updates on slider move
+				let sliderValue = ui.value;
+				$('.value-text').html(sliderValue)
+			}
+		   });
+         } );
+      </script>
+   </body>
+</html>
