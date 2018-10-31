@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Insight Slideout</title>
+      <style>
+         body {
+			font-family: sans-serif;
+			background: #f6f6f6;
+		}
+
+		.container {
+			margin: 0 auto;
+			margin-top: 3em;
+			max-width: 1100px;
+		}
+
+		.main-content {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+		.sidebar {
+			width: 25%;
+			background: #222;
+			padding: 2em;
+		}
+
+		.content {
+			width: 75%;
+			background: #444;
+			padding: 2em;
+		}
+
+		.overlay-sidebar {
+			background: white;
+			position: absolute;
+			left: -100%;
+			top: 0;
+			height: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			text-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-shadow: 3px 3px 11px #00000014;
+			box-shadow: 3px 3px 11px #00000014;
+			-webkit-transition: all .25s ease;
+			-o-transition: all .25s ease;
+			transition: all .25s ease;
+			opacity: 0;
+		}
+
+		.overlay-sidebar.visible {
+			left: 0!important;
+			opacity: 1;
+		}
+
+      </style>
+   </head>
+   <body>
+	   <div class="overlay-sidebar"><h4>Hello Sidebar</h4></div>
+		<div class="container">
+			<div class="main-content">
+				<div class="sidebar"></div>
+				<div class="content">
+					<button class="toggleSidepanel">Toggle Sidepanel</button>
+				</div>
+			</div>
+	
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script>
+
+		//toggle visible class to show/hide 
+		$('.toggleSidepanel').click(function() {
+			$('.overlay-sidebar').toggleClass( "visible" )
+		})
+		 $(document).ready(calcSidebarWidth);
+		 $(window).resize(calcSidebarWidth);
+
+		function calcSidebarWidth() {
+			var windowWidth = window.innerWidth;
+			let mainContentContainerWidth = $('.main-content').outerWidth();
+			let innerSidebarWidth = $('.sidebar').outerWidth();
+			let innerMainContent = $('.content').outerWidth();
+
+			let overflowSidebarPanel = (((windowWidth - mainContentContainerWidth)/2) + innerSidebarWidth);
+			$('.overlay-sidebar').css("left", "-" + overflowSidebarPanel + "px")
+			$('.overlay-sidebar').css("width", overflowSidebarPanel + "px")
+		}
+      
+      </script>
+   </body>
+</html>
