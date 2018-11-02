@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Insight Range Slider</title>
       <style>
-         body {
+        body {
 			font-family: sans-serif;
 		}
 
@@ -62,6 +62,10 @@
 
 		.ui-slider-horizontal {
 			height: .3em;
+		}
+
+		.ui-slider-horizontal:hover {
+			cursor: pointer;
 		}
 
 		.ui-slider-horizontal .ui-slider-handle {
@@ -165,13 +169,30 @@
 			-webkit-box-pack: justify;
 			-ms-flex-pack: justify;
 			justify-content: space-between;
+			position: relative;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.ticks .ui-slider {
+			width: 100%;
+			position: absolute;
+			-webkit-transition: .1s ease all;
+			-o-transition: .1s ease all;
+			transition: .1s ease all;
 		}
 
 		.tick {
 			background: #d6d6d6;
 			height: 2em;
 			width: .3em;
-			margin-top: -.75em;
+		}
+
+		.ticks:hover .ui-slider {
+			height: 2em;
 		}
 
 		.tick-desc {
@@ -213,15 +234,17 @@
 			margin: 0 auto;
 			margin-top: 10em;
 			max-width: 150px;
-			text-align:center;
-			background:#eee;
-			padding:1em;
+			text-align: center;
+			background: #eee;
+			padding: 1em;
 			border-radius: 5px;
 		}
-		.value-text,.slider-value h3 {
-			margin:0;
-			padding:0;
-			padding-bottom:.25em;
+
+		.value-text,
+		.slider-value h3 {
+			margin: 0;
+			padding: 0;
+			padding-bottom: .25em;
 		}
       </style>
    </head>
@@ -229,19 +252,22 @@
       <div class="container">
          <h1 style="padding-bottom:1em;text-align: center;">Insight Range Slider</h1>
          <div class="slider-container">
-            <div id="slider">
-               <div class="ticks">
-                  <div class="tick"></div>
-                  <div class="tick"></div>
-                  <div class="tick"></div>
-               </div>
-               <div class="tick-desc">
-                  <p>Needs Development</p>
-                  <p>Proficient</p>
-                  <p>Exceptional</p>
-               </div>
-               <div id="insight-handle" class="ui-slider-handle"></div>
-            </div>
+		   
+			<div class="ticks">
+					<div id="slider">
+						<div id="insight-handle" class="ui-slider-handle"></div>
+						 </div>
+				<div class="tick"></div>
+				<div class="tick"></div>
+				<div class="tick"></div>
+			 </div>
+			 
+			<div class="tick-desc">
+				<p>Needs Development</p>
+				<p>Proficient</p>
+				<p>Exceptional</p>
+			 </div>
+
 		 </div>
 		 
 		 <div class="slider-value">
