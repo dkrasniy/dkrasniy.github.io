@@ -192,15 +192,15 @@
         .left-fixed-2 {
             position: -webkit-sticky;
             position: sticky;
-            left: 85px;
-            font-weight: 600;
+            left: 64px;
+            font-weight: normal;
             z-index: 2;
             background: #fff;
         }
         .left-fixed-3 {
             position: -webkit-sticky;
             position: sticky;
-            left: 170px;
+            left: 140px;
             z-index: 2;
             background: #fff;
         }
@@ -236,6 +236,21 @@
             /* .compact  {
                 font-size: .9em!important;
             } */
+
+            .section-header th {
+                position: sticky;
+                width: 100%;
+                left: 0;
+                top: 80px;
+                z-index: 400;
+
+                background: #f9fafb;
+                text-align: left!important;
+                font-size: 1.1em;
+                padding: .25em 1em!important;
+
+                
+            }
 
 </style>
            
@@ -273,7 +288,6 @@
                 <tr class="quarters">
                     <th class="left-fixed-1"></th>
                     <th class="left-fixed-2"></th>
-                    <th class="left-fixed-3"></th>
                     <th colspan="4" scope="col">2017</th>
                     <th colspan="4" scope="col">2018</th>
                     <th colspan="4" scope="col">2019</th>
@@ -284,9 +298,9 @@
                     <th colspan="4" scope="col">2024</th>
                 </tr>
                 <tr class="headers">
-                    <th scope="col" class="left-fixed-1">Committee</th>
-                    <th scope="col" class="left-fixed-2">Power</th>
-                    <th scope="col" style="min-width: 300px;" class="left-fixed-3">Specific ALM Power</th>
+                    <th scope="col" class="left-fixed-1"> </th>
+                 
+                    <th scope="col" style="min-width: 600px;" class="left-fixed-2">Specific ALM Power</th>
                     <th scope="col">Q1</th>
                     <th scope="col">Q2</th>
                     <th scope="col">Q3</th>
@@ -322,10 +336,16 @@
                 </tr>
                 </thead>
                 <tbody>
+                        <tr class="section-header" >
+                            <th id="set" class="span" colspan="15"  scope="colgroup">
+                                Set
+                            </th>
+                        </tr>
+                        
                     <tr class="light-blue">
                         <th rowspan="4" headers="ic" id="ic1" class="left-fixed-1">IC</th>
-                        <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th>
-                        <td class="left-fixed-3">Set investment beliefs</td>
+                        <!-- <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th> -->
+                        <td class="left-fixed-2">Set investment beliefs</td>
                         <td headers="ic1 set1"></td>
                         <td></td>
                         <td></td>
@@ -360,7 +380,7 @@
                         <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                     </tr>
                     <tr class="light-blue">
-                        <td class="left-fixed-3">Set total fund and asset class policy benchmarks</td>
+                        <td class="left-fixed-2">Set total fund and asset class policy benchmarks</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -395,7 +415,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-blue">
-                        <td class="left-fixed-3">Set investment risk appetite and tolerances</td>
+                        <td class="left-fixed-2">Set investment risk appetite and tolerances</td>
                         <td></td>
                         <td></td>
                         <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">1</span></li></ul></td>
@@ -430,7 +450,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-blue">
-                        <td class="left-fixed-3">Set the target rate of return</td>
+                        <td class="left-fixed-2">Set the target rate of return</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -464,11 +484,17 @@
                         <td></td>
                         <td></td>
                     </tr>
+                    
                     <tr class="seperator">
+                    <tr class="section-header" >
+                            <th id="approve" class="span" colspan="15"  scope="colgroup">
+                                Approve
+                            </th>
+                        </tr>
                     <tr class="light-orange">
                         <th rowspan="2" headers="ic2" id="ic2" class="left-fixed-1">IC</th>
-                        <th rowspan="5" headers="set2" id="set2" class="left-fixed-2">APPROVE</th>
-                        <td class="left-fixed-3">Select the asset allocation mix including interim allocation targets for each fund</td>
+                        <!-- <th rowspan="5" headers="set2" id="set2" class="left-fixed-2">APPROVE</th> -->
+                        <td class="left-fixed-2">Select the asset allocation mix including interim allocation targets for each fund</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -503,7 +529,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-orange">
-                        <td class="left-fixed-3">Approve asset class strategic plans and portfolio construction guidelines</td>
+                        <td class="left-fixed-2">Approve asset class strategic plans and portfolio construction guidelines</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -539,7 +565,7 @@
                     </tr>
                     <tr class="light-orange">
                         <th rowspan="3" headers="ic" id="ic2"  class="left-fixed-1">FAC</th>
-                        <td class="left-fixed-3">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
+                        <td class="left-fixed-2">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -574,7 +600,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-orange">
-                        <td class="left-fixed-3">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                        <td class="left-fixed-2">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -609,7 +635,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-orange">
-                        <td class="left-fixed-3">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</td>
+                        <td class="left-fixed-2">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -644,10 +670,15 @@
                         <td></td>
                     </tr class="light-orange">
                     <tr class="seperator">
+                    <tr class="section-header" >
+                            <th id="conduct" class="span" colspan="15"  scope="colgroup">
+                                    Conduct
+                            </th>
+                        </tr>
                     <tr class="light-yellow">
                         <th rowspan="1" headers="ic2" id="ic2"  class="left-fixed-1">IC</th>
-                        <th rowspan="1" headers="set2" id="set2" class="left-fixed-2">CONDUCT</th>
-                        <td class="left-fixed-3">Conduct strategic asset allocation</td>
+                        <!-- <th rowspan="1" headers="set2" id="set2" class="left-fixed-2">CONDUCT</th> -->
+                        <td class="left-fixed-2">Conduct strategic asset allocation</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -682,10 +713,15 @@
                         <td></td>
                     </tr>
                     <tr class="seperator">
+                <tr class="section-header" >
+                        <th id="conduct" class="span" colspan="15"  scope="colgroup">
+                                Oversee
+                        </th>
+                    </tr>
                     <tr class="light-green">
                         <th rowspan="4" headers="ic3" id="ic3"  class="left-fixed-1">FAC</th>
-                        <th rowspan="12" headers="set3" id="set3" class="left-fixed-2">OVERSEE</th>
-                        <td class="left-fixed-3">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
+                        <!-- <th rowspan="12" headers="set3" id="set3" class="left-fixed-2">OVERSEE</th> -->
+                        <td class="left-fixed-2">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
                         <td></td>
                         <td></td>
                         <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
@@ -720,7 +756,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</td>
+                        <td class="left-fixed-2">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -753,7 +789,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</td>
+                        <td class="left-fixed-2">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -789,7 +825,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</td>
+                        <td class="left-fixed-2">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -825,7 +861,7 @@
                     </tr>
                     <tr class="light-green">
                         <th rowspan="8" headers="ic3" id="ic3" class="left-fixed-1">IC</th>
-                        <td class="left-fixed-3">Oversee asset class strategic plans and portfolio construction guidelines</td>
+                        <td class="left-fixed-2">Oversee asset class strategic plans and portfolio construction guidelines</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -860,7 +896,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                        <td class="left-fixed-2">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -895,7 +931,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee investment performance</td>
+                        <td class="left-fixed-2">Oversee investment performance</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -930,7 +966,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee selection process and performance of investment partners, managers and consultants</td>
+                        <td class="left-fixed-2">Oversee selection process and performance of investment partners, managers and consultants</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -965,7 +1001,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee cost effectiveness of the investment program</td>
+                        <td class="left-fixed-2">Oversee cost effectiveness of the investment program</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1000,7 +1036,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee investment office risk assessment and control environment</td>
+                        <td class="left-fixed-2">Oversee investment office risk assessment and control environment</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1035,7 +1071,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee environmental, social and governance (ESG) program</td>
+                        <td class="left-fixed-2">Oversee environmental, social and governance (ESG) program</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1070,7 +1106,7 @@
                         <td></td>
                     </tr>
                     <tr class="light-green">
-                        <td class="left-fixed-3">Oversee performance of Board consultants who provide investment-related expertise to the Board</td>
+                        <td class="left-fixed-2">Oversee performance of Board consultants who provide investment-related expertise to the Board</td>
                         <td></td>
                         <td></td>
                         <td></td>
