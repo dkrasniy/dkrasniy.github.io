@@ -32,6 +32,10 @@
                 margin: 0 auto;
                 text-align: center;
             }
+            span.item:hover {
+                cursor: pointer;
+            }
+
             .light-blue span.item {
                background: #2196F3;
            }
@@ -80,7 +84,7 @@
             }
 
             #policy-radar th {
-                font-weight: normal;
+                font-weight: 600;
             }
 
             #policy-radar td {
@@ -107,30 +111,39 @@
             .overlay-sidebar {
 			background: white;
 			position: absolute;
-			right: -100%;
-            width:500px;
+			padding: 1.5em;
+            width:300px;
 			top: 0;
-			height: 100%;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			text-align: center;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			-webkit-box-shadow: 3px 3px 11px #00000014;
-			box-shadow: 3px 3px 11px #00000014;
-			-webkit-transition: all .25s ease;
-			-o-transition: all .25s ease;
-			transition: all .25s ease;
+			min-height: 100%;
+			display: none;
+			-webkit-box-shadow: -1px -1px 11px #00000014;
+			box-shadow: -1px -1px 11px #00000014;
+			-webkit-transition: all .05s ease;
+			-o-transition: all .05s ease;
+			transition: all .05s ease;
 			opacity: 0;
-		}
+		} 
+        .overlay-sidebar .details {
+            display: flex;
+            margin: 2em 0;
+        }
+        .overlay-sidebar .details p {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        .overlay-sidebar .details p span.label {
+            display: block;
+            font-weight: 600;
+            font-size:.9em;
+        }
+        .overlay-sidebar h4 {
+            font-weight: 600;
+            font-size: 1.25em;
+        }
 
 		.overlay-sidebar.visible {
-			right: 0!important;
+			display: block;
+            right: 0;
 			opacity: 1;
             z-index: 10000;
 		}
@@ -179,6 +192,7 @@
             position: -webkit-sticky;
             position: sticky;
             left: 85px;
+            font-weight: 600;
             z-index: 2;
             background: #fff;
         }
@@ -191,6 +205,7 @@
         }
         thead .left-fixed-1,thead .left-fixed-2,thead .left-fixed-3 {
             z-index: 10;
+            
         }
 
         thead th:first-child,
@@ -207,6 +222,19 @@
         .header h1{
             margin: 0;
         }
+
+        .compact td ,.compact th  {
+                padding: 0!important;
+                min-width: 0!important;
+                min-height: 0!important;
+            }
+            .compact tr.headers th {
+            padding: 2px 5px!important;
+                    }
+            /* .compact  {
+                font-size: .9em!important;
+            } */
+
 </style>
            
         </head>
@@ -248,7 +276,7 @@
                 <tr class="headers">
                     <th scope="col" class="left-fixed-1">Committee</th>
                     <th scope="col" class="left-fixed-2">Power</th>
-                    <th scope="col" style="min-width: 360px;" class="left-fixed-3">Specific ALM Power</th>
+                    <th scope="col" style="min-width: 300px;" class="left-fixed-3">Specific ALM Power</th>
                     <th scope="col">Q1</th>
                     <th scope="col">Q2</th>
                     <th scope="col">Q3</th>
@@ -1072,7 +1100,18 @@
 
 
 
-            <div class="overlay-sidebar"><h4>Hello Sidebar</h4></div>
+            <div class="overlay-sidebar">
+                <h4>Item Details - 2019 Q4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, ex a dictum lobortis, ipsum lorem lobortis odio.</p>
+                <hr>
+                <div class="details">
+                    <p><span class="label">Committee</span>IC</p>
+                    <p><span class="label">Power</span>SET</p>
+                </div>
+                <div class="details">
+                        <p><span class="label">Specific ALM Power</span>Set total fund and asset class policy benchmarks	</p>
+                    </div>
+            </div>
            
 
 
@@ -1083,6 +1122,9 @@
               $('.li-toggle').click(function() {
                   console.log("click")
                   $('.overlay-sidebar').toggleClass( "visible" )
+              })
+              $('.toggle-compact').click(function() {
+                  $('.main-table').toggleClass( "compact" )
               })
               
             
