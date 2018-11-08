@@ -97,12 +97,43 @@
             #policy-radar tbody td:first-child::after {
                 content: leader(". ");
                 '
-    }
-    .seperator {
-            display: block;
-            min-height: 10px;
-            background: #fff;
-    }
+                }
+
+            .seperator {
+                    display: block;
+                    min-height: 10px;
+                    background: #fff;
+            }
+            .overlay-sidebar {
+			background: white;
+			position: absolute;
+			right: -100%;
+            width:500px;
+			top: 0;
+			height: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			text-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-shadow: 3px 3px 11px #00000014;
+			box-shadow: 3px 3px 11px #00000014;
+			-webkit-transition: all .25s ease;
+			-o-transition: all .25s ease;
+			transition: all .25s ease;
+			opacity: 0;
+		}
+
+		.overlay-sidebar.visible {
+			right: 0!important;
+			opacity: 1;
+            z-index: 10000;
+		}
 
    
         .table-scroll {
@@ -192,7 +223,7 @@
 
             <div class="header" style="padding:1em;">
                     <div class="container-fluid">
-                    <button class="btn btn-secondary-outline float-right">Compact View</button>
+                    <button class="btn btn-secondary-outline float-right toggle-compact">Compact View</button>
                 <h1><span style="display: block;
                     font-size: .6em;">Policy Group</span><b>ALM</b></h1>
                 </div>
@@ -262,7 +293,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -270,13 +301,13 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">4</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">4</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">1</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -288,7 +319,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                     </tr>
                     <tr class="light-blue">
                         <td class="left-fixed-3">Set total fund and asset class policy benchmarks</td>
@@ -309,13 +340,13 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">4</span></li><li><span class="item">9</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">4</span></li><li class="li-toggle"><span class="item">9</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -329,7 +360,7 @@
                         <td class="left-fixed-3">Set investment risk appetite and tolerances</td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">1</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -344,20 +375,20 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">1</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                     </tr>
                     <tr class="light-blue">
@@ -374,7 +405,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -388,7 +419,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -498,7 +529,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -519,7 +550,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -561,7 +592,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">2</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -587,7 +618,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -601,7 +632,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">8</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">8</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -619,7 +650,7 @@
                         <td class="left-fixed-3">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -663,7 +694,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td> <td></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td> <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -674,7 +705,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td><td></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td><td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -698,7 +729,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                        
                         <td></td>
                         <td></td>
@@ -866,7 +897,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1023,7 +1054,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li><li><span class="item">23</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item">1</span></li><li class="li-toggle"><span class="item">23</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -1038,5 +1069,26 @@
                 </tbody>
             </table>
             </div>
+
+
+
+            <div class="overlay-sidebar"><h4>Hello Sidebar</h4></div>
+           
+
+
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script>
+      
+              //toggle visible class to show/hide 
+              $('.li-toggle').click(function() {
+                  console.log("click")
+                  $('.overlay-sidebar').toggleClass( "visible" )
+              })
+              
+            
+            </script>
+
+            
+
         </body>
     </html>
