@@ -1,0 +1,1042 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Policy Radar Table</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style>
+            .light-blue {
+                background: #edf5fa;
+            }
+            .light-orange {
+                background: #fdf1e8;
+            }
+            .light-yellow {
+                background:#fff7e1;
+            }
+            .light-green {
+                background:#f0f6ec;
+            }
+
+
+           span.item {
+                display: block;
+               
+                border-radius: 100%;
+                height: 15px;
+                color: transparent;
+                width: 15px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .light-blue span.item {
+               background: #2196F3;
+           }
+           .light-orange span.item {
+               background: #FF9800;
+           }
+           .light-yellow span.item {
+               background: #FFEB3B;
+           }
+           .light-green span.item {
+               background: #4CAF50;
+           }
+
+            .inner-data-ul {
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+            }
+            .inner-data-ul li {
+            flex: 1 0 50%;
+            }
+
+
+            body{
+                font-family: proxima nova!important;
+                background-color: #f4f6f8;
+            }
+            #policy-radar {
+                /* border: solid thin rgba(0, 0, 0, 0.1); */
+                border-collapse: collapse;
+                table-layout: fixed;
+                background-color: #fff;
+                box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px 0 rgba(63,63,68,.15);
+            }
+
+            #policy-radar caption {
+                padding-bottom: 0.5em;
+            }
+
+            #policy-radar th, #policy-radar td {
+                border: solid thin rgba(0, 0, 0, 0.1);
+                padding: 0.5rem 1rem;
+                min-width: 4rem;
+            }
+
+            #policy-radar th {
+                font-weight: normal;
+            }
+
+            #policy-radar td {
+                /* border-style: none solid; */
+                /* vertical-align: top; */
+            }
+
+            #policy-radar th {
+                padding: 0.2em;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            #policy-radar tbody td:first-child::after {
+                content: leader(". ");
+                '
+    }
+    .seperator {
+            display: block;
+            min-height: 10px;
+            background: #fff;
+    }
+
+   
+        .table-scroll {
+        position: relative;
+        width:100%;
+        z-index: 1;
+        margin: auto;
+        overflow: scroll;
+        height: 100vh;
+        }
+
+         
+        .table-scroll thead th {
+            background: #fff;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+        tr.headers th {
+            top:30px;
+        }
+        
+        /* safari and ios need the tfoot itself to be position:sticky also */
+        .table-scroll tfoot,
+        .table-scroll tfoot th,
+        .table-scroll tfoot td {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            color: #fff;
+            z-index:4;
+        }
+
+       
+        th:first-child {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0;
+            z-index: 2;
+            background: #fff;
+        }
+        .left-fixed-2 {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 85px;
+            z-index: 2;
+            background: #fff;
+        }
+        .left-fixed-3 {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 170px;
+            z-index: 2;
+            background: #fff;
+        }
+        thead .left-fixed-1,thead .left-fixed-2,thead .left-fixed-3 {
+            z-index: 10;
+        }
+
+        thead th:first-child,
+        tfoot th:first-child {
+            z-index: 5;
+        }
+
+        tr.headers th {
+            background: #f9fafb;
+            border-bottom: .1rem solid #dfe3e8;
+            padding: 13px 5px!important;
+            font-weight: 600!important;
+        }
+        .header h1{
+            margin: 0;
+        }
+</style>
+           
+        </head>
+        <body>
+                <div class="application-bar" style="
+                background: white;
+                padding:1em;
+                box-shadow: 3px 3px 10px #00000008;">
+                
+                <div class="container-fluid"><a style="
+                    font-weight: bold;
+                    font-size: 20px;
+                ">App Name</a></div></div>
+
+            <div class="header" style="padding:1em;">
+                    <div class="container-fluid">
+                    <button class="btn btn-secondary-outline float-right">Compact View</button>
+                <h1><span style="display: block;
+                    font-size: .6em;">Policy Group</span><b>ALM</b></h1>
+                </div>
+                
+            </div>
+                <div id="table-scroll" class="table-scroll">
+            <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
+                    <thead>
+                <tr class="quarters">
+                    <th class="left-fixed-1"></th>
+                    <th class="left-fixed-2"></th>
+                    <th class="left-fixed-3"></th>
+                    <th colspan="4" scope="col">2017</th>
+                    <th colspan="4" scope="col">2018</th>
+                    <th colspan="4" scope="col">2019</th>
+                    <th colspan="4" scope="col">2020</th>
+                    <th colspan="4" scope="col">2021</th>
+                    <th colspan="4" scope="col">2022</th>
+                    <th colspan="4" scope="col">2023</th>
+                    <th colspan="4" scope="col">2024</th>
+                </tr>
+                <tr class="headers">
+                    <th scope="col" class="left-fixed-1">Committee</th>
+                    <th scope="col" class="left-fixed-2">Power</th>
+                    <th scope="col" style="min-width: 360px;" class="left-fixed-3">Specific ALM Power</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                    <th scope="col">Q1</th>
+                    <th scope="col">Q2</th>
+                    <th scope="col">Q3</th>
+                    <th scope="col">Q4</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="light-blue">
+                        <th rowspan="4" headers="ic" id="ic1" class="left-fixed-1">IC</th>
+                        <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th>
+                        <td class="left-fixed-3">Set investment beliefs</td>
+                        <td headers="ic1 set1"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">4</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                    </tr>
+                    <tr class="light-blue">
+                        <td class="left-fixed-3">Set total fund and asset class policy benchmarks</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">4</span></li><li><span class="item">9</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-blue">
+                        <td class="left-fixed-3">Set investment risk appetite and tolerances</td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-blue">
+                        <td class="left-fixed-3">Set the target rate of return</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="seperator">
+                    <tr class="light-orange">
+                        <th rowspan="2" headers="ic2" id="ic2" class="left-fixed-1">IC</th>
+                        <th rowspan="5" headers="set2" id="set2" class="left-fixed-2">APPROVE</th>
+                        <td class="left-fixed-3">Select the asset allocation mix including interim allocation targets for each fund</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-orange">
+                        <td class="left-fixed-3">Approve asset class strategic plans and portfolio construction guidelines</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-orange">
+                        <th rowspan="3" headers="ic" id="ic2"  class="left-fixed-1">FAC</th>
+                        <td class="left-fixed-3">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-orange">
+                        <td class="left-fixed-3">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-orange">
+                        <td class="left-fixed-3">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">2</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr class="light-orange">
+                    <tr class="seperator">
+                    <tr class="light-yellow">
+                        <th rowspan="1" headers="ic2" id="ic2"  class="left-fixed-1">IC</th>
+                        <th rowspan="1" headers="set2" id="set2" class="left-fixed-2">CONDUCT</th>
+                        <td class="left-fixed-3">Conduct strategic asset allocation</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">8</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="seperator">
+                    <tr class="light-green">
+                        <th rowspan="4" headers="ic3" id="ic3"  class="left-fixed-1">FAC</th>
+                        <th rowspan="12" headers="set3" id="set3" class="left-fixed-2">OVERSEE</th>
+                        <td class="left-fixed-3">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td> <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td><td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                       
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <th rowspan="8" headers="ic3" id="ic3" class="left-fixed-1">IC</th>
+                        <td class="left-fixed-3">Oversee asset class strategic plans and portfolio construction guidelines</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee investment performance</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee selection process and performance of investment partners, managers and consultants</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">3</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee cost effectiveness of the investment program</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee investment office risk assessment and control environment</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee environmental, social and governance (ESG) program</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="light-green">
+                        <td class="left-fixed-3">Oversee performance of Board consultants who provide investment-related expertise to the Board</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><ul class="inner-data-ul"><li><span class="item">1</span></li><li><span class="item">23</span></li></ul></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </body>
+    </html>
