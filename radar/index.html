@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Policy Radar Table</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
         <link rel="stylesheet" href="radar.css">
        
            
@@ -29,9 +31,9 @@
                             </a>
                           
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item active" href="#">ALM</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                              <a class="dropdown-item active" href="radar.html">ALM</a>
+                              <a class="dropdown-item" href="epm.html">EPM</a>
+                              <a class="dropdown-item" href="phb.html">PHB</a>
                             </div>
                           </div>
 
@@ -69,7 +71,7 @@
                     <th scope="col">Q2</th>
                     <th scope="col">Q3</th>
                     <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
+                    <th scope="col" class="current-year">Q1</th>
                     <th scope="col">Q2</th>
                     <th scope="col">Q3</th>
                     <th scope="col">Q4</th>
@@ -98,8 +100,9 @@
                 <tbody>
                    
                         <tr class="section-header set-section">
+                            
                             <th id="set" class="span" colspan="15"  scope="colgroup">
-                                Set
+                                    <i class="fas fa-plus"></i> Set 
                             </th>
                         </tr>
                         
@@ -253,7 +256,7 @@
                       
                     <tr class="section-header approve-section" >
                             <th id="approve" class="span" colspan="15"  scope="colgroup">
-                                Approve
+                                <i class="fas fa-plus"></i> Approve
                             </th>
                         </tr>
                     <tr class="light-orange approve-item">
@@ -437,7 +440,7 @@
                     <tr class="seperator approve-item">
                     <tr class="section-header conduct-section" >
                             <th id="conduct" class="span" colspan="15"  scope="colgroup">
-                                    Conduct
+                                   <i class="fas fa-plus"></i> Conduct
                             </th>
                         </tr>
                     <tr class="light-yellow conduct-item">
@@ -480,7 +483,7 @@
                     <tr class="seperator conduct-item">
                 <tr class="section-header oversee-section" >
                         <th id="conduct" class="span" colspan="15"  scope="colgroup">
-                                Oversee
+                                <i class="fas fa-plus"></i> Oversee
                         </th>
                     </tr>
                     <tr class="light-green oversee-item">
@@ -911,17 +914,30 @@
 
 
 
-            <div class="overlay-sidebar">
-                <h4>Item Details - 2019 Q4</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, ex a dictum lobortis, ipsum lorem lobortis odio.</p>
-                <hr>
-                <div class="details">
-                    <p><span class="label">Committee</span>IC</p>
-                    <p><span class="label">Power</span>SET</p>
+            <div class="overlay-sidebar overlayq24of5">
+                <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h2>Approve</h2>
+                       
                 </div>
-                <div class="details">
-                        <p><span class="label">Specific ALM Power</span>Set total fund and asset class policy benchmarks	</p>
+                <div class="overlay-body">
+                    <div class="details">
+                            <p><span class="label">Quarter</span>2019 - Q4</p>
+                            <p><span class="label">Committee</span>FAC</p>
+                        </div>
+                        <div class="details">
+                        <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies	</p>
                     </div>
+                    <hr>
+                    
+                    <div class="details">
+                            <p><span class="label">Agenda Items</span>Set total fund and asset class policy benchmarks	</p>
+                        </div>
+                </div>
+                   
+                          
+             
             </div>
            
 
@@ -930,11 +946,15 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+           
+
             <script>
       
               //toggle visible class to show/hide 
               $('.li-toggle').click(function() {
-                  console.log("click")
+                  $('.overlay-sidebar').toggleClass( "visible" )
+              })
+              $('.close').click(function() {
                   $('.overlay-sidebar').toggleClass( "visible" )
               })
               $('.toggle-compact').click(function() {
@@ -943,15 +963,19 @@
 
               $('.set-section').click(function() {
                   $('.set-item').toggleClass( "hide-tr" )
+                  $('.set-section').toggleClass( "collapsed" )
               })
               $('.approve-section').click(function() {
                   $('.approve-item').toggleClass( "hide-tr" )
+                  $('.approve-section').toggleClass( "collapsed" )
               })
               $('.conduct-section').click(function() {
                   $('.conduct-item').toggleClass( "hide-tr" )
+                  $('.conduct-section').toggleClass( "collapsed" )
               })
               $('.oversee-section').click(function() {
                   $('.oversee-item').toggleClass( "hide-tr" )
+                  $('.oversee-section').toggleClass( "collapsed" )
               })
 
 

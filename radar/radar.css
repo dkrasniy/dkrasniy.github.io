@@ -23,6 +23,17 @@ Policy Radar
 	background: #f0f6ec;
 }
 
+
+tr.section-header i {
+  transform: rotate(135deg);
+  transition: .1s ease all;
+}
+
+
+tr.section-header.collapsed i {
+  transform: none!important;
+}
+
 tr.section-header {
 	cursor: pointer;
 }
@@ -71,7 +82,8 @@ span.item:hover {
 
 body {
 	font-family: proxima nova, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	background-color: #f4f6f8;
+  background-color: #f4f6f8;
+  overflow: hidden;
 }
 
 #policy-radar {
@@ -103,7 +115,7 @@ body {
 }
 
 #policy-radar th {
-	padding: 0.2em;
+	/* padding: 0.2em; */
 	vertical-align: middle;
 	text-align: center;
 }
@@ -123,8 +135,8 @@ body {
 .overlay-sidebar {
 	background: white;
 	position: absolute;
-	padding: 1.5em;
-	width: 300px;
+
+	width: 340px;
 	top: 0;
 	min-height: 100%;
 	display: none;
@@ -135,10 +147,33 @@ body {
 	transition: all .05s ease;
 	opacity: 0;
 }
+.overlay-body {
+  padding: 1.5em;
+}
+.power-head-bg {
+  background: #006edf;
+  padding: .75em 1em;
+}
+.power-head-bg button.close {
+  color: white;
+  box-shadow: none;
+  opacity: .7;
+}
+.power-head-bg  h2 {
+  font-size: 1.25em;
+  line-height: 1;
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+
 
 .overlay-sidebar .details {
 	display: flex;
-	margin: 2em 0;
+	margin: 1.5em 0;
+}
+.overlay-sidebar .details:first-child {
+  margin-top:0;
 }
 
 .overlay-sidebar .details p {
@@ -340,6 +375,11 @@ tr.section-header.oversee-section th {
   font-weight: bold;
   font-size: 28px;
   color: #333;
+  text-decoration: none;
+}
+.policy-group .dropdown-item {
+  font-size:20px;
+  line-height: 1.75;
 }
 
 
@@ -360,3 +400,15 @@ tr.section-header.oversee-section th {
   background: #edf5fa!important;
 }
 
+
+th.current-year:before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 0;
+  display: block;
+  width: 64px;
+  height: 92px;
+  border-left: 2px solid #4CAF50;
+  border-right: 2px solid #4CAF50;
+}
