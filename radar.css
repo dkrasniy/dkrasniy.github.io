@@ -1,0 +1,362 @@
+/* --------------------------------
+
+David Krasniy
+CalPERS
+
+Policy Radar
+
+-------------------------------- */
+
+.light-blue {
+	background: #edf5fa;
+}
+
+.light-orange {
+	background: #fdf1e8;
+}
+
+.light-yellow {
+	background: #fff7e1;
+}
+
+.light-green {
+	background: #f0f6ec;
+}
+
+tr.section-header {
+	cursor: pointer;
+}
+
+span.item {
+	display: block;
+	border-radius: 100%;
+	height: 15px;
+	color: transparent;
+	width: 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+span.item:hover {
+	cursor: pointer;
+}
+
+.light-blue span.item {
+	background: #2196F3;
+}
+
+.light-orange span.item {
+	background: #FF9800;
+}
+
+.light-yellow span.item {
+	background: #FFEB3B;
+}
+
+.light-green span.item {
+	background: #4CAF50;
+}
+
+.inner-data-ul {
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.inner-data-ul li {
+	flex: 1 0 50%;
+}
+
+body {
+	font-family: proxima nova, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	background-color: #f4f6f8;
+}
+
+#policy-radar {
+	/* border: solid thin rgba(0, 0, 0, 0.1); */
+	border-collapse: collapse;
+	table-layout: fixed;
+	background-color: #fff;
+	box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px 0 rgba(63, 63, 68, .15);
+}
+
+#policy-radar caption {
+	padding-bottom: 0.5em;
+}
+
+#policy-radar th,
+#policy-radar td {
+	border: solid thin #dcdcdc;
+	padding: 0.5rem 1rem;
+	min-width: 4rem;
+}
+
+#policy-radar th {
+	font-weight: 600;
+}
+
+#policy-radar td {
+	/* border-style: none solid; */
+	/* vertical-align: top; */
+}
+
+#policy-radar th {
+	padding: 0.2em;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#policy-radar tbody td:first-child::after {
+	content: leader(". ");
+	'
+
+}
+
+.seperator {
+	display: block;
+	min-height: 10px;
+	background: #fff;
+}
+
+.overlay-sidebar {
+	background: white;
+	position: absolute;
+	padding: 1.5em;
+	width: 300px;
+	top: 0;
+	min-height: 100%;
+	display: none;
+	-webkit-box-shadow: -1px -1px 11px #00000014;
+	box-shadow: -1px -1px 11px #00000014;
+	-webkit-transition: all .05s ease;
+	-o-transition: all .05s ease;
+	transition: all .05s ease;
+	opacity: 0;
+}
+
+.overlay-sidebar .details {
+	display: flex;
+	margin: 2em 0;
+}
+
+.overlay-sidebar .details p {
+	flex: 1;
+	margin-bottom: 0;
+}
+
+.overlay-sidebar .details p span.label {
+	display: block;
+	font-weight: 600;
+	font-size: .9em;
+}
+
+.overlay-sidebar h4 {
+	font-weight: 600;
+	font-size: 1.25em;
+}
+
+.overlay-sidebar.visible {
+	display: block;
+	right: 0;
+	opacity: 1;
+	z-index: 10000;
+}
+
+.table-scroll {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	margin: auto;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	height: 100vh;
+}
+
+.table-scroll thead th {
+	background: #fff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+tr.headers th {
+	top: 30px;
+}
+
+
+/* safari and ios need the tfoot itself to be position:sticky also */
+
+.table-scroll tfoot,
+.table-scroll tfoot th,
+.table-scroll tfoot td {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	color: #fff;
+	z-index: 4;
+}
+
+th:first-child {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0px;
+	z-index: 2;
+	background: #fff;
+}
+
+.left-fixed-2 {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 64px;
+	font-weight: normal;
+	z-index: 2;
+	background: #fff;
+}
+
+.left-fixed-3 {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 140px;
+	z-index: 2;
+	background: #fff;
+}
+
+thead .left-fixed-1,
+thead .left-fixed-2,
+thead .left-fixed-3 {
+	z-index: 10;
+}
+
+thead th:first-child,
+tfoot th:first-child {
+	z-index: 5;
+}
+
+tr.headers th {
+	background: #f9fafb;
+	border-bottom: .1rem solid #dfe3e8;
+	padding: 13px 5px!important;
+	font-weight: 600!important;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 1.8em;
+}
+
+.compact td,
+.compact th {
+	padding: 0!important;
+	min-width: 0!important;
+	min-height: 0!important;
+}
+
+.compact tr.headers th {
+	padding: 2px 5px!important;
+}
+
+
+/* .compact  {
+  font-size: .9em!important;
+} */
+
+.section-header th {
+	position: sticky;
+	width: 100%;
+	left: 0;
+	top: -3px;
+	z-index: 400;
+	position: -webkit-sticky;
+	background: #f9fafb;
+	text-align: left!important;
+	font-size: 1.1em;
+	padding: .5em 1em!important;
+}
+
+.hide-tr {
+	display: none!important;
+}
+
+tr.section-header.set-section th {
+	background: #0071dc;
+	color: white;
+}
+
+tr.section-header.approve-section th {
+	background: #FA710E;
+	color: white;
+}
+
+tr.section-header.conduct-section th {
+	background: #FFEB3B;
+	color: black;
+}
+
+tr.section-header.oversee-section th {
+	background: #30B34E;
+	color: white;
+}
+
+
+/* tr.section-header.set-section th {
+  background:   #edf5fa;
+  color: #0874D9;
+}
+tr.section-header.approve-section th {
+  background:#fdf1e8;
+  color: #FA710E;
+}
+tr.section-header.conduct-section th {
+  background:#fff7e1;
+  color:#333;
+}
+tr.section-header.oversee-section th {
+  background:#f0f6ec;
+  color:#30B34E;
+} */
+
+
+
+
+.application-bar {
+  background:#fff;
+  padding:1em;
+  color:#333;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+    z-index: 100;
+    position: relative;
+}
+.header {
+  background: #f6f6f6;
+                padding:1em;
+                box-shadow: 3px 3px 10px #00000008;
+                z-index: 20;
+                position: relative;
+}
+
+.dropdown.policy-group .outer {
+  font-weight: bold;
+  font-size: 28px;
+  color: #333;
+}
+
+
+.dropdown.policy-group .outer::after {
+  font-size: 19px;
+  color: grey;
+}
+.policy-group .dropdown-menu.show {
+  display: block;
+  margin-top: -30px;
+  box-shadow: 0 7px 14px 0 rgba(59,65,94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+  border: none;
+}
+
+.policy-group .dropdown-item.active, .policy-group .dropdown-item:active {
+  color: #006edf!important;
+  font-weight: 600;
+  background: #edf5fa!important;
+}
+
