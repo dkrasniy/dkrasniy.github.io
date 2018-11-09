@@ -16,7 +16,7 @@ Policy Radar
 }
 
 .light-yellow {
-	background: #fff7e1;
+	background: #f8f4fc;
 }
 
 .light-green {
@@ -25,8 +25,8 @@ Policy Radar
 
 
 tr.section-header i {
-  transform: rotate(135deg);
-  transition: .1s ease all;
+  transform: rotate(180deg);
+  transition: .2s ease all;
 }
 
 
@@ -100,7 +100,7 @@ body {
 
 #policy-radar th,
 #policy-radar td {
-	border: solid thin #dcdcdc;
+	border: solid 1px #dcdcdc;
 	padding: 0.5rem 1rem;
 	min-width: 4rem;
 }
@@ -325,8 +325,8 @@ tr.section-header.approve-section th {
 }
 
 tr.section-header.conduct-section th {
-	background: #FFEB3B;
-	color: black;
+	background: #913FD6;
+	color: white;
 }
 
 tr.section-header.oversee-section th {
@@ -400,7 +400,7 @@ tr.section-header.oversee-section th {
   background: #edf5fa!important;
 }
 
-
+/* 
 th.current-year:before {
   content: "";
   position: absolute;
@@ -411,4 +411,39 @@ th.current-year:before {
   height: 92px;
   border-left: 2px solid #4CAF50;
   border-right: 2px solid #4CAF50;
+} */
+
+.fixed-section {
+	position: sticky;
+	left: 18px;
+
 }
+
+.agenda ul {
+	padding-left: 20px;
+    color: #333;
+    line-height: 1.25;
+}
+.agenda ul li {
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.agenda ul li a {
+    color: #333;
+}
+
+.agenda p {
+	display: block;
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.approve-sidebar .power-head-bg {
+    background: #fc7100!important;
+}
+
+.oversee-sidebar .power-head-bg {
+    background: #25b349!important;
+}
+
