@@ -15,42 +15,42 @@
         </head>
         <body>
 
-            
-                
-              
 
+    
+
+            
+                <div class="application-bar">
                 
-                
-                      
+                <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div></div>
+
+                <div class="header">
+
+                <div class="container-fluid">
+                    <button class="sr-only btn btn-secondary-outline float-right toggle-compact">Compact View</button> 
+                    
+                    <div class="dropdown show policy-group">
+                            <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              ALM
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item active" href="radar.html">ALM</a>
+                              <a class="dropdown-item" href="epm.html">EPM</a>
+                              <a class="dropdown-item" href="phb.html">PHB</a>
+                            </div>
+                          </div>
+
+
+                    
+                    </div>
+                </div>
+
+
           
                 <div id="table-scroll" class="table-scroll">
-                        <div class="application-bar"> <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div>  </div>
-                
-                        <div class="header sticky-item-1">
-
-                                <div class="container-fluid">
-                                    <button class="sr-only btn btn-secondary-outline float-right toggle-compact">Compact View</button> 
-                                    
-                                    <div class="dropdown show policy-group">
-                                            <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                              ALM
-                                            </a>
-                                          
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                              <a class="dropdown-item active" href="radar.html">ALM</a>
-                                              <a class="dropdown-item" href="epm.html">EPM</a>
-                                              <a class="dropdown-item" href="phb.html">PHB</a>
-                                            </div>
-                                          </div>
-                
-                
-                                    
-                                    </div>
-                                </div>
-
             <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
                     <thead>
-                <tr class="quarters sticky-item-2">
+                <tr class="quarters">
                     <th class="left-fixed-1"></th>
                     <th class="left-fixed-2"></th>
                     <th colspan="4" scope="col">2017</th>
@@ -986,7 +986,7 @@
                         <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
-                              <h2>Oversee</h2>
+                              <h2>Approve</h2>
                                
                         </div>
                         <div class="overlay-body">
@@ -1078,48 +1078,6 @@
               
 
               
-
-            var clicked = false, clickX;
-            $(document).on({
-                'mousemove': function(e) {
-                    clicked && updateScrollPos(e);
-                },
-                'mousedown': function(e) {
-                    clicked = true;
-                    clickX = e.pageX;
-                },
-                'mouseup': function() {
-                    clicked = false;
-                }
-            });
-
-            var updateScrollPos = function(e) {
-                $('html').css('cursor', 'grab');
-
-                // console.log("Window", window);
-                // console.log("clickX", clickX);
-                // console.log("e.pagX", e.pageX);
-
-                // console.log("final scroll pos", (clickX - e.pageX));
-                // console.log("scroll left fnc", $('.table-scroll').scrollLeft());
-
-                $('.table-scroll').scrollLeft($('.table-scroll').scrollLeft() + ((clickX - e.pageX)));
-
-                // $('.table-scroll').scrollLeft((clickX - e.pageX));
-            }
-
-            var stickyItem1 = $('.sticky-item-1')
-            var stickyItem2 = $('.table-scroll thead th')
-            var stickyItem3 = $('.headers th')
-            var stickyItem4 = $('.section-header th')
-
-
-            stickyItem2.css('top', stickyItem1.outerHeight()+'px' );
-            stickyItem3.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight())+'px' );
-            stickyItem4.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight()+stickyItem3.outerHeight())+'px' );
-
-
-                
             
             </script>
 
