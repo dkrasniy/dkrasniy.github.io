@@ -368,7 +368,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac45">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle" data-target="#sidebar1"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -403,7 +403,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac55">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle" data-target="#sidebar2"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -490,7 +490,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac112">3</span></li></ul></td>
+                        <td><ul class="inner-data-ul"><li class="li-toggle" data-target="#sidebar3"><span class="item">3</span></li></ul></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -910,7 +910,7 @@
 
 
 
-            <div class="overlay-sidebar sidebar45 approve-sidebar">
+            <div id="sidebar1" class="overlay-sidebar sidebar45 approve-sidebar">
                 <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -942,7 +942,7 @@
 
 
 
-            <div class="overlay-sidebar sidebar55 approve-sidebar">
+            <div id="sidebar2" class="overlay-sidebar sidebar55 approve-sidebar">
                     <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -973,7 +973,7 @@
 
 
 
-                <div class="overlay-sidebar sidebar112 oversee-sidebar">
+                <div id="sidebar3" class="overlay-sidebar sidebar112 oversee-sidebar">
                         <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -1006,44 +1006,30 @@
 
 
          
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
            
 
             <script>
       
-              //toggle visible class to show/hide 
-            //   $('.li-toggle').click(function() {
-            //       $('.overlay-sidebar').toggleClass( "visible" )
-            //   })
+              $('.li-toggle').click(function(e) {
+                  let sidebarTarget = e.currentTarget.dataset.target;
 
-            $('.item-fac45').click(function() {
-                  $('.sidebar45').toggleClass( "visible" )
-                  $( ".sidebar55" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
+                  $('.overlay-sidebar.visible').removeClass( "visible" )
+                  $( sidebarTarget ).addClass( "visible" )
+                  
               })
-
-              $('.item-fac55').click(function() {
-                  $('.sidebar55').toggleClass( "visible" )
-                  $( ".sidebar45" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
-              })
-               $('.item-fac112').click(function() {
-                  $('.sidebar112').toggleClass( "visible" )
-                  $( ".sidebar55" ).removeClass( "visible" )
-                  $( ".sidebar45" ).removeClass( "visible" )
+              $('.close').click(function() {
+                $('.overlay-sidebar.visible').removeClass( "visible" )
               })
 
               
 
+        
 
-              $('.close').click(function() {
-                $( ".sidebar55" ).removeClass( "visible" )
-                
-                $( ".sidebar45" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
-              })
+
+             
               $('.toggle-compact').click(function() {
                   $('.main-table').toggleClass( "compact" )
               })
