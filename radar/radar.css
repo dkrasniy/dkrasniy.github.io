@@ -104,8 +104,17 @@ body {
   background-color: #f4f6f8;
   overflow: hidden;
 }
+table#policy-radar {
+	cursor: grab; 
+	cursor : -o-grab; 
+	cursor : -moz-grab;
+	cursor : -webkit-grab;
+}
 table#policy-radar:hover {
-	cursor: move;	
+	cursor: grab; 
+	cursor : -o-grab; 
+	cursor : -moz-grab;
+	cursor : -webkit-grab;
 }
 
 #policy-radar {

@@ -14,15 +14,6 @@
            
         </head>
         <body>
-
-            
-                
-              
-
-                
-                
-                      
-          
                 <div id="table-scroll" class="table-scroll">
                         <div class="application-bar"> <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div>  </div>
                 
@@ -1103,16 +1094,20 @@
                 // console.log("final scroll pos", (clickX - e.pageX));
                 // console.log("scroll left fnc", $('.table-scroll').scrollLeft());
 
-                $('.table-scroll').scrollLeft($('.table-scroll').scrollLeft() + ((clickX - e.pageX)));
+                $('.table-scroll').scrollLeft($('.table-scroll').scrollLeft() + (((clickX - e.pageX)))/6);
+
+           
 
                 // $('.table-scroll').scrollLeft((clickX - e.pageX));
             }
+
+
+
 
             var stickyItem1 = $('.sticky-item-1')
             var stickyItem2 = $('.table-scroll thead th')
             var stickyItem3 = $('.headers th')
             var stickyItem4 = $('.section-header th')
-
 
             stickyItem2.css('top', stickyItem1.outerHeight()+'px' );
             stickyItem3.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight())+'px' );
