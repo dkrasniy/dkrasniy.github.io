@@ -104,6 +104,9 @@ body {
   background-color: #f4f6f8;
   overflow: hidden;
 }
+table#policy-radar:hover {
+	cursor: move;	
+}
 
 #policy-radar {
 	/* border: solid thin rgba(0, 0, 0, 0.1); */
