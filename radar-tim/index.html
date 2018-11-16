@@ -1529,7 +1529,15 @@ Defined Duration</a></li>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
          <script>
-          
+            PSPDFKit.load({
+              container: "#pspdfkit",
+              pdf: "https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf",
+              licenseKey: "ESlMebuhghZ06qStETaEn8nLvIaW72vSzOwY9E933u7MZ6J5cQgSrH6RwbaSg842dgXh1NH8Rb_G7RiACKTT1DuSm0ywB5Dv-IKJTX_ROPsTUEL8ZF0vR_7B5l4ngHQ_Rq45NnkF7uudgC5w9l8DLfwJ0bHj7yRSAKQPCkrg8D9nOILhpxMOm4UwqIzPfVj_l-oa05kNyAMU6djdRp7zomfJWR7HzJ_K-8Pgz7Lo1DAqy9zBIRWOi-tonP7RN3Aro9qtsexqm1qRINaBewGKtrCVxWo0ae8tf-OHj_6oy-7dU4qABpekFUe1CDNtRn1ROfvRr-y-8ewtg0zpqDcbCHOAXGohmQiNsk1IhGSH0R9bL-YMDiskxqrjVdGsPyxlsN1g-FfKv0Udm5oPFGN8E6LceAdCCvrBVaf42auYuErMK9KDpK91K15DL1KpAtTK"
+            }).then(function(instance) {
+              console.log("PSPDFKit loaded", instance);
+            }).catch(function(error) {
+              console.error(error.message);
+            });
           </script>
           
           <script>
