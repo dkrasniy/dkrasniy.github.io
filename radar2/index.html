@@ -1,1087 +1,1413 @@
-
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Policy Radar Table</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="radar.css">
-       
-           
-        </head>
-        <body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
 
+    <title>Radar 2</title>
+  </head>
+
+  <body>
+  
+        <div class="container-fluid">
+
+            <div role="table" id="compareTable" aria-label="Compare Plans Table" aria-describedby="plans_table_desc" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div id="plans_table_desc" class="sr-only">Table Desc</div>
+                <div class="over-wrapper">
+                    <div class="row compare-container table-header fixed" role="rowgroup">
+                        <div class="col-lg-2 single-row-label"></div>
+                        <div class="col-lg-10 _n0_sP2">
+                            <ul class="table-navigation">
+                                <li><a href="#0" class="prev inactive" style="">Prev</a></li>
+                                <li><a href="#0" class="next" style="">Next</a></li>
+                            </ul>
+                            <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                <div role="columnheader" data-planid="1" class="col-4 col-md-3 plan-name plan-col _1">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/kaiser.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>Kaiser Permanente</h4>
+                                            <p>$524/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="columnheader" data-planid="2" class="col-4 col-md-3 plan-name plan-col _2">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/blue.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>Blue Shield Access+</h4>
+                                            <p>$596/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="columnheader" data-planid="3" class="col-4 col-md-3 plan-name plan-col _3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/healthnet.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>Health Net SmartCare</h4>
+                                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="columnheader" data-planid="4" class="col-4 col-md-3 plan-name plan-col _4">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/united.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>UnitedHealthcare</h4>
+                                            <p>$661/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="columnheader" data-planid="5" class="col-4 col-md-3 plan-name plan-col _5">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/pers.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>PERSChoice</h4>
+                                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="columnheader" data-planid="6" class="col-4 col-md-3 plan-name plan-col _6">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <img class="plan-logo" src="assets/pers.png">
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <h4>PERS Premium</h4>
+                                            <p>$781/month<br><span class="monthly-desc">Full Monthly Premium </span></p>
+                                        </div>
+                                        <div class="options col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-thumbtack fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="thumbtack" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z"></path></svg><!-- <i class="fas fa-thumbtack"></i> -->
+                                                </div>
+                                                <div class="col-6">
+                                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="rowgroup" class="compare-data-start" style="margin-top: 130px;">
     
-
-            
-                <div class="application-bar">
-                
-                <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div></div>
-
-                <div class="header">
-
-                <div class="container-fluid">
-                    <button class="sr-only btn btn-secondary-outline float-right toggle-compact">Compact View</button> 
-                    
-                    <div class="dropdown show policy-group">
-                            <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              ALM
-                            </a>
-                          
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item active" href="radar.html">ALM</a>
-                              <a class="dropdown-item" href="epm.html">EPM</a>
-                              <a class="dropdown-item" href="phb.html">PHB</a>
-                            </div>
-                          </div>
-
-
-                    
-                    </div>
-                </div>
-
-
-          
-                <div id="table-scroll" class="table-scroll">
-            <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
-                    <thead>
-                <tr class="quarters">
-                    <th class="left-fixed-1"></th>
-                    <th class="left-fixed-2"></th>
-                    <th colspan="4" scope="col">2017</th>
-                    <th colspan="4" scope="col">2018</th>
-                    <th colspan="4" scope="col">2019</th>
-                    <th colspan="4" scope="col">2020</th>
-                    <th colspan="4" scope="col">2021</th>
-                    <th colspan="4" scope="col">2022</th>
-                    <th colspan="4" scope="col">2023</th>
-                    <th colspan="4" scope="col">2024</th>
-                </tr>
-                <tr class="headers">
-                    <th scope="col" class="left-fixed-1"> </th>
-                 
-                    <th scope="col" style="min-width: 530px;" class="left-fixed-2">Specific Powers Reserved</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col" class="current-year">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                    <th scope="col">Q1</th>
-                    <th scope="col">Q2</th>
-                    <th scope="col">Q3</th>
-                    <th scope="col">Q4</th>
-                </tr>
-                </thead>
-                <tbody>
-                   
-                        <tr class="section-header set-section">
-                            
-                            <th id="set" class="span" colspan="34"  scope="colgroup">
-                                    <span class="fixed-section"><i class="fas fa-chevron-down"></i> Set</span>
-                            </th>
-                        </tr>
-                        
-                    <tr class="light-blue set-item">
-                        
-                        <th rowspan="4" headers="ic" id="ic1" class="left-fixed-1">IC</th>
-                        <!-- <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th> -->
-                        <td class="left-fixed-2">Set investment beliefs</td>
-                        
-                        <td headers="ic1 set1"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-blue set-item">
-                        <td class="left-fixed-2">Set total fund and asset class policy benchmarks</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-blue set-item">
-                        <td class="left-fixed-2">Set investment risk appetite and tolerances</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-blue set-item">
-                        <td class="left-fixed-2">Set the target rate of return</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    
-                    <tr class="seperator set-item">
-                      
-                    <tr class="section-header approve-section" >
-                            <th id="approve" class="span" colspan="34"  scope="colgroup">
-                                    <span class="fixed-section"><i class="fas fa-chevron-down"></i> Approve</span>
-                            </th>
-                        </tr>
-                    <tr class="light-orange approve-item">
-                        <th rowspan="2" headers="ic2" id="ic2" class="left-fixed-1">IC</th>
-                        <!-- <th rowspan="5" headers="set2" id="set2" class="left-fixed-2">APPROVE</th> -->
-                        <td class="left-fixed-2">Select the asset allocation mix including interim allocation targets for each fund</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-orange approve-item">
-                        <td class="left-fixed-2">Approve asset class strategic plans and portfolio construction guidelines</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-orange approve-item">
-                        <th rowspan="3" headers="ic" id="ic2"  class="left-fixed-1">FAC</th>
-                        <td class="left-fixed-2">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-orange approve-item">
-                        <td class="left-fixed-2">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac45">3</span></li></ul></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-orange approve-item">
-                        <td class="left-fixed-2">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac55">3</span></li></ul></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr class="light-orange">
-                    <tr class="seperator approve-item">
-                    <tr class="section-header conduct-section" >
-                            <th id="conduct" class="span" colspan="34"  scope="colgroup">
-                                    <span class="fixed-section"><i class="fas fa-chevron-down"></i> Conduct</span>
-                            </th>
-                        </tr>
-                    <tr class="light-yellow conduct-item">
-                        <th rowspan="1" headers="ic2" id="ic2"  class="left-fixed-1">IC</th>
-                        <!-- <th rowspan="1" headers="set2" id="set2" class="left-fixed-2">CONDUCT</th> -->
-                        <td class="left-fixed-2">Conduct strategic asset allocation</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="seperator conduct-item">
-                <tr class="section-header oversee-section" >
-                        <th id="conduct" class="span" colspan="34"  scope="colgroup">
-                                
-                                <span class="fixed-section"><i class="fas fa-chevron-down"></i> Oversee</span>
-                        </th>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <th rowspan="4" headers="ic3" id="ic3"  class="left-fixed-1">FAC</th>
-                        <!-- <th rowspan="12" headers="set3" id="set3" class="left-fixed-2">OVERSEE</th> -->
-                        <td class="left-fixed-2">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><ul class="inner-data-ul"><li class="li-toggle"><span class="item item-fac112">3</span></li></ul></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td> 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td><td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                       
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <th rowspan="8" headers="ic3" id="ic3" class="left-fixed-1">IC</th>
-                        <td class="left-fixed-2">Oversee asset class strategic plans and portfolio construction guidelines</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee investment performance</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee selection process and performance of investment partners, managers and consultants</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee cost effectiveness of the investment program</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee investment office risk assessment and control environment</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee environmental, social and governance (ESG) program</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="light-green oversee-item">
-                        <td class="left-fixed-2">Oversee performance of Board consultants who provide investment-related expertise to the Board</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-
-
-
-            <div class="overlay-sidebar sidebar45 approve-sidebar">
-                <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                      <h2>Approve</h2>
-                       
-                </div>
-                <div class="overlay-body">
-                    <div class="details">
-                            <p><span class="label">Quarter</span>2018 - Q2</p>
-                            <p><span class="label">Committee</span>FAC</p>
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Calendar Year Deductible</div>
                         </div>
-                        <div class="details">
-                        <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</p>
-                    </div>
-                    <hr>
-                    
-                    <div class="agenda">
-                            <p><span class="label">Agenda Items</span>
-                            <ul>
-                                <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-5a-00_a.pdf" target="_blank">2018-19 Annual Budget Proposal (Second Reading-Final)</a></li>
-                                <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3b-00_a.pdf" target="_blank">Treasury Management Policy Review</a></li>
-                                <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review </a></li>
-                                <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-6b-00_a.pdf" target="_blank">Extension of the Third-Party Administrator (TPA) Contract for the Supplemental Income Plan (SIP) Programs</a> </li>
-                                
-                            </ul>	</p>
-                        </div>
-                </div>   
-            </div>
-
-
-
-            <div class="overlay-sidebar sidebar55 approve-sidebar">
-                    <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                          <h2>Approve</h2>
-                           
-                    </div>
-                    <div class="overlay-body">
-                        <div class="details">
-                                <p><span class="label">Quarter</span>2018 - Q2</p>
-                                <p><span class="label">Committee</span>FAC</p>
-                            </div>
-                            <div class="details">
-                            <p><span class="label">Specific Power Reserved</span>Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</p>
-                        </div>
-                        <hr>
-                        
-                        <div class="agenda">
-                                <p><span class="label">Agenda Items</span>
-                                <ul>
-                                    <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review </a></li>
-                                    <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-7a-00_a.pdf" target="_blank">State Valuation and Employer/Employee Contribution Rates</a></li>
-                                    <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-7b-00_a.pdf" target="_blank">Schools Valuation and Employer/Employee Contribution Rates </a></li>
-                                    
-                                </ul>	</p>
-                            </div>
-                    </div>   
-                </div>
-
-
-
-                <div class="overlay-sidebar sidebar112 oversee-sidebar">
-                        <div class="power-head-bg"> <button type="button" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                              <h2>Approve</h2>
-                               
-                        </div>
-                        <div class="overlay-body">
-                            <div class="details">
-                                    <p><span class="label">Quarter</span>2018 - Q2</p>
-                                    <p><span class="label">Committee</span>FAC</p>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Individual</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$10</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$25</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$25</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$25</div>
                                 </div>
-                                <div class="details">
-                                <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered.</p>
                             </div>
-                            <hr>
-                            
-                            <div class="agenda">
-                                    <p><span class="label">Agenda Items</span>
-                                    <ul>
-                                        <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-4d-00_a.pdf" target="_blank">Semi-Annual Financial Report </a></li>
-                                        <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-4e-00_a.pdf" target="_blank">Semi-Annual Budget and Expenditure Report </a></li>
-                                        <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-8a-00_a.pdf" target="_blank">Semi-Annual Health Plan Financial Report </a></li>
-                                        <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-9a-00_a.pdf" target="_blank">Long-Term Care Valuation Report </a></li>
-                                        
-                                    </ul>	</p>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Family</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$10</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$25</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$25</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$25</div>
                                 </div>
-                        </div>   
+                            </div>
+                        </div>
                     </div>
-           
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Maximum Calendar Year Co-pay or Co-insurance <span class="section-desc">(excluding Pharmacy)</span></div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Individual</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$1,500<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$1,000<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$2,200<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$1,500<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$1,800<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$1,500<br>(co-pay)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Family</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$3,500<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$3,100<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$2,500<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$3,500<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$4,600<br>(co-pay)
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$3,500<br>(co-pay)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Hospital <span class="section-desc">(including Mental Health and Substance Abuse)</span>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Deductible <span class="label-desc">(per admission)</span></div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Inpatient</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Outpatient Facility/ Surgery Services</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Emergency Services</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Emergency Room Deductible</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$10</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$25</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$25</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$25</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Emergency <span class="label-desc">(co-pay waived if admitted as an inpatient or for observation as an outpatient)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$80</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$55</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$15</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Non-Emergency <span class="label-desc">(co-pay waived if admitted as an inpatient or for observation as an outpatient)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$50</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$50</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$35</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Physician Services <span class="section-desc">(including Mental Health and Substance Abuse)</span>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Office Visits <span class="label-desc">(co-pay for each service provided)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$10</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$25</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$25</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$25</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Inpatient Visits</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$80</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$55</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$15</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Outpatient Visits</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$50</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$50</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$35</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Urgent Care Visits</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$50</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$50</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$35</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Preventive Services</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$50</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$50</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$50</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$50</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$85</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$35</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Surgery/Anesthesia</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate data" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Diagnostic X-Ray/Lab</div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Diagnostic X-Ray/Lab</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Prescription Drugs</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Deductible</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Retail Pharmacy <span class="label-desc">(not to exceed 30 day supply)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <ul>
+                                            <li>Generic: $5</li>
+                                            <li>Brand Formulary:: $25</li>
+                                            <li>Non-Formulary:: $50</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Retail Pharmacy Long-Term Prescription Medications filled
+                                after 2nd fill <span class="label-desc">(i.e. 90 day supply)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                            (Walgreens Pharmacy)
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                            (Walgreens Pharmacy)
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Retail Pharmacy Maintenance Medications filled after 2nd
+                                fill <span class="label-desc">(i.e. a medication taken longer than 60 days) (not to exceed 30 day supply)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Mail Order Pharmacy Program <span class="label-desc">(not to exceed 90 day supply for maintenance drugs)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <ul>
+                                            <li>Generic: $10</li>
+                                            <li>Brand Formulary:: $40</li>
+                                            <li>Non-Formulary:: $100</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Mail order maximum co-payment per person per calendar
+                                year
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$1,000</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$1,00</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$1,000</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$1,000</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$1,000</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$1,000</div>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Durable Medical Equipment</div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Durable Medical Equipment</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Infertility Testing/Treatment</div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Infertility Testing/Treatment</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6"><b>50%</b> of
+                                        Covered Charges
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Occupational/Physical/Speech Therapy</div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Inpatient <span class="label-desc">(hospital or skilled nursing facility)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">$0</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">$0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Outpatient <span class="label-desc">(office and home visits)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$15</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$15</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$15</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$15</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>20%</b><br>(pre-certification required for more than 24 visits)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b><br>Occupational Therapy: 20%<br>(pre-certification required for
+                                                more than 24 visits)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>20%</b><br>(pre-certification required for more than 24 visits)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b><br>Occupational Therapy: 20%<br>(pre-certification required for
+                                                more than 24 visits)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Diabetes Services</div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Glucose Monitors</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">Coverage Varies
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Test Strips</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">Coverage Varies
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">Coverage Varies
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Self-Management Training</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$15</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$15</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$15</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$15</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>20%</b>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>60%</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>20%</b>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>60%</b>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Acupuncture</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Self-Management Training</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>$15</b>/visit
+                                                (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b>(acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>$15</b>/visit
+                                                (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b>(acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Chiropractic</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Chiropractic</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4"><b>$15</b>/visit
+                                        (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                    </div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>$15</b>/visit
+                                                (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b>(acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                <b>$15</b>/visit
+                                                (acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                <b>40%</b>(acupuncture/ chiropractic; combined 20 visits per calendar year)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Skilled Nursing Facility</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Skilled Nursing Facility <span class="label-desc">(up to 100 days/benefit period)</span>
+                            </div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40% of allowable amount for Non-PPO provider (require a precertified
+                                                treatment plan)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40% of allowable amount for Non-PPO provider (require a precertified
+                                                treatment plan)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Home Health Services</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Home Health Services</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40% of allowable amount
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40% of allowable amount
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Hospice</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Hospice</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                See Evidence of Coverage (EOC)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                See Evidence of Coverage (EOC)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Ambulance Services</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Ambulance Services</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">20%</div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">20%</div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+    
+    
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Hearing Services</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Routine Hearing Exam</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                40%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                See Evidence of Coverage (EOC)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                See Evidence of Coverage (EOC)
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Physician Services</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$15</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$15</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                40%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                20%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Hearing Aids</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$15</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$10</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$1,000 max/36 months</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$1,000 max/36 months</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%<br>($1,000 max/36 months)
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%<br>($1,000 max/36 months)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                    <div class="section">
+                        <div class="row">
+                            <div class="section-title">Vision Care</div>
+                        </div>
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Vision Exam</div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$1,000 max/36 months</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$1,000 max/36 months</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                40%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                20%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+    
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Eyeglasses <span class="label-desc">(following cataract surgery)</span></div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                40%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                20%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                        <div role="row" class="d-flex flex-row wrap-mobile compare-container">
+                            <div class="col-lg-2 single-row-label">Contact Lenses <span class="label-desc">(following cataract surgery)</span></div>
+                            <div class="col-lg-10 _n0_sP2">
+                                <div class="d-flex flex-row _2translate" style="transform: translateX(0px);">
+                                    <div role="cell" data-planid="1" class="col-4 col-md-3 plan-col _1">$0</div>
+                                    <div role="cell" data-planid="2" class="col-4 col-md-3 plan-col _2">$0</div>
+                                    <div role="cell" data-planid="3" class="col-4 col-md-3 plan-col _3">$0</div>
+                                    <div role="cell" data-planid="4" class="col-4 col-md-3 plan-col _4">$0</div>
+                                    <div role="cell" data-planid="5" class="col-4 col-md-3 plan-col _5">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                40%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                20%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="cell" data-planid="6" class="col-4 col-md-3 plan-col _6">
+                                        <div class="ppo-non-ppo row">
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">PPO</span>
+                                                20%
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <span class="badge badge-default">Non-PPO</span>
+                                                40%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+    
+    
+                </div>
+            </div>
+               
+        </div>
 
+    <!-- JavaScript -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 
-         
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-           
-
-            <script>
-      
-              //toggle visible class to show/hide 
-            //   $('.li-toggle').click(function() {
-            //       $('.overlay-sidebar').toggleClass( "visible" )
-            //   })
-
-            $('.item-fac45').click(function() {
-                  $('.sidebar45').toggleClass( "visible" )
-                  $( ".sidebar55" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
-              })
-
-              $('.item-fac55').click(function() {
-                  $('.sidebar55').toggleClass( "visible" )
-                  $( ".sidebar45" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
-              })
-               $('.item-fac112').click(function() {
-                  $('.sidebar112').toggleClass( "visible" )
-                  $( ".sidebar55" ).removeClass( "visible" )
-                  $( ".sidebar45" ).removeClass( "visible" )
-              })
-
-              
-
-
-              $('.close').click(function() {
-                $( ".sidebar55" ).removeClass( "visible" )
-                
-                $( ".sidebar45" ).removeClass( "visible" )
-                  $( ".sidebar112" ).removeClass( "visible" )
-              })
-              $('.toggle-compact').click(function() {
-                  $('.main-table').toggleClass( "compact" )
-              })
-
-              $('.set-section').click(function() {
-                  $('.set-item').toggleClass( "hide-tr" )
-                  $('.set-section').toggleClass( "collapsed" )
-              })
-              $('.approve-section').click(function() {
-                  $('.approve-item').toggleClass( "hide-tr" )
-                  $('.approve-section').toggleClass( "collapsed" )
-              })
-              $('.conduct-section').click(function() {
-                  $('.conduct-item').toggleClass( "hide-tr" )
-                  $('.conduct-section').toggleClass( "collapsed" )
-              })
-              $('.oversee-section').click(function() {
-                  $('.oversee-item').toggleClass( "hide-tr" )
-                  $('.oversee-section').toggleClass( "collapsed" )
-              })
-
-
-              
-
-              
-            
-            </script>
-
-            
-
-        </body>
-    </html>
+</html>
