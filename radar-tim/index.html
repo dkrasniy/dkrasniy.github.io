@@ -10,12 +10,13 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
       <link rel="stylesheet" href="radar.css">
 
-      <script src="pspdfkit.js"></script>
+      <script src='https://www.pdftron.com/4.0/lib/webviewer.min.js'></script>
+
 
 
    </head>
    <body>
-         <div id="pspdfkit" style="width: 100%; height: 480px;"></div>
+      
       <div id="table-scroll" class="table-scroll">
          <div class="application-bar">
             <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div>
@@ -40,19 +41,25 @@
                   
                   <div class="options">
                         <form id="programFilter" onsubmit="filterItems(); return false;">
-                              <input type="checkbox" name="programName" id="ISOF" value="ISOF" />
+                              <div class="checkboxes-container">
+                                    <div class="form-check">
+                              <input type="checkbox" name="programName" id="ISOF" value="ISOF" checked />
                               <label class="form-check-label" for="ISOF">ISOF</label>
+                              </div>
 
-
+                              <div class="form-check">
                               <input type="checkbox" name="programName" id="ESDD" value="ESDD" />
                               <label class="form-check-label" for="ESDD">ESDD</label>
-
+                           </div>
+                              <div class="form-check">
                               <input type="checkbox" name="programName" id="FINO" value="FINO" />
                               <label class="form-check-label" for="FINO">FINO</label>
-
+                           </div>
+                           <div class="form-check">
                               <input type="checkbox" name="programName" id="ITSB" value="ITSB" />
                               <label class="form-check-label" for="ITSB">ITSB</label>
-                             
+                           </div>
+                        </div>
                                  
                               <button type="submit" class="btn btn-primary">Apply Filter</button>
                         </form>
@@ -66,6 +73,7 @@
 
             </div>
          </div>
+         <div id='viewer' style='width: 1024px; height: 600px;'></div>
          <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
             <thead>
                <tr class="quarters sticky-item-2">
@@ -1529,17 +1537,15 @@ Defined Duration</a></li>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-         <script>
-            PSPDFKit.load({
-              container: "#pspdfkit",
-              pdf: "https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf",
-              licenseKey: "ESlMebuhghZ06qStETaEn8nLvIaW72vSzOwY9E933u7MZ6J5cQgSrH6RwbaSg842dgXh1NH8Rb_G7RiACKTT1DuSm0ywB5Dv-IKJTX_ROPsTUEL8ZF0vR_7B5l4ngHQ_Rq45NnkF7uudgC5w9l8DLfwJ0bHj7yRSAKQPCkrg8D9nOILhpxMOm4UwqIzPfVj_l-oa05kNyAMU6djdRp7zomfJWR7HzJ_K-8Pgz7Lo1DAqy9zBIRWOi-tonP7RN3Aro9qtsexqm1qRINaBewGKtrCVxWo0ae8tf-OHj_6oy-7dU4qABpekFUe1CDNtRn1ROfvRr-y-8ewtg0zpqDcbCHOAXGohmQiNsk1IhGSH0R9bL-YMDiskxqrjVdGsPyxlsN1g-FfKv0Udm5oPFGN8E6LceAdCCvrBVaf42auYuErMK9KDpK91K15DL1KpAtTK"
-            }).then(function(instance) {
-              console.log("PSPDFKit loaded", instance);
-            }).catch(function(error) {
-              console.error(error.message);
-            });
-          </script>
+      <script>
+         var viewerElement = document.getElementById('viewer');
+         var myWebViewer = new PDFTron.WebViewer({
+           path: 'https://www.pdftron.com/4.0/lib',
+           l: 'demo:david@webperfex.com:75238cbd017887312bfa4847153341c81cc07e48e7bb156572',
+           initialDoc: 'https://www.calpers.ca.gov/docs/board-agendas/201702/financeadmin/item-9a-00.pdf', // this URL must be publicly accessible to work with the pdftronServer at demo.pdftron.com
+           pdftronServer: 'https://demo.pdftron.com' // remove option to run client-side only, or replace later with your own server
+         }, viewerElement);
+       </script>
           
           <script>
          
@@ -1559,6 +1565,14 @@ Defined Duration</a></li>
          $('.filter-program-btn').click(function() {
              $('.program-filer').toggleClass( "visible" )
          })
+
+         $('#programFilter .btn').click(function() {
+             $('.program-filer').toggleClass( "visible" )
+         })
+       
+         
+
+
 
 
 
