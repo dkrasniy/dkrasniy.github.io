@@ -7,11 +7,24 @@ Policy Radar
 
 -------------------------------- */
 
-.table-scroll::-webkit-scrollbar {
-	width: 0 !important;
-		display:none;
+ul.inner-data-ul li.not-checked span {
+	background: rgba(0, 0, 0, 0.2);
 }
 
+.program-filer {
+    -webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    background: white;
+	max-width: 380px;
+	display: none;
+	position: absolute;
+	padding:1em;
+	margin-top: -30px;
+	margin-left: 120px;
+}
+.program-filer.visible {
+	display: block;
+}
 body {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -69,6 +82,15 @@ span.item:hover {
 	cursor: pointer;
 }
 
+span.placeholder {
+	display: block;
+	height: 15px;
+	color: transparent;
+	width: 15px;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .light-blue span.item {
 	background: #2196F3;
 }
@@ -82,6 +104,22 @@ span.item:hover {
 }
 
 .light-green span.item {
+	background: #4CAF50;
+}
+
+.light-blue span.placeholder {
+	background: #2196F3;
+}
+
+.light-orange span.placeholder {
+	background: #FF9800;
+}
+
+.light-yellow span.placeholder {
+	background: #FFEB3B;
+}
+
+.light-green span.placeholder {
 	background: #4CAF50;
 }
 
@@ -492,4 +530,8 @@ th.current-year:before {
 
 .oversee-sidebar .power-head-bg {
 	background: #25b349!important;
+}
+
+.sm-details {
+	font-size: 80%;
 }

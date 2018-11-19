@@ -9,9 +9,23 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
       <link rel="stylesheet" href="radar.css">
-
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
    </head>
    <body>
+	   
+	   <!-- when ready, replace all references to https://demo.pdftron.com below with your own server -->
+<script src='https://www.pdftron.com/4.0/lib/webviewer.min.js'></script>
+
+<div id='viewer' style='width: 1024px; height: 600px;'></div>
+<script>
+  var viewerElement = document.getElementById('viewer');
+  var myWebViewer = new PDFTron.WebViewer({
+    path: 'https://www.pdftron.com/4.0/lib',
+    l: 'demo:timothy.taylor@calpers.ca.gov:75238cbd0152b56715c2b1b33e1253bcaa3b02150507122794',
+    initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf', // this URL must be publicly accessible to work with the pdftronServer at demo.pdftron.com
+    pdftronServer: 'https://demo.pdftron.com' // remove option to run client-side only, or replace later with your own server
+  }, viewerElement);
+</script>
          
       <div id="table-scroll" class="table-scroll">
          <div class="application-bar">
@@ -1220,14 +1234,6 @@ Defined Duration</a></li>
 				<ul style="padding-bottom: 0;">
 					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/actuarial-amortization-policy.pdf" target="_blank">Actuarial Amortization Policy</a></br>
 						v2.0 - 02/14/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3a-00_a.pdf" target="_blank">FAC - Minutes of Meeting</a></br>
-						02/13/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="docs/Projected Funded Status.pdf" target="_blank">Projected Funded Status - Strategic Measure Summary</a></br>
-						09/30/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="docs/Alignment of ALM.pdf" target="_blank">Alignment of Asset Liability Management - Strategic Measure Summary</a></br>
-						09/30/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/page/about/organization/facts-at-a-glance/solid-foundation-for-the-future" target="_blank">A Solid Foundation for the Future</a></br>
-						08/03/2018</span></li>
 				</ul>
                   </li>
 				  
