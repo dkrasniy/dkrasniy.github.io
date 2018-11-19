@@ -73,7 +73,9 @@
 
             </div>
          </div>
-         <div id='viewer' style='width: 1024px; height: 600px;'></div>
+
+         <div id='viewer' style='width: 100%; height: 100%;'></div>
+
          <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
             <thead>
                <tr class="quarters sticky-item-2">
@@ -1097,9 +1099,9 @@ Policy </a></li>
                <div class="agenda">
                   <p><span class="label">Agenda Items</span>
                   <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf" target="_blank"> Asset Liability Management Policy (
-Second 
-Reading)</a></li>
+                        <li><a id="toggleDocument" href="#"> Asset Liability Management Policy (Second Reading)</a></li>
+               
+                        
                   </ul>
                   </p>
                </div>
@@ -1542,13 +1544,17 @@ Defined Duration</a></li>
          var myWebViewer = new PDFTron.WebViewer({
            path: 'https://www.pdftron.com/4.0/lib',
            l: 'demo:david@webperfex.com:75238cbd017887312bfa4847153341c81cc07e48e7bb156572',
-           initialDoc: 'https://www.calpers.ca.gov/docs/board-agendas/201702/financeadmin/item-9a-00.pdf', // this URL must be publicly accessible to work with the pdftronServer at demo.pdftron.com
+           initialDoc: 'https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf', // this URL must be publicly accessible to work with the pdftronServer at demo.pdftron.com
            pdftronServer: 'https://demo.pdftron.com' // remove option to run client-side only, or replace later with your own server
          }, viewerElement);
        </script>
           
           <script>
-         
+
+            $('#toggleDocument').click(function() {
+               $('body').toggleClass('document-open');
+               $('#viewer').css('width', '100%').css('width', '-=325px');
+            })
 
          function filterItems() {
             $("input:checkbox[name=programName]:not(:checked)").each(function(){
@@ -1561,6 +1567,9 @@ Defined Duration</a></li>
             });
             $('.table-scroll').addClass( "filter-applied" )
          }
+
+         
+
          
          $('.filter-program-btn').click(function() {
              $('.program-filer').toggleClass( "visible" )
@@ -1569,9 +1578,10 @@ Defined Duration</a></li>
          $('#programFilter .btn').click(function() {
              $('.program-filer').toggleClass( "visible" )
          })
+         
        
          
-
+       
 
 
 

@@ -7,6 +7,21 @@ Policy Radar
 
 -------------------------------- */
 
+div#viewer {
+    display: none;
+}
+body.document-open div#viewer {
+    display: block;
+}
+body.document-open table#policy-radar {
+    display: none;
+}
+
+body.document-open .header.sticky-item-1 {
+    position: initial!important;
+}
+
+
 ul.inner-data-ul li.not-checked span {
 	background: transparent;
 }

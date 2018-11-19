@@ -7,20 +7,36 @@ Policy Radar
 
 -------------------------------- */
 
+div#viewer {
+    display: none;
+}
+body.document-open div#viewer {
+    display: block;
+}
+body.document-open table#policy-radar {
+    display: none;
+}
+
+body.document-open .header.sticky-item-1 {
+    position: initial!important;
+}
+
+
 ul.inner-data-ul li.not-checked span {
-	background: rgba(0, 0, 0, 0.2);
+	background: transparent!important;
 }
 
 .program-filer {
     -webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
     box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
     background: white;
-	max-width: 380px;
+	max-width: 410px;
 	display: none;
 	position: absolute;
 	padding:1em;
 	margin-top: -30px;
 	margin-left: 120px;
+	z-index:10000;
 }
 .program-filer.visible {
 	display: block;
@@ -93,34 +109,43 @@ span.placeholder {
 
 .light-blue span.item {
 	background: #2196F3;
+	border: 2px solid #2196F3;
 }
 
 .light-orange span.item {
 	background: #FF9800;
+	border: 2px solid #FF9800;
 }
 
 .light-yellow span.item {
 	background: #FFEB3B;
+	border: 2px solid #FFEB3B;
 }
 
 .light-green span.item {
 	background: #4CAF50;
+	border: 2px solid #4CAF50;
 }
 
 .light-blue span.placeholder {
 	background: #2196F3;
+	border: 2px solid #2196F3;
 }
 
 .light-orange span.placeholder {
 	background: #FF9800;
+	border: 2px solid #FF9800;
 }
+
 
 .light-yellow span.placeholder {
 	background: #FFEB3B;
+	border: 2px solid #FFEB3B;
 }
 
 .light-green span.placeholder {
 	background: #4CAF50;
+	border: 2px solid #4CAF50;
 }
 
 .inner-data-ul {

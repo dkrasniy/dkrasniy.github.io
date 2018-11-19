@@ -10,63 +10,55 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
       <link rel="stylesheet" href="radar.css">
 
+      <script src='https://www.pdftron.com/4.0/lib/webviewer.min.js'></script>
+
    </head>
    <body>
-         
       <div id="table-scroll" class="table-scroll">
          <div class="application-bar">
             <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div>
          </div>
          <div class="header sticky-item-1">
             <div class="container-fluid">
-				
-				<div class="row">
-               		<div class="col-md-9">
-               			<div class="dropdown show policy-group">
-                  			<a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
-                  				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                     				<a class="dropdown-item active" href="index.html">ALM</a>
-                     				<a class="dropdown-item" href="epm.html">EPM</a>
-                     				<a class="dropdown-item" href="phb.html">PHB</a>
-                  				</div>
-						</div> 
-					</div>
-					<div class="col-md-3">   
-				   		<button class="btn btn-secondary-outline filter-program-btn" style="float: right;"><i class="fas fa-filter"></i> Filter</button>
-						<ul class="inner-data-ul">
+               <div class="row">
+                  <div class="col-md-9">
+                     <div class="dropdown show policy-group">
+                        <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           <a class="dropdown-item active" href="index.html">ALM</a>
+                           <a class="dropdown-item" href="epm.html">EPM</a>
+                           <a class="dropdown-item" href="phb.html">PHB</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <button class="btn btn-secondary-outline filter-program-btn" style="float: right;"><i class="fas fa-filter"></i> Filter</button>
+                     <ul class="inner-data-ul">
                         <li class="li-toggle ITSB" data-target="#tableFilter"><span class="item">3</span></li>
                      </ul>
-						<div class="program-filer">
-                  
-                  <div class="options" style="float: right;">
-                        <form id="programFilter" onsubmit="filterItems(); return false;" style="float: right;">
-
-
+                     <div class="program-filer">
+                        <div class="options" style="float: right;">
+                           <form id="programFilter" onsubmit="filterItems(); return false;" style="float: right;">
                               <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked/>
                               <label class="form-check-label" for="ACTO">Actuarial Office</label>
-								<br>
+                              <br>
                               <input type="checkbox" name="programName" id="FINO" value="FINO" checked/>
                               <label class="form-check-label" for="FINO">Financial Office</label>
-								<br>
+                              <br>
                               <input type="checkbox" name="programName" id="INVO" value="INVO" checked/>
                               <label class="form-check-label" for="INVO">Investment Office</label>
-								<br><br>                             
+                              <br><br>                             
                               <button type="submit" class="btn btn-primary">Apply</button>
-                        </form>
+                           </form>
+                        </div>
+                     </div>
                   </div>
-                 
-                  
                </div>
-					</div>   
-               		</div>
-
-               
-
-   
-                  
-
             </div>
          </div>
+
+         <div id='viewer' style='width: 100%; height: 100%;'></div>
+
          <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
             <thead>
                <tr class="quarters sticky-item-2">
@@ -128,12 +120,12 @@
                   <th rowspan="4" headers="ic" id="ic1" class="left-fixed-1">IC</th>
                   <!-- <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th> -->
                   <td class="left-fixed-2">Set investment beliefs</td>
-				  <td headers="ic1 set1"></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td headers="ic1 set1"></td>
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -141,51 +133,51 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                </tr>
@@ -195,11 +187,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -235,11 +227,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -274,11 +266,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -323,11 +315,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -363,11 +355,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>                     
-					  <ul class="inner-data-ul">
+                  <td>
+                     <ul class="inner-data-ul">
                         <li class="INVO"><span class="placeholder">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -397,16 +389,16 @@
                   <td class="left-fixed-2">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
                   <td></td>
                   <td>
-					  <ul class="inner-data-ul">
+                     <ul class="inner-data-ul">
                         <li class="li-toggle INVO" data-target="#17Q2A3"><span class="item">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td>
-				     <ul class="inner-data-ul">
+                     <ul class="inner-data-ul">
                         <li class="li-toggle ACTO" data-target="#17Q4A3"><span class="item">3</span></li>
                      </ul>
-				  </td>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -1040,159 +1032,153 @@
             </tbody>
          </table>
       </div>
-	   
-<!-- 2017 Approve -->	   
-<div id="17Q1A4" class="overlay-sidebar approve-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Approve</h2>
+      <!-- 2017 Approve -->	   
+      <div id="17Q1A4" class="overlay-sidebar approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q1</p>
+               <p><span class="label">Committee</span>FAC</p>
             </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2017 - Q1</p>
-                  <p><span class="label">Committee</span>FAC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201702/financeadmin/item-9a-00.pdf" target="_blank"> Funding Risk Mitigation 
-Policy </a></li>
-                  </ul>
-                  </p>
-               </div>
-      </div>
-
-
-
-      </div>
-<div id="17Q2A3" class="overlay-sidebar sidebar1122 approve-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Approve</h2>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
             </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2017 - Q2</p>
-                  <p><span class="label">Committee</span>FAC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf" target="_blank"> Asset Liability Management Policy (
-Second 
-Reading)</a></li>
-                  </ul>
-                  </p>
-               </div>
-      </div>
-
-
-
-      </div>
-<div id="17Q4A3" class="overlay-sidebar approve-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Approve</h2>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201702/financeadmin/item-9a-00.pdf" target="_blank"> Funding Risk Mitigation 
+                     Policy </a>
+                  </li>
+               </ul>
+               </p>
             </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2017 - Q4</p>
-                  <p><span class="label">Committee</span>FAC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-7a-00.pdf" target="_blank"> Review of Actuarial Assumptions
- and Discount Rate Selection</a></li>
-                  </ul>
-                  </p>
-               </div>
+         </div>
       </div>
-
-
-
-      </div>
-
-<!-- 2017 Oversee -->
-<div id="17Q4O1" class="overlay-sidebar oversee-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Oversee</h2>
+      <div id="17Q2A3" class="overlay-sidebar sidebar1122 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q2</p>
+               <p><span class="label">Committee</span>FAC</p>
             </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2017 - Q4</p>
-                  <p><span class="label">Committee</span>FAC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf" target="_blank"> Review of Finance and Administration Committee Risk Profiles </a></li>
-                  </ul>
-                  </p>
-               </div>
-      </div>
-
-
-
-      </div>
-<div id="17Q4O6" class="overlay-sidebar oversee-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Oversee</h2>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
             </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2017 - Q4</p>
-                  <p><span class="label">Committee</span>IC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-3c-00.pdf" target="_blank"> Contracts Administration: Affirmation
- of Investment Manager Contracts Without 
-Defined Duration</a></li>
-                  </ul>
-                  </p>
-               </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+
+                     
+
+                  <li><a id="toggleDocument" href="#"> Asset Liability Management Policy (
+                     Second 
+                     Reading)</a>
+                  </li>
+
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf" target="_blank"> Asset Liability Management Policy (
+                     Second 
+                     Reading)</a>
+                  </li>
+               </ul>
+               </p>
+            </div>
+         </div>
       </div>
-
-
-
+      <div id="17Q4A3" class="overlay-sidebar approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q4</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-7a-00.pdf" target="_blank"> Review of Actuarial Assumptions
+                     and Discount Rate Selection</a>
+                  </li>
+               </ul>
+               </p>
+            </div>
+         </div>
       </div>
-	   
-<!-- 2018 Approve -->	
-<div id="18Q1A4" class="overlay-sidebar sidebar45 approve-sidebar">
+      <!-- 2017 Oversee -->
+      <div id="17Q4O1" class="overlay-sidebar oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q4</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf" target="_blank"> Review of Finance and Administration Committee Risk Profiles </a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+      <div id="17Q4O6" class="overlay-sidebar oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q4</p>
+               <p><span class="label">Committee</span>IC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-3c-00.pdf" target="_blank"> Contracts Administration: Affirmation
+                     of Investment Manager Contracts Without 
+                     Defined Duration</a>
+                  </li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- 2018 Approve -->	
+      <div id="18Q1A4" class="overlay-sidebar sidebar45 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1212,45 +1198,48 @@ Defined Duration</a></li>
                <p><span class="label">Agenda Items</span>
                <ul>
                   <li>
-					  <a href="docs/Amortization Policy.pdf" target="_blank">Amortization Policy (2<sup>nd</sup> Reading)</a></br>
-					  <span class="sm-details"><strong>Program:</strong> Actuarial Office</br>
-				<strong>Item Type:</strong> Action</br>
-			 <strong>Supporting Materials: </strong></br>
-			 
-				<ul style="padding-bottom: 0;">
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/actuarial-amortization-policy.pdf" target="_blank">Actuarial Amortization Policy</a></br>
-						v2.0 - 02/14/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3a-00_a.pdf" target="_blank">FAC - Minutes of Meeting</a></br>
-						02/13/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="docs/Projected Funded Status.pdf" target="_blank">Projected Funded Status - Strategic Measure Summary</a></br>
-						09/30/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="docs/Alignment of ALM.pdf" target="_blank">Alignment of Asset Liability Management - Strategic Measure Summary</a></br>
-						09/30/2018</span></li>
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/page/about/organization/facts-at-a-glance/solid-foundation-for-the-future" target="_blank">A Solid Foundation for the Future</a></br>
-						08/03/2018</span></li>
-				</ul>
+                     <a href="docs/Amortization Policy.pdf" target="_blank">Amortization Policy (2<sup>nd</sup> Reading)</a></br>
+                     <span class="sm-details">
+                        <strong>Program:</strong> Actuarial Office</br>
+                        <strong>Item Type:</strong> Action</br>
+                        <strong>Supporting Materials: </strong></br>
+                        <ul style="padding-bottom: 0;">
+                           <li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/actuarial-amortization-policy.pdf" target="_blank">Actuarial Amortization Policy</a></br>
+                              v2.0 - 02/14/2018
+                     </span>
+                     </li>
+                     <li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3a-00_a.pdf" target="_blank">FAC - Minutes of Meeting</a></br>
+                     02/13/2018</span></li>
+                     <li style="margin-left: 0em; list-style-type: none;"><a href="docs/Projected Funded Status.pdf" target="_blank">Projected Funded Status - Strategic Measure Summary</a></br>
+                     09/30/2018</span></li>
+                     <li style="margin-left: 0em; list-style-type: none;"><a href="docs/Alignment of ALM.pdf" target="_blank">Alignment of Asset Liability Management - Strategic Measure Summary</a></br>
+                     09/30/2018</span></li>
+                     <li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/page/about/organization/facts-at-a-glance/solid-foundation-for-the-future" target="_blank">A Solid Foundation for the Future</a></br>
+                     08/03/2018</span></li>
+                     </ul>
                   </li>
-				  
-                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review</a></br>
-					  <span class="sm-details"><strong>Program:</strong> Financial Office</br>
-					  <strong>Item Type:</strong> Information Consent<br><strong>Supporting Materials: </strong></br>
-			 
-				<ul style="padding-bottom: 0;">
-					<li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/actuarial-amortization-policy.pdf" target="_blank">Treasury Management Reserve Policy</a></br>
-						v3.0 - 12/14/2017</span></li>
-				</ul>
+                  <li>
+                     <a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review</a></br>
+                     <span class="sm-details">
+                        <strong>Program:</strong> Financial Office</br>
+                        <strong>Item Type:</strong> Information Consent<br><strong>Supporting Materials: </strong></br>
+                        <ul style="padding-bottom: 0;">
+                           <li style="margin-left: 0em; list-style-type: none;"><a href="https://www.calpers.ca.gov/docs/actuarial-amortization-policy.pdf" target="_blank">Treasury Management Reserve Policy</a></br>
+                              v3.0 - 12/14/2017
+                     </span>
+                     </li>
+                     </ul>
                   </li>
-                  
                   <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-6b-00_a.pdf" target="_blank">Extension of the Third-Party Administrator (TPA) Contract for the Supplemental Income Plan (SIP) Programs</a></br>
-					  <span class="sm-details"><strong>Program:</strong> Financial Office</br>
-					  <strong>Item Type:</strong> Action</span> </li>
+                     <span class="sm-details"><strong>Program:</strong> Financial Office</br>
+                     <strong>Item Type:</strong> Action</span> 
+                  </li>
                </ul>
                </p>
             </div>
-	
          </div>
       </div>
-<div id="18Q2A4" class="overlay-sidebar sidebar45 approve-sidebar">
+      <div id="18Q2A4" class="overlay-sidebar sidebar45 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1276,8 +1265,7 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-
-<div id="tableFilter" class="overlay-sidebar sidebar45 approve-sidebar">
+      <div id="tableFilter" class="overlay-sidebar sidebar45 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1301,9 +1289,8 @@ Defined Duration</a></li>
                </p>
             </div>
          </div>
-</div>
-
-<div id="18Q3A4" class="overlay-sidebar sidebar45 approve-sidebar">
+      </div>
+      <div id="18Q3A4" class="overlay-sidebar sidebar45 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1328,7 +1315,7 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-<div id="18Q4A4" class="overlay-sidebar sidebar45 approve-sidebar">
+      <div id="18Q4A4" class="overlay-sidebar sidebar45 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1353,8 +1340,7 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-
-<div id="18Q1A5" class="overlay-sidebar sidebar55 approve-sidebar">
+      <div id="18Q1A5" class="overlay-sidebar sidebar55 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1381,7 +1367,7 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-<div id="18Q2A5" class="overlay-sidebar sidebar55 approve-sidebar">
+      <div id="18Q2A5" class="overlay-sidebar sidebar55 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1408,7 +1394,7 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-<div id="18Q3A5" class="overlay-sidebar sidebar55 approve-sidebar">
+      <div id="18Q3A5" class="overlay-sidebar sidebar55 approve-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1433,9 +1419,8 @@ Defined Duration</a></li>
             </div>
          </div>
       </div>
-
-<!-- 2018 Oversee -->
-<div id="18Q1O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+      <!-- 2018 Oversee -->
+      <div id="18Q1O1" class="overlay-sidebar sidebar112 oversee-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1459,8 +1444,8 @@ Defined Duration</a></li>
                </p>
             </div>
          </div>
-</div>
-<div id="18Q2O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+      </div>
+      <div id="18Q2O1" class="overlay-sidebar sidebar112 oversee-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1487,8 +1472,8 @@ Defined Duration</a></li>
                </p>
             </div>
          </div>
-</div>
-<div id="18Q3O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+      </div>
+      <div id="18Q3O1" class="overlay-sidebar sidebar112 oversee-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1514,8 +1499,8 @@ Defined Duration</a></li>
                </p>
             </div>
          </div>
-</div>
-<div id="18Q4O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+      </div>
+      <div id="18Q4O1" class="overlay-sidebar sidebar112 oversee-sidebar">
          <div class="power-head-bg">
             <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -1542,60 +1527,52 @@ Defined Duration</a></li>
                </p>
             </div>
          </div>
-</div>
-
-<div id="18Q2O6" class="overlay-sidebar oversee-sidebar">
-            <div class="power-head-bg">
-               <button type="button" class="close" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-               <h2>Oversee</h2>
-            </div>
-            <div class="overlay-body">
-               <div class="details">
-                  <p><span class="label">Quarter</span>2018 - Q2</p>
-                  <p><span class="label">Committee</span>IC</p>
-               </div>
-               <div class="details">
-                  <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
-               </div>
-               <hr>
-               <div class="agenda">
-                  <p><span class="label">Agenda Items</span>
-                  <ul>
-                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3b-00_a.pdf" target="_blank"> Semi-Annual Contracting Prospective Report</a></li>
-                  </ul>
-                  </p>
-               </div>
       </div>
-
-
-
-      </div>         
-
-
-
-
-
-
+      <div id="18Q2O6" class="overlay-sidebar oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q2</p>
+               <p><span class="label">Committee</span>IC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3b-00_a.pdf" target="_blank"> Semi-Annual Contracting Prospective Report</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-         <script>
-            PSPDFKit.load({
-              container: "#pspdfkit",
-              pdf: "https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf",
-              licenseKey: "ESlMebuhghZ06qStETaEn8nLvIaW72vSzOwY9E933u7MZ6J5cQgSrH6RwbaSg842dgXh1NH8Rb_G7RiACKTT1DuSm0ywB5Dv-IKJTX_ROPsTUEL8ZF0vR_7B5l4ngHQ_Rq45NnkF7uudgC5w9l8DLfwJ0bHj7yRSAKQPCkrg8D9nOILhpxMOm4UwqIzPfVj_l-oa05kNyAMU6djdRp7zomfJWR7HzJ_K-8Pgz7Lo1DAqy9zBIRWOi-tonP7RN3Aro9qtsexqm1qRINaBewGKtrCVxWo0ae8tf-OHj_6oy-7dU4qABpekFUe1CDNtRn1ROfvRr-y-8ewtg0zpqDcbCHOAXGohmQiNsk1IhGSH0R9bL-YMDiskxqrjVdGsPyxlsN1g-FfKv0Udm5oPFGN8E6LceAdCCvrBVaf42auYuErMK9KDpK91K15DL1KpAtTK"
-            }).then(function(instance) {
-              console.log("PSPDFKit loaded", instance);
-            }).catch(function(error) {
-              console.error(error.message);
-            });
-          </script>
-          
-          <script>
+      <script>
+         var viewerElement = document.getElementById('viewer');
+         var myWebViewer = new PDFTron.WebViewer({
+            path: 'https://www.pdftron.com/4.0/lib',
+            l: 'demo:david@webperfex.com:75238cbd017887312bfa4847153341c81cc07e48e7bb156572',
+            initialDoc: 'https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf', // this URL must be publicly accessible to work with the pdftronServer at demo.pdftron.com
+            pdftronServer: 'https://demo.pdftron.com' // remove option to run client-side only, or replace later with your own server
+         }, viewerElement);
+      </script>
+      <script>
+         $('#toggleDocument').click(function(e) {
+            e.preventDefault();
+            $('body').toggleClass('document-open');
+            $('#viewer').css('width', '100%').css('width', '-=325px');
+         })
          
-
+         
          function filterItems() {
             $("input:checkbox[name=programName]:not(:checked)").each(function(){
                $('ul.inner-data-ul li.'+$(this).val()).addClass( "not-checked" )
@@ -1611,26 +1588,31 @@ Defined Duration</a></li>
          $('.filter-program-btn').click(function() {
              $('.program-filer').toggleClass( "visible" )
          })
-
-
-
+         $('#programFilter .btn').click(function() {
+             $('.program-filer').toggleClass( "visible" )
+         })
+         
+         
+         
+         
          $('.li-toggle').click(function(e) {
              let sidebarTarget = e.currentTarget.dataset.target;
              $('.overlay-sidebar.visible').removeClass( "visible" )
              $( sidebarTarget ).addClass( "visible" )
-
+         
          })
          $('.close').click(function() {
+            $('body').toggleClass('document-open');
            $('.overlay-sidebar.visible').removeClass( "visible" )
          })
-
-
-
-
+         
+         
+         
+         
          $('.toggle-compact').click(function() {
              $('.main-table').toggleClass( "compact" )
          })
-
+         
          $('.set-section').click(function() {
              $('.set-item').toggleClass( "hide-tr" )
              $('.set-section').toggleClass( "collapsed" )
@@ -1647,9 +1629,9 @@ Defined Duration</a></li>
              $('.oversee-item').toggleClass( "hide-tr" )
              $('.oversee-section').toggleClass( "collapsed" )
          })
-
-
-
+         
+         
+         
          var clicked = false, clickX;
          $(document).on({
            'mousemove': function(e) {
@@ -1663,34 +1645,34 @@ Defined Duration</a></li>
                clicked = false;
            }
          });
-
+         
          var updateScrollPos = function(e) {
            $('html').css('cursor', 'grab');
            // console.log("Window", window);
            // console.log("clickX", clickX);
            // console.log("e.pagX", e.pageX);
-
+         
            // console.log("final scroll pos", (clickX - e.pageX));
            // console.log("scroll left fnc", $('.table-scroll').scrollLeft());
-
+         
            $('.table-scroll').scrollLeft($('.table-scroll').scrollLeft() + (((clickX - e.pageX)))/15);
-
+         
          }
-
-
-
-
+         
+         
+         
+         
          var stickyItem1 = $('.sticky-item-1')
          var stickyItem2 = $('.table-scroll thead th')
          var stickyItem3 = $('.headers th')
          var stickyItem4 = $('.section-header th')
-
+         
          stickyItem2.css('top', stickyItem1.outerHeight()+'px' );
          stickyItem3.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight())+'px' );
          stickyItem4.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight()+stickyItem3.outerHeight())+'px' );
-
-
-
+         
+         
+         
       </script>
    </body>
 </html>
