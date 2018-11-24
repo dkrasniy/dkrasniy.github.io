@@ -1,0 +1,150 @@
+body {
+	margin: 0px;
+	font-family: proxima nova, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+}
+
+.application-bar {
+	background: #fff;
+	padding: 1em;
+	color: #333;
+	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+	z-index: 100;
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+}
+
+.header {
+	background: #f6f6f6;
+	padding: 1em;
+	-webkit-box-shadow: 3px 3px 10px #00000008;
+	box-shadow: 3px 3px 10px #00000008;
+	z-index: 20;
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+	top: 0;
+}
+
+.dropdown.policy-group .outer {
+	font-weight: bold;
+	font-size: 28px;
+	color: #333;
+	text-decoration: none;
+}
+
+.policy-group .dropdown-item {
+	font-size: 20px;
+	line-height: 1.75;
+}
+
+.dropdown.policy-group .outer::after {
+	font-size: 19px;
+	color: grey;
+}
+
+.policy-group .dropdown-menu.show {
+	display: block;
+	margin-top: -30px;
+	-webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+	box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+	border: none;
+}
+
+.policy-group .dropdown-item.active,
+.policy-group .dropdown-item:active {
+	color: #006edf!important;
+	font-weight: 600;
+	background: #edf5fa!important;
+}
+
+.program-filer {
+    -webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    background: white;
+	max-width: 410px;
+	display: none;
+	position: absolute;
+	padding:1em;
+	margin-top: -30px;
+	margin-left: 120px;
+	z-index:10000;
+}
+.program-filer.visible {
+	display: block;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 65px /* Committee */ 530px /* Power */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */ ;
+	grid-gap: 0px;
+	background-color: #fff;
+	color: #444;
+	text-align: center;
+}
+
+.box {
+	border: solid 1px #dcdcdc;
+	padding: 0.5rem 1rem;
+	margin:0 -1px -1px 0;
+	background-color: #FFFFFF;
+}
+
+.SPRheader {
+	text-align: center;
+	font-weight: bold;
+	border-top: solid 0px #dcdcdc;
+}
+
+.FYheader {
+	border-left: solid 3px #dcdcdc;
+	border-top: solid 3px #dcdcdc;
+	font-weight: bold;
+}
+
+.FYQheader {
+	font-weight: bold;
+}
+
+.powerCategory {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.powerSet {
+	background-color: #0071DC;
+}
+
+.powerApprove {
+	background-color: #FA710E;
+}
+
+.committeeEntry {
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+}
+
+.SPRentry {
+	text-align: left;
+}
+
+.boxQ1 {
+	border-left: solid 3px #dcdcdc;
+}

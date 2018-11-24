@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+
+	<div class="application-bar">
+    <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">CalPowERS - Strategic Decision Radar</a></div>
+  </div>
+
+	<div class="header sticky-item-1">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-9">
+                     <div class="dropdown show policy-group">
+                        <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           <a class="dropdown-item active" href="index.html">ALM</a>
+                           <a class="dropdown-item" href="epm.html">EPM</a>
+                           <a class="dropdown-item" href="phb.html">PHBC</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <button class="btn btn-secondary-outline filter-program-btn" style="float: right;"><i class="fas fa-filter"></i> Filter</button>
+                     <div class="program-filer">
+                        <div class="options" style="float: right;">
+                           <form id="programFilter" onsubmit="filterItems(); return false;" style="float: right;">
+                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked="">
+                              <label class="form-check-label" for="ACTO">Actuarial Office</label>
+                              <br>
+                              <input type="checkbox" name="programName" id="FINO" value="FINO" checked="">
+                              <label class="form-check-label" for="FINO">Financial Office</label>
+                              <br>
+                              <input type="checkbox" name="programName" id="INVO" value="INVO" checked="">
+                              <label class="form-check-label" for="INVO">Investment Office</label>
+                              <br><br>
+                              <button type="submit" class="btn btn-primary">Apply</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+<div class="wrapper">
+
+  <!-- Committee -->
+  <div class="box" style="display: flex; align-items: center; position: sticky; left: 0;"></div>
+
+  <!-- Powers Reserved -->
+  <div class="box" style="position: sticky; left: 0; font-weight: bold; text-align: center;"></div>
+
+  <!-- 2017 -->
+  <div class="box FYheader" style="grid-column: span 4;">2017</div>
+  <!-- 2018 -->
+  <div class="box FYheader" style="grid-column: span 4;">2018</div>
+  <!-- 2019 -->
+  <div class="box FYheader" style="grid-column: span 4;">2019</div>
+  <!-- 2020 -->
+  <div class="box FYheader" style="grid-column: span 4;">2020</div>
+  <!-- 2021 -->
+  <div class="box FYheader" style="grid-column: span 4;">2021</div>
+  <!-- 2022 -->
+  <div class="box FYheader" style="grid-column: span 4;">2022</div>
+  <!-- 2023 -->
+  <div class="box FYheader" style="grid-column: span 4;">2023</div>
+  <!-- 2024 -->
+  <div class="box FYheader" style="grid-column: span 4;">2024</div>
+
+  <div class="box SPRheader" style="position: sticky; left: 0;"></div>
+  <div class="box SPRheader" style="position: sticky; left: 0;">Specific Powers Reserved</div>
+  <!-- 2017 -->
+  <div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2018 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2019 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2020 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2021 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2022 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2023 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+  <!-- 2024 -->
+	<div class="box boxQ1 FYQheader">Q1</div>
+  <div class="box FYQheader">Q2</div>
+  <div class="box FYQheader">Q3</div>
+  <div class="box FYQheader">Q4</div>
+
+<!-- SET -->
+<div class="box powerCategory powerSet" style="grid-column: span 34; display: flex; align-items: center; position: sticky; left: 0;">Set</div>
+
+  <div class="box committeeEntry" style="grid-row: span 4; position: sticky; left: 0;">IC</div>
+  <div class="box SPRentry" style="position: sticky; left: 0;">Set investment beliefs</div>
+	<!-- 2017 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2018 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2019 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2020 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2021 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2022 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2023 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2024 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+
+
+  <!-- <div class="box a">IC</div> -->
+  <div class="box SPRentry" style="position: sticky; left: 0;">Set total fund and asset class policy benchmarks</div>
+	<!-- 2017 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2018 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2019 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2020 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2021 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2022 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2023 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2024 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+
+
+    <!-- <div class="box a">IC</div> -->
+  <div class="box SPRentry" style="position: sticky; left: 0;">Set investment risk appetite and tolerances</div>
+	<!-- 2017 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2018 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2019 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2020 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2021 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2022 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2023 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2024 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+
+
+  <!-- <div class="box a">IC</div> -->
+  <div class="box SPRentry" style="position: sticky; left: 0;">Set the target rate of return</div>
+	<!-- 2017 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2018 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2019 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2020 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2021 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2022 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2023 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <!-- 2024 -->
+  <div class="box boxQ1"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+  <div class="box"> </div>
+
+	<!-- APPROVE -->
+	<div class="box powerCategory powerApprove" style="grid-column: span 34; display: flex; align-items: center; position: sticky; left: 0;">Approve</div>
+
+
+</div>
+
+</body>
+</html>
