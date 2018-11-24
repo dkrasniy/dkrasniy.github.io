@@ -8,10 +8,10 @@ Policy Radar
 -------------------------------- */
 
 div#viewer {
-    display: none!important;
+    display: none;
 }
 body.document-open div#viewer {
-    display: block!important;
+    display: block;
 }
 body.document-open table#policy-radar {
     display: none;
