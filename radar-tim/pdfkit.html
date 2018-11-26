@@ -1,0 +1,1618 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Policy Radar Table</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <link rel="stylesheet" href="radar.css">
+
+      <script src="pspdfkit.js"></script>
+
+
+   </head>
+   <body>
+         <div id="pspdfkit" style="width: 100%; height: 480px;"></div> 
+      <div id="table-scroll" class="table-scroll">
+         <div class="application-bar">
+            <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">Strategic Policy Radar</a></div>
+         </div>
+         <div class="header sticky-item-1">
+            <div class="container-fluid">
+               <button class="sr-only btn btn-secondary-outline float-right toggle-compact">Compact View</button>
+               <div class="dropdown show policy-group">
+                  <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ALM
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                     <a class="dropdown-item active" href="radar.html">ALM</a>
+                     <a class="dropdown-item" href="epm.html">EPM</a>
+                     <a class="dropdown-item" href="phb.html">PHB</a>
+                  </div>
+               </div>
+
+               <button class="btn btn-secondary-outline filter-program-btn">Filter Program</button>
+
+               <div class="program-filer">
+                  
+                  <div class="options">
+                        <form id="programFilter" onsubmit="filterItems(); return false;">
+                              <input type="checkbox" name="programName" id="ISOF" value="ISOF" />
+                              <label class="form-check-label" for="ISOF">ISOF</label>
+
+
+                              <input type="checkbox" name="programName" id="ESDD" value="ESDD" />
+                              <label class="form-check-label" for="ESDD">ESDD</label>
+
+                              <input type="checkbox" name="programName" id="FINO" value="FINO" />
+                              <label class="form-check-label" for="FINO">FINO</label>
+
+                              <input type="checkbox" name="programName" id="ITSB" value="ITSB" />
+                              <label class="form-check-label" for="ITSB">ITSB</label>
+                             
+                                 
+                              <button type="submit" class="btn btn-primary">Apply Filter</button>
+                        </form>
+                  </div>
+                 
+                  
+               </div>
+
+   
+                  
+
+            </div>
+         </div>
+         <table id="policy-radar" class="main-table" style="border-spacing: none;" cellspacing="0" cellpadding="0">
+            <thead>
+               <tr class="quarters sticky-item-2">
+                  <th class="left-fixed-1"></th>
+                  <th class="left-fixed-2"></th>
+                  <th colspan="4" scope="col">2017</th>
+                  <th colspan="4" scope="col">2018</th>
+                  <th colspan="4" scope="col">2019</th>
+                  <th colspan="4" scope="col">2020</th>
+                  <th colspan="4" scope="col">2021</th>
+                  <th colspan="4" scope="col">2022</th>
+                  <th colspan="4" scope="col">2023</th>
+                  <th colspan="4" scope="col">2024</th>
+               </tr>
+               <tr class="headers">
+                  <th scope="col" class="left-fixed-1"> </th>
+                  <th scope="col" style="min-width: 530px;" class="left-fixed-2">Specific Powers Reserved</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col" class="current-year">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+                  <th scope="col">Q1</th>
+                  <th scope="col">Q2</th>
+                  <th scope="col">Q3</th>
+                  <th scope="col">Q4</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="section-header set-section">
+                  <th id="set" class="span" colspan="34"  scope="colgroup">
+                     <span class="fixed-section"><i class="fas fa-chevron-down"></i> Set</span>
+                  </th>
+               </tr>
+               <tr class="light-blue set-item">
+                  <th rowspan="4" headers="ic" id="ic1" class="left-fixed-1">IC</th>
+                  <!-- <th rowspan="4" headers="set" id="set1" class="left-fixed-2">SET</th> -->
+                  <td class="left-fixed-2">Set investment beliefs</td>
+				  <td headers="ic1 set1"></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ESDD"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ESDD"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ITSB"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ISOF"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ISOF"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="FINO"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-blue set-item">
+                  <td class="left-fixed-2">Set total fund and asset class policy benchmarks</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ITSB"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-blue set-item">
+                  <td class="left-fixed-2">Set investment risk appetite and tolerances</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="FINO"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-blue set-item">
+                  <td class="left-fixed-2">Set the target rate of return</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="FINO"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="seperator set-item">
+               <tr class="section-header approve-section" >
+                  <th id="approve" class="span" colspan="34"  scope="colgroup">
+                     <span class="fixed-section"><i class="fas fa-chevron-down"></i> Approve</span>
+                  </th>
+               </tr>
+               <tr class="light-orange approve-item">
+                  <th rowspan="2" headers="ic2" id="ic2" class="left-fixed-1">IC</th>
+                  <!-- <th rowspan="5" headers="set2" id="set2" class="left-fixed-2">APPROVE</th> -->
+                  <td class="left-fixed-2">Select the asset allocation mix including interim allocation targets for each fund</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ITSB"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-orange approve-item">
+                  <td class="left-fixed-2">Approve asset class strategic plans and portfolio construction guidelines</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>                     
+					  <ul class="inner-data-ul">
+                        <li class="ESDD"><span class="placeholder">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-orange approve-item">
+                  <th rowspan="3" headers="ic" id="ic2"  class="left-fixed-1">FAC</th>
+                  <td class="left-fixed-2">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</td>
+                  <td></td>
+                  <td>
+					  <ul class="inner-data-ul">
+                        <li class="li-toggle ITSB" data-target="#17Q2A3"><span class="item">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td>
+				     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#17Q4A3"><span class="item">3</span></li>
+                     </ul>
+				  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-orange approve-item">
+                  <td class="left-fixed-2">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#17Q1A4"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ITSB ESDD" data-target="#18Q1A4"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#18Q2A4"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ISOF" data-target="#18Q3A4"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ESDD" data-target="#18Q4A4"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-orange approve-item">
+                  <td class="left-fixed-2">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#18Q1A5"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#18Q2A5"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ESDD" data-target="#18Q3A5"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  </tr class="light-orange">
+               <tr class="seperator approve-item">
+               <tr class="section-header conduct-section" >
+                  <th id="conduct" class="span" colspan="34"  scope="colgroup">
+                     <span class="fixed-section"><i class="fas fa-chevron-down"></i> Conduct</span>
+                  </th>
+               </tr>
+               <tr class="light-yellow conduct-item">
+                  <th rowspan="1" headers="ic2" id="ic2"  class="left-fixed-1">IC</th>
+                  <!-- <th rowspan="1" headers="set2" id="set2" class="left-fixed-2">CONDUCT</th> -->
+                  <td class="left-fixed-2">Conduct strategic asset allocation</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="seperator conduct-item">
+               <tr class="section-header oversee-section" >
+                  <th id="conduct" class="span" colspan="34"  scope="colgroup">
+                     <span class="fixed-section"><i class="fas fa-chevron-down"></i> Oversee</span>
+                  </th>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <th rowspan="4" headers="ic3" id="ic3"  class="left-fixed-1">FAC</th>
+                  <!-- <th rowspan="12" headers="set3" id="set3" class="left-fixed-2">OVERSEE</th> -->
+                  <td class="left-fixed-2">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ITSB" data-target="#17Q4O1"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle FINO" data-target="#18Q1O1"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ESDD" data-target="#18Q2O1"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ESDD" data-target="#18Q3O1"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ISOF" data-target="#18Q4O1"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <th rowspan="8" headers="ic3" id="ic3" class="left-fixed-1">IC</th>
+                  <td class="left-fixed-2">Oversee asset class strategic plans and portfolio construction guidelines</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ISOF" data-target="#17Q4O6"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td>
+                     <ul class="inner-data-ul">
+                        <li class="li-toggle ISOF" data-target="#18Q2O6"><span class="item">3</span></li>
+                     </ul>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee investment performance</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee selection process and performance of investment partners, managers and consultants</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee cost effectiveness of the investment program</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee investment office risk assessment and control environment</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee environmental, social and governance (ESG) program</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr class="light-green oversee-item">
+                  <td class="left-fixed-2">Oversee performance of Board consultants who provide investment-related expertise to the Board</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+	   
+<!-- 2017 Approve -->	   
+<div id="17Q1A4" class="overlay-sidebar approve-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Approve</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2017 - Q1</p>
+                  <p><span class="label">Committee</span>FAC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201702/financeadmin/item-9a-00.pdf" target="_blank"> Funding Risk Mitigation 
+Policy </a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>
+<div id="17Q2A3" class="overlay-sidebar sidebar1122 approve-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Approve</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2017 - Q2</p>
+                  <p><span class="label">Committee</span>FAC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201704/financeadmin/item-7a-00.pdf" target="_blank"> Asset Liability Management Policy (
+Second 
+Reading)</a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>
+<div id="17Q4A3" class="overlay-sidebar approve-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Approve</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2017 - Q4</p>
+                  <p><span class="label">Committee</span>FAC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-7a-00.pdf" target="_blank"> Review of Actuarial Assumptions
+ and Discount Rate Selection</a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>
+
+<!-- 2017 Oversee -->
+<div id="17Q4O1" class="overlay-sidebar oversee-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Oversee</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2017 - Q4</p>
+                  <p><span class="label">Committee</span>FAC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf" target="_blank"> Review of Finance and Administration Committee Risk Profiles </a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>
+<div id="17Q4O6" class="overlay-sidebar oversee-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Oversee</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2017 - Q4</p>
+                  <p><span class="label">Committee</span>IC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201712/financeadmin/item-3c-00.pdf" target="_blank"> Contracts Administration: Affirmation
+ of Investment Manager Contracts Without 
+Defined Duration</a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>
+	   
+<!-- 2018 Approve -->	
+<div id="18Q1A4" class="overlay-sidebar sidebar45 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q1</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-7a-00_a.pdf" target="_blank">Amortization Policy (Second Reading)</a></li>
+               </ul>
+               </p>
+            </div>
+	<div class="agenda">
+               <p><span class="label">Supporting Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-7a-00_a.pdf" target="_blank">Amortization Policy (Second Reading)</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+<div id="18Q2A4" class="overlay-sidebar sidebar45 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q2</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-5a-00_a.pdf" target="_blank">2018-19 Annual Budget Proposal (Second Reading-Final)</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3b-00_a.pdf" target="_blank">Treasury Management Policy Review</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201805/financeadmin/item-6b-00_a.pdf" target="_blank">Extension of the Third-Party Administrator (TPA) Contract for the Supplemental Income Plan (SIP) Programs</a> </li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+<div id="18Q3A4" class="overlay-sidebar sidebar45 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q3</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201809/financeadmin/item-8b-00_a.pdf" target="_blank">Proposed Revision to Amortization Policy Regarding Financial Necessity (1st Reading)</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+<div id="18Q4A4" class="overlay-sidebar sidebar45 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q4</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="" target="_blank">??? Nov 2018 Basic Financial Statements Review</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+
+<div id="18Q1A5" class="overlay-sidebar sidebar55 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q1</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-4b-00_a.pdf" target="_blank"> Judges’ Retirement System Actuarial Valuation Report and Employer and Employee Contribution Rates </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-4c-00_a.pdf" target="_blank"> Judges’ Retirement System II Actuarial Valuation Report and Employer and Employee Contribution Rates</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-4d-00_a.pdf" target="_blank">Legislators’ Retirement System Actuarial Valuation Report and Employer and Employee Contribution Rates </a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+<div id="18Q2A5" class="overlay-sidebar sidebar55 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q2</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3c-00_a.pdf" target="_blank">Treasury Management Reserve Policy Review </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-7a-00_a.pdf" target="_blank">State Valuation and Employer/Employee Contribution Rates</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-7b-00_a.pdf" target="_blank">Schools Valuation and Employer/Employee Contribution Rates </a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+<div id="18Q3A5" class="overlay-sidebar sidebar55 approve-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Approve</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q3</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201809/financeadmin/item-8a-00_a.pdf" target="_blank">Annual Actuarial Valuation Terminated Agency Pool </a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+      </div>
+
+<!-- 2018 Oversee -->
+<div id="18Q1O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q1</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201802/financeadmin/item-9a-00_a.pdf" target="_blank">Establishment of the Long-Term Care Discount Rate Assumption</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+</div>
+<div id="18Q2O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q2</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-4d-00_a.pdf" target="_blank">Semi-Annual Financial Report </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-4e-00_a.pdf" target="_blank">Semi-Annual Budget and Expenditure Report </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-8a-00_a.pdf" target="_blank">Semi-Annual Health Plan Financial Report </a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-9a-00_a.pdf" target="_blank">Long-Term Care Valuation Report </a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+</div>
+<div id="18Q3O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q3</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201809/financeadmin/item-5i-00_a.pdf" target="_blank">California Employers’ Retiree Benefit Trust Report</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201809/financeadmin/item-5h-00_a.pdf" target="_blank">Supplemental Income Plans Report</a></li>
+                  <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201809/financeadmin/item-7a-00_a.pdf" target="_blank">Reporting on Participating Employers</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+</div>
+<div id="18Q4O1" class="overlay-sidebar sidebar112 oversee-sidebar">
+         <div class="power-head-bg">
+            <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Oversee</h2>
+         </div>
+         <div class="overlay-body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2018 - Q4</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered.</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span>
+               <ul>
+                  <li><a href="" target="_blank">???</a></li>
+                  <li><a href="" target="_blank">???</a></li>
+                  <li><a href="" target="_blank">???</a></li>
+                  <li><a href="" target="_blank">???</a></li>
+               </ul>
+               </p>
+            </div>
+         </div>
+</div>
+
+<div id="18Q2O6" class="overlay-sidebar oversee-sidebar">
+            <div class="power-head-bg">
+               <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+               <h2>Oversee</h2>
+            </div>
+            <div class="overlay-body">
+               <div class="details">
+                  <p><span class="label">Quarter</span>2018 - Q2</p>
+                  <p><span class="label">Committee</span>IC</p>
+               </div>
+               <div class="details">
+                  <p><span class="label">Specific Power Reserved</span>Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</p>
+               </div>
+               <hr>
+               <div class="agenda">
+                  <p><span class="label">Agenda Items</span>
+                  <ul>
+                     <li><a href="https://www.calpers.ca.gov/docs/board-agendas/201804/financeadmin/item-3b-00_a.pdf" target="_blank"> Semi-Annual Contracting Prospective Report</a></li>
+                  </ul>
+                  </p>
+               </div>
+      </div>
+
+
+
+      </div>         
+
+
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+         <script>
+            PSPDFKit.load({
+              container: "#pspdfkit",
+              pdf: "https://www.calpers.ca.gov/docs/board-agendas/201711/financeadmin/item-9a-00.pdf",
+              licenseKey: "ESlMebuhghZ06qStETaEn8nLvIaW72vSzOwY9E933u7MZ6J5cQgSrH6RwbaSg842dgXh1NH8Rb_G7RiACKTT1DuSm0ywB5Dv-IKJTX_ROPsTUEL8ZF0vR_7B5l4ngHQ_Rq45NnkF7uudgC5w9l8DLfwJ0bHj7yRSAKQPCkrg8D9nOILhpxMOm4UwqIzPfVj_l-oa05kNyAMU6djdRp7zomfJWR7HzJ_K-8Pgz7Lo1DAqy9zBIRWOi-tonP7RN3Aro9qtsexqm1qRINaBewGKtrCVxWo0ae8tf-OHj_6oy-7dU4qABpekFUe1CDNtRn1ROfvRr-y-8ewtg0zpqDcbCHOAXGohmQiNsk1IhGSH0R9bL-YMDiskxqrjVdGsPyxlsN1g-FfKv0Udm5oPFGN8E6LceAdCCvrBVaf42auYuErMK9KDpK91K15DL1KpAtTK"
+            }).then(function(instance) {
+              console.log("PSPDFKit loaded", instance);
+            }).catch(function(error) {
+              console.error(error.message);
+            });
+          </script>
+          
+          <script>
+         
+         function filterItems() {
+            $("input:checkbox[name=programName]:not(:checked)").each(function(){
+               $('ul.inner-data-ul li.'+$(this).val()).addClass( "not-checked" )
+               
+            });
+            $("input:checkbox[name=programName]:checked").each(function(){
+               $('ul.inner-data-ul li.'+$(this).val()).removeClass( "not-checked" )
+               
+            });
+            $('.table-scroll').addClass( "filter-applied" )
+         }
+         
+         $('.filter-program-btn').click(function() {
+             $('.program-filer').toggleClass( "visible" )
+         })
+         $('.li-toggle').click(function(e) {
+             let sidebarTarget = e.currentTarget.dataset.target;
+             $('.overlay-sidebar.visible').removeClass( "visible" )
+             $( sidebarTarget ).addClass( "visible" )
+         })
+         $('.close').click(function() {
+           $('.overlay-sidebar.visible').removeClass( "visible" )
+         })
+         $('.toggle-compact').click(function() {
+             $('.main-table').toggleClass( "compact" )
+         })
+         $('.set-section').click(function() {
+             $('.set-item').toggleClass( "hide-tr" )
+             $('.set-section').toggleClass( "collapsed" )
+         })
+         $('.approve-section').click(function() {
+             $('.approve-item').toggleClass( "hide-tr" )
+             $('.approve-section').toggleClass( "collapsed" )
+         })
+         $('.conduct-section').click(function() {
+             $('.conduct-item').toggleClass( "hide-tr" )
+             $('.conduct-section').toggleClass( "collapsed" )
+         })
+         $('.oversee-section').click(function() {
+             $('.oversee-item').toggleClass( "hide-tr" )
+             $('.oversee-section').toggleClass( "collapsed" )
+         })
+         var clicked = false, clickX;
+         $(document).on({
+           'mousemove': function(e) {
+               clicked && updateScrollPos(e);
+           },
+           'mousedown': function(e) {
+               clicked = true;
+               clickX = e.pageX;
+           },
+           'mouseup': function() {
+               clicked = false;
+           }
+         });
+         var updateScrollPos = function(e) {
+           $('html').css('cursor', 'grab');
+           // console.log("Window", window);
+           // console.log("clickX", clickX);
+           // console.log("e.pagX", e.pageX);
+           // console.log("final scroll pos", (clickX - e.pageX));
+           // console.log("scroll left fnc", $('.table-scroll').scrollLeft());
+           $('.table-scroll').scrollLeft($('.table-scroll').scrollLeft() + (((clickX - e.pageX)))/15);
+         }
+         var stickyItem1 = $('.sticky-item-1')
+         var stickyItem2 = $('.table-scroll thead th')
+         var stickyItem3 = $('.headers th')
+         var stickyItem4 = $('.section-header th')
+         stickyItem2.css('top', stickyItem1.outerHeight()+'px' );
+         stickyItem3.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight())+'px' );
+         stickyItem4.css('top', (stickyItem1.outerHeight()+stickyItem2.outerHeight()+stickyItem3.outerHeight())+'px' );
+      </script>
+   </body>
+</html>
