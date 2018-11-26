@@ -15,9 +15,11 @@ body {
 	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
 	z-index: 100;
-	position: -webkit-sticky;
-	position: sticky;
+	position: fixed;
 	left: 0;
+	display: block;
+	width: 100%;
+	height: 62px;
 }
 
 .header {
@@ -26,10 +28,12 @@ body {
 	-webkit-box-shadow: 3px 3px 10px #00000008;
 	box-shadow: 3px 3px 10px #00000008;
 	z-index: 20;
-	position: -webkit-sticky;
-	position: sticky;
+	position: fixed;
 	left: 0;
-	top: 0;
+	top: 62px;
+	display: block;
+	width: 100%;
+	height: 74px;
 }
 
 .dropdown.policy-group .outer {
@@ -95,10 +99,11 @@ body {
 	background-color: #fff;
 	color: #444;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 .box {
-	border: solid 1px #dcdcdc;
+	border: solid 1px #a7a7a7;
 	padding: 0.5rem 1rem;
 	margin:0 -1px -1px 0;
 	background-color: #FFFFFF;
@@ -107,13 +112,14 @@ body {
 .SPRheader {
 	text-align: center;
 	font-weight: bold;
-	border-top: solid 0px #dcdcdc;
+	border-top: solid 0px #a7a7a7;
 }
 
 .FYheader {
-	border-left: solid 3px #dcdcdc;
-	border-top: solid 3px #dcdcdc;
+	border-left: solid 3px #a7a7a7;
+	border-top: solid 3px #a7a7a7;
 	font-weight: bold;
+    grid-column: span 4;
 }
 
 .FYQheader {
@@ -122,15 +128,52 @@ body {
 
 .powerCategory {
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #FFFFFF; 
+    grid-column: span 34; 
+    display: flex; 
+    align-items: center; 
+    height: 42px;
+    position: relative;
+}
+
+.powerCategoryLabel {
+    position: sticky;
+    left: 18px;
 }
 
 .powerSet {
 	background-color: #0071DC;
 }
 
+.powerSetCell {
+	background-color: rgba(0, 113, 220, 0.15);
+}
+
 .powerApprove {
 	background-color: #FA710E;
+	margin-top: 10px;
+}
+
+.powerApproveCell {
+	background-color: rgba(250, 113, 14, 0.15);
+}
+
+.powerConduct {
+	background-color: #913FD6;
+	margin-top: 10px;
+}
+
+.powerConductCell {
+	background-color: rgba(145, 63, 214, 0.15);
+}
+
+.powerOversee {
+	background-color: #30B34E;
+	margin-top: 10px;	
+}
+
+.powerOverseeCell {
+	background-color: rgba(48, 179, 78, 0.15);
 }
 
 .committeeEntry {
@@ -139,12 +182,16 @@ body {
 	display: flex;
 	align-items: center;
 	justify-items: center;
+    position: sticky; 
+    left: 0;
 }
 
 .SPRentry {
 	text-align: left;
+    position: sticky;
+    left: 66px!important;
 }
 
 .boxQ1 {
-	border-left: solid 3px #dcdcdc;
+	border-left: solid 3px #a7a7a7;
 }

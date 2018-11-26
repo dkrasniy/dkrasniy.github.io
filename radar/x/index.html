@@ -1,306 +1,1114 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="grid.css">
 </head>
 
 <body>
 
-	<div class="application-bar">
+  <div class="application-bar">
     <div class="container-fluid"> <a style="font-weight: bold;font-size: 20px;">CalPowERS - Strategic Decision Radar</a></div>
   </div>
 
-	<div class="header sticky-item-1">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-md-9">
-                     <div class="dropdown show policy-group">
-                        <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                           <a class="dropdown-item active" href="index.html">ALM</a>
-                           <a class="dropdown-item" href="epm.html">EPM</a>
-                           <a class="dropdown-item" href="phb.html">PHBC</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <button class="btn btn-secondary-outline filter-program-btn" style="float: right;"><i class="fas fa-filter"></i> Filter</button>
-                     <div class="program-filer">
-                        <div class="options" style="float: right;">
-                           <form id="programFilter" onsubmit="filterItems(); return false;" style="float: right;">
-                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked="">
-                              <label class="form-check-label" for="ACTO">Actuarial Office</label>
-                              <br>
-                              <input type="checkbox" name="programName" id="FINO" value="FINO" checked="">
-                              <label class="form-check-label" for="FINO">Financial Office</label>
-                              <br>
-                              <input type="checkbox" name="programName" id="INVO" value="INVO" checked="">
-                              <label class="form-check-label" for="INVO">Investment Office</label>
-                              <br><br>
-                              <button type="submit" class="btn btn-primary">Apply</button>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+  <div class="header sticky-item-1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="dropdown show policy-group">
+            <a class="dropdown-toggle outer" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item active" href="index.html">ALM</a>
+              <a class="dropdown-item" href="epm.html">EPM</a>
+              <a class="dropdown-item" href="phb.html">PHBC</a>
             </div>
-         </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-secondary-outline filter-program-btn" style="float: right;"><i class="fas fa-filter"></i> Filter</button>
+          <div class="program-filer">
+            <div class="options" style="float: right;">
+              <form id="programFilter" onsubmit="filterItems(); return false;" style="float: right;">
+                <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked="">
+                <label class="form-check-label" for="ACTO">Actuarial Office</label>
+                <br>
+                <input type="checkbox" name="programName" id="FINO" value="FINO" checked="">
+                <label class="form-check-label" for="FINO">Financial Office</label>
+                <br>
+                <input type="checkbox" name="programName" id="INVO" value="INVO" checked="">
+                <label class="form-check-label" for="INVO">Investment Office</label>
+                <br><br>
+                <button type="submit" class="btn btn-primary">Apply</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="wrapper">
+  <div class="wrapper" style="top:136px; position: relative;">
 
-  <!-- Committee -->
-  <div class="box" style="display: flex; align-items: center; position: sticky; left: 0;"></div>
+<!-- ** TABLE HEADER ** -->
+      
+    <!-- COMMITTEE COLUMN-->
+    <div class="box" style="display: flex; align-items: center; position: sticky; left: 0;"></div>
 
-  <!-- Powers Reserved -->
-  <div class="box" style="position: sticky; left: 0; font-weight: bold; text-align: center;"></div>
+    <!-- POWERS RESERVED COLUMN-->
+    <div class="box" style="position: sticky; left: 66px; font-weight: bold; text-align: center;"></div>
 
-  <!-- 2017 -->
-  <div class="box FYheader" style="grid-column: span 4;">2017</div>
-  <!-- 2018 -->
-  <div class="box FYheader" style="grid-column: span 4;">2018</div>
-  <!-- 2019 -->
-  <div class="box FYheader" style="grid-column: span 4;">2019</div>
-  <!-- 2020 -->
-  <div class="box FYheader" style="grid-column: span 4;">2020</div>
-  <!-- 2021 -->
-  <div class="box FYheader" style="grid-column: span 4;">2021</div>
-  <!-- 2022 -->
-  <div class="box FYheader" style="grid-column: span 4;">2022</div>
-  <!-- 2023 -->
-  <div class="box FYheader" style="grid-column: span 4;">2023</div>
-  <!-- 2024 -->
-  <div class="box FYheader" style="grid-column: span 4;">2024</div>
+    <!-- FY HEADERS -->
+    <!-- 2017 -->
+    <div class="box FYheader">2017</div>
+    <!-- 2018 -->
+    <div class="box FYheader">2018</div>
+    <!-- 2019 -->
+    <div class="box FYheader">2019</div>
+    <!-- 2020 -->
+    <div class="box FYheader">2020</div>
+    <!-- 2021 -->
+    <div class="box FYheader">2021</div>
+    <!-- 2022 -->
+    <div class="box FYheader">2022</div>
+    <!-- 2023 -->
+    <div class="box FYheader">2023</div>
+    <!-- 2024 -->
+    <div class="box FYheader">2024</div>
 
-  <div class="box SPRheader" style="position: sticky; left: 0;"></div>
-  <div class="box SPRheader" style="position: sticky; left: 0;">Specific Powers Reserved</div>
-  <!-- 2017 -->
-  <div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2018 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2019 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2020 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2021 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2022 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2023 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
-  <!-- 2024 -->
-	<div class="box boxQ1 FYQheader">Q1</div>
-  <div class="box FYQheader">Q2</div>
-  <div class="box FYQheader">Q3</div>
-  <div class="box FYQheader">Q4</div>
+    <!-- COMMITTEE HEADER-->
+    <div class="box SPRheader" style="position: sticky; left: 0;"></div>
 
-<!-- SET -->
-<div class="box powerCategory powerSet" style="grid-column: span 34; display: flex; align-items: center; position: sticky; left: 0;">Set</div>
+    <!-- POWERS RESERVED HEADER-->
+    <div class="box SPRheader" style="position: sticky; left: 66px;">Specific Powers Reserved</div>
 
-  <div class="box committeeEntry" style="grid-row: span 4; position: sticky; left: 0;">IC</div>
-  <div class="box SPRentry" style="position: sticky; left: 0;">Set investment beliefs</div>
-	<!-- 2017 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2018 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2019 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2020 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2021 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2022 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2023 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2024 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
+    <!-- QUARTER HEADERS -->
+    <!-- 2017 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2018 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2019 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2020 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2021 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2022 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2023 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
+    <!-- 2024 -->
+    <div class="box boxQ1 FYQheader">Q1</div>
+    <div class="box FYQheader">Q2</div>
+    <div class="box FYQheader">Q3</div>
+    <div class="box FYQheader">Q4</div>
 
+<!-- ** TABLE BODY ** -->      
+      
+    <!-- SET -->
+    <div class="box powerCategory powerSet"><span class="powerCategoryLabel">Set</span></div>
+      
+    <!-- SET > COMMITEE > IC -->
+    <div class="box committeeEntry" style="grid-row: span 4;">IC</div>
+      
+    <!-- SET > Power 01 -->
+    <div class="box SPRentry">Set investment beliefs</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
 
-  <!-- <div class="box a">IC</div> -->
-  <div class="box SPRentry" style="position: sticky; left: 0;">Set total fund and asset class policy benchmarks</div>
-	<!-- 2017 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2018 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2019 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2020 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2021 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2022 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2023 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2024 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
+    <!-- SET > Power 02 -->
+    <div class="box SPRentry">Set total fund and asset class policy benchmarks</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
 
+    <!-- SET > Power 03 -->
+    <div class="box SPRentry">Set investment risk appetite and tolerances</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
 
-    <!-- <div class="box a">IC</div> -->
-  <div class="box SPRentry" style="position: sticky; left: 0;">Set investment risk appetite and tolerances</div>
-	<!-- 2017 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2018 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2019 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2020 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2021 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2022 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2023 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2024 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
+    <!-- SET > Power 04 -->
+    <div class="box SPRentry">Set the target rate of return</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
+    <div class="box powerSetCell"> </div>
 
+    <!-- APPROVE -->
+    <div class="box powerCategory powerApprove"><span class="powerCategoryLabel">Approve</span></div>
 
-  <!-- <div class="box a">IC</div> -->
-  <div class="box SPRentry" style="position: sticky; left: 0;">Set the target rate of return</div>
-	<!-- 2017 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2018 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2019 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2020 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2021 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2022 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2023 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <!-- 2024 -->
-  <div class="box boxQ1"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
-  <div class="box"> </div>
+    <!-- APPROVE > COMMITTEE > IC -->
+    <div class="box committeeEntry" style="grid-row: span 2;">IC</div>
+    
+    <!-- APPROVE > Power 01 -->
+    <div class="box SPRentry">Select the asset allocation mix including interim allocation targets for each fund</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
 
-	<!-- APPROVE -->
-	<div class="box powerCategory powerApprove" style="grid-column: span 34; display: flex; align-items: center; position: sticky; left: 0;">Approve</div>
+    <!-- APPROVE > Power 02 -->
+    <div class="box SPRentry">Approve asset class strategic plans and portfolio construction guidelines</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
 
+    <!-- APPROVE > COMMITTEE > FAC -->
+    <div class="box committeeEntry" style="grid-row: span 3;">FAC</div>
+      
+    <!-- APPROVE > Power 03 -->
+    <div class="box SPRentry">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
 
-</div>
+    <!-- APPROVE > Power 04 -->
+    <div class="box SPRentry">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+
+    <!-- APPROVE > Power 05 -->
+    <div class="box SPRentry">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell"> </div>
+
+    <!-- CONDUCT -->
+    <div class="box powerCategory powerConduct"><span class="powerCategoryLabel">Conduct</span></div>
+
+    <!-- OVERSEE > COMMITTEE > IC -->
+    <div class="box committeeEntry">IC</div>
+      
+    <!-- CONDUCT > Power 01 -->
+    <div class="box SPRentry">Conduct strategic asset allocation</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+    <div class="box powerConductCell"> </div>
+
+    <!-- OVERSEE -->
+    <div class="box powerCategory powerOversee"><span class="powerCategoryLabel">Oversee</span></div>
+
+    <!-- OVERSEE > COMMITTEE > FAC -->
+    <div class="box committeeEntry" style="grid-row: span 4;">FAC</div>
+      
+    <!-- OVERSEE > Power 01 -->
+    <div class="box SPRentry">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+      
+    <!-- OVERSEE > Power 02 -->
+    <div class="box SPRentry">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 03 -->
+    <div class="box SPRentry">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 04 -->
+    <div class="box SPRentry">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+      
+    <!-- OVERSEE > COMMITTEE > IC -->
+    <div class="box committeeEntry" style="grid-row: span 8;">IC</div>
+
+    <!-- OVERSEE > Power 05 -->
+    <div class="box SPRentry">Oversee asset class strategic plans and portfolio construction guidelines</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>     
+      
+    <!-- OVERSEE > Power 06 -->
+    <div class="box SPRentry">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 07 -->
+    <div class="box SPRentry">Oversee investment performance</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 08 -->
+    <div class="box SPRentry">Oversee selection process and performance of investment partners, managers and consultants</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+      
+ 
+    <!-- OVERSEE > Power 09 -->
+    <div class="box SPRentry">Oversee cost effectiveness of the investment program</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>     
+      
+    <!-- OVERSEE > Power 10 -->
+    <div class="box SPRentry">Oversee investment office risk assessment and control environment</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 11 -->
+    <div class="box SPRentry">Oversee environmental, social and governance (ESG) program</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+
+    <!-- OVERSEE > Power 12 -->
+    <div class="box SPRentry">Oversee performance of Board consultants who provide investment-related expertise to the Board</div>
+    <!-- 2017 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2018 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2019 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2020 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2021 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2022 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2023 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <!-- 2024 -->
+    <div class="box boxQ1 powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+    <div class="box powerOverseeCell"> </div>
+      
+      
+  </div>
 
 </body>
+
 </html>
