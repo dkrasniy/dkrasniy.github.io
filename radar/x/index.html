@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Untitled Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="grid.css">
 </head>
 
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="wrapper" style="top:136px; position: relative;">
+  <div class="wrapper main-headers">
 
 <!-- ** TABLE HEADER ** -->
       
@@ -127,7 +127,12 @@
     <div class="box FYQheader">Q3</div>
     <div class="box FYQheader">Q4</div>
 
+
+</div>
+
 <!-- ** TABLE BODY ** -->      
+
+<div class="wrapper" style="position: relative;     top: 136px;">
       
     <!-- SET -->
     <div class="box powerCategory powerSet"><span class="powerCategoryLabel">Set</span></div>
@@ -360,7 +365,13 @@
     <div class="box SPRentry">Approve asset class strategic plans and portfolio construction guidelines</div>
     <!-- 2017 -->
     <div class="box boxQ1 powerApproveCell"> </div>
-    <div class="box powerApproveCell"> </div>
+    <div class="box powerApproveCell">
+      <ul class="item innerDataUl">
+        <li class="liToggle IC APPROVE" data-target="#17Q2A2">
+          <span class="item sr-only">Description here for screen reader</span>
+        </li>
+     </ul>
+    </div>
     <div class="box powerApproveCell"> </div>
     <div class="box powerApproveCell"> </div>
     <!-- 2018 -->
@@ -1108,6 +1119,57 @@
       
       
   </div>
+
+
+ <!-- Sidebar Content -->
+ <div id="17Q2A2" class="overlaySidebar approvePowerCat">
+    <div class="titleArea">
+      <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">Close</span>
+      </button>
+      <h2>Approve</h2>
+    </div>
+    <div class="body">
+      <div class="details">
+          <p><span class="label">Quarter</span>2017 - Q2</p>
+          <p><span class="label">Committee</span>FAC</p>
+      </div>
+      <div class="details">
+          <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
+      </div>
+      <hr>
+      <div class="agenda">
+          <p><span class="label">Agenda Items</span></p>
+          <ul>
+            <li><a id="toggleDocument" href="#">Asset Liability Management Policy (Second Reading)</a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+
+
+
+ <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script>
+      $('.liToggle').click(function(e) {
+          let sidebarTarget = e.currentTarget.dataset.target;
+
+          // Close all other sidebars if any open
+          $('.overlaySidebar.visible').removeClass( "visible" )
+          
+          $( sidebarTarget ).addClass( "visible" )
+      
+      })
+      $('.close').click(function() {
+        // Remove visible class from all sidebars
+         $('body').toggleClass('document-open');
+         $('.overlaySidebar.visible').removeClass( "visible" )
+      })
+      
+   </script>
+
 
 </body>
 
