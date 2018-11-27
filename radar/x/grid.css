@@ -75,10 +75,11 @@ body {
 	max-width: 410px;
 	display: none;
 	position: absolute;
-	padding:1em;
-	margin-top: -30px;
-	margin-left: 120px;
-	z-index:10000;
+    border-radius: 5px;
+    padding: 1.25em;
+    margin-top: 50px;
+    z-index: 10000;
+    right: 15px;
 }
 .program-filer.visible {
 	display: block;
@@ -343,4 +344,16 @@ Overlay Sidebar
 	font-weight: 600;
 	font-size: .9em;
 }
-
+/********** Sidebar Colors **********/
+.setPowerCat .titleArea {
+    background: #006fe4;
+}
+.approvePowerCat .titleArea {
+    background: #ff6700;
+}
+.conductPowerCat .titleArea {
+    background: #9e2cdd;
+}
+.overseePowerCat .titleArea {
+    background: #00b83d;
+}
