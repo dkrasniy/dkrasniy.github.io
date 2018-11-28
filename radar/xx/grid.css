@@ -1,0 +1,385 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+	html { 
+		font-family: 'Inter UI', sans-serif; 
+	}
+@supports (font-variation-settings: normal) {
+	html { 
+		font-family: 'Inter UI var alt', sans-serif; 
+	}
+}
+
+ body {
+	margin: 0px;
+	font-family: 'Inter UI', sans-serif; 
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+}
+
+.application-bar {
+	background: #fff;
+	padding: 1em;
+	color: #333;
+	-webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 62px;
+}
+
+
+.mainHeader {
+	margin-bottom:20px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #dadce0;
+}
+.dropdown.policy-group .outer {
+	font-weight: bold;
+	font-size: 28px;
+	color: #333;
+	text-decoration: none;
+}
+
+.policy-group .dropdown-item {
+	font-size: 20px;
+	line-height: 1.75;
+}
+
+.dropdown.policy-group .outer::after {
+	font-size: 19px;
+	color: grey;
+}
+
+.policy-group .dropdown-menu.show {
+	display: block;
+	margin-top: -30px;
+	-webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+	box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+	border: none;
+}
+
+.policy-group .dropdown-item.active,
+.policy-group .dropdown-item:active {
+	color: #006edf!important;
+	font-weight: 600;
+	background: #edf5fa!important;
+}
+
+.program-filer {
+    -webkit-box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07);
+    background: white;
+	max-width: 410px;
+	display: none;
+	position: absolute;
+    border-radius: 5px;
+    padding: 1.25em;
+    margin-top: 50px;
+    z-index: 10000;
+    right: 15px;
+}
+.program-filer.visible {
+	display: block;
+}
+.innerDataUl li.not-checked {
+    background: transparent;
+}
+
+.outerWrapper {
+	display: grid;
+	grid-template-columns: 65px /* Committee */ 530px /* Power */ auto /* Data */;
+	grid-gap: 0px;
+	background-color: #fff;
+	color: #444;
+	text-align: center;
+}
+.scrollWrapper {
+overflow: hidden;
+}
+
+.innerWrapper {
+	display: grid;
+	grid-template-columns: repeat(32, 65px);
+	grid-gap: 0px;
+	background-color: #fff;
+	color: #444;
+	text-align: center;
+	float: left;
+	transform: translateX(0px);
+	height: 100%;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 65px /* Committee */ 530px /* Power */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
+		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */ ;
+	grid-gap: 0px;
+	background-color: #fff;
+	color: #444;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.box {
+	border-top: solid 1px hsla(0, 0%, 0%, 0.15);
+    border-left: solid 1px hsla(0, 0%, 0%, 0.15);
+	padding: 0.5rem 1rem;
+	background-color: #FFFFFF;
+	justify-content: center;
+    align-items: center;
+	display: flex;
+	min-height: 50px;
+}
+.main-headers .box {
+    border: solid 1px hsla(0, 0%, 0%, 0.1);
+}
+
+.SPRheader {
+	text-align: center;
+	font-weight: bold;
+	border-top: solid 0px #a7a7a7;
+}
+
+.FYheader {
+	/* border-left: solid 3px #a7a7a7;
+	border-top: solid 3px #a7a7a7; */
+	font-weight: bold;
+    grid-column: span 4;
+}
+
+.FYQheader {
+	font-weight: bold;
+}
+
+.powerCategory {
+	font-weight: bold;
+    grid-column: span 3; 
+    display: flex; 
+    align-items: center; 
+	position: relative;
+	justify-content: left;
+}
+
+/* 
+.powerSet {
+	background-color: #0071DC;
+} */
+
+.powerSetCell {
+	background-color: rgba(0, 113, 220, 0.15);
+}
+/* 
+.powerApprove {
+	background-color: #FA710E;
+	margin-top: 10px;
+} */
+
+.powerApproveCell {
+	background-color: rgba(250, 113, 14, 0.15);
+}
+/* 
+.powerConduct {
+	background-color: #913FD6;
+	margin-top: 10px;
+} */
+
+.powerConductCell {
+	background-color: rgba(145, 63, 214, 0.15);
+}
+/* 
+.powerOversee {
+	background-color: #30B34E;
+	margin-top: 10px;	
+} */
+
+.powerOverseeCell {
+	background-color: rgba(48, 179, 78, 0.15);
+}
+
+.committeeEntry {
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SPRentry {
+	text-align: left;
+    justify-content: left!important;
+}
+
+.boxQ1 {
+	/* border-left: solid 3px #a7a7a7; */
+}
+.main-headers {
+	top: 0;
+    position: sticky;
+    z-index: 1;
+    padding-bottom: 0;
+}
+
+
+.innerDataUl {
+	padding: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	margin: 0;
+	align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.innerDataUl li {
+	display: block;
+	border-radius: 100%;
+	height: 14px;
+	color: transparent;
+	width: 14px;
+	margin: 0 auto;
+	text-align: center;
+	background:#ff6700;
+	border:2px solid;
+	border-color:#ff6700;
+	cursor: pointer;
+	transition:.2s ease all;
+}
+
+
+.innerDataUl li:hover {
+	transform: scale(1.2);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+	
+	
+
+/********************
+
+Overlay Sidebar
+
+*********************/
+
+
+.overlaySidebar {
+	background: white;
+	position: absolute;
+	width: 340px;
+	top: 0;
+	min-height: 100%;
+	display: none;
+	-webkit-box-shadow: -1px -1px 11px #00000014;
+	box-shadow: -1px -1px 11px #00000014;
+	-webkit-transition: all .05s ease;
+	-o-transition: all .05s ease;
+	transition: all .05s ease;
+	opacity: 0;
+}
+
+.overlaySidebar .body {
+	padding: 1.5em;
+}
+
+.overlaySidebar .titleArea {
+	background: #006edf;
+	padding: .75em 1em;
+}
+
+.overlaySidebar .titleArea button.close {
+	color: white;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: .7;
+}
+
+.overlaySidebar .titleArea  h2 {
+	font-size: 1.25em;
+	line-height: 1;
+	margin: 0;
+	color: white;
+	font-weight: 500;
+}
+
+.overlaySidebar .details {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 1.5em 0;
+}
+
+.overlaySidebar .details:first-child {
+	margin-top: 0;
+}
+.overlaySidebar .details p {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-bottom: 0;
+}
+
+.overlaySidebar .details p span.label {
+	display: block;
+	font-weight: 600;
+	font-size: .9em;
+}
+
+.overlaySidebar h4 {
+	font-weight: 600;
+	font-size: 1.25em;
+}
+
+.overlaySidebar.visible {
+	display: block;
+	right: 0;
+	opacity: 1;
+	z-index: 10000;
+	position: fixed;
+}
+
+.overlaySidebar .agenda ul {
+	padding-left: 20px;
+	color: #333;
+	line-height: 1.25;
+}
+
+.overlaySidebar .agenda ul li {
+	padding-bottom: 10px;
+	color: #333;
+}
+
+.overlaySidebar .agenda ul li a {
+	color: #333;
+}
+
+.overlaySidebar .agenda p {
+	display: block;
+	font-weight: 600;
+	font-size: .9em;
+}
+/********** Sidebar Colors **********/
+.setPowerCat .titleArea {
+    background: #006fe4;
+}
+.approvePowerCat .titleArea {
+    background: #ff6700;
+}
+.conductPowerCat .titleArea {
+    background: #9e2cdd;
+}
+.overseePowerCat .titleArea {
+    background: #00b83d;
+}
+
