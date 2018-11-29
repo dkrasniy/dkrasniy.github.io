@@ -112,23 +112,7 @@ overflow: hidden;
 	transform: translateX(0px);
 	height: 100%;
 }
-.wrapper {
-	display: grid;
-	grid-template-columns: 65px /* Committee */ 530px /* Power */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */
-		64px /* Q1 */ 64px /* Q2 */ 64px /* Q3 */ 64px /* Q4 */ ;
-	grid-gap: 0px;
-	background-color: #fff;
-	color: #444;
-	text-align: center;
-	padding-bottom: 20px;
-}
+
 
 .box {
 	border-top: solid 1px hsla(0, 0%, 0%, 0.15);
