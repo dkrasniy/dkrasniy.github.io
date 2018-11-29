@@ -15,6 +15,11 @@
     <button onclick="translateTable('right')">Right</button>
 
 
+    <button onclick="showYears(1)">1FY</button>
+    <button onclick="showYears(3)">3FY</button>
+    <button onclick="showYears(5)">5FY</button>
+
+
     <!-- ** TABLE HEADER ** --> 
     <div class="outerWrapper mainHeader">
         <!-- COMMITTEE COLUMN-->
@@ -650,15 +655,16 @@
 
       // ------ Table scrolling and fit ------ // 
        let scrollWrapperWidth = $('.scrollWrapper').outerWidth();
-       let yearWidth = scrollWrapperWidth/3;
-       let quarterWidth = yearWidth/4;
+       
        let swipeCounter = 0;
        let swipePos = 0;
+       let yearColumns = 3;
 
-       $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
+      showYears(3);
 
 
        function translateTable(dir) {
+         let yearWidth = scrollWrapperWidth/yearColumns;
          if (dir == "left" && swipeCounter > 0) { 
            swipePos += yearWidth;
            swipeCounter--;
@@ -671,6 +677,14 @@
 
          $('.innerWrapper').css('transform', 'translateX('+ (swipePos) + 'px)');
          console.log("Swipe Position", swipeCounter)
+       }
+
+       function showYears(yearsAmount) {
+        yearColumns = yearsAmount;
+        let yearWidth = scrollWrapperWidth/yearsAmount;
+        let quarterWidth = yearWidth/4;
+        $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
+
        }
 
 
