@@ -11,6 +11,9 @@
 
 <body>
 
+    <button onclick="translateTable('left')">Left</button>
+    <button onclick="translateTable('right')">Right</button>
+
 
     <!-- ** TABLE HEADER ** --> 
     <div class="outerWrapper mainHeader">
@@ -625,11 +628,11 @@
 
 
  <!-- Javascript -->
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script>
      
 
+      // ------ Loop through all items and add quarter/year class to element  ------ // 
       $('.innerWrapper').each(function () {
           //STARTING QUARTER
           let Q = 1;  
@@ -644,10 +647,35 @@
            })
        });
 
-       console.log($('.FYheader').outerWidth())
-       console.log($('.scrollWrapper').outerWidth())
 
-    
+      // ------ Table scrolling and fit ------ // 
+       let scrollWrapperWidth = $('.scrollWrapper').outerWidth();
+       let yearWidth = scrollWrapperWidth/3;
+       let quarterWidth = yearWidth/4;
+       let swipeCounter = 0;
+       let swipePos = 0;
+
+       $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
+
+
+       function translateTable(dir) {
+         if (dir == "left" && swipeCounter > 0) { 
+           swipePos += yearWidth;
+           swipeCounter--;
+        } 
+        
+        if (dir == "right" && swipeCounter < 300) { 
+          swipePos -= yearWidth;
+          swipeCounter++;
+        }
+
+         $('.innerWrapper').css('transform', 'translateX('+ (swipePos) + 'px)');
+         console.log("Swipe Position", swipeCounter)
+       }
+
+
+
+      // ------ More details toggle ------ //  
       $('.liToggle').click(function(e) {
           let sidebarTarget = e.currentTarget.dataset.target;
 
