@@ -3,25 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Untitled Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Radar Policy</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="grid.css">
 </head>
 
 <body>
 
-    <button onclick="translateTable('left')">Left</button>
-    <button onclick="translateTable('right')">Right</button>
-
-
-    <button onclick="showYears(1)">1FY</button>
-    <button onclick="showYears(3)">3FY</button>
-    <button onclick="showYears(5)">5FY</button>
-
+   
 
     <!-- ** TABLE HEADER ** --> 
     <div class="outerWrapper mainHeader">
+       <!-- COMMITTEE COLUMN-->
+       <div class="box"></div>
+
+       <!-- POWERS RESERVED COLUMN-->
+       <div class="box"></div>
+
+        <div class="scrollWrapper">
+            <button onclick="translateTable('left')">Left</button>
+            <button onclick="showYears(1)"><img src="1col.svg">1FY</button>
+            <button onclick="showYears(3)"><img src="3col.svg">3FY</button>
+            <button onclick="showYears(5)"><img src="5col.svg">5FY</button>
+            <button onclick="translateTable('right')">Right</button>
+        </div>
+
+
         <!-- COMMITTEE COLUMN-->
         <div class="box" style="display: flex; align-items: center; position: sticky; left: 0;"></div>
 
@@ -607,25 +614,7 @@
 
 
 <!-- Filter Modal -->
-<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
 
 
@@ -634,102 +623,8 @@
 
  <!-- Javascript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script>
-     
-
-      // ------ Loop through all items and add quarter/year class to element  ------ // 
-      $('.innerWrapper').each(function () {
-          //STARTING QUARTER
-          let Q = 1;  
-          //STARTING YEAR
-          let Y = 2017;
-
-          $(this).children().each(function () {
-            if (!$(this).hasClass("FYheader")) {
-              $( this ).addClass( "Y" + Y + " Q" + Q )
-            }
-            if (Q >= 4){ Q=1; Y++; } else {Q++;}
-           })
-       });
-
-
-      // ------ Table scrolling and fit ------ // 
-       let scrollWrapperWidth = $('.scrollWrapper').outerWidth();
-       
-       let swipeCounter = 0;
-       let swipePos = 0;
-       let yearColumns = 3;
-
-      showYears(3);
-
-
-       function translateTable(dir) {
-         let yearWidth = scrollWrapperWidth/yearColumns;
-         if (dir == "left" && swipeCounter > 0) { 
-           swipePos += yearWidth;
-           swipeCounter--;
-        } 
-        
-        if (dir == "right" && swipeCounter < 300) { 
-          swipePos -= yearWidth;
-          swipeCounter++;
-        }
-
-         $('.innerWrapper').css('transform', 'translateX('+ (swipePos) + 'px)');
-         console.log("Swipe Position", swipeCounter)
-       }
-
-       function showYears(yearsAmount) {
-        yearColumns = yearsAmount;
-        let yearWidth = scrollWrapperWidth/yearsAmount;
-        let quarterWidth = yearWidth/4;
-        $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
-
-       }
-
-
-
-      // ------ More details toggle ------ //  
-      $('.liToggle').click(function(e) {
-          let sidebarTarget = e.currentTarget.dataset.target;
-
-          // Close all other sidebars if any open
-          $('.overlaySidebar.visible').removeClass( "visible" )
-          
-          $( sidebarTarget ).addClass( "visible" )
-      
-      })
-      $('.close').click(function() {
-        // Remove visible class from all sidebars
-         $('body').toggleClass('document-open');
-         $('.overlaySidebar.visible').removeClass( "visible" )
-      })
-      
-
-          
-        function filterItems() {
-          $("input:checkbox[name=programName]:not(:checked)").each(function(){
-              $('ul.innerDataUl li.'+$(this).val()).addClass( "not-checked" )
-              
-          });
-          $("input:checkbox[name=programName]:checked").each(function(){
-              $('ul.innerDataUl li.'+$(this).val()).removeClass( "not-checked" )
-              
-          });
-          $('.table-scroll').addClass( "filter-applied" )
-         }
-         
-         
-         $('.filter-program-btn').click(function() {
-             $('.program-filer').toggleClass( "visible" )
-         })
-         $('#programFilter .btn').click(function() {
-             $('.program-filer').toggleClass( "visible" )
-         })
-         
-
-
-   </script>
+  <script src="radar.js"></script>
+ 
 
 
 </body>
