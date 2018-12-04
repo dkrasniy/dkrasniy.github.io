@@ -94,6 +94,7 @@ body {
 .btn {
     font-weight: 600;
     -webkit-transition: none;
+    -o-transition: none;
     transition: none;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
@@ -136,9 +137,11 @@ body {
  .main-navigation
  {
     -webkit-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
+    -o-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
     transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
      .nav-item {
         -webkit-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
+        -o-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
         transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
      }
     &:hover .nav-item a {
@@ -148,6 +151,7 @@ body {
     &:hover a {
         opacity: 1!important;
         -webkit-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
+        -o-transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
         transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
     }}
  }
@@ -163,6 +167,7 @@ body {
             a {
                 color: $grey;
                 -webkit-transition: .2s ease color;
+                -o-transition: .2s ease color;
                 transition: .2s ease color;
             }
             &:hover {
@@ -274,11 +279,13 @@ a.dropdown-item {
     visibility: hidden;
     -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
     transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+    -o-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
     transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
     transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
     overflow: hidden;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -ms-transform: translateY(0);
+        transform: translateY(0);
 }
 .dropdown-menu.show {
     opacity: 1;
@@ -286,12 +293,14 @@ a.dropdown-item {
     height: unset;
     overflow: unset;
     -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+            -ms-transform: translateY(10px);
+        transform: translateY(10px);
 }
 
 
 
 .dropdownWPhoto {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 1fr 3fr .5fr;
     -ms-grid-columns: 1fr 3fr .5fr;
@@ -387,7 +396,9 @@ ul.folder-list {
     margin-bottom:.75em;
 
     .stat {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 3fr;
         grid-template-columns: 1fr 3fr;
         
         color: $dark-grey;
@@ -403,7 +414,9 @@ ul.folder-list {
 
     a {
         text-decoration: none;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: .5fr 2.5fr 1fr 1fr;
         grid-template-columns: .5fr 2.5fr 1fr 1fr;
         background: white;
         border-radius: $borderRadius;
@@ -413,6 +426,7 @@ ul.folder-list {
                 align-items: center;
         padding:1em 0;
         -webkit-transition: .2s ease all;
+        -o-transition: .2s ease all;
         transition: .2s ease all;
         &:hover {
             -webkit-box-shadow: $boxShadow;
@@ -548,6 +562,7 @@ ul.folder-list {
     list-style: none;
     padding: 0;
     li {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: 1fr 5fr;
         -ms-grid-columns: 1fr 5fr;
@@ -654,12 +669,14 @@ label {
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             border-radius: 100%;
             background: #eeeeee;
             -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
                     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
             -webkit-transition: ease .3s;
+            -o-transition: ease .3s;
             transition: ease .3s;
             &:hover {
                 padding: 10px;
@@ -679,6 +696,7 @@ label {
     background: white;
     border-bottom:$onePxBorder;
     text-decoration: none;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 0.5fr 3fr 1fr 1fr;
     -ms-grid-columns:0.5fr 3fr 1fr 1fr;
@@ -766,7 +784,9 @@ i.routing-slip {
     margin-top:1em;
    
     .routing-item {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 25px 5px 4fr 5px 2fr;
         grid-template-columns: 25px 4fr 2fr;
         grid-gap: 5px;
         border-bottom:$onePxBorder;
@@ -779,21 +799,27 @@ i.routing-slip {
     .add-viewer {
         padding: .75em 0px;
         div {
+            -ms-grid-column-span: 3;
             grid-column: span 3;
             text-align: center;
         }
     }
     .dispatch div {
+        -ms-grid-column-span: 3;
         grid-column: span 3;
     }
     .dispatch-controls {
         margin:1em 0;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-gap: 10px;
 
         .completion-estimate {
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: 1fr 5fr;
             grid-template-columns: 1fr 5fr;
             margin-top:1em;
         }
@@ -810,17 +836,24 @@ i.routing-slip {
 
 .dispatch-container-layout {
 
+    display: -ms-grid;
+
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     .stats {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
     .stats > div {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 4fr;
         grid-template-columns: 1fr 4fr;
     }
     h4{
@@ -835,6 +868,8 @@ i.routing-slip {
             width: 100%;
             height: 100%;
             background: -webkit-gradient(linear,left top, left bottom,color-stop(40%, rgba(255, 0, 0, 0)),color-stop(80%, #F7F8F7));
+            background: -webkit-linear-gradient(rgba(255, 0, 0, 0) 40%,#F7F8F7 80%);
+            background: -o-linear-gradient(rgba(255, 0, 0, 0) 40%,#F7F8F7 80%);
             background: linear-gradient(rgba(255, 0, 0, 0) 40%,#F7F8F7 80%);
         }
     }
