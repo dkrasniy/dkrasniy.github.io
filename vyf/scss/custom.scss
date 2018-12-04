@@ -294,6 +294,7 @@ a.dropdown-item {
 .dropdownWPhoto {
     display: grid;
     grid-template-columns: 1fr 3fr .5fr;
+    -ms-grid-columns: 1fr 3fr .5fr;
     grid-gap: 10px;
     img {
         max-width: 40px;
@@ -388,6 +389,7 @@ ul.folder-list {
     .stat {
         display: grid;
         grid-template-columns: 1fr 3fr;
+        
         color: $dark-grey;
         font-size:.95em;
         .icon {
@@ -548,6 +550,7 @@ ul.folder-list {
     li {
         display: grid;
         grid-template-columns: 1fr 5fr;
+        -ms-grid-columns: 1fr 5fr;
         grid-gap: 10px;
         margin-bottom: 1em;
         img {
@@ -678,6 +681,7 @@ label {
     text-decoration: none;
     display: grid;
     grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    -ms-grid-columns:0.5fr 3fr 1fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
