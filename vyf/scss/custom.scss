@@ -113,6 +113,9 @@ body {
 
 
 
+
+
+
 // Right side
 .bd-activity {
     @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -302,8 +305,8 @@ a.dropdown-item {
 .dropdownWPhoto {
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 3fr 10px .5fr;
     grid-template-columns: 1fr 3fr .5fr;
-    -ms-grid-columns: 1fr 3fr .5fr;
     grid-gap: 10px;
     img {
         max-width: 40px;
@@ -400,7 +403,6 @@ ul.folder-list {
         display: grid;
         -ms-grid-columns: 1fr 3fr;
         grid-template-columns: 1fr 3fr;
-        
         color: $dark-grey;
         font-size:.95em;
         .icon {
@@ -564,8 +566,8 @@ ul.folder-list {
     li {
         display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 10px 5fr;
         grid-template-columns: 1fr 5fr;
-        -ms-grid-columns: 1fr 5fr;
         grid-gap: 10px;
         margin-bottom: 1em;
         img {
@@ -698,8 +700,8 @@ label {
     text-decoration: none;
     display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 0.5fr 3fr 1fr 1fr;
     grid-template-columns: 0.5fr 3fr 1fr 1fr;
-    -ms-grid-columns:0.5fr 3fr 1fr 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -707,6 +709,10 @@ label {
         font-weight:600;
         margin:0;
         font-size:1.5em;
+    }
+    &.four-data-points-col {
+        -ms-grid-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
     }
     .icon-container {
         font-size: 1.25em;
@@ -737,6 +743,11 @@ label {
         &.purple {
 
         }
+        
+
+    }
+    .en-route-color {
+        color: $orange;
     }
 }
 
@@ -867,6 +878,9 @@ i.routing-slip {
             left: 0;
             width: 100%;
             height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
             background: -webkit-gradient(linear,left top, left bottom,color-stop(40%, rgba(255, 0, 0, 0)),color-stop(80%, #F7F8F7));
             background: -webkit-linear-gradient(rgba(255, 0, 0, 0) 40%,#F7F8F7 80%);
             background: -o-linear-gradient(rgba(255, 0, 0, 0) 40%,#F7F8F7 80%);
@@ -891,4 +905,10 @@ i.routing-slip {
         padding-bottom: 100%;
     }
    
+}
+
+.data-stat {
+    .days-count {
+        display: none;
+    }
 }
