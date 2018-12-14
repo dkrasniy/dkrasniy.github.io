@@ -34,15 +34,20 @@
 
 
 .mainHeader {
-	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #dadce0;
+	/* box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12), inset 0 -1px 0 0 #dadce0; */
 	position: sticky;
     top: 0;
     z-index: 100;
 }
-.mainHeader h1 {
+.application-header {
+	padding-left: 1rem;
+    padding-right: 1rem;
+}
+.application-header h1 {
     font-size: 1.25em;
     text-align: left;
 }
+
 
 .dropdown.policy-group .outer {
 	font-weight: bold;
@@ -121,7 +126,14 @@ overflow: hidden;
 	transition:.3s ease-in-out all;
 }
 
-
+.controls-box {
+	border-top: solid 1px hsla(0, 0%, 0%, 0.15);
+    border-left: solid 1px hsla(0, 0%, 0%, 0.15);
+    background-color: #FFFFFF;
+    min-height: 55px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 .box {
 	border-top: solid 1px hsla(0, 0%, 0%, 0.15);
     border-left: solid 1px hsla(0, 0%, 0%, 0.15);
@@ -261,6 +273,16 @@ overflow: hidden;
 	transition:.2s ease all;
 }
 
+/* Pill Shapes */
+.innerDataUl li {
+	height: 60%;
+	width: 5px;
+	border-radius: 10px;
+}
+
+
+
+
 
 /* .innerDataUl li:hover {
 	transform: scale(1.2);
@@ -349,6 +371,7 @@ Overlay Sidebar
 	opacity: 1;
 	z-index: 10000;
 	position: fixed;
+	    transition: .2s ease all;
 }
 
 .overlaySidebar .agenda ul {
@@ -394,7 +417,8 @@ Overlay Sidebar
 
 .monthDetail .FYQheaderMonth {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 0;
 }
 
 .btn.arrow-ctrl {
