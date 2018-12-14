@@ -37,10 +37,15 @@
         }
 
          $('.innerWrapper').css('transform', 'translateX('+ (swipePos) + 'px)');
-         console.log("Swipe Position", swipeCounter)
        }
 
        function showYears(yearsAmount) {
+           if(yearsAmount == 1) {
+                $("body").addClass("oneYearView")
+           } else {
+            $("body").removeClass("oneYearView")
+           }
+
         yearColumns = yearsAmount;
         let yearWidth = scrollWrapperWidth/yearsAmount;
         let quarterWidth = yearWidth/4;
@@ -90,3 +95,12 @@
              $('.program-filer').toggleClass( "visible" )
          })
          
+
+         $(document).keydown(function(e){
+             //on arrow left 
+            if (e.keyCode == 37)
+                translateTable('left');
+            //arrow right
+            if (e.keyCode == 39)
+                 translateTable('right');
+        });

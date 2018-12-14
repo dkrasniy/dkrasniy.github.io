@@ -9053,4 +9053,10 @@ i.routing-slip {
   display: none;
 }
 
+.ui-sortable-helper {
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
+  background: white !important;
+  transition: 0.1s ease all;
+}
+
 /*# sourceMappingURL=custom.css.map */
