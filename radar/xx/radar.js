@@ -65,13 +65,23 @@
           $('.overlaySidebar.visible').removeClass( "visible" )
           
           $( sidebarTarget ).addClass( "visible" )
-      
       })
+
       $('.close').click(function() {
         // Remove visible class from all sidebars
          $('body').toggleClass('document-open');
          $('.overlaySidebar.visible').removeClass( "visible" )
       })
+
+      $('.toggle-filter').click(function(e) {
+          console.log("hello")
+        $('.overlaySidebar.visible').removeClass( "visible" )
+          
+        $('#radarFilter').addClass( "visible" )
+      });
+
+      
+
       
 
           
@@ -116,7 +126,4 @@
             $( "#"+dropdownTarget ).addClass( "show" )
             
         
-        })
-        $('.dropdown-content.dropdown-menu.show').click(function(e) {
-                console.log("hello")
         })

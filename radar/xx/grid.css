@@ -355,10 +355,11 @@ Overlay Sidebar
 }
 
 .overlaySidebar .titleArea button.close {
+	float: right;
+    background: transparent;
+	border: none;
 	color: white;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	opacity: .7;
+	cursor: pointer;
 }
 
 .overlaySidebar .titleArea  h2 {
