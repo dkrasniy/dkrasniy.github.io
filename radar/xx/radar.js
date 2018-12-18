@@ -104,3 +104,19 @@
             if (e.keyCode == 39)
                  translateTable('right');
         });
+
+
+        $('.dropdown-toggle').click(function(e) {
+            let dropdownTarget = e.currentTarget.dataset.target;
+  
+       
+            // Close all other sidebars if any open
+            $('.dropdown-content').removeClass( "show" )
+            
+            $( "#"+dropdownTarget ).addClass( "show" )
+            
+        
+        })
+        $('.dropdown-content.dropdown-menu.show').click(function(e) {
+                console.log("hello")
+        })

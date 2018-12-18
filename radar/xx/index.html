@@ -18,25 +18,30 @@
        <!-- COMMITTEE COLUMN-->
        <!-- POWERS RESERVED COLUMN-->
        <div class="box controls-row" style="justify-content: left; grid-column: span 2;">
-            ALM Dropdown
+            
+        <div class="dropdown">
+            <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
+            <div class="dropdown-content" id="policyGroupDropdown">
+                menu
+            </div>
+        </div>
+
+
         </div>
 
         <div class="controls-box bl-none controls-row">
-                <div class="dropdown">
-                    <button class="btn">Filter</button>
-                    <div class="dropdown-content">
-                        <button class="btn" onclick="showYears(1)"><img src="1col.svg">1FY</button>
-                        <button class="btn" onclick="showYears(3)"><img src="3col.svg">3FY</button>
-                        <button class="btn" onclick="showYears(5)"><img src="5col.svg">5FY</button>
-                    </div>
-                </div>
+         
+                    <button class="btn mr-5">Filter</button>
+                    
+   
 
-                <div class="dropdown">
-                    <button class="btn">Layout</button>
-                    <div class="dropdown-content">
-                        <button class="btn" onclick="showYears(1)"><img src="1col.svg">1FY</button>
-                        <button class="btn" onclick="showYears(3)"><img src="3col.svg">3FY</button>
-                        <button class="btn" onclick="showYears(5)"><img src="5col.svg">5FY</button>
+                <div class="dropdown layout-options">
+                    <button class="btn dropdown-toggle no-outline" data-target="layoutDropdown">Layout</button>
+                    <div class="dropdown-content dropdown-menu" id="layoutDropdown">
+                            <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
+                            <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
+                            <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>
+                     
                     </div>
                 </div>
 
