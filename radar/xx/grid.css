@@ -40,13 +40,24 @@
     z-index: 100;
 }
 .application-header {
-	padding-left: 1rem;
-    padding-right: 1rem;
+	padding:1rem;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
+	position: relative;
+	z-index: 1;
 }
 .application-header h1 {
     font-size: 1.25em;
-    text-align: left;
+	text-align: left;
+	margin:0;
 }
+.controls-row {
+	background-color: #f7f7f7!important;
+	display: flex;
+    align-items: center;
+	justify-content: flex-end;
+	padding:0 1em!important
+}
+
 
 
 .dropdown.policy-group .outer {
@@ -157,6 +168,7 @@ overflow: hidden;
 .main-headers .box {
     border: solid 1px hsla(0, 0%, 0%, 0.1);
 }
+
 
 .SPRheader {
 	text-align: center;
@@ -451,16 +463,44 @@ Overlay Sidebar
   .dropdown:hover .dropdown-content {
 	display: block;
   }
+
   button.btn {
 	padding-top: .5rem;
     padding-bottom: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: .25rem;
-    font-weight: 600;
-    
+    font-weight: 500;
+	background: #fff;
+	font-size:15px;
   }
 
   .bl-none {
 	  border-left: none;
   }
+
+
+  /* Borders around year  */
+  .box.FYheader {
+    border-top: solid 2px hsla(0, 0%, 0%, 0.2);
+    border-right: solid 1px hsla(0, 0%, 0%, 0.2);
+    border-left:solid 1px hsla(0, 0%, 0%, 0.2);
+}
+.Q4 {
+    border-right:solid 1px hsla(0, 0%, 0%, 0.2);
+}
+.Q1 {
+    border-left: solid 1px hsla(0, 0%, 0%, 0.2);
+}
+.Q1:first-child {
+    border-left: solid 2px hsla(0, 0%, 0%, 0.2);
+}
+.Q4:last-child {
+    border-right: solid 2px hsla(0, 0%, 0%,0.2);
+}
+.box.FYheader:first-child {
+    border-left:solid 2px hsla(0, 0%, 0%, 0.2);
+}
+.box.FYheader:last-child {
+    border-right: solid 2px hsla(0, 0%, 0%, 0.2);
+}

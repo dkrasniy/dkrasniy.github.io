@@ -17,13 +17,22 @@
     <div class="outerWrapper mainHeader">
        <!-- COMMITTEE COLUMN-->
        <!-- POWERS RESERVED COLUMN-->
-       <div class="box" style="justify-content: left; grid-column: span 2;">
+       <div class="box controls-row" style="justify-content: left; grid-column: span 2;">
             ALM Dropdown
         </div>
 
-        <div class="controls-box bl-none">
+        <div class="controls-box bl-none controls-row">
                 <div class="dropdown">
-                    <button class="btn"><i class="fas fa-th-large"></i> Layout</button>
+                    <button class="btn">Filter</button>
+                    <div class="dropdown-content">
+                        <button class="btn" onclick="showYears(1)"><img src="1col.svg">1FY</button>
+                        <button class="btn" onclick="showYears(3)"><img src="3col.svg">3FY</button>
+                        <button class="btn" onclick="showYears(5)"><img src="5col.svg">5FY</button>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn">Layout</button>
                     <div class="dropdown-content">
                         <button class="btn" onclick="showYears(1)"><img src="1col.svg">1FY</button>
                         <button class="btn" onclick="showYears(3)"><img src="3col.svg">3FY</button>
