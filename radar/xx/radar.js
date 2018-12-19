@@ -1,3 +1,10 @@
+$(document).click(function(e) {
+    if ( $(e.target).closest('.dropdown-toggle').length === 0 ) {
+       // Close all open toggles if any open
+       $('.dropdown-content').removeClass( "show" )
+    }
+  });
+ 
  // ------ Loop through all items and add quarter/year class to element  ------ // 
       $('.innerWrapper').each(function () {
           //STARTING QUARTER
@@ -74,13 +81,15 @@
       })
 
       $('.toggle-filter').click(function(e) {
-          console.log("hello")
+
+        console.log(event)
+          
         $('.overlaySidebar.visible').removeClass( "visible" )
           
         $('#radarFilter').addClass( "visible" )
       });
 
-      
+    
 
       
 
@@ -120,7 +129,7 @@
             let dropdownTarget = e.currentTarget.dataset.target;
   
        
-            // Close all other sidebars if any open
+            // Close all open toggles if any open
             $('.dropdown-content').removeClass( "show" )
             
             $( "#"+dropdownTarget ).addClass( "show" )

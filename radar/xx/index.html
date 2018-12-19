@@ -16,17 +16,19 @@
          <!-- POWERS RESERVED COLUMN-->
          <div class="box controls-row" style="justify-content: left; grid-column: span 2;">
             <div class="dropdown">
-               <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM</a>
-               <div class="dropdown-content" id="policyGroupDropdown">
-                  menu
-               </div>
+               <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM <i class="fas fa-caret-down"></i></a>
+               <div class="dropdown-content dropdown-menu dropdown-align-left" id="policyGroupDropdown">
+                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ALM</button>
+                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ABC</button>
+                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>QWERT</button>
+                 </div>
             </div>
          </div>
          <div class="controls-box bl-none controls-row">
             <button class="btn mr-5 toggle-filter">Filter</button>
             <div class="dropdown layout-options">
                <button class="btn dropdown-toggle no-outline" data-target="layoutDropdown">Layout</button>
-               <div class="dropdown-content dropdown-menu" id="layoutDropdown">
+               <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
                   <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
                   <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
                   <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>

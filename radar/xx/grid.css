@@ -307,9 +307,9 @@ body.oneYearView li.liToggle {
 
 /* Pill Shapes */
 .innerDataUl li {
-	height: 60%;
-	width: 5px;
-	border-radius: 10px;
+	height: 70%;
+    width: 60%;
+    border-radius: 2px;
 }
 
 
@@ -457,7 +457,7 @@ Overlay Sidebar
 .btn.arrow-ctrl {
 	position: absolute;
     z-index: 100;
-    top: 30%;
+    top: 20%;
 }
 .arrow-ctrl.arrow-left {
 	left: 20px;
@@ -466,9 +466,24 @@ Overlay Sidebar
 	right: 20px;
 }
 
+span.policy-group-icon {
+    background: #ddeafa;
+    border-radius: 50%;
+    padding: 15px;
+    color: #36a3f9;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    font-size: .85em;
+    justify-content: center;
+    margin-right: 5px;
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
+	cursor: pointer;
   }
   
   .dropdown-content {
@@ -491,6 +506,13 @@ Overlay Sidebar
     transform: translateY(0);
   }
 
+  .dropdown-align-left {
+    left: 0!important;
+}
+.dropdown-align-right {
+    right: 0!important;
+}
+
   
 .dropdown-content::before {
 	content: "";
@@ -498,7 +520,7 @@ Overlay Sidebar
     border-left: 9px solid rgba(0, 0, 0, 0);
     border-right: 9px solid rgba(0, 0, 0, 0);
     display: inline-block;
-    left: 75%;
+    left: 90%;
     position: absolute;
     top: -8px;
 }
@@ -508,9 +530,16 @@ Overlay Sidebar
     border-right: 9px solid rgba(0, 0, 0, 0);
     content: "";
     display: inline-block;
-    left: 75%;
+    left: 90%;
     position: absolute;
     top: -7px;
+}
+
+.dropdown-align-left::before {
+    left: 10%;
+}
+.dropdown-align-left::after {
+    left: 10%;
 }
 
   .dropdown-item {
@@ -539,7 +568,7 @@ button.dropdown-item:focus {
 }
 
 
-  .dropdown.layout-options .dropdown-content {
+  .dropdown .dropdown-content {
     padding: 1em 0;
 }
 
@@ -616,4 +645,10 @@ button.btn {
 
 .mr-5{
 	margin-right: 5px;
+}
+
+
+.radar-filter {
+    width: 0;
+    width: 45vw;
 }
