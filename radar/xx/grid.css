@@ -649,6 +649,18 @@ button.btn {
 
 
 .radar-filter {
-    width: 0;
-    width: 45vw;
+	width: 20vw;
+	opacity: 0;
+	visibility: hidden;
+	display: block;
+}
+
+.radar-filter.visible{
+	width: 45vw;
+	visibility: visible;
+}
+
+
+.radar-filter .body {
+	padding: 1em 2.5em;
 }
