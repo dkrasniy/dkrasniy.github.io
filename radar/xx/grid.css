@@ -697,15 +697,16 @@ button.btn {
 
 
 .radar-filter {
-	width: 43vw;
+	width: 40vw;
 	opacity: 0;
 	visibility: hidden;
 	display: block;
-	right: 0;
+	right: -3vw;
 }
 
 .radar-filter.visible{
-	width: 45vw;
+	right: 0;
+	opacity: 1;
 	visibility: visible;
 }
 
@@ -714,6 +715,22 @@ button.btn {
 	padding: 1em 2.5em;
 }
 
+.radar-filter .titleArea button.close {
+    color: #040404;
+    background: hsl(0, 0%, 97%);
+}
+
+.radar-filter .tabs-nav {
+    background: #f1f5f8;
+}
+
+.radar-filter .tabs-nav li a {
+	text-decoration: none;
+	border-bottom:3px solid transparent;
+}
+.radar-filter .tabs-nav li a.active{
+	border-color:#333;
+}
 
 
 .shadow {
@@ -734,4 +751,8 @@ button.btn {
 
 div#data-holder{
 	border-bottom:solid 1px hsla(0, 0%, 0%, 0.15);
+}
+
+.shadow-xs {
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
 }

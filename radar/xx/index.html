@@ -1382,37 +1382,59 @@
       
       <!-- Filter Modal -->
       <div id="radarFilter" class="overlaySidebar radar-filter">
-            
-            
-        <div class="filter-title-area">
-                <h2 class="my-3">Filter Radar <button class="text-xs border-none font-bold py-2 px-4 rounded sr-only">Clear Filters</button></h2>
-                <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
-        </div>       
+          <div  class="inner-container relative">
+                <div class="titleArea">
+                        <h2 class="my-3">Filter Radar <button class="text-xs border-none font-bold py-2 px-4 rounded sr-only">Clear Filters</button></h2>
+                        <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+                </div>       
+                
+                       <div class="applied-filters py-4 ">
+                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                        </div>
+                        <div>
+                        <ul class="list-reset flex border-b tabs-nav" role="tablist">
+                            <li class="mr-1">
+                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">by Committee</a>
+                            </li>
+                            <li class="mr-1">
+                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Presenter</a>
+                            </li>
+                            <li class="mr-1">
+                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">by Example</a>
+                            </li>
+                        </ul>
         
-               <div class="applied-filters py-4 ">
-                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-                </div>
-                <div>
-                <ul class="list-reset flex border-b tabs-nav" role="tablist">
-                    <li class="-mb-px mr-1">
-                        <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold active" href="#" data-target="filterSection1">by Committee</a>
-                    </li>
-                    <li class="mr-1">
-                        <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold" href="#" data-target="filterSection2">by Author</a>
-                    </li>
-                    <li class="mr-1">
-                        <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold" href="#" data-target="filterSection3">by Example</a>
-                    </li>
-                </ul>
+                        <div class="body">
+                       <div class="tab-content active" id="filterSection1">
+                            <form id="programFilter">
+                            <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked="">
+                            <label class="form-check-label" for="ACTO">Actuarial Office</label>
+                            <br>
+                            <input type="checkbox" name="programName" id="FINO" value="FINO" checked="">
+                            <label class="form-check-label" for="FINO">Financial Office</label>
+                            <br>
+                            <input type="checkbox" name="programName" id="INVO" value="INVO" checked="">
+                            <label class="form-check-label" for="INVO">Investment Office</label>
+                            <br><br>                             
+                            <button type="submit" class="btn btn-primary">Apply</button>
+                            </form>
+                       </div>
+                       <div class="tab-content" id="filterSection2">2</div>
+                       <div class="tab-content" id="filterSection3">3</div>
+                        </div>
+                    </div>
+                    <div class="footer fixed pin-b pin-l">
+                            <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+                                    Apply Filters
+                                  </button>
+                    </div>
 
-                <div class="body">
-               <div class="tab-content active" id="filterSection1">1</div>
-               <div class="tab-content" id="filterSection2">2</div>
-               <div class="tab-content" id="filterSection3">3</div>
-                </div>
-            </div>
+          </div>
+            
+            
+        
          </div>
 
 
