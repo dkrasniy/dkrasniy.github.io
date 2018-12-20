@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+
     $(document).click(function(e) {
     if ($(e.target).closest('.dropdown-toggle').length === 0) {
         // Close all open toggles if any open
@@ -166,4 +166,3 @@ $('.tabs-nav li a').click(function(e){
   });
 
   
-});
