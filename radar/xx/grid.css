@@ -332,42 +332,54 @@ Overlay Sidebar
 
 .overlaySidebar {
 	background: white;
-	position: absolute;
-	width: 340px;
+	min-width: 200px;
+	width: 30vw;
+	position: fixed;
 	top: 0;
 	min-height: 100%;
-	display: none;
-	-webkit-box-shadow: -1px -1px 11px #00000014;
+	visibility: hidden;
 	box-shadow: -1px -1px 11px #00000014;
-	-webkit-transition: all .05s ease;
-	-o-transition: all .05s ease;
-	transition: all .05s ease;
+	right: -2vw;
+	display: block;
+	z-index: 10000;
 	opacity: 0;
+	transition: all .15s ease;
 }
+
+.overlaySidebar.visible {
+	right: 0;
+	visibility: visible;
+	opacity: 1;
+}
+
+
 
 .overlaySidebar .body {
 	padding: 1.5em;
 }
 
 .overlaySidebar .titleArea {
-	background: #006edf;
-	padding: .75em 1em;
+	padding: 1em;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .overlaySidebar .titleArea button.close {
-	float: right;
-    background: transparent;
 	border: none;
-	color: white;
-	cursor: pointer;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
 }
 
 .overlaySidebar .titleArea  h2 {
 	font-size: 1.25em;
 	line-height: 1;
 	margin: 0;
-	color: white;
-	font-weight: 500;
+	font-weight: 600;
+    letter-spacing: -.5px;
 }
 
 .overlaySidebar .details {
@@ -398,14 +410,6 @@ Overlay Sidebar
 	font-size: 1.25em;
 }
 
-.overlaySidebar.visible {
-	display: block;
-	right: 0;
-	opacity: 1;
-	z-index: 10000;
-	position: fixed;
-	    transition: .2s ease all;
-}
 
 .overlaySidebar .agenda ul {
 	padding-left: 20px;
@@ -441,6 +445,50 @@ Overlay Sidebar
     background: #00b83d;
 }
 
+
+/********** Sidebar Colors **********/
+.setPowerCat .titleArea {
+    background: rgba(66, 77, 88, 0.05);
+}
+.approvePowerCat .titleArea {
+    background: hsla(24, 100%, 50%, .05);
+}
+.conductPowerCat .titleArea {
+    background: hsla(279, 72%, 52%, .05);
+}
+.overseePowerCat .titleArea {
+    background: hsla(140, 100%, 36%, .05);
+}
+
+.setPowerCat .titleArea button.close {
+	background: #006fe4;
+}
+.approvePowerCat .titleArea button.close {
+	background: #ff6700;
+}
+.conductPowerCat .titleArea button.close {
+	background:#9e2cdd;
+}
+.overseePowerCat .titleArea button.close {
+	background: #00b83d;
+}
+
+.setPowerCat .titleArea h2 {
+   color:#006fe4;
+}
+.approvePowerCat .titleArea h2 {
+    color:#ff6700;
+}
+.conductPowerCat .titleArea h2 {
+   color:#9e2cdd;
+}
+.overseePowerCat .titleArea h2 {
+   color:#00b83d;;
+}
+
+
+
+
 .monthDetail {
 	display: none;
 }
@@ -454,7 +502,7 @@ Overlay Sidebar
 	padding: 0;
 }
 
-.btn.arrow-ctrl {
+.arrow-ctrl {
 	position: absolute;
     z-index: 100;
     top: 20%;
@@ -617,7 +665,7 @@ button.btn {
 }
 
 
-/* Borders around year  */
+/* Borders around year 
 .box.FYheader {
 	border-top: solid 2px hsla(0, 0%, 0%, 0.2);
 	border-right: solid 1px hsla(0, 0%, 0%, 0.2);
@@ -640,7 +688,7 @@ button.btn {
 }
 .box.FYheader:last-child {
     border-right: solid 2px hsla(0, 0%, 0%, 0.2);
-}
+} */
 
 
 .mr-5{
@@ -649,10 +697,11 @@ button.btn {
 
 
 .radar-filter {
-	width: 20vw;
+	width: 43vw;
 	opacity: 0;
 	visibility: hidden;
 	display: block;
+	right: 0;
 }
 
 .radar-filter.visible{
@@ -663,4 +712,26 @@ button.btn {
 
 .radar-filter .body {
 	padding: 1em 2.5em;
+}
+
+
+
+.shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+
+.bt-none {
+	border-top:none!important;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+div#data-holder{
+	border-bottom:solid 1px hsla(0, 0%, 0%, 0.15);
 }

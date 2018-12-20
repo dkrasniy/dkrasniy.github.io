@@ -2,19 +2,20 @@
 <html>
    <head>
       <meta charset="UTF-8">
-      <title>Radar Policy</title>
+      <title>Board Insights</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
       <link rel="stylesheet" href="grid.css">
    </head>
    <body>
-      <div  class="application-header">
-         <h1>CalPowERS - Strategic Decision Radar</h1>
+      <div  class="application-header shadow z-50">
+         <h1>Board Insights</h1>
       </div>
       <!-- ** TABLE HEADER ** --> 
-      <div class="outerWrapper mainHeader">
+      <div class="outerWrapper mainHeader shadow z-50">
          <!-- COMMITTEE COLUMN-->
          <!-- POWERS RESERVED COLUMN-->
-         <div class="box controls-row" style="justify-content: left; grid-column: span 2;">
+         <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
             <div class="dropdown">
                <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM <i class="fas fa-caret-down"></i></a>
                <div class="dropdown-content dropdown-menu dropdown-align-left" id="policyGroupDropdown">
@@ -24,10 +25,10 @@
                  </div>
             </div>
          </div>
-         <div class="controls-box bl-none controls-row">
-            <button class="btn mr-5 toggle-filter">Filter</button>
+         <div class="controls-box bl-none controls-row bt-none">
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline">Filter</button>
             <div class="dropdown layout-options">
-               <button class="btn dropdown-toggle no-outline" data-target="layoutDropdown">Layout</button>
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline" data-target="layoutDropdown">Layout</button>
                <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
                   <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
                   <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
@@ -36,12 +37,12 @@
             </div>
          </div>
          <!-- COMMITTEE COLUMN-->
-         <div class="box"></div>
+         <div class="box "></div>
          <!-- POWERS RESERVED COLUMN-->
          <div class="box bl-none"></div>
          <div class="scrollWrapper" style="position: relative;">
-            <button class="btn arrow-ctrl arrow-left" onclick="translateTable('left')"><i class="fas fa-chevron-left"></i></button>
-            <button class="btn arrow-ctrl arrow-right" onclick="translateTable('right')"><i class="fas fa-chevron-right"></i></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-left" onclick="translateTable('left')"><i class="fas fa-chevron-left"></i></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-right" onclick="translateTable('right')"><i class="fas fa-chevron-right"></i></button>
             <div class="innerWrapper">
                <!-- FY HEADERS -->
                <!-- 2017 -->
@@ -315,7 +316,7 @@
       </div>
       <div class="outerWrapper">
          <!-- SET Header-->
-         <div class="box powerCategory powerSet">Set</div>
+         <div class="box powerCategory powerSet bt-none">Set</div>
          <!-- SET > COMMITEE > IC -->
          <div class="box committeeEntry" style="grid-row: span 4;">IC</div>
          <!-- SET > Power 01 -->
@@ -1356,10 +1357,10 @@
       <!-- Sidebar Content -->
       <div id="17Q2A2" class="overlaySidebar approvePowerCat">
          <div class="titleArea">
+            <h2>Approve</h2>
             <button type="button" class="close" aria-label="Close">
             <i class="fas fa-times"></i>
             </button>
-            <h2>Approve</h2>
          </div>
          <div class="body">
             <div class="details">
@@ -1382,8 +1383,35 @@
       <!-- Filter Modal -->
       <div id="radarFilter" class="overlaySidebar radar-filter">
             
-            <div class="body">
-               <h2>Filter Radar</h2>
+            
+        <div class="filter-title-area">
+                <h2 class="my-3">Filter Radar <button class="text-xs border-none font-bold py-2 px-4 rounded sr-only">Clear Filters</button></h2>
+                <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+        </div>       
+        
+               <div class="applied-filters py-4 ">
+                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                    <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                </div>
+                <div>
+                <ul class="list-reset flex border-b tabs-nav" role="tablist">
+                    <li class="-mb-px mr-1">
+                        <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold active" href="#" data-target="filterSection1">by Committee</a>
+                    </li>
+                    <li class="mr-1">
+                        <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold" href="#" data-target="filterSection2">by Author</a>
+                    </li>
+                    <li class="mr-1">
+                        <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker font-semibold" href="#" data-target="filterSection3">by Example</a>
+                    </li>
+                </ul>
+
+                <div class="body">
+               <div class="tab-content active" id="filterSection1">1</div>
+               <div class="tab-content" id="filterSection2">2</div>
+               <div class="tab-content" id="filterSection3">3</div>
+                </div>
             </div>
          </div>
 
@@ -1392,5 +1420,6 @@
       <!-- Javascript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="radar.js"></script>
+     
    </body>
 </html>

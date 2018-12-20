@@ -148,3 +148,20 @@ $('.dropdown-toggle').click(function(e) {
 
 
 })
+
+
+//tabs nav
+$('.tabs-nav li a').click(function(e){    
+    e.preventDefault();
+    var t = e.currentTarget.dataset.target; 
+
+    if(!$(this).hasClass('active')){ //this is the start of our condition 
+      $('.tabs-nav li a').removeClass('active');           
+      $(this).addClass('active');
+
+      $('.tab-content').removeClass('active');           
+      $('#'+t).addClass('active');
+   }
+  });
+
+  
