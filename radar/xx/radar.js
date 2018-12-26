@@ -43,7 +43,14 @@ let swipeCounter = 0;
 let swipePos = 0;
 let yearColumns = 3;
 
-showYears(3);
+$('.scrollWrapper').addClass("swipePosition0");
+
+showYears(yearColumns);
+
+$( window ).resize(function() {
+    scrollWrapperWidth = $('.scrollWrapper').outerWidth();
+    showYears(yearColumns);
+  });
 
 
 function translateTable(dir) {
@@ -51,24 +58,35 @@ function translateTable(dir) {
     if (dir == "left" && swipeCounter > 0) {
         swipePos += yearWidth;
         swipeCounter--;
+
+        $('.scrollWrapper').removeClass("swipePosition"+(swipeCounter+1));
+        $('.scrollWrapper').addClass("swipePosition"+(swipeCounter));
     }
 
     if (dir == "right" && swipeCounter < 300) {
         swipePos -= yearWidth;
         swipeCounter++;
+
+        $('.scrollWrapper').removeClass("swipePosition"+(swipeCounter-1));
+        $('.scrollWrapper').addClass("swipePosition"+(swipeCounter));
     }
+
+
+    
 
     $('.innerWrapper').css('transform', 'translateX(' + (swipePos) + 'px)');
 }
 
 function showYears(yearsAmount) {
+    yearColumns = yearsAmount;
+
     if (yearsAmount == 1) {
         $("body").addClass("oneYearView")
     } else {
         $("body").removeClass("oneYearView")
     }
 
-    yearColumns = yearsAmount;
+    
     let yearWidth = scrollWrapperWidth / yearsAmount;
     let quarterWidth = yearWidth / 4;
 
@@ -76,6 +94,7 @@ function showYears(yearsAmount) {
     $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
 
 }
+
 
 
 
