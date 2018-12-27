@@ -36,25 +36,32 @@ $('.innerWrapper').each(function() {
 });
 
 
+
+
 // ------ Table scrolling and fit ------ // 
 let scrollWrapperWidth = $('.scrollWrapper').outerWidth();
 
 let swipeCounter = 0;
 let swipePos = 0;
 let yearColumns = 3;
+let possibleScrolls = 0;
 
-$('.scrollWrapper').addClass("swipePosition0");
+
 
 showYears(yearColumns);
 
-$( window ).resize(function() {
-    scrollWrapperWidth = $('.scrollWrapper').outerWidth();
+
+$( window ).resize(function() {    
     showYears(yearColumns);
   });
 
 
 function translateTable(dir) {
+
+    
+    
     let yearWidth = scrollWrapperWidth / yearColumns;
+    
     if (dir == "left" && swipeCounter > 0) {
         swipePos += yearWidth;
         swipeCounter--;
@@ -63,7 +70,7 @@ function translateTable(dir) {
         $('.scrollWrapper').addClass("swipePosition"+(swipeCounter));
     }
 
-    if (dir == "right" && swipeCounter < 300) {
+    if (dir == "right" && swipeCounter < possibleScrolls) {
         swipePos -= yearWidth;
         swipeCounter++;
 
@@ -72,12 +79,33 @@ function translateTable(dir) {
     }
 
 
-    
+    $('.innerWrapper').css('transform', 'translateX(' + (-1*swipeCounter*yearWidth) + 'px)');
 
-    $('.innerWrapper').css('transform', 'translateX(' + (swipePos) + 'px)');
+    //show left arrow if swiped 
+    (swipeCounter!=0 ? $('.arrow-left').addClass("visible") : $('.arrow-left').removeClass("visible"))
+
+    if (swipeCounter == possibleScrolls){
+        $('.arrow-right').removeClass("visible") 
+    } else {
+        $('.arrow-right').addClass("visible")
+    }
+
+    console.log("Possible", possibleScrolls)
+    console.log("swipeCounter", swipeCounter)
+
+
 }
 
 function showYears(yearsAmount) {
+
+
+    scrollWrapperWidth = $('.scrollWrapper').outerWidth();
+    possibleScrolls = ((8)-yearsAmount);
+
+    if(swipeCounter >= possibleScrolls){
+        swipeCounter = possibleScrolls;
+    }
+
     yearColumns = yearsAmount;
 
     if (yearsAmount == 1) {
@@ -90,8 +118,16 @@ function showYears(yearsAmount) {
     let yearWidth = scrollWrapperWidth / yearsAmount;
     let quarterWidth = yearWidth / 4;
 
+
+    console.log("Possible", possibleScrolls)
+    console.log("swipeCounter", swipeCounter)
+
+    
+
     $('.innerWrapper').css('transform', 'translateX(' + (-1 * yearWidth * swipeCounter) + 'px)');
     $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
+
+    
 
 }
 
@@ -106,12 +142,14 @@ $('.liToggle').click(function(e) {
     $('.overlaySidebar.visible').removeClass("visible")
 
     $(sidebarTarget).addClass("visible")
+    $("body").addClass("sidebar-open")
 })
 
 $('.close').click(function() {
     // Remove visible class from all sidebars
     $('body').toggleClass('document-open');
     $('.overlaySidebar.visible').removeClass("visible")
+    $("body").removeClass("sidebar-open")
 })
 
 $('.toggle-filter').click(function(e) {
