@@ -58,8 +58,7 @@ $( window ).resize(function() {
 
 function translateTable(dir) {
 
-    
-    
+
     let yearWidth = scrollWrapperWidth / yearColumns;
     
     if (dir == "left" && swipeCounter > 0) {
@@ -78,10 +77,14 @@ function translateTable(dir) {
         $('.scrollWrapper').addClass("swipePosition"+(swipeCounter));
     }
 
+    //aninmate translation 
+    $('.innerWrapper').css('transition', '.3s');
 
+    //translate table
     $('.innerWrapper').css('transform', 'translateX(' + (-1*swipeCounter*yearWidth) + 'px)');
 
-   toggleArrows();
+    
+    toggleArrows();
 
     
 
@@ -91,8 +94,7 @@ function translateTable(dir) {
 
 
 function showYears(yearsAmount) {
-
-
+  
     scrollWrapperWidth = $('.scrollWrapper').outerWidth();
     possibleScrolls = ((8)-yearsAmount);
 
@@ -120,6 +122,9 @@ function showYears(yearsAmount) {
 
     $('.innerWrapper').css('transform', 'translateX(' + (-1 * yearWidth * swipeCounter) + 'px)');
     $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
+
+    //disable animation to avoid jump
+    $('.innerWrapper').css('transition', '0s');
 
     
 

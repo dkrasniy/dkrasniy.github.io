@@ -151,6 +151,9 @@ overflow: hidden;
 	transform: translateX(0px);
 	height: 100%;
 	transition:.3s ease-in-out all;
+}       
+.transition-animate {
+	transition:none!important;
 }
 
 .controls-box {
@@ -929,7 +932,8 @@ body.sidebar-open {
 }
 
 .FYQheaderMonth .box {
-    border-top: 0;
+	border-top: 0;
+	padding: 0;
 }
 .FYQheaderMonth .box:first-child {
     border-left: none;
