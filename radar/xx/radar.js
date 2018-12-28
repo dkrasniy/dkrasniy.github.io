@@ -81,20 +81,14 @@ function translateTable(dir) {
 
     $('.innerWrapper').css('transform', 'translateX(' + (-1*swipeCounter*yearWidth) + 'px)');
 
-    //show left arrow if swiped 
-    (swipeCounter!=0 ? $('.arrow-left').addClass("visible") : $('.arrow-left').removeClass("visible"))
+   toggleArrows();
 
-    if (swipeCounter == possibleScrolls){
-        $('.arrow-right').removeClass("visible") 
-    } else {
-        $('.arrow-right').addClass("visible")
-    }
-
-    console.log("Possible", possibleScrolls)
-    console.log("swipeCounter", swipeCounter)
+    
 
 
 }
+
+
 
 function showYears(yearsAmount) {
 
@@ -122,7 +116,7 @@ function showYears(yearsAmount) {
     console.log("Possible", possibleScrolls)
     console.log("swipeCounter", swipeCounter)
 
-    
+    toggleArrows();
 
     $('.innerWrapper').css('transform', 'translateX(' + (-1 * yearWidth * swipeCounter) + 'px)');
     $('.innerWrapper').css('grid-template-columns', 'repeat(32, ' + (quarterWidth) + 'px)');
@@ -130,6 +124,22 @@ function showYears(yearsAmount) {
     
 
 }
+
+function toggleArrows(){
+    //show left arrow if swiped 
+    (swipeCounter!=0 ? $('.arrow-left').addClass("visible") : $('.arrow-left').removeClass("visible"))
+
+    if (swipeCounter == possibleScrolls){
+        $('.arrow-right').removeClass("visible") 
+    } else {
+        $('.arrow-right').addClass("visible")
+        
+    }
+
+    console.log("Possible", possibleScrolls)
+   console.log("swipeCounter", swipeCounter)
+}
+
 
 
 

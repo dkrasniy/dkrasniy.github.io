@@ -927,3 +927,10 @@ body.sidebar-open .backdrop-overlay {
 body.sidebar-open {
 	overflow: hidden;
 }
+
+.FYQheaderMonth .box {
+    border-top: 0;
+}
+.FYQheaderMonth .box:first-child {
+    border-left: none;
+}
