@@ -19,16 +19,16 @@
             <div class="dropdown">
                <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM <i class="fas fa-caret-down"></i></a>
                <div class="dropdown-content dropdown-menu dropdown-align-left" id="policyGroupDropdown">
-                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ALM</button>
-                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ABC</button>
-                    <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>QWERT</button>
-                 </div>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ALM</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ABC</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>QWERT</button>
+               </div>
             </div>
          </div>
          <div class="controls-box bl-none controls-row bt-none">
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
             <div class="dropdown layout-options">
-               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline" data-target="layoutDropdown">Layout</button>
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline cursor-pointer" data-target="layoutDropdown">Layout</button>
                <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
                   <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
                   <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
@@ -41,8 +41,8 @@
          <!-- POWERS RESERVED COLUMN-->
          <div class="box bl-none grid-order-1"></div>
          <div class="scrollWrapper grid-order-2" style="position: relative;">
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-left" onclick="translateTable('left')"><i class="fas fa-chevron-left"></i></button>
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-right visible" onclick="translateTable('right')"><i class="fas fa-chevron-right"></i></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-left cursor-pointer" onclick="translateTable('left')"><i class="fas fa-chevron-left"></i></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-right visible cursor-pointer" onclick="translateTable('right')"><i class="fas fa-chevron-right"></i></button>
             <div class="innerWrapper">
                <!-- FY HEADERS -->
                <!-- 2017 -->
@@ -324,45 +324,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- SET > Power 02 -->
@@ -375,64 +503,168 @@
                   <div></div>
                   <div></div>
                </div>
-               <div class="box cell powerSetCell"> 
+               <div class="box cell powerSetCell">
                   <div></div>
                   <div></div>
                   <div></div>
                </div>
-               <div class="box cell powerSetCell"> 
+               <div class="box cell powerSetCell">
                   <div></div>
                   <div></div>
                   <div></div>
                </div>
-               <div class="box cell powerSetCell"> 
+               <div class="box cell powerSetCell">
                   <div></div>
                   <div></div>
                   <div></div>
                </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerSetCell"> 
+               <div class="box cell boxQ1 powerSetCell">
                   <div></div>
                   <div></div>
                   <div></div>
                </div>
-               <div class="box cell powerSetCell"> 
+               <div class="box cell powerSetCell">
                   <div></div>
                   <div></div>
                   <div></div>
                </div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- SET > Power 03 -->
@@ -440,45 +672,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- SET > Power 04 -->
@@ -486,45 +846,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerSetCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- SET Header-->
@@ -536,45 +1024,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- APPROVE > Power 02 -->
@@ -582,54 +1198,179 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <div class="box cell powerApproveCell">
                   <div>
-                  <ul class="item innerDataUl">
-                     <li class="liToggle IC APPROVE" data-target="#17Q2A2">
-                        <span class="item sr-only">Description here for screen reader</span>
-                     </li>
-                  </ul>
+                     <ul class="item innerDataUl">
+                        <li class="liToggle IC APPROVE" data-target="#17Q2A2">
+                           <span class="item sr-only">Description here for screen reader</span>
+                        </li>
+                     </ul>
+                  </div>
+                  <div></div>
+                  <div></div>
                </div>
-               <div></div><div></div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
                </div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- APPROVE > COMMITTEE > FAC -->
@@ -639,45 +1380,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- APPROVE > Power 04 -->
@@ -685,45 +1554,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- APPROVE > Power 05 -->
@@ -731,45 +1728,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
-               <div class="box cell powerApproveCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <div class="box powerCategory powerApprove">Conduct</div>
@@ -780,45 +1905,173 @@
          <div class="scrollWrapper">
             <div class="innerWrapper">
                <!-- 2017 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2018 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2019 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2020 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2021 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2022 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2023 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
                <!-- 2024 -->
-               <div class="box cell boxQ1 powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
-                <div class="box cell powerConductCell"><div></div><div></div><div></div></div>
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
             </div>
          </div>
          <!-- OVERSEE -->
@@ -1409,130 +2662,106 @@
       <div class="backdrop-overlay"></div>
       <!-- Filter Modal -->
       <div id="radarFilter" class="overlaySidebar radar-filter">
-          <div  class="inner-container relative">
-                <div class="titleArea">
-                        <h2 class="my-3">Filter Radar <button class="text-xs border-none font-bold py-2 px-4 rounded">Clear Filters</button></h2>
-                        <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
-                </div>       
-                
-                       <div class="applied-filters pb-4 px-4">
-                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-                            <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+         <div  class="inner-container relative">
+            <div class="titleArea">
+               <h2 class="my-3">Filter Radar</h2>
+               <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="applied-filters pb-4 px-4">
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+            </div>
+            <div>
+               <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a>
+                  </li>
+               </ul>
+               <div class="body">
+                  <div class="tab-content active" id="filterSection1">
+                     <fieldset>
+                        <legend class="form-legend sr-only">Filter by Committee</legend>
+                        <div class="checkbox-list checkbox-list--custom">
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
+                              <label for="ACTO">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO" value="FINO">
+                              <label for="FINO">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO" value="INVO" >
+                              <label for="INVO">Investment Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
+                              <label for="ACTO2">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO2" value="FINO">
+                              <label for="FINO2">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO2" value="INVO" >
+                              <label for="INVO2">Investment Office</label>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="tab-content" id="filterSection2">
+                     <div class="checkbox-list checkbox-list--custom">
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO" value="ACTO" >
+                           <label for="ACTO">John Smith</label>
                         </div>
                         <div>
-                        <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
-                            <li class="mr-1">
-                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
-                            </li>
-                            <li class="mr-1">
-                              <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
-                          </li>
-                            <li class="mr-1">
-                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
-                            </li>
-                            <li class="mr-1">
-                              <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a>
-                          </li>
-                            <li class="mr-1">
-                                <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a>
-                            </li>
-                        </ul>
-        
-                        <div class="body">
-                       <div class="tab-content active" id="filterSection1">
-
-
-                            <fieldset>
-                                <legend class="form-legend sr-only">Filter by Committee</legend>
-                        
-                                <div class="checkbox-list checkbox-list--custom">
-                                    <div>
-                                        <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
-                                        <label for="ACTO">Actuarial Office</label>
-                                    </div>
-                            
-                                    <div>
-                                        <input type="checkbox" name="programName" id="FINO" value="FINO">
-                                        <label for="FINO">Financial Office</label>
-                                    </div>
-                            
-                                    <div>
-                                        <input type="checkbox" name="programName" id="INVO" value="INVO" >
-                                        <label for="INVO">Investment Office</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
-                                        <label for="ACTO2">Actuarial Office</label>
-                                    </div>
-                            
-                                    <div>
-                                        <input type="checkbox" name="programName" id="FINO2" value="FINO">
-                                        <label for="FINO2">Financial Office</label>
-                                    </div>
-                            
-                                    <div>
-                                        <input type="checkbox" name="programName" id="INVO2" value="INVO" >
-                                        <label for="INVO2">Investment Office</label>
-                                    </div>
-                                </div>
-                            </fieldset>
-
-                            
-                        
-                       </div>
-                       <div class="tab-content" id="filterSection2">
-                            <div class="checkbox-list checkbox-list--custom">
-                            <div>
-                                <input type="checkbox" name="names" id="ACTO" value="ACTO" >
-                                <label for="ACTO">John Smith</label>
-                            </div>
-                    
-                            <div>
-                                <input type="checkbox" name="names" id="FINO" value="FINO">
-                                <label for="FINO">Anna Appleseed</label>
-                            </div>
-                    
-                            <div>
-                                <input type="checkbox" name="names" id="INVO" value="INVO" >
-                                <label for="INVO">Investment Office</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="names" id="ACTO2" value="ACTO" >
-                                <label for="ACTO2">Actuarial Office</label>
-                            </div>
-                    
-                            <div>
-                                <input type="checkbox" name="names" id="FINO2" value="FINO">
-                                <label for="FINO2">Financial Office</label>
-                            </div>
-                    
-                            <div>
-                                <input type="checkbox" name="names" id="INVO2" value="INVO" >
-                                <label for="INVO2">Investment Office</label>
-                            </div>
+                           <input type="checkbox" name="names" id="FINO" value="FINO">
+                           <label for="FINO">Anna Appleseed</label>
                         </div>
-                       </div>
-                       <div class="tab-content" id="filterSection3">3</div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO" value="INVO" >
+                           <label for="INVO">Investment Office</label>
                         </div>
-                    </div>
-                    <div class="footer fixed pin-b pin-r">
-                            <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
-                                    Apply Filters
-                                  </button>
-                    </div>
-
-          </div>
-            
-            
-        
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO2" value="ACTO" >
+                           <label for="ACTO2">Actuarial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO2" value="FINO">
+                           <label for="FINO2">Financial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO2" value="INVO" >
+                           <label for="INVO2">Investment Office</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-content" id="filterSection3">3</div>
+               </div>
+            </div>
+            <div class="footer fixed pin-b pin-r">
+               <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+               Apply Filters
+               </button>
+            </div>
          </div>
-
-
-
+      </div>
       <!-- Javascript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="radar.js"></script>
-     
    </body>
 </html>

@@ -167,9 +167,7 @@ $('.close').click(function() {
     $("body").removeClass("sidebar-open")
 })
 
-$('.toggle-filter').click(function(e) {
-
-    console.log(event)
+$('.toggle-filter').click(function() {
 
     $('.overlaySidebar.visible').removeClass("visible")
 
