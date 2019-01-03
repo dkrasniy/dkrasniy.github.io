@@ -93,6 +93,13 @@ function translateTable(dir) {
 
 
 
+
+$('.toggle-desc-truncate').on("click", function(){
+    console.log('hello')
+    $("body").toggleClass("power-desc-expanded")
+})
+
+
 function showYears(yearsAmount) {
   
     scrollWrapperWidth = $('.scrollWrapper').outerWidth();
