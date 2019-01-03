@@ -1049,3 +1049,7 @@ body.power-desc-expanded .box.SPRentry p {
 	text-overflow: inherit;
 	width: inherit;
 }
+
+body.power-desc-expanded .fa-expand:before {
+	content: "\f066";
+}
