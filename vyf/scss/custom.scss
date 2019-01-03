@@ -92,7 +92,7 @@ body {
 }
   
 .btn {
-    font-weight: 600;
+    font-weight: 500;
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -148,7 +148,7 @@ body {
         transition: opacity 125ms cubic-bezier(.455,.03,.515,.955);
      }
     &:hover .nav-item a {
-        opacity: .6;
+        // opacity: .6;
     }
     .nav-item{
     &:hover a {
@@ -494,7 +494,21 @@ ul.folder-list {
     opacity: .8;
 }
 .modal-header {
+
+    padding: 1em 1.25rem;
     border-bottom: none;
+    align-items:center;
+    .close {
+        padding: .5rem 1rem;
+       
+        font-size: 2rem;
+        font-weight: 500;
+        text-shadow: none;
+        opacity: .8;
+    }
+}
+.modal-title {
+    font-weight:600;
 }
 
 .modal-body {
@@ -517,7 +531,7 @@ ul.folder-list {
                 box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
     }
     .modal-dialog {
-        max-width: 550px;
+        max-width: 600px;
         margin: 2.75rem auto;
     }
     .modal-wide .modal-dialog {
@@ -622,10 +636,12 @@ label {
         width: 45px;
         margin:5px;
         border-radius: 50%;
+        cursor: pointer;
+        transition: .15s ease all;
+
         &:hover {
-            height: 55px;
-            width: 55px;
-            margin: 0px;
+            transform:scale(1.15);
+           
         }
     }
     .color-option {
@@ -634,6 +650,9 @@ label {
         }
         &.blue {
             background:$blue;
+        }
+        &.yellow {
+            background:$yellow;
         }
         &.green {
             background:$green;
@@ -651,6 +670,7 @@ label {
     
     input[type="radio"]:checked+label{ 
         border:1px solid red;
+        transform:scale(1.15);
      } 
 
 

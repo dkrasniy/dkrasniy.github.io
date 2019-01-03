@@ -167,7 +167,7 @@ body {
 	border-top: solid 1px hsla(0, 0%, 0%, 0.15);
 	border-left: solid 1px hsla(0, 0%, 0%, 0.15);
 	background-color: #FFFFFF;
-	min-height: 55px;
+	min-height: 50px;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -179,7 +179,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	min-height: 55px;
+	min-height: 50px;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -311,11 +311,12 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	background: #ff6700;
 	border: 2px solid;
-	border-color: #ff6700;
 	cursor: pointer;
 	transition: .2s ease all;
+
+	background: #333;
+	border-color: #333;
 }
 
 body.oneYearView li.liToggle {
@@ -520,7 +521,24 @@ Overlay Sidebar
 
 .overseePowerCat .titleArea h2 {
 	color: #00b83d;
-	;
+}
+
+
+.powerApproveCell .innerDataUl li {
+    background: #ff5a00;
+    border-color: #ff5a00;
+}
+.powerConductCell .innerDataUl li {
+    background: #9e2cdd;
+    border-color: #9e2cdd;
+}
+.powerSetCell .innerDataUl li {
+    background: #006fe4;
+    border-color: #006fe4;
+}
+.powerOverseeCell .innerDataUl li {
+    background: #00b83d;
+    border-color: #00b83d;
 }
 
 .monthDetail {
@@ -1014,4 +1032,20 @@ body.sidebar-open {
 
 .box.cell div:first-child {
 	border-left: none;
+}
+
+.box.SPRentry p {
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+body.power-desc-expanded .box.SPRentry p {
+	white-space: inherit;
+	overflow: inherit;
+	text-overflow: inherit;
+	width: inherit;
 }
