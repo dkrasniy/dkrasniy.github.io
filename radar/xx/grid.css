@@ -306,9 +306,9 @@ body {
 
 .innerDataUl li {
 	display: block;
-	height: 100%;
+	
 	color: transparent;
-	width: 100%;
+	
 	margin: 0 auto;
 	text-align: center;
 	border: 2px solid;
@@ -317,6 +317,10 @@ body {
 
 	background: #333;
 	border-color: #333;
+
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
 }
 
 body.oneYearView li.liToggle {

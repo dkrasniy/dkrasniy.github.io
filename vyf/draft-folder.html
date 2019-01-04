@@ -37,7 +37,7 @@
             <ul class="navbar-nav mr-auto">
                <li class="nav-item dropdown show">
                   <a class="nav-link dropdown-toggle inline-flex-center userLogin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="user-name">Tim Taylor</span>
+                  <span class="user-name">Timothy Taylor</span>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                      <div class="quick-user-info">
@@ -61,63 +61,26 @@
       </nav>
       <div class="container-fluid">
          <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 pt-vyf bd-sidebar">
+            <div class="pt-vyf bd-sidebar br-1">
                <!-- Vertical Menu -->
                <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newFolderModal">New Folder</button>
                <ul class="nav flex-column main-navigation">
-                  <li class="nav-item">
+                  <li class="nav-item ">
                      <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inbox</a>
                   </li>
                   <li class="nav-item active">
-                     <a class="nav-link" href="#"><i class="fas fa-file"></i> Drafts</a>
+                     <a class="nav-link" href="draft-folder.html"><i class="fas fa-file"></i> Drafts</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#"><i class="fas fa-road"></i> En Route</a>
+                     <a class="nav-link" href="enroute-folder.html"><i class="fas fa-road"></i> En Route</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="#"><i class="fas fa-check"></i> Completed</a>
+                     <a class="nav-link" href="completed-folder.html"><i class="fas fa-check"></i> Completed</a>
                   </li>
                </ul>
             </div>
-            <div class="d-none d-xl-block col-xl-2 pt-vyf bd-activity bl-1">
-               <h5 class="weight-600 sidebar-title"><i class="fas fa-directions routing-slip"></i> Routing Slip</h5>
-               <div class="routing-slip-container" id="sortable">
-                  <div class="routing-item routing-header">
-                     <div></div>
-                     <div>Deliver To</div>
-                     <div>Department</div>
-                  </div>
-                  <div class="routing-item">
-                     <div><i class="fas fa-bars"></i></div>
-                     <div>Paul Makhnovskiy</div>
-                     <div>ESDD</div>
-                  </div>
-                  <div class="routing-item">
-                     <div><i class="fas fa-bars"></i></div>
-                     <div>Andrew Studer</div>
-                     <div>ESDD</div>
-                  </div>
-                  <div class="routing-item">
-                     <div><i class="fas fa-bars"></i></div>
-                     <div>Tim Taylor</div>
-                     <div>ESDD</div>
-                  </div>
-                  <div class="routing-item add-viewer">
-                     <div><button type="button" class="btn btn-link bold btn-sm">Add Viewer</button></div>
-                  </div>
-                  <div class="dispatch-controls">
-                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#dispatchFolder">Dispatch</button>
-                     <div class="completion-estimate">
-                        <div class="icon"><i class="fas fa-clock"></i></div>
-                        <div class="data-stat">
-                           <span class="label">Estimated Completion</span>
-                           <span class="data">12 days</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-12 col-md-9 col-xl-8 pt-vyf pl-md-5 pr-md-5 bd-content">
+            
+            <div class="pt-vyf pl-md-5 pr-md-5 main-content">
                <div class="secondaryInnerHead">
                   <div class="icon">
                      <div class="icon-container"><i class="fas fa-folder"></i></div>
@@ -130,6 +93,49 @@
                   <div class="data-stat">
                      <span class="label">Status</span>
                      <span class="data">Draft</span>
+                  </div>
+               </div>
+               <div class="row flex-xl-nowrap">
+                  <div class="d-xl-block pt-vyf bd-activity br-1">
+                     <h5 class="weight-600 sidebar-title"><i class="fas fa-directions routing-slip"></i> Routing Slip</h5>
+                     <div class="routing-slip-container" id="sortable">
+                        <div class="routing-item routing-header">
+                           <div></div>
+                           <div>Deliver To</div>
+                           <div>Department</div>
+                        </div>
+                        <div class="routing-item">
+                           <div><i class="fas fa-bars"></i></div>
+                           <div>Paul Makhnovskiy</div>
+                           <div>ESDD</div>
+                        </div>
+                        <div class="routing-item">
+                           <div><i class="fas fa-bars"></i></div>
+                           <div>Andrew Studer</div>
+                           <div>ESDD</div>
+                        </div>
+                        <div class="routing-item">
+                           <div><i class="fas fa-bars"></i></div>
+                           <div>Timothy Taylor</div>
+                           <div>ESDD</div>
+                        </div>
+                        <div class="routing-item add-viewer">
+                           <div><button type="button" class="btn btn-link bold btn-sm">Add Viewer</button></div>
+                        </div>
+                        <div class="dispatch-controls">
+                           <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#dispatchFolder">Dispatch</button>
+                           <div class="completion-estimate">
+                              <div class="icon"><i class="fas fa-clock"></i></div>
+                              <div class="data-stat">
+                                 <span class="label">Estimated Completion</span>
+                                 <span class="data">12 days</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content">
+                     hello
                   </div>
                </div>
                <ul class="folder-list file-list">

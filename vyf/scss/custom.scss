@@ -23,6 +23,8 @@ $primary: $blue;
 $enable-gradients:false;
 
 $onePxBorder: 1px solid #eee;
+$sidebarNavWidth: 260px;
+
 
 $borderRadius: .35em;
 
@@ -60,7 +62,7 @@ body {
 
 .navbar {
     background: #fff;
-    padding: .75rem 1rem;
+    padding: .5rem 1rem;
 }
 
 .logo-vyf {
@@ -114,26 +116,13 @@ body {
 
 
 
-
-
 // Right side
 .bd-activity {
-    @supports ((position: -webkit-sticky) or (position: sticky)) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 79px;
-        z-index: 1000;
-        height: calc(100vh - 79px);
-        background:#fff;
-    }
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     padding: 1.5em;
     .section-title {
         margin-top: 1em;
     }
-  }
+}
   
 
 
@@ -201,25 +190,32 @@ body {
         -ms-flex-order: 0;
             order: 0;
     padding: 1.5em;
-    @include media-breakpoint-up(md) {
-      @supports ((position: -webkit-sticky) or (position: sticky)) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 79px;
-        z-index: 1000;
-        height: calc(100vh - 79px);
-        background:#fff;
-      }
-      border-right: 1px solid rgba(0, 0, 0, .1);
-    }
+    
+    position: fixed;
+    min-width: $sidebarNavWidth;
+    height: 100%;
+    overflow: auto;
+    z-index: 10;
+    background: #fff;
   
-    @include media-breakpoint-up(xl) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 320px;
-              flex: 0 1 320px;
-    }
+  
   }
 
+.main-content {
+    margin-left: $sidebarNavWidth;
+    width: 100%;
+}
+.inner-main-content {
+    width: 100%;
+}
+.routing-slip-outer {
+    background: #fff;
+    margin: -2em;
+    margin-right: 2em;
+    max-width: 300px;
+    min-width: 300px;
+    height: calc(100vh - 154px);
+}
 
 /* Add arrow to dropdown container when dropdown menu expanded */
 .dropdown-menu {
@@ -795,14 +791,13 @@ label {
 
 .data-stat {
     font-size:.95em;
-
     .label {
         display: block;
-        font-weight: 600;
-        font-size: .9em;
+        color:$light-grey;
     }
     .data {
         display: block;
+        font-weight: 600;
     }
 }
 
