@@ -8397,6 +8397,12 @@ body {
   max-width: 300px;
   min-width: 300px;
   height: calc(100vh - 154px);
+  display: inline-block;
+}
+
+.routing-slip-outer + div {
+  background: red;
+  display: inline-block;
 }
 
 /* Add arrow to dropdown container when dropdown menu expanded */

@@ -5,10 +5,11 @@
         $('.dropdown-content').removeClass("show");
     }
 
-    if ($(e.target).closest('#radarFilter').length === 0 && $(e.target).closest('.toggle-filter').length === 0) {
-        // Close all open toggles if any open
-        $('#radarFilter').removeClass("visible");
-    }
+    // if ($(e.target).closest('#radarFilter').length === 0 && $(e.target).closest('.toggle-filter').length === 0) {
+    //     // Close all open toggles if any open
+    //     $('#radarFilter').removeClass("visible");
+       
+    // }
 
     
 
@@ -86,8 +87,6 @@ function translateTable(dir) {
     
     toggleArrows();
 
-    
-
 
 }
 
@@ -96,6 +95,10 @@ function translateTable(dir) {
 
 $('.toggle-desc-truncate').on("click", function(){
     $("body").toggleClass("power-desc-expanded")
+})
+$('.toggle-powers-width').on("click", function(){
+    $("body").toggleClass("specific-powers-collapse ")
+    showYears(yearColumns);
 })
 
 
@@ -121,8 +124,6 @@ function showYears(yearsAmount) {
     let quarterWidth = yearWidth / 4;
 
 
-    console.log("Possible", possibleScrolls)
-    console.log("swipeCounter", swipeCounter)
 
     toggleArrows();
 
@@ -146,9 +147,6 @@ function toggleArrows(){
         $('.arrow-right').addClass("visible")
         
     }
-
-    console.log("Possible", possibleScrolls)
-   console.log("swipeCounter", swipeCounter)
 }
 
 
@@ -178,6 +176,8 @@ $('.toggle-filter').click(function() {
     $('.overlaySidebar.visible').removeClass("visible")
 
     $('#radarFilter').addClass("visible")
+    $('body').addClass("sidebar-open")
+    
 });
 
 
@@ -242,3 +242,9 @@ $('.tabs-nav li a').click(function(e){
   });
 
   
+
+  $(".filter-checkbox").change(function() {
+    if(this.checked) {
+       console.log($(this).next().text())
+    }
+});

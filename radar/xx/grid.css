@@ -60,7 +60,11 @@ body {
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.02);
 	position: relative;
 	z-index: 1;
+	display: flex;
+    justify-content: space-between;
 }
+
+
 
 .application-header h1 {
 	font-size: 1.25em;
@@ -689,8 +693,8 @@ button.dropdown-item:focus {
 }
 
 .layout-img {
-	max-width: 25px;
-	padding-right: 5px;
+	min-width: 30px;
+	padding: .25em;
 }
 
 
@@ -809,7 +813,24 @@ button.btn {
 
 .radar-filter .tabs-nav li a.active {
 	border-color: #0072e0;
-	background: #f7f7f7;
+	background: #fff;
+}
+
+.applied-filters {
+	margin-top: -1em;
+    margin-left: -2em;
+    margin-right: -2em;
+    margin-bottom: 1em;
+    background: white;
+	padding: 1em 2em;
+	min-height: 62px;
+	display: flex;
+	align-items:center;
+
+}
+.applied-filters .no-filters-text{
+	color:#777;
+	margin: 0;
 }
 
 .radar-filter .footer {
@@ -818,7 +839,7 @@ button.btn {
 	padding: .75em;
 	display: flex;
 	align-items: center;
-	justify-content: end;
+	justify-content: space-between;
 }
 
 .shadow {
@@ -1056,4 +1077,34 @@ body.power-desc-expanded .box.SPRentry p {
 
 body.power-desc-expanded .fa-expand:before {
 	content: "\f066";
+}
+.rounder-dne {
+    border-radius: .00000000001px;
+}
+
+.specific-powers-collapse .outerWrapper {
+    grid-template-columns: 65px/* Committee */ 280px/* Power */ auto/* Data */;
+}
+.collapse-expand-arrow {
+	width: 14px;
+    padding-top: 2px;
+}
+
+/* Hide right arrow if no collapsed close on body  */
+body .arrow-to-right.collapse-expand-arrow {
+    display: none;
+} 
+
+body.specific-powers-collapse .arrow-to-right {
+	display: block;
+}
+body.specific-powers-collapse .arrow-to-left {
+    display: none;
+}
+
+.bg-blue {
+    background-color: #0874D9;
+}
+.hover\:bg-blue-dark:hover {
+    background-color: #036bca;
 }

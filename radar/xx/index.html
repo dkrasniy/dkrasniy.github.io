@@ -4,12 +4,20 @@
       <meta charset="UTF-8">
       <title>Board Insights</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+   
+
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
       <link rel="stylesheet" href="grid.css">
    </head>
    <body>
       <div  class="application-header shadow z-50">
-         <h1>Board Insights</h1>
+         <div>
+               <h1>Board Insights</h1>
+         </div>
+       <div>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+       </div>
+            
       </div>
       <!-- ** TABLE HEADER ** --> 
       <div class="outerWrapper mainHeader shadow z-50">
@@ -26,15 +34,36 @@
             </div>
          </div>
          <div class="controls-box bl-none controls-row bt-none">
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
-            <div class="dropdown layout-options">
-               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline cursor-pointer" data-target="layoutDropdown">Layout</button>
-               <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
-                  <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
-                  <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
-                  <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>
-               </div>
-            </div>
+            <div class="inline-flex mr-3">
+               <button class="toggle-desc-truncate bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-l">
+                  <i class="fas fa-expand"></i>
+               </button>
+               <!-- <button class="toggle-desc-expand bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounder-dne">
+                  <i class="fas fa-compress"></i>
+                </button> -->
+               <button class="toggle-powers-width bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-r">
+                     <div class="arrow-to-left collapse-expand-arrow">
+                           <svg aria-hidden="true" data-prefix="fas" data-icon="arrow-to-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-arrow-to-left fa-w-14 fa-3x"><path fill="currentColor" d="M0 424V88c0-13.3 10.7-24 24-24h24c13.3 0 24 10.7 24 24v336c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm280.5-66.4L214.9 292H424c13.3 0 24-10.7 24-24v-24c0-13.3-10.7-24-24-24H214.9l65.6-65.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L94.1 239c-9.4 9.4-9.4 24.6 0 33.9l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.3 9.4-24.5 0-33.8z" class=""></path></svg>
+                     </div>
+                     <div  class="arrow-to-right collapse-expand-arrow">
+                           <svg aria-hidden="true" data-prefix="fas" data-icon="arrow-to-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-arrow-to-right fa-w-14 fa-3x"><path fill="currentColor" d="M448 88v336c0 13.3-10.7 24-24 24h-24c-13.3 0-24-10.7-24-24V88c0-13.3 10.7-24 24-24h24c13.3 0 24 10.7 24 24zm-280.5 66.4l65.6 65.6H24c-13.3 0-24 10.7-24 24v24c0 13.3 10.7 24 24 24h209.1l-65.6 65.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L353.9 273c9.4-9.4 9.4-24.6 0-33.9L218.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9z" class=""></path></svg>
+                     </div>
+                 </button>
+             </div>
+
+             <div class="inline-flex layout-options">
+               <button  onclick="showYears(1)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-l">
+                  <img class="layout-img" alt="1 Column" src="1col.svg">
+               </button>
+               <button  onclick="showYears(3)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounder-dne">
+                  <img class="layout-img" alt="3 Column" src="3col.svg">
+                </button>
+               <button  onclick="showYears(5)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-r">
+                  <img class="layout-img" alt="5 Column" src="5col.svg">
+               </button>
+             </div>
+             
+        
          </div>
          <!-- COMMITTEE COLUMN-->
          <div class="box grid-order-0"></div>
@@ -66,8 +95,7 @@
          <!-- COMMITTEE HEADER-->
          <div class="box SPRheader grid-order-3" ></div>
          <!-- POWERS RESERVED HEADER-->
-         <div class="box SPRheader bl-none grid-order-4 relative">Specific Powers Reserved  <button class="toggle-desc-truncate  pin-r mr-2 bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow cursor-pointer absolute"><i class="fas fa-expand"></i></button>
-         </div>
+         <div class="box SPRheader bl-none grid-order-4 relative">Specific Powers Reserved</div>
          <div class="scrollWrapper grid-order-5">
             <div class="innerWrapper">
                <!-- QUARTER HEADERS -->
@@ -1206,8 +1234,8 @@
                </div>
                <div class="box cell powerApproveCell">
                   <div>
-                     <ul class="item innerDataUl">
-                        <li class="liToggle IC APPROVE" data-target="#17Q2A2">
+                     <ul class="liToggle item innerDataUl cursor-pointer" data-target="#17Q2A2">
+                        <li class="IC APPROVE" >
                            <span class="item sr-only">Description here for screen reader</span>
                         </li>
                      </ul>
@@ -2668,18 +2696,14 @@
                <h2 class="my-3">Filter Radar</h2>
                <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
-            <div class="applied-filters pb-4 px-4">
-               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
-            </div>
+           
             <div>
                <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
                   <li class="mr-1">
-                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Committee <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></a>
                   </li>
                   <li class="mr-1">
-                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Program</a>
                   </li>
                   <li class="mr-1">
                      <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
@@ -2693,37 +2717,47 @@
                </ul>
                <div class="body">
                   <div class="tab-content active" id="filterSection1">
+                     
+                     <div class="applied-filters">
+                        <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                        <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                        <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+                     </div>
+                     
                      <fieldset>
                         <legend class="form-legend sr-only">Filter by Committee</legend>
                         <div class="checkbox-list checkbox-list--custom">
                            <div>
-                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="ACTO" value="ACTO" checked>
                               <label for="ACTO">Actuarial Office</label>
                            </div>
                            <div>
-                              <input type="checkbox" name="programName" id="FINO" value="FINO">
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="FINO" value="FINO">
                               <label for="FINO">Financial Office</label>
                            </div>
                            <div>
-                              <input type="checkbox" name="programName" id="INVO" value="INVO" >
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="INVO" value="INVO" >
                               <label for="INVO">Investment Office</label>
                            </div>
                            <div>
-                              <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="ACTO2" value="ACTO" >
                               <label for="ACTO2">Actuarial Office</label>
                            </div>
                            <div>
-                              <input type="checkbox" name="programName" id="FINO2" value="FINO">
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="FINO2" value="FINO">
                               <label for="FINO2">Financial Office</label>
                            </div>
                            <div>
-                              <input type="checkbox" name="programName" id="INVO2" value="INVO" >
+                              <input class="filter-checkbox" type="checkbox" name="commitee" id="INVO2" value="INVO" >
                               <label for="INVO2">Investment Office</label>
                            </div>
                         </div>
                      </fieldset>
                   </div>
                   <div class="tab-content" id="filterSection2">
+                        <div class="applied-filters">
+                           <p class="no-filters-text">No filters applied.</p></div>
+
                      <div class="checkbox-list checkbox-list--custom">
                         <div>
                            <input type="checkbox" name="names" id="ACTO" value="ACTO" >
@@ -2755,7 +2789,11 @@
                </div>
             </div>
             <div class="footer fixed pin-b pin-r">
-               <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+                  <button class="text-grey-darker close shadow border-none no-outline cursor-pointer font-bold py-2 px-4 rounded">
+                       Cancel
+                        </button>
+
+               <button class="bg-blue hover:bg-blue-dark text-white shadow border-none no-outline cursor-pointer font-bold py-2 px-4 rounded">
                Apply Filters
                </button>
             </div>
