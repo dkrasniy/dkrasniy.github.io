@@ -218,7 +218,6 @@ body {
     display: inline-block;
 }
 .routing-slip-outer + div {
-    background: red;
     display: inline-block;
 }
 
@@ -421,7 +420,7 @@ ul.folder-list {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: .5fr 2.5fr 1fr 1fr;
-        grid-template-columns: .5fr 2.5fr 1fr 1fr;
+        grid-template-columns: .5fr 2.5fr 1fr 1fr 1fr;
         background: white;
         border-radius: $borderRadius;
         border: $onePxBorder;
@@ -938,4 +937,11 @@ i.routing-slip {
     box-shadow: 2px 4px 12px rgba(0, 0, 0, .05);
     background: white!important;
     transition: .1s ease all;
+}
+
+.btn-danger-outline {
+    box-shadow: none;
+    background: none;
+    color: $red;
+    font-weight: bold;
 }

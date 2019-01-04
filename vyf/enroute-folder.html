@@ -65,66 +65,27 @@
       </nav>
       <div class="container-fluid">
          <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 pt-vyf bd-sidebar">
-                    <!-- Vertical Menu -->
-                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newFolderModal">New Folder</button>
-                    
-                    <ul class="nav flex-column main-navigation">
-                      <li class="nav-item">
-                          <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inbox</a>
-                      </li>
-                      <li class="nav-item active">
-                          <a class="nav-link" href="#"><i class="fas fa-file"></i> Drafts</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fas fa-road"></i> En Route</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="fas fa-check"></i> Completed</a>
-                      </li>
-                    </ul>
+                <div class="pt-vyf bd-sidebar br-1">
+                        <!-- Vertical Menu -->
+                        <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newFolderModal">New Folder</button>
+                        <ul class="nav flex-column main-navigation">
+                           <li class="nav-item ">
+                              <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Inbox</a>
+                           </li>
+                           <li class="nav-item active">
+                              <a class="nav-link" href="draft-folder.html"><i class="fas fa-file"></i> Drafts</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="enroute-folder.html"><i class="fas fa-road"></i> En Route</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="completed-folder.html"><i class="fas fa-check"></i> Completed</a>
+                           </li>
+                        </ul>
+                     </div>
+ 
 
-            </div>
-            <div class="d-none d-xl-block col-xl-2 pt-vyf bd-activity bl-1">
-              <h5 class="weight-600 sidebar-title"><i class="fas fa-directions routing-slip"></i> Routing Slip</h5>
-
-              
-             <div class="routing-slip-container">
-                 <div class="routing-item routing-header">
-                     <div></div><div>Deliver To</div> <div>Department</div>
-                 </div>
-                 <div class="routing-item">
-                        <div><i class="fas fa-bars"></i></div><div>Paul Makhnovskiy</div> <div>ESDD</div>
-                    </div>
-                <div class="routing-item">
-                        <div><i class="fas fa-bars"></i></div><div>Andrew Studer</div> <div>ESDD</div>
-                    </div>
-                    <div class="routing-item">
-                        <div><i class="fas fa-bars"></i></div><div>Tim Taylor</div> <div>ESDD</div>
-                    </div>
-                    <div class="routing-item add-viewer">
-                        <div><button type="button" class="btn btn-link bold btn-sm">Add Viewer</button></div>
-                    </div>
-                    <div class="dispatch-controls">
-                       
-                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#dispatchFolder">Dispatch</button>
-                            
-                            
-                            <div class="completion-estimate">
-                                    <div class="icon"><i class="fas fa-clock"></i></div>
-                                    <div class="data-stat">
-                                            <span class="label">Estimated Completion</span>
-                                            <span class="data">12 days</span>
-                                          </div>
-                                   </div>
-
-                           
-                    </div>
-
-             </div>
-            </div>
-
-            <div class="col-12 col-md-9 col-xl-8 pt-vyf pl-md-5 pr-md-5 bd-content">
+            <div class="pt-vyf pl-md-5 pr-md-5 main-content">
                 <div class="secondaryInnerHead four-data-points-col">
                     <div class="icon">
                         <div class="icon-container"><i class="fas fa-folder"></i></div>
@@ -149,10 +110,50 @@
                       </div>
                 </div>
 
+                                    
+                <div class="row flex-xl-nowrap">
+                        <div class="pt-vyf bd-activity br-1 routing-slip-outer">
+                    <h5 class="weight-600 sidebar-title"><i class="fas fa-directions routing-slip"></i> Routing Slip</h5>
+      
+                    
+                   <div class="routing-slip-container">
+                       <div class="routing-item routing-header">
+                           <div></div><div>Deliver To</div> <div>Department</div>
+                       </div>
+                       <div class="routing-item">
+                              <div></div><div>Paul Makhnovskiy</div> <div>ESDD</div>
+                          </div>
+                      <div class="routing-item">
+                              <div></div><div>Andrew Studer</div> <div>ESDD</div>
+                          </div>
+                          <div class="routing-item">
+                              <div></div><div>Tim Taylor</div> <div>ESDD</div>
+                          </div>
+                    
+                          <div class="dispatch-controls">
+                             
+                                  <button class="btn btn-danger-outline btn-sm" data-toggle="modal" data-target="#dispatchFolder">Cancel Route</button>
+                                  
+                                  
+                                  <div class="completion-estimate">
+                                          <div class="icon"><i class="fas fa-clock"></i></div>
+                                          <div class="data-stat">
+                                                  <span class="label">Estimated Completion</span>
+                                                  <span class="data">12 days</span>
+                                                </div>
+                                         </div>
+      
+                                 
+                          </div>
+      
+                   </div>
+                  </div>
+
+                  <div class="inner-main-content">
                 <ul class="folder-list file-list">
                         <li class="folder-component folder-size-lg file-component">
                             <a href="#">
-                               <div class="icon"><div class="icon-container"><i class="fas fa-file"></i></div></div>
+                               <div class="icon"><div class="icon-container"><i class="fas fa-file-pdf"></i></div></div>
                                <div>
                                  <p class="folder-name">Example Folder</p>
                                  <p class="folder-author">Andrew Studer</p>
@@ -169,7 +170,7 @@
                           </li>
                        <li class="folder-component folder-size-lg file-component">
                           <a href="#">
-                             <div class="icon"><div class="icon-container blue"><i class="fas fa-folder"></i></div></div>
+                             <div class="icon"><div class="icon-container"><i class="fas fa-file-pdf"></i></div></div>
                              <div>
                                <p class="folder-name">Travel Expense Claim</p>
                                <p class="folder-author">David Krasniy</p>
@@ -185,9 +186,9 @@
                            </a>
                         </li>
                      </ul>
+                    </div>
 
-
-               
+                    </div>
                
             </div>
          </div>

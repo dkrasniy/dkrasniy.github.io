@@ -8401,7 +8401,6 @@ body {
 }
 
 .routing-slip-outer + div {
-  background: red;
   display: inline-block;
 }
 
@@ -8593,7 +8592,7 @@ ul.folder-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.5fr 2.5fr 1fr 1fr;
-  grid-template-columns: 0.5fr 2.5fr 1fr 1fr;
+  grid-template-columns: 0.5fr 2.5fr 1fr 1fr 1fr;
   background: white;
   border-radius: 0.35em;
   border: 1px solid #eee;
@@ -9066,6 +9065,13 @@ i.routing-slip {
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
   background: white !important;
   transition: 0.1s ease all;
+}
+
+.btn-danger-outline {
+  box-shadow: none;
+  background: none;
+  color: #E02200;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=custom.css.map */
