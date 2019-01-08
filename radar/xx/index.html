@@ -15,12 +15,16 @@
                <h1>Board Insights</h1>
          </div>
        <div>
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block text-color-radar-blue bg-color-radar rounded-full px-2 py-1 ml-2 text-xs font-semibold my--dot25">3</span></button>
        </div>
             
       </div>
       <!-- ** TABLE HEADER ** --> 
+      <div class="current-quarter-line"></div>
+      <div id="swipe">
+
       <div class="outerWrapper mainHeader shadow z-50">
+      
          <!-- COMMITTEE COLUMN-->
          <!-- POWERS RESERVED COLUMN-->
          <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
@@ -110,7 +114,7 @@
                <div class="box FYQheader">Q3</div>
                <div class="box FYQheader">Q4</div>
                <!-- 2019 -->
-               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box boxQ1 FYQheader current">Q1</div>
                <div class="box FYQheader">Q2</div>
                <div class="box FYQheader">Q3</div>
                <div class="box FYQheader">Q4</div>
@@ -2663,6 +2667,9 @@
          </div>
       </div>
       <!-- ** TABLE BODY ** -->      
+
+   </div>
+
       <!-- Sidebar Content -->
       <div id="17Q2A2" class="overlaySidebar approvePowerCat">
          <div class="titleArea">
@@ -2802,5 +2809,37 @@
       <!-- Javascript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="radar.js"></script>
+      <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+      <script>
+            $( document ).ready(function() {
+         
+               var options = {
+                  threshold: 100
+               };
+
+
+        var myElement = document.getElementById('swipe');
+         var mc = new Hammer(myElement,options);
+
+
+
+         
+
+
+         mc.on("panleft panright", function(ev) {
+            console.log(ev.type)
+            if(ev.type === 'panleft') {
+               translateTable('right')
+            } else {
+               translateTable('left')
+            }
+            
+         });
+
+
+      });</script>
+
+
    </body>
 </html>

@@ -84,6 +84,10 @@ function translateTable(dir) {
     //translate table
     $('.innerWrapper').css('transform', 'translateX(' + (-1*swipeCounter*yearWidth) + 'px)');
 
+
+    $('.current-quarter-line').css('transition', '.3s');
+    $('.current-quarter-line').css('transform', 'translateX(' + (-1*swipeCounter*yearWidth) + 'px)');
+
     
     toggleArrows();
 
@@ -103,6 +107,8 @@ $('.toggle-powers-width').on("click", function(){
 
 
 function showYears(yearsAmount) {
+
+
   
     scrollWrapperWidth = $('.scrollWrapper').outerWidth();
     possibleScrolls = ((8)-yearsAmount);
@@ -132,6 +138,10 @@ function showYears(yearsAmount) {
 
     //disable animation to avoid jump
     $('.innerWrapper').css('transition', '0s');
+    $('.current-quarter-line').css('transition', '0s');
+
+
+    alignCurrentYearLine(quarterWidth);
 
     
 
@@ -248,3 +258,14 @@ $('.tabs-nav li a').click(function(e){
        console.log($(this).next().text())
     }
 });
+
+
+function alignCurrentYearLine(quarterWidth)  {
+    let currentBox = $('.FYQheader.current').offset();
+    $('.current-quarter-line').css('left', (currentBox.left)+(quarterWidth/2)-2);
+}
+
+
+
+
+
