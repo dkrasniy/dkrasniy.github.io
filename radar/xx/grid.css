@@ -1127,7 +1127,8 @@ body.specific-powers-collapse .arrow-to-left {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #f00;
-    bottom: 0;
+	bottom: 0;
+	left: calc(50% - 10px);
 }
 
 
