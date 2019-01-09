@@ -181,8 +181,12 @@ $('.close').click(function() {
     $("body").removeClass("sidebar-open")
 })
 
+
+
+
 $('.toggle-filter').click(function() {
 
+    console.log(filter)
     $('.overlaySidebar.visible').removeClass("visible")
 
     $('#radarFilter').addClass("visible")
@@ -252,12 +256,74 @@ $('.tabs-nav li a').click(function(e){
   });
 
   
+var filter = {};
+//so need to take a snapshot of the filter on filter open? yee, clone it 
 
-  $(".filter-checkbox").change(function() {
-    if(this.checked) {
-       console.log($(this).next().text())
-    }
+$(".checkbox-filter").change(function(event) {
+    
+    console.log(event.target.name);
+
 });
+
+$('.close-filter').click(function() {
+    // Remove visible class from all sidebars
+    $('body').toggleClass('document-open');
+    $('.overlaySidebar.visible').removeClass("visible")
+    $("body").removeClass("sidebar-open")
+})
+
+
+
+//each tab has a filter-category class which is the same as the checbox grouping
+$('.filter-category ').each( function () {
+    
+    //get the group name from attribute
+    let name = this.getAttribute('data-name');
+    let id = this.getAttribute('data-target');
+    
+    filter[name] = {} 
+    
+    $("input[name='" +  name +"']").each( function () {
+        //thinking how to reuse the createlement stuff 
+        //what are u tryinh to creaet?the checboxes? yee
+        this.addEventListener('change', function(e) {
+
+        })
+        if(this.checked){
+            var itemvalue = this.getAttribute('value');
+            var itemid = this.getAttribute('id');
+            
+            filter[name][itemid] = {name: name, id: itemid, value: itemvalue}
+            
+            var filterElement = document.createElement("span");
+            filterElement.className = "inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2";
+            filterElement.innerHTML = (itemvalue)
+            var deleteIcon = document.createElement("a");
+            deleteIcon.className = "text-grey remove-filter ml-2 cursor-pointer";
+            deleteIcon.title = "Remove " + itemvalue + " Filter";
+            deleteIcon.innerHTML = ('<i class="fas fa-times"></i>')
+            
+            deleteIcon.addEventListener('click', function (e) {
+                delete filter[name][itemid];
+                
+                $("input[id='" +  itemid +"']").prop("checked", false)
+
+                
+                e.target.parentElement.parentElement.remove();
+            }, )
+
+            
+            
+            filterElement.appendChild(deleteIcon);
+            $('#'+ id + ' .applied-filters').append(filterElement)
+        }
+    });
+
+});
+
+//render the filter pills
+
+
 
 
 function alignCurrentYearLine(quarterWidth)  {
