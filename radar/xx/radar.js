@@ -186,7 +186,7 @@ $('.close').click(function() {
 
 $('.toggle-filter').click(function() {
 
-    console.log(filter)
+    console.log(filter['comm[]'].size)
     $('.overlaySidebar.visible').removeClass("visible")
 
     $('#radarFilter').addClass("visible")
@@ -257,7 +257,7 @@ $('.tabs-nav li a').click(function(e){
 
   
 var filter = {};
-//so need to take a snapshot of the filter on filter open? yee, clone it 
+
 
 $(".checkbox-filter").change(function(event) {
     
@@ -284,8 +284,6 @@ $('.filter-category ').each( function () {
     filter[name] = {} 
     
     $("input[name='" +  name +"']").each( function () {
-        //thinking how to reuse the createlement stuff 
-        //what are u tryinh to creaet?the checboxes? yee
         this.addEventListener('change', function(e) {
 
         })
@@ -321,7 +319,6 @@ $('.filter-category ').each( function () {
 
 });
 
-//render the filter pills
 
 
 
