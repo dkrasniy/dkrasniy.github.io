@@ -836,6 +836,7 @@ button.btn {
 	min-height: 62px;
 	display: flex;
 	align-items:center;
+	flex-wrap: wrap;
 
 }
 .applied-filters .no-filters-text{
@@ -2192,4 +2193,8 @@ a.ui-button:active,
 }
 .ui-state-disabled .ui-icon {
 	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+.applied-filters span {
+    margin-bottom: 8px;
 }
