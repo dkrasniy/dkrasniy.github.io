@@ -61,7 +61,9 @@
          </div>
          <div class="toolbar-item dropdown-group">
             <button class="toolbar-button shape-annotation-icon"></button>
-            <div class="dropdown-content" role="listbox"></div>
+            <!-- <div class="dropdown-content annotation-toolbar d-flex align-items-center justify-content-center" role="listbox">
+                  Annotations tools
+            </div> -->
          </div>
          <div class="toolbar-item">
             <button class="toolbar-button print-icon"></button>
@@ -75,6 +77,7 @@
       <script src="icons.js"></script>
       <script>
          $('.dropdown-group').click(function () {
+            $('.dropdown-group').removeClass('dropdown-expanded')
             $(this).toggleClass('dropdown-expanded')
          });
          
