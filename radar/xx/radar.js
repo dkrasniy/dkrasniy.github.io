@@ -323,9 +323,11 @@ $('.filter-category ').each( function () {
 
 
 
-function alignCurrentYearLine(quarterWidth)  {
+function alignCurrentYearLine()  {
     let currentBox = $('.FYQheader.current').offset();
-    $('.current-quarter-line').css('left', (currentBox.left)+(quarterWidth/2)-2);
+    let caretPosition = window.getComputedStyle(document.querySelector('.current'), ':after').left;
+    let leftOffset = (currentBox.left)+10+parseInt(caretPosition, 10);
+    $('.current-quarter-line').css('left', (leftOffset));
 }
 
 
