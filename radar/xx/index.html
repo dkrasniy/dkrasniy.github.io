@@ -15,7 +15,13 @@
                <h1>Board Insights</h1>
          </div>
        <div>
-            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block text-color-radar-blue bg-color-radar rounded-full px-2 py-1 ml-2 text-xs font-semibold my--dot25">3</span></button>
+            <input type="text" class="mr-8 search-input form-control shadow" placeholder="Search by agenda item, presenter, etc">
+          <div class="loggedin-user dropdown">
+               <a role="button" class="dropdown-toggle" data-target="userLoginMenu"><div class="initials">TT</div>Timothy Taylor <i class="fas fa-chevron-down"></i></a>
+               <div class="dropdown-content dropdown-menu dropdown-align-right" id="userLoginMenu">
+                     <button class="dropdown-item" href="#">Log Out</button>
+                  </div>
+          </div>
        </div>
             
       </div>
@@ -45,7 +51,7 @@
                <!-- <button class="toggle-desc-expand bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounder-dne">
                   <i class="fas fa-compress"></i>
                 </button> -->
-               <button class="toggle-powers-width bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-r">
+               <button class="height-37 toggle-powers-width bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-r">
                      <div class="arrow-to-left collapse-expand-arrow">
                            <svg aria-hidden="true" data-prefix="fas" data-icon="arrow-to-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-arrow-to-left fa-w-14 fa-3x"><path fill="currentColor" d="M0 424V88c0-13.3 10.7-24 24-24h24c13.3 0 24 10.7 24 24v336c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm280.5-66.4L214.9 292H424c13.3 0 24-10.7 24-24v-24c0-13.3-10.7-24-24-24H214.9l65.6-65.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L94.1 239c-9.4 9.4-9.4 24.6 0 33.9l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.3 9.4-24.5 0-33.8z" class=""></path></svg>
                      </div>
@@ -55,16 +61,38 @@
                  </button>
              </div>
 
-             <div class="inline-flex layout-options">
-               <button  onclick="showYears(1)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-l">
-                  <img class="layout-img" alt="1 Column" src="1col.svg">
+             <div class="inline-flex layout-options mr-3 height-37">
+               <button  onclick="showYears(1)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-l show-years">
+                  <svg id="Columns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.99" height="37.99" viewBox="0 0 256 256">
+                     <g id="_1" data-name="1">
+                     <image id="Columns_1" data-name="Columns 1" x="40" y="40" width="176" height="176" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAo0lEQVRIie3WMQrCMBSH8V9rcVVnFxdnJy/g4oG8j1fxLOLipoKIILYSyFCoFKRVl/yXhJfk+3iZXoY9JiiRo9JPssgK6ynrEdyaAheMsMUOw7YHH+SBBTa4iqLQ1foLjcwj+5bXitPGte6ZRUKVfwH+NkmUREmURM0kURL9V3RsnHbPIRKyooZa4Y5BT5InlnFf/nTcCu2N4zf2PUCGobTE+QUH+RuwFzYpQQAAAABJRU5ErkJggg=="/>
+                     <image id="White_Circle" data-name="White Circle" x="85" y="87" width="84" height="84" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAmUlEQVQokZXRIQoCURSF4TuKuAUtrsgNuAKDK7C4GYtGQUGwWIwmg8GmMGKyWT954OiAjIw/XHhwzg/vvhcozwAzXHHHCqNypzhkWKhmj05ZWFZWP5zQSuX+V1TNJAnzyvibY7p7HhHdqMejERFZzXIiS8LuD+GShOkfwrx41k2Nhc9oF0IT6x/lA3rljytm+BJz3LDF+J0TTz/fZ5IA1DVhAAAAAElFTkSuQmCC"/>
+                     <image id="_1-2" data-name="1" x="115" y="106" width="22" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAHCAYAAADNufepAAAAO0lEQVQImWNkgIB1DAwMCiDGRQYGhv8gzMzAwGDCwMDAxcDAwAZVxbAeJMME5fCCCBhHAJnzkIGB4S0AZh0HhTLl9AEAAAAASUVORK5CYII="/>
+                     </g>
+                  </svg>
                </button>
-               <button  onclick="showYears(3)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounder-dne">
-                  <img class="layout-img" alt="3 Column" src="3col.svg">
+               <button  onclick="showYears(3)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounder-dne show-years">
+                  <svg id="Columns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.99" height="37.99" viewBox="0 0 256 256">
+                     <g id="_3" data-name="3">
+                     <image id="Columns_3" data-name="Columns 3" x="40" y="40" width="176" height="176" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABB0lEQVRIie2WMYoCQRBF34yygZEiCmuiiBtvJB7EyBuY7wk2FM8ieBUzwcRR2MhFAxFBHaXoEhtrMFOT/knP1Ovu39VJ/whIgBKQAjFw5qZI/68s8vgj5nMZ1/fwacoDG6AIjIER8OGZnYAK8AsMtPucx8paHwJT3e+qA/AN/ABbqa21q/6Dbv6Bgqk67YGaqTp96d672CtWzTSnunbRMsQZyPU3DXFq6HiODXqSglEwCkbByCoYBaP3Gq0MdUo06cwNgT99qheGOC11jPww0dGAkfNqEkA+NbD0gNldOJHnXw7bBSYZa9v6nb40bkl7ErfEVE6UFQKPOjcrQAqTdVnhU648BTYXQZs6RLzYs84AAAAASUVORK5CYII="/>
+                     <image id="White_Circle" data-name="White Circle" x="85" y="87" width="84" height="84" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAmUlEQVQokZXRIQoCURSF4TuKuAUtrsgNuAKDK7C4GYtGQUGwWIwmg8GmMGKyWT954OiAjIw/XHhwzg/vvhcozwAzXHHHCqNypzhkWKhmj05ZWFZWP5zQSuX+V1TNJAnzyvibY7p7HhHdqMejERFZzXIiS8LuD+GShOkfwrx41k2Nhc9oF0IT6x/lA3rljytm+BJz3LDF+J0TTz/fZ5IA1DVhAAAAAElFTkSuQmCC"/>
+                     <image id="_3-2" data-name="3" x="109" y="106" width="38" height="49" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAHCAYAAAArkDztAAAAaElEQVQImU3OsQnCABSE4a8KOEBIKdaSjGDpNIK9VUoXsBGsXSFg5QCOYC84hOGFK3xwcP/9zYMVbvglFzQlrhlOOKbfS/TYVsE+4hxe7pXxg3UNOwyRbeS34BkYcUh/l+gw/X31wGYGY1QW/K+tR2UAAAAASUVORK5CYII="/>
+                     </g>
+                  </svg>
                 </button>
-               <button  onclick="showYears(5)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-r">
-                  <img class="layout-img" alt="5 Column" src="5col.svg">
+               <button onclick="showYears(5)" class="flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow rounded-r show-years">
+                  <svg id="Columns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.99" height="37.99" viewBox="0 0 256 256">
+                     <g id="_5" data-name="5">
+                     <image id="Columns_5" data-name="Columns 5" x="40" y="40" width="176" height="176" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABLUlEQVRIie2WsUpDYQyFv9tWWxC1gnQUCzoLgrr7BM76At1FHF0FRwfxIQo+iZOFLoWqg4hiq4iD1nsleAKhglt1+bPcnJPkP0mWmwy4BhaAHCjxbUXAmbhP+Z6TK6/8S00hf5AJTNwqwBCoAxdAW9wMcAycAVdq4gToA6fCu8AmsK9ml4FD4Ah40HRrir9awUCJrbGp7lXs1gHOAz4AegFbc49jb6zq7bdSIBvBn9fum4GbFu+2CEwFvKKapcB5o0UUmqgloSSUhJLQT0tCSeh/heJv+FlXz23g3oGXgJ+Aj4D7qrkJnNdnlUBuAV35c0AN2AEuxdV1A2wLrwOzAVusCuwBd+I29M3/9Nyy8axbE43H4EjY12trshzfgq3JTio/ULzG4n5AWjwHhl8eWkEIoyFZsgAAAABJRU5ErkJggg=="/>
+                     <image id="White_Circle" data-name="White Circle" x="85" y="87" width="84" height="84" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAmUlEQVQokZXRIQoCURSF4TuKuAUtrsgNuAKDK7C4GYtGQUGwWIwmg8GmMGKyWT954OiAjIw/XHhwzg/vvhcozwAzXHHHCqNypzhkWKhmj05ZWFZWP5zQSuX+V1TNJAnzyvibY7p7HhHdqMejERFZzXIiS8LuD+GShOkfwrx41k2Nhc9oF0IT6x/lA3rljytm+BJz3LDF+J0TTz/fZ5IA1DVhAAAAAElFTkSuQmCC"/>
+                     <image id="_5-2" data-name="5" x="110" y="106" width="36" height="49" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAYUlEQVQImS3MsQmDYBRF4U+0EawdwMaAWcI+E1hkhhQ6iBNkARcR2/TpUmWCoER+eN3l3MOBO17Y8cezwIAOEzK8E2ySjgNfLDlKVGjxwC0ZPeqw5+j6xBjxi4QrtjhWXE78JBJu/6dNqAAAAABJRU5ErkJggg=="/>
+                     </g>
+                     </svg>
                </button>
+             </div>
+             <div class="height-37">
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block text-color-radar-blue bg-color-radar rounded-full px-2 py-1 ml-2 text-xs font-semibold my--dot25">3</span></button>
+      
              </div>
              
         
