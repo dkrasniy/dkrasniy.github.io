@@ -2247,3 +2247,67 @@ a.ui-button:active,
 .search-input {
 	width: 300px;
 }
+.radar-search .titleArea button.close {
+	color: #040404;
+    background: hsl(0, 0%, 97%);
+}
+.radar-search .body {
+	background: #f8f8f8;
+}
+p.results-count {
+    font-size: .85em;
+    color: #777;
+	margin-bottom: 0;
+}
+.results ul {
+    list-style: none;
+	padding-left: 10px;
+	margin-top: .25em;
+}
+.results span.item-title {
+    font-weight: 500;
+}
+span.search-match {
+    background: yellow;
+}
+span.details span {
+	margin-right: 10px;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	font-size: 90%;
+}
+span.details span i{
+	font-size: 80%;
+	color: #999;
+	margin-right: 5px;
+
+}
+
+
+.results span.details {
+    margin: 0!important;
+    padding: 0;
+    padding-top: 3px;
+    color: #777;
+    font-size: .9em;
+}
+h4.search-result-section {
+	margin-bottom: .5em;
+	font-size: 1em;
+}
+.results ul li {
+
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+	
+input#searchInputModal {
+    width: 100%;
+}
+.radar-search {
+    width: 45vw;
+}

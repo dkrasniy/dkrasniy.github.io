@@ -334,3 +334,39 @@ function alignCurrentYearLine()  {
 
 
 
+
+
+
+
+// Jan 16 2019
+var searchInput = document.getElementById("searchInput")
+searchInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      runSearchQuery(searchInput.value)
+      openSearch();
+      document.getElementById("searchButton").click();
+    }
+  });
+
+  var searchInputModal = document.getElementById("searchInputModal");
+  searchInputModal.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        runSearchQuery(searchInputModal.value)
+        document.getElementById("searchButtonModal").click();
+      }
+  })
+
+  function runSearchQuery(searchValue){
+    $('.search-query').html("\"" + searchValue + "\"")
+    document.getElementById("searchInputModal").value = searchValue
+    document.getElementById("searchInput").value = searchValue
+  }
+
+  function openSearch(){
+    $('.overlaySidebar.visible').removeClass("visible")
+    $('#searchFilter').addClass("visible")
+    $('body').addClass("sidebar-open")
+  }
+ 
