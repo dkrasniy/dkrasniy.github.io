@@ -14,12 +14,17 @@
          <div>
                <h1>Board Insights</h1>
          </div>
-       <div>
+       <div class="height-37">
+            <button class="height-37 bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2  no-outline cursor-pointer toggle-glossary">
+               <i class="fas fa-book"></i>
+            </button>
+      
             <input type="text" class="mr-8 search-input form-control shadow" id="searchInput" placeholder="Search by agenda item, presenter, etc">
             <button class="sr-only" id="searchButton">Go</button>
           <div class="loggedin-user dropdown">
-               <a role="button" class="dropdown-toggle" data-target="userLoginMenu"><div class="initials">TT</div>Timothy Taylor <i class="fas fa-chevron-down"></i></a>
+               <a role="button" class="dropdown-toggle" data-target="userLoginMenu"><div class="initials">TT</div><i class="fas fa-chevron-down"></i></a>
                <div class="dropdown-content dropdown-menu dropdown-align-right" id="userLoginMenu">
+                     <div class="user-info"><div class="initials">TT</div><span class="logged-in-name">Timothy Taylor</span></div>
                      <button class="dropdown-item" href="#">Log Out</button>
                   </div>
           </div>
@@ -45,13 +50,20 @@
             </div>
          </div>
          <div class="controls-box bl-none controls-row bt-none">
-            <div class="inline-flex mr-3">
+               <div class="inline-flex mr-3 height-37">
+                     <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-l">
+                           <i class="fas fa-list"></i>
+                     </button>
+                  
+                     <button class="height-37 bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-r">
+                           <i class="fas fa-calendar-alt"></i>
+                       </button>
+                   </div>
+
+            <div class="inline-flex mr-3 height-37">
                <button class="toggle-desc-truncate bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-l">
                   <i class="fas fa-expand"></i>
                </button>
-               <!-- <button class="toggle-desc-expand bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounder-dne">
-                  <i class="fas fa-compress"></i>
-                </button> -->
                <button class="height-37 toggle-powers-width bg-white hover:bg-grey-lightest text-grey-darkest font-semibold no-outline cursor-pointer border-none shadow py-2 px-4 rounded-r">
                      <div class="arrow-to-left collapse-expand-arrow">
                            <svg aria-hidden="true" data-prefix="fas" data-icon="arrow-to-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-arrow-to-left fa-w-14 fa-3x"><path fill="currentColor" d="M0 424V88c0-13.3 10.7-24 24-24h24c13.3 0 24 10.7 24 24v336c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm280.5-66.4L214.9 292H424c13.3 0 24-10.7 24-24v-24c0-13.3-10.7-24-24-24H214.9l65.6-65.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L94.1 239c-9.4 9.4-9.4 24.6 0 33.9l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.3 9.4-24.5 0-33.8z" class=""></path></svg>
@@ -92,7 +104,7 @@
                </button>
              </div>
              <div class="height-37">
-               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block text-color-radar-blue bg-color-radar rounded-full px-2 py-1 ml-2 text-xs font-semibold my--dot25">3</span></button>
+               <button class="items-center flex bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer"> <i class="fas fa-sliders-h"></i><span class="inline-block text-color-radar-blue bg-color-radar rounded-full px-2 py-1 ml-2 text-xs font-semibold my--dot25">3</span></button>
       
              </div>
              
@@ -3064,10 +3076,20 @@
                      </fieldset>
                   </div>
                   <div class="tab-content" id="filterDateSection">
-                        <label for="from">From</label>
-                        <input type="text" id="from" name="from">
-                        <label for="to">to</label>
-                        <input type="text" id="to" name="to">
+                        <div class="applied-filters">
+                              <p class="no-filters-text">No filters applied.</p>
+                        </div>
+                        <div class="datepicker flex">
+                           <div class="flex-1">
+                              <label for="from">From</label>
+                              <input class="rounded-l no-outline" type="text" id="from" name="from" placeholder="MM/DD/YYYY">
+                           </div>
+                           <div class="flex-1">
+                              <label for="to">to</label>
+                              <input class="rounded-r no-outline" type="text" id="to" name="to" placeholder="MM/DD/YYYY">
+                           </div>
+                        </div>
+                        
                         
                   </div>
                   <div class="tab-content" id="filteritemTypesSection">
