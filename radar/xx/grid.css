@@ -2494,3 +2494,6 @@ select.ui-datepicker-month,select.ui-datepicker-year  {
 .width100 {
 	width: 100%;
 }
+.radar-filter .tabs-nav {
+	overflow-x:scroll;
+}
