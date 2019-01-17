@@ -2487,3 +2487,10 @@ select.ui-datepicker-month,select.ui-datepicker-year  {
     font-weight: bold;
     font-size: 1.1em;
 }
+.outerWrapper {
+	
+    grid-template-columns: 65px/* Committee */ 37vw/* Power */ auto/* Data */;
+}
+.width100 {
+	width: 100%;
+}

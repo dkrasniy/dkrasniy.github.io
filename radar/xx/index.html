@@ -2846,7 +2846,7 @@
                               <label for="BGC">BGC</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="comm[]" id="FAC" value="FAC" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="comm[]" id="FAC" value="FAC">
                               <label for="FAC">FAC</label>
                            </div>
                            <div>
@@ -2862,7 +2862,7 @@
                               <label for="PHBC">PHBC</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="comm[]" id="RAC" value="RAC" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="comm[]" id="RAC" value="RAC">
                               <label for="RAC">RAC</label>
                            </div>
                         </div>
@@ -2874,6 +2874,7 @@
                         </div>
                      <fieldset>
                         <legend class="form-legend sr-only">Filter by Programs</legend>
+                       
                         <div class="checkbox-list checkbox-list--custom">
                         
                            <div>
@@ -3120,11 +3121,13 @@
                   <div class="tab-content" id="filterPresentersSection">
                         <div class="applied-filters">
                            </div>
+
+                     <input type="text" id="presenterFilterInput" class="mb-4 search-input form-control shadow width100" onkeyup="filterList(this)" data-filter-id="presenterListFilter" placeholder="Search for presenters..." title="Filter by presenter name">
                      <fieldset>
                         <legend class="form-legend sr-only">Filter by Presenters</legend>
-                        <div class="checkbox-list checkbox-list--custom">
+                        <div class="checkbox-list checkbox-list--custom" id="presenterListFilter">
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Alison Li" value="Alison Li" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Alison Li" value="Alison Li" >
                               <label for="Alison Li">Alison Li								</label>
                            </div>
                            <div>
@@ -3132,523 +3135,523 @@
                               <label for="Allan Emkin">Allan Emkin&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andrew Bratt" value="Andrew Bratt" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andrew Bratt" value="Andrew Bratt">
                               <label for="Andrew Bratt">Andrew Bratt&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andrew Junkin" value="Andrew Junkin" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andrew Junkin" value="Andrew Junkin">
                               <label for="Andrew Junkin">Andrew Junkin&nbsp;-Wilshire Associates								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andy Nguyen" value="Andy Nguyen" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Andy Nguyen" value="Andy Nguyen">
                               <label for="Andy Nguyen">Andy Nguyen								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Anne Simpson" value="Anne Simpson" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Anne Simpson" value="Anne Simpson">
                               <label for="Anne Simpson">Anne Simpson								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Anthony Suine" value="Anthony Suine" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Anthony Suine" value="Anthony Suine">
                               <label for="Anthony Suine">Anthony Suine								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Arnie Philips" value="Arnie Philips" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Arnie Philips" value="Arnie Philips">
                               <label for="Arnie Philips">Arnie Philips								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Arnita Paige" value="Arnita Paige" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Arnita Paige" value="Arnita Paige">
                               <label for="Arnita Paige">Arnita Paige								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ateev Mehrotra, MD, MPH" value="Ateev Mehrotra, MD, MPH" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ateev Mehrotra, MD, MPH" value="Ateev Mehrotra, MD, MPH">
                               <label for="Ateev Mehrotra, MD, MPH">Ateev Mehrotra, MD, MPH&nbsp;-Harvard Medical School								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Beliz Chappuie" value="Beliz Chappuie" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Beliz Chappuie" value="Beliz Chappuie">
                               <label for="Beliz Chappuie">Beliz Chappuie								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Beth Richtman" value="Beth Richtman" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Beth Richtman" value="Beth Richtman">
                               <label for="Beth Richtman">Beth Richtman								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Bill Slaton" value="Bill Slaton" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Bill Slaton" value="Bill Slaton">
                               <label for="Bill Slaton">Bill Slaton								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Brad Barber" value="Brad Barber" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Brad Barber" value="Brad Barber">
                               <label for="Brad Barber">Brad Barber&nbsp;-University of California, Davis								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Brad Pacheco" value="Brad Pacheco" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Brad Pacheco" value="Brad Pacheco">
                               <label for="Brad Pacheco">Brad Pacheco								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Caroline Walsh" value="Caroline Walsh" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Caroline Walsh" value="Caroline Walsh">
                               <label for="Caroline Walsh">Caroline Walsh&nbsp;-Macias Gini &amp; O'Connell								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Carrie Douglas-Fong" value="Carrie Douglas-Fong" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Carrie Douglas-Fong" value="Carrie Douglas-Fong">
                               <label for="Carrie Douglas-Fong">Carrie Douglas-Fong								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Charles Asubonten" value="Charles Asubonten" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Charles Asubonten" value="Charles Asubonten">
                               <label for="Charles Asubonten">Charles Asubonten								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Chris Jennings" value="Chris Jennings" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Chris Jennings" value="Chris Jennings">
                               <label for="Chris Jennings">Chris Jennings&nbsp;-Jennings Policy Strategies								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christian Farland" value="Christian Farland" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christian Farland" value="Christian Farland">
                               <label for="Christian Farland">Christian Farland								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christine Gogan" value="Christine Gogan" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christine Gogan" value="Christine Gogan">
                               <label for="Christine Gogan">Christine Gogan								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christine Reese" value="Christine Reese" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christine Reese" value="Christine Reese">
                               <label for="Christine Reese">Christine Reese								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christy Fields" value="Christy Fields" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Christy Fields" value="Christy Fields">
                               <label for="Christy Fields">Christy Fields&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="CJ Nakayama" value="CJ Nakayama" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="CJ Nakayama" value="CJ Nakayama">
                               <label for="CJ Nakayama">CJ Nakayama								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Clinton Stevenson" value="Clinton Stevenson" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Clinton Stevenson" value="Clinton Stevenson">
                               <label for="Clinton Stevenson">Clinton Stevenson								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Curtis Ishii" value="Curtis Ishii" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Curtis Ishii" value="Curtis Ishii">
                               <label for="Curtis Ishii">Curtis Ishii								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dan Bienvenue" value="Dan Bienvenue" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dan Bienvenue" value="Dan Bienvenue">
                               <label for="Dan Bienvenue">Dan Bienvenue								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dana Hollinger" value="Dana Hollinger" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dana Hollinger" value="Dana Hollinger">
                               <label for="Dana Hollinger">Dana Hollinger								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Daniel Crowley" value="Daniel Crowley" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Daniel Crowley" value="Daniel Crowley">
                               <label for="Daniel Crowley">Daniel Crowley&nbsp;-K&amp;L Gates								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Daniel Ingram" value="Daniel Ingram" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Daniel Ingram" value="Daniel Ingram">
                               <label for="Daniel Ingram">Daniel Ingram&nbsp;-Wilshire Associates								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Danny Brown" value="Danny Brown" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Danny Brown" value="Danny Brown">
                               <label for="Danny Brown">Danny Brown								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Altshuler" value="David Altshuler" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Altshuler" value="David Altshuler">
                               <label for="David Altshuler">David Altshuler&nbsp;-StepStone								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Bullock" value="David Bullock" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Bullock" value="David Bullock">
                               <label for="David Bullock">David Bullock&nbsp;-Macias Gini &amp; O'Connell								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Cowling" value="David Cowling" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Cowling" value="David Cowling">
                               <label for="David Cowling">David Cowling								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Driscoll" value="David Driscoll" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Driscoll" value="David Driscoll">
                               <label for="David Driscoll">David Driscoll&nbsp;-Buck Consultants								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Glickman" value="David Glickman" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="David Glickman" value="David Glickman">
                               <label for="David Glickman">David Glickman&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Debbie Chan" value="Debbie Chan" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Debbie Chan" value="Debbie Chan">
                               <label for="Debbie Chan">Debbie Chan&nbsp;-Macias Gini &amp; O'Connell								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dianne Sandoval" value="Dianne Sandoval" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dianne Sandoval" value="Dianne Sandoval">
                               <label for="Dianne Sandoval">Dianne Sandoval								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Diego Carrillo" value="Diego Carrillo" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Diego Carrillo" value="Diego Carrillo">
                               <label for="Diego Carrillo">Diego Carrillo								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dirk Benson" value="Dirk Benson" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dirk Benson" value="Dirk Benson">
                               <label for="Dirk Benson">Dirk Benson								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Don Martinez" value="Don Martinez" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Don Martinez" value="Don Martinez">
                               <label for="Don Martinez">Don Martinez								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Donna Lum" value="Donna Lum" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Donna Lum" value="Donna Lum">
                               <label for="Donna Lum">Donna Lum								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Doug Hoffner" value="Doug Hoffner" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Doug Hoffner" value="Doug Hoffner">
                               <label for="Doug Hoffner">Doug Hoffner								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Ashby Monk" value="Dr. Ashby Monk" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Ashby Monk" value="Dr. Ashby Monk">
                               <label for="Dr. Ashby Monk">Dr. Ashby Monk&nbsp;-Stanford Global Projects Center								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Kelly Pfeifer" value="Dr. Kelly Pfeifer" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Kelly Pfeifer" value="Dr. Kelly Pfeifer">
                               <label for="Dr. Kelly Pfeifer">Dr. Kelly Pfeifer&nbsp;-California Health Care Foundation								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Richard Sun" value="Dr. Richard Sun" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Richard Sun" value="Dr. Richard Sun">
                               <label for="Dr. Richard Sun">Dr. Richard Sun								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Tobias Moeller-Bertram" value="Dr. Tobias Moeller-Bertram" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Dr. Tobias Moeller-Bertram" value="Dr. Tobias Moeller-Bertram">
                               <label for="Dr. Tobias Moeller-Bertram">Dr. Tobias Moeller-Bertram								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ed Yrure" value="Ed Yrure" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ed Yrure" value="Ed Yrure">
                               <label for="Ed Yrure">Ed Yrure								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Elisabeth Bourqui" value="Elisabeth Bourqui" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Elisabeth Bourqui" value="Elisabeth Bourqui">
                               <label for="Elisabeth Bourqui">Elisabeth Bourqui								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Emily Zhong" value="Emily Zhong" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Emily Zhong" value="Emily Zhong">
                               <label for="Emily Zhong">Emily Zhong								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Baggesen" value="Eric Baggesen" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Baggesen" value="Eric Baggesen">
                               <label for="Eric Baggesen">Eric Baggesen								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Gonzaga" value="Eric Gonzaga" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Gonzaga" value="Eric Gonzaga">
                               <label for="Eric Gonzaga">Eric Gonzaga&nbsp;-Grant Thornton LLP								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Myszka" value="Eric Myszka" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Eric Myszka" value="Eric Myszka">
                               <label for="Eric Myszka">Eric Myszka&nbsp;-Grant Thornton LLP								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Flora Hu" value="Flora Hu" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Flora Hu" value="Flora Hu">
                               <label for="Flora Hu">Flora Hu								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Forrest Grimes" value="Forrest Grimes" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Forrest Grimes" value="Forrest Grimes">
                               <label for="Forrest Grimes">Forrest Grimes								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Fritzie Archuleta" value="Fritzie Archuleta" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Fritzie Archuleta" value="Fritzie Archuleta">
                               <label for="Fritzie Archuleta">Fritzie Archuleta								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Gary McCollum" value="Gary McCollum" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Gary McCollum" value="Gary McCollum">
                               <label for="Gary McCollum">Gary McCollum								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Hannah Schriner" value="Hannah Schriner" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Hannah Schriner" value="Hannah Schriner">
                               <label for="Hannah Schriner">Hannah Schriner&nbsp;-Meketa Investment Group								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Henry Jones" value="Henry Jones" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Henry Jones" value="Henry Jones">
                               <label for="Henry Jones">Henry Jones								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jan Falzarano" value="Jan Falzarano" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jan Falzarano" value="Jan Falzarano">
                               <label for="Jan Falzarano">Jan Falzarano								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jane Delfendahl" value="Jane Delfendahl" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jane Delfendahl" value="Jane Delfendahl">
                               <label for="Jane Delfendahl">Jane Delfendahl								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jean Hsu" value="Jean Hsu" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jean Hsu" value="Jean Hsu">
                               <label for="Jean Hsu">Jean Hsu								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jennifer Harris" value="Jennifer Harris" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Jennifer Harris" value="Jennifer Harris">
                               <label for="Jennifer Harris">Jennifer Harris								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Cole" value="John Cole" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Cole" value="John Cole">
                               <label for="John Cole">John Cole								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Prince, Chief Executive Officer" value="John Prince, Chief Executive Officer" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Prince, Chief Executive Officer" value="John Prince, Chief Executive Officer">
                               <label for="John Prince, Chief Executive Officer">John Prince, Chief Executive Officer&nbsp;-OptumRx								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Rothfield" value="John Rothfield" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="John Rothfield" value="John Rothfield">
                               <label for="John Rothfield">John Rothfield								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Julian Robinson" value="Julian Robinson" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Julian Robinson" value="Julian Robinson">
                               <label for="Julian Robinson">Julian Robinson								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kami Niebank" value="Kami Niebank" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kami Niebank" value="Kami Niebank">
                               <label for="Kami Niebank">Kami Niebank								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Karen Páleš" value="Karen Páleš" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Karen Páleš" value="Karen Páleš">
                               <label for="Karen Páleš">Karen Páleš								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kathy Donneson" value="Kathy Donneson" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kathy Donneson" value="Kathy Donneson">
                               <label for="Kathy Donneson">Kathy Donneson								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelli Aoki" value="Kelli Aoki" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelli Aoki" value="Kelli Aoki">
                               <label for="Kelli Aoki">Kelli Aoki								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelly Fox" value="Kelly Fox" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelly Fox" value="Kelly Fox">
                               <label for="Kelly Fox">Kelly Fox								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelly Sturm" value="Kelly Sturm" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kelly Sturm" value="Kelly Sturm">
                               <label for="Kelly Sturm">Kelly Sturm								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kevin Winter" value="Kevin Winter" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kevin Winter" value="Kevin Winter">
                               <label for="Kevin Winter">Kevin Winter								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kim Malm" value="Kim Malm" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kim Malm" value="Kim Malm">
                               <label for="Kim Malm">Kim Malm								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kit Crocker" value="Kit Crocker" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kit Crocker" value="Kit Crocker">
                               <label for="Kit Crocker">Kit Crocker								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="KPMG" value="KPMG" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="KPMG" value="KPMG">
                               <label for="KPMG">KPMG								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kristin LaMantia" value="Kristin LaMantia" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kristin LaMantia" value="Kristin LaMantia">
                               <label for="Kristin LaMantia">Kristin LaMantia								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kristin Montgomery" value="Kristin Montgomery" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kristin Montgomery" value="Kristin Montgomery">
                               <label for="Kristin Montgomery">Kristin Montgomery								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kurt Schneider" value="Kurt Schneider" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Kurt Schneider" value="Kurt Schneider">
                               <label for="Kurt Schneider">Kurt Schneider								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Laura Clapper, MD" value="Laura Clapper, MD" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Laura Clapper, MD" value="Laura Clapper, MD">
                               <label for="Laura Clapper, MD">Laura Clapper, MD&nbsp;-Anthem Blue Cross								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Liana Bailey-Crimmins" value="Liana Bailey-Crimmins" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Liana Bailey-Crimmins" value="Liana Bailey-Crimmins">
                               <label for="Liana Bailey-Crimmins">Liana Bailey-Crimmins								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Lisa Bacon" value="Lisa Bacon" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Lisa Bacon" value="Lisa Bacon">
                               <label for="Lisa Bacon">Lisa Bacon&nbsp;-Meketa Investment Group								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Lou Zahorak" value="Lou Zahorak" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Lou Zahorak" value="Lou Zahorak">
                               <label for="Lou Zahorak">Lou Zahorak								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mahboob Hossain" value="Mahboob Hossain" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mahboob Hossain" value="Mahboob Hossain">
                               <label for="Mahboob Hossain">Mahboob Hossain								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Marcie Frost" value="Marcie Frost" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Marcie Frost" value="Marcie Frost">
                               <label for="Marcie Frost">Marcie Frost								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Marlene Timberlake D'Adamo" value="Marlene Timberlake D'Adamo" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Marlene Timberlake D'Adamo" value="Marlene Timberlake D'Adamo">
                               <label for="Marlene Timberlake D'Adamo">Marlene Timberlake D'Adamo								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mary Anne Ashley" value="Mary Anne Ashley" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mary Anne Ashley" value="Mary Anne Ashley">
                               <label for="Mary Anne Ashley">Mary Anne Ashley								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Matt Flynn" value="Matt Flynn" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Matt Flynn" value="Matt Flynn">
                               <label for="Matt Flynn">Matt Flynn								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Matthew Jacobs" value="Matthew Jacobs" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Matthew Jacobs" value="Matthew Jacobs">
                               <label for="Matthew Jacobs">Matthew Jacobs								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="May Leung" value="May Leung" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="May Leung" value="May Leung">
                               <label for="May Leung">May Leung								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="May Yu" value="May Yu" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="May Yu" value="May Yu">
                               <label for="May Yu">May Yu								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Melissa Mantong" value="Melissa Mantong" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Melissa Mantong" value="Melissa Mantong">
                               <label for="Melissa Mantong">Melissa Mantong								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Cohen" value="Michael Cohen" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Cohen" value="Michael Cohen">
                               <label for="Michael Cohen">Michael Cohen								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Krimm" value="Michael Krimm" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Krimm" value="Michael Krimm">
                               <label for="Michael Krimm">Michael Krimm								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Moy" value="Michael Moy" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Moy" value="Michael Moy">
                               <label for="Michael Moy">Michael Moy&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Younger" value="Michael Younger" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michael Younger" value="Michael Younger">
                               <label for="Michael Younger">Michael Younger								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michele Nix" value="Michele Nix" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Michele Nix" value="Michele Nix">
                               <label for="Michele Nix">Michele Nix								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mike Inglett" value="Mike Inglett" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Mike Inglett" value="Mike Inglett">
                               <label for="Mike Inglett">Mike Inglett								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Nelson Da Conceicao" value="Nelson Da Conceicao" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Nelson Da Conceicao" value="Nelson Da Conceicao">
                               <label for="Nelson Da Conceicao">Nelson Da Conceicao								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Nina Ramsey" value="Nina Ramsey" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Nina Ramsey" value="Nina Ramsey">
                               <label for="Nina Ramsey">Nina Ramsey								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Paul Mouchakkaa" value="Paul Mouchakkaa" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Paul Mouchakkaa" value="Paul Mouchakkaa">
                               <label for="Paul Mouchakkaa">Paul Mouchakkaa								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Randy Dziubek" value="Randy Dziubek" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Randy Dziubek" value="Randy Dziubek">
                               <label for="Randy Dziubek">Randy Dziubek								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Renee Ostrander" value="Renee Ostrander" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Renee Ostrander" value="Renee Ostrander">
                               <label for="Renee Ostrander">Renee Ostrander								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rina Lessing" value="Rina Lessing" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rina Lessing" value="Rina Lessing">
                               <label for="Rina Lessing">Rina Lessing								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rob Feckner" value="Rob Feckner" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rob Feckner" value="Rob Feckner">
                               <label for="Rob Feckner">Rob Feckner								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rob Jarzombek" value="Rob Jarzombek" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rob Jarzombek" value="Rob Jarzombek">
                               <label for="Rob Jarzombek">Rob Jarzombek								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ron Lagnado" value="Ron Lagnado" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ron Lagnado" value="Ron Lagnado">
                               <label for="Ron Lagnado">Ron Lagnado								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rose Dean" value="Rose Dean" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rose Dean" value="Rose Dean">
                               <label for="Rose Dean">Rose Dean&nbsp;-Wilshire Associates								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rose McAuliffe" value="Rose McAuliffe" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Rose McAuliffe" value="Rose McAuliffe">
                               <label for="Rose McAuliffe">Rose McAuliffe								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sabrina Hutchins" value="Sabrina Hutchins" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sabrina Hutchins" value="Sabrina Hutchins">
                               <label for="Sabrina Hutchins">Sabrina Hutchins								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sarah Bernstein" value="Sarah Bernstein" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sarah Bernstein" value="Sarah Bernstein">
                               <label for="Sarah Bernstein">Sarah Bernstein&nbsp;-Pension Consulting Alliance								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sarah Corr" value="Sarah Corr" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sarah Corr" value="Sarah Corr">
                               <label for="Sarah Corr">Sarah Corr								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Scott Terando" value="Scott Terando" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Scott Terando" value="Scott Terando">
                               <label for="Scott Terando">Scott Terando								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Shari Little" value="Shari Little" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Shari Little" value="Shari Little">
                               <label for="Shari Little">Shari Little								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sharon Louie" value="Sharon Louie" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Sharon Louie" value="Sharon Louie">
                               <label for="Sharon Louie">Sharon Louie								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Simiso Nzima" value="Simiso Nzima" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Simiso Nzima" value="Simiso Nzima">
                               <label for="Simiso Nzima">Simiso Nzima								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Stephen McCourt" value="Stephen McCourt" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Stephen McCourt" value="Stephen McCourt">
                               <label for="Stephen McCourt">Stephen McCourt&nbsp;-Meketa Investment Group								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Steve Foresti" value="Steve Foresti" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Steve Foresti" value="Steve Foresti">
                               <label for="Steve Foresti">Steve Foresti&nbsp;-Wilshire Associates								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Steve Hartt" value="Steve Hartt" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Steve Hartt" value="Steve Hartt">
                               <label for="Steve Hartt">Steve Hartt&nbsp;-Meketa Investment Group								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Stuart Bennett" value="Stuart Bennett" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Stuart Bennett" value="Stuart Bennett">
                               <label for="Stuart Bennett">Stuart Bennett								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ted Eliopoulos" value="Ted Eliopoulos" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Ted Eliopoulos" value="Ted Eliopoulos">
                               <label for="Ted Eliopoulos">Ted Eliopoulos								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Theresa Taylor" value="Theresa Taylor" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Theresa Taylor" value="Theresa Taylor">
                               <label for="Theresa Taylor">Theresa Taylor								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Timothy Taylor" value="Timothy Taylor" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Timothy Taylor" value="Timothy Taylor">
                               <label for="Timothy Taylor">Timothy Taylor								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tina Campbell" value="Tina Campbell" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tina Campbell" value="Tina Campbell">
                               <label for="Tina Campbell">Tina Campbell								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Keck" value="Tom Keck" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Keck" value="Tom Keck">
                               <label for="Tom Keck">Tom Keck&nbsp;-StepStone								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Lussier" value="Tom Lussier" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Lussier" value="Tom Lussier">
                               <label for="Tom Lussier">Tom Lussier&nbsp;-The Lussier Group, Inc.								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom McDonagh" value="Tom McDonagh" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom McDonagh" value="Tom McDonagh">
                               <label for="Tom McDonagh">Tom McDonagh								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Woelfel" value="Tom Woelfel" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tom Woelfel" value="Tom Woelfel">
                               <label for="Tom Woelfel">Tom Woelfel&nbsp;-Pacific Community Ventures								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tony Roda" value="Tony Roda" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Tony Roda" value="Tony Roda">
                               <label for="Tony Roda">Tony Roda&nbsp;-Williams and Jensen								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Wylie Tollette" value="Wylie Tollette" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Wylie Tollette" value="Wylie Tollette">
                               <label for="Wylie Tollette">Wylie Tollette								</label>
                            </div>
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Yvette Fontenot" value="Yvette Fontenot" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="pre[]" id="Yvette Fontenot" value="Yvette Fontenot">
                               <label for="Yvette Fontenot">Yvette Fontenot&nbsp;-Avenue Solutions								</label>
                            </div>
                         </div>
@@ -3661,7 +3664,7 @@
                         <legend class="form-legend sr-only">Filter by Item Types</legend>
                         <div class="checkbox-list checkbox-list--custom">
                            <div>
-                              <input type="checkbox" class="checkbox-filter"  name="sess[]" id="OPEN" value="OPEN" checked="">
+                              <input type="checkbox" class="checkbox-filter"  name="sess[]" id="OPEN" value="OPEN">
                               <label for="OPEN">OPEN</label>
                            </div>
                         </div>

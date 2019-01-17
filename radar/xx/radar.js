@@ -370,3 +370,23 @@ searchInput.addEventListener("keyup", function(event) {
     $('body').addClass("sidebar-open")
   }
  
+
+
+  function filterList(e) {
+    var idToFilter = e.getAttribute("data-filter-id")
+    var input = document.getElementById(e.getAttribute("id"));
+    var filter  = input.value.toUpperCase();
+
+    var filterListParent = document.getElementById(idToFilter);
+    var li = filterListParent.getElementsByTagName("div");
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("label")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
