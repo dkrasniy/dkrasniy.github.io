@@ -2497,7 +2497,49 @@ select.ui-datepicker-month,select.ui-datepicker-year  {
 /* .radar-filter .tabs-nav {
 	overflow-x:scroll;
 } */
+
+
+
+
+
+
+
+
+/* January 18 2019 */
 .applied-filters span {
     margin-bottom: 4px;
     margin-top: 4px;
+}
+.document-viewer-container {
+	display: none;
+	width: 936px;
+    background: #f8f8f8;
+    height: 100vh;
+    z-index: 100000;
+	position: fixed;
+	top: 0;
+	opacity: 0;
+}
+
+body.document-open .document-viewer-container {
+	display: block;
+	opacity: 1;
+}
+
+
+.document-viewer-container .close {
+	border: none;
+	background:#f8f8f8;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: #444;
+}
+
+
+.document-viewer-container .viewer-head {
+    background: white;
+    padding: 10px 20px;
+    text-align: right;
 }

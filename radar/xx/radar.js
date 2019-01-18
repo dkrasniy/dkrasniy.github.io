@@ -54,6 +54,7 @@ showYears(yearColumns);
 
 $( window ).resize(function() {    
     showYears(yearColumns);
+    calculateDocumentOpenWidth();
   });
 
 
@@ -175,10 +176,10 @@ $('.liToggle').click(function(e) {
 })
 
 $('.close').click(function() {
-    // Remove visible class from all sidebars
-    $('body').toggleClass('document-open');
+    // Remove visible class from all sidebars and open document
     $('.overlaySidebar.visible').removeClass("visible")
     $("body").removeClass("sidebar-open")
+    $("body").removeClass("document-open")
 })
 
 
@@ -390,3 +391,21 @@ searchInput.addEventListener("keyup", function(event) {
         }
     }
 }
+
+function calculateDocumentOpenWidth() {
+    var overlaySidebarWidth = $('.overlaySidebar').outerWidth();
+    var documentWidth = $( window ).width();
+    $('.document-viewer-container').css('width',(documentWidth  - (overlaySidebarWidth)+ 'px'));
+}
+
+
+$('#viewDocument').click(function(e) {
+    e.preventDefault();
+    $('body').addClass('document-open');
+    calculateDocumentOpenWidth();
+    
+ })
+
+ $('.document-viewer-container .close').on("click",function(){
+    $('body').removeClass('document-open');
+ });
