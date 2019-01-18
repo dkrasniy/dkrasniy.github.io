@@ -2222,17 +2222,29 @@ a.ui-button:active,
 	height: 32px;
     width: 32px;
     font-size: .8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-right: 0;
     font-weight: 600;
 }
 
 .loggedin-user a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-weight: 600;
     font-size: .95em;
 }
@@ -2241,8 +2253,12 @@ a.ui-button:active,
     padding: 1em;
     background: #f7f7f7;
     margin-bottom: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .loggedin-user .user-info .initials{
 	background: white;
@@ -2296,9 +2312,15 @@ span.search-match {
 }
 span.details span {
 	margin-right: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    align-items: center;
-	justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	font-size: 90%;
 }
 span.details span i{
@@ -2377,7 +2399,8 @@ input#searchInputModal {
 .ui-widget.ui-widget-content {
     border: none;
     border-radius: 5px;
-	box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .1);
+	        box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .1);
     padding: 1em;
 }
 
@@ -2489,6 +2512,8 @@ select.ui-datepicker-month,select.ui-datepicker-year  {
 }
 .outerWrapper {
 	
+    -ms-grid-columns: 65px/* Committee */ 37vw/* Power */ auto/* Data */;
+	
     grid-template-columns: 65px/* Committee */ 37vw/* Power */ auto/* Data */;
 }
 .width100 {
@@ -2500,4 +2525,8 @@ select.ui-datepicker-month,select.ui-datepicker-year  {
 .applied-filters span {
     margin-bottom: 4px;
     margin-top: 4px;
+}
+.shadow {
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+	        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
 }
