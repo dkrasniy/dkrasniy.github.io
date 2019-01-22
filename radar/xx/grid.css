@@ -2537,9 +2537,25 @@ body.document-open .document-viewer-container {
     color: #444;
 }
 
-
 .document-viewer-container .viewer-head {
     background: white;
     padding: 10px 20px;
     text-align: right;
+}
+
+
+
+
+/* Jan 22 */
+.current-quarter-line {
+    display: none!important;
+}
+.FYQheader.current:after {
+    left: calc(50% - 4px);
+    border-radius: 100%;
+    border: none;
+    height: 8px;
+    width: 8px;
+    background: #E02200;
+    bottom: 2px;
 }
