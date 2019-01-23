@@ -2625,3 +2625,9 @@ body.document-open .document-viewer-container {
 	  transform: scale(1.0);
 	}
   }
+  .show-years svg {
+    max-width: 25px;
+    min-width: 23px;
+    fill: #3b4853;
+    border-radius: 2px;
+}
