@@ -2631,3 +2631,12 @@ body.document-open .document-viewer-container {
     fill: #3b4853;
     border-radius: 2px;
 }
+.app-branding img {
+    width: 48px;
+    height: 48px;
+    margin-right: .75em;
+}
+.app-branding {
+    display: inline-flex;
+    align-items: center;
+}
