@@ -1,4 +1,5 @@
 // Greys
+$grey-10: #f6f6f6;
 $grey-9:#ccc;
 $grey-8:#a7a7a7;
 $grey-7:#999;
@@ -11,20 +12,23 @@ $grey-1: #1f1f1f;
 $grey-0: #000000;
 
 $light-grey: #f7f7f7;
-$grey: #eee;
+$grey: rgb(2, 2, 2);
 $offwhite: #ddd;
 
 $bg-color: #f7f8f9;
 $grey-4: #555;
 $dark-grey:$grey-3;
-$light-grey: $grey-5;
 $blue-grey:#95a1ad;
 
 //Application colors
 $blue:#0874D9;
 $green: #30B34E;
+$green-light:hsla(134, 50%, 95%, 1);
 $red: #E02200;
+$red-light: hsla(9, 70%, 95%, 1);
 $orange: #FA710E;
+$orange-light:hsla(25, 95%, 95%, 1);
+
 $purple: #913FD6;
 
 
@@ -33,6 +37,7 @@ $theme-colors: (
   "primary": $blue,
   "danger": $red,
   "success": $green,
+  "secondary": hsla(209, 55%, 95%, 1),
 );
 
 
@@ -47,8 +52,8 @@ $borderRadius: .35em;
 $boxShadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.05);
 $boxShadowHover: 0px 3px 5px rgba(0,0,0,0.14);
 
-$boxShadowSm:0 1px 3px hsla(0, 0%, 0%, .2);
-$boxShadowSmHover:0 1px 4px hsla(0, 0%, 0%, .22);
+$boxShadowSm:0 1px 1px hsla(0, 0%, 0%, .06);
+$boxShadowSmHover:0 1px 1px hsla(0, 0%, 0%, .1);
 
 
 @import "../bootstrap/scss/bootstrap";
@@ -115,21 +120,235 @@ h1 {
 }
 .btn:hover {
     -webkit-box-shadow: $boxShadowSmHover;
-            box-shadow: $boxShadowSmHover;
-            
+            box-shadow: $boxShadowSmHover;       
 }
-.btn-link {
-    -webkit-box-shadow: none!important;
-            box-shadow: none!important;
-    color: $light-grey;
+.btn-primary.secondary {
+    color:$blue;
+    background-color: hsla(209, 55%, 95%, 1);
+    border-color: hsla(209, 55%, 95%, 1);
 }
-.btn-link:hover {
-    -webkit-box-shadow: none!important;
-            box-shadow: none!important;
-    text-decoration: none;
-    color: $dark-grey;
+.btn-primary.secondary:hover {
+    color: $blue;
+    background-color: hsla(209, 62%, 92%, 1);
+    border-color:hsla(209, 62%, 92%, 1);
+}
+.btn-primary.tertiary {
+    color:$blue;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
+.btn-success.secondary {
+    color:$green;
+    background-color: hsla(134, 50%, 95%, 1);
+    border-color: hsla(134, 50%, 95%, 1);
+}
+.btn-success.secondary:hover {
+    color: $green;
+    background-color: hsla(134, 55%, 92%, 1);
+    border-color:hsla(134, 55%, 92%, 1);
+}
+.btn-success.tertiary {
+    color:$green;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-danger.secondary {
+    color:$red;
+    background-color: $red-light;
+    border-color: $red-light;
+}
+.btn-danger.secondary:hover {
+    color: $red;
+    background-color: hsla(9, 75%, 92%, 1);
+    border-color:hsla(9, 75%, 92%, 1);
+}
+.btn-danger.tertiary {
+    color:$red;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+// .btn-link {
+//     -webkit-box-shadow: none!important;
+//     box-shadow: none!important;
+//     color: $light-grey;
+// }
+// .btn-link:hover {
+//     -webkit-box-shadow: none!important;
+//     box-shadow: none!important;
+//     text-decoration: none;
+//     color: $dark-grey;
+// }
+
+/* --------- MODALS --------- */
+.modal-backdrop.show {
+    opacity: 0.2;
+}
+.modal-content {
+    background: $light-grey;
+    border: none;
+    box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.15);
+    overflow: hidden;
+    border-radius: $borderRadius;
+}
+.modal-body {
+    background: $light-grey;
+}
+.modal-header {
+    background: white;
+    border: none;
+}
+.modal-footer {
+    background: white;
+    border: none;
+}
+
+.modal.fade .modal-dialog {
+    transform: scale(.95);
+}
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+.fade {
+    transition: opacity 0.08s linear;
+}
+
+.close {
+    opacity: 1;
+    text-shadow: none;
+    font-size: inherit;
+    float: none;
+}
+
+
+.icon-container-ambient {
+    display: inline-block;
+    padding:6px;
+    border-radius: 50%;
+    &.danger {
+        background:red;
+    }
+}
+
+.icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: $light-grey;
+    color:$grey-4;
+    &.light {
+        background: #fff;
+        color:$grey-3;
+    }
+    &.dark {
+        background: $grey-2;
+        color:#fff;
+    }
+}
+
+
+.alert {
+    box-shadow: $boxShadowSm;
+    border:none;
+    border-radius: $borderRadius;
+    background:#FFF;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.25em;
+    .alert-heading {
+        font-weight:600;
+        margin-bottom: .15em;
+        font-size:1.25em;
+    }
+    .icon-container {
+        font-size:14px;
+        border:3px solid;
+        background: white;
+    }
+}
+
+
+.alert-danger {
+    .icon-container-ambient {
+        background: $red-light;
+    }
+    .icon-container {
+        border-color: $red;
+        color: $red;
+    }
+    .alert-heading {
+        color: $red;
+    }
+    .alert-icon {
+        &:before {
+            content: "\f00d";
+        }
+    }
+}
+
+.alert-success {
+    .icon-container-ambient {
+        background: $green-light;
+    }
+    .icon-container {
+        border-color: $green;
+        color: $green;
+    }
+    .alert-heading {
+        color: $green;
+    }
+    .alert-icon {
+        &:before {
+            content: "\f00c";
+        }
+    }
+}
+.alert-warning {
+    .icon-container-ambient {
+        background: $orange-light;
+    }
+    .icon-container {
+        border-color: $orange;
+        color: $orange;
+    }
+    .alert-heading {
+        color: $orange;
+    }
+    .alert-icon {
+        &:before {
+            content: "\f12a";
+        }
+    }
+}
+
+.alert .alert-content {
+    color:$grey-6;
+    padding-left: 1.25em;
+    p {
+        margin-bottom: .5em;
+    }
+   
+}
+.section-to-code {
+    box-shadow: $boxShadowSm;
+}
 
 
 /* Add arrow to dropdown container when dropdown menu expanded */
@@ -210,3 +429,21 @@ a.dropdown-item {
             -ms-transform: translateY(10px);
         transform: translateY(10px);
 }
+
+
+// TEMPORARY
+.section-to-code {
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom:10px;
+ }
+ .code-code {
+
+background: whitesmoke;
+margin: -1em;
+margin-top: 1em;
+border-radius: 0 0 8px 8px;
+padding: 1em;
+
+ }
