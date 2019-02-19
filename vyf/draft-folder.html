@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link rel="stylesheet" href="scss/custom.css">
+      <link rel="stylesheet" href="fonts/fonts.css">
+      <title>Virtual Yellow Folder</title>
+   </head>
+   <body>
+
+      <main>
+         <nav class="side-navigation">
+            <div class="logo-container">
+               <img src="assets/logo/filled-color-h.svg" alt="Virtual Yellow Folder Logo">
+            </div>
+            <button type="button" class="btn btn-primary new-folder-button  btn-block" data-toggle="modal" data-target="#newFolderModal">New Folder</button> 
+            <ul role="list">
+               <li role="listitem" class="active"><a href="home.html">Inbox</a></li>
+               <li role="listitem"><a href="drafts.html">Drafts</a></li>
+               <li role="listitem"><a href="en-route.html">En Route</a></li>
+               <li role="listitem"><a href="completed.html">Completed</a></li>
+            </ul>
+            <div class="user-account btn-group dropup">
+               <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Timothy Taylor
+               <span>timothy.taylor@calpers.ca.gov</span>
+               <i class="fas fa-chevron-up"></i>
+               </button>
+               <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">My Account</a>
+                     <a class="dropdown-item" href="#">Settings</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="#">Sign Out</a>
+               </div>
+            </div>
+            
+         </nav>
+         <div class="content-wrapper">
+            <div class="folder-view">
+             <div class="folder-header">
+                <div class="folder-info">
+                   <h1>Travel Expense Folder</h1>
+                   <div class="folder-details">
+                      <ul>
+                         <li><span class="label">Created</span> 01/22/2019 3:12pm</li>
+                         <li><span class="label">Modified</span> 44 minutes ago</li>
+                         <li><span class="label">Status</span> Draft</li>
+                      </ul>
+                   </div>
+                  </div>
+                <div class="folder-actions">
+                     <button type="button" class="btn btn-primary tertiary">Settings</button> 
+                     <button type="button" class="btn btn-primary">Upload Documents</button> 
+                </div>
+             </div>
+             <div class="folder-contents row">
+                <div class="routing-slip col-3">
+                   <div class="title"><h2>Routing Slip</h2></div>
+                     <div class="empty-state">
+                        <h4>No Route Yet</h4>
+                        <p>Start by uploading your documents. We’ll generate a routing slip for you which you can modify later.</p>
+                     </div>
+                   </div>
+                   <div class="col-9">
+                        <div class="empty-state">
+                              <img src="assets/empty-states/newfolder.svg" alt="Woman checking items off to-do list"/>
+                              <h1>Upload Documents</h1>
+                              <p>Add file or drop files here</p>
+                              
+                        </div>
+                        
+                        </div>
+
+             </div>
+               
+         </div>
+      </main>
+
+
+
+
+      <!-- JavaScript -->
+      <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+      <script src="bootstrap/js/popper.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+      <script src="js/vxf.js"></script>
+   </body>
+</html>
