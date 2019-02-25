@@ -8872,6 +8872,7 @@ input.form-control.float-true {
 .empty-state img, .empty-state svg {
   max-width: 380px;
   margin: 0 auto;
+  z-index: -1;
   padding: 1em;
 }
 
@@ -9160,7 +9161,7 @@ input.form-control.float-true {
 }
 .folder-view .routing-slip .empty-state p {
   color: #7c7c7c;
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 span.uploader-name {

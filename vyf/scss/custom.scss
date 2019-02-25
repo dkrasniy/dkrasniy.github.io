@@ -846,6 +846,7 @@ input.form-control.float-true {
     img,svg {
         max-width: 380px;
         margin: 0 auto;
+        z-index: -1;
         padding:1em;
     }
    
@@ -1170,7 +1171,7 @@ input.form-control.float-true {
             }
             p {
                 color:$grey-6;
-                font-size:.75em;
+                font-size:.9em;
             }
         }
         
