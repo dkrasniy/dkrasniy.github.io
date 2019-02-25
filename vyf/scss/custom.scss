@@ -1050,6 +1050,8 @@ input.form-control.float-true {
         padding: 1em 3em;
         .empty-state {
             height: 60vh;
+            max-width: 400px;
+            margin: 0 auto;
             h1 {
                 font-size:1.25rem;
                 font-weight:600;

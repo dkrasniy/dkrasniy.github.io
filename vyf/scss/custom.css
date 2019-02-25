@@ -9041,6 +9041,8 @@ input.form-control.float-true {
 }
 .folder-view .folder-contents .empty-state {
   height: 60vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .folder-view .folder-contents .empty-state h1 {
   font-size: 1.25rem;
