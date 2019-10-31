@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .slidecontainer {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Enter Phone Number</h1>
+
+
+  <div class="slidecontainer">
+    <input style="width: 100%;" type="range" min="1000000" max="9780374"  value="6780374" class="slider" id="myRange">
+    <p style="font-size:40px;">(916) <span id="demo"></span></p>
+  </div>
+
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value.slice(0, 3) + "-" + slider.value.slice(3);
+
+    slider.oninput = function () {
+      output.innerHTML = this.value.slice(0, 3) + "-" + this.value.slice(3);
+    }
+  </script>
+
+</body>
+
+</html>
